@@ -1,0 +1,909 @@
+  0%|          | 0/1000 [00:00<?, ?it/s]cuda is True
+device is cuda
+Unet_1D(
+  (enc1_1): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(1, 6, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (enc1_2): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(6, 6, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (enc1_3): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(6, 6, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (enc2_1): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(6, 12, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(12, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (enc2_2): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(12, 12, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(12, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (enc3_1): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(12, 24, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (enc3_2): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(24, 24, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (enc4_1): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(24, 48, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (enc4_2): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(48, 48, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (upsample_3): ConvTranspose1d(48, 48, kernel_size=(8,), stride=(2,), padding=(3,))
+  (dec3_1): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(72, 24, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (dec3_2): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(24, 24, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (upsample_2): ConvTranspose1d(24, 24, kernel_size=(8,), stride=(2,), padding=(3,))
+  (dec2_1): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(36, 12, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(12, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (dec2_2): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(12, 12, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(12, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (upsample_1): ConvTranspose1d(12, 12, kernel_size=(8,), stride=(2,), padding=(3,))
+  (dec1_1): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(18, 6, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (dec1_2): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(6, 6, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (dec1_3): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(6, 4, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (dec1_4): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(4, 4, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+)
+train_datasize 800 val_datasize 200
+train.py:189: RuntimeWarning: invalid value encountered in long_scalars
+  pi = np.sum(p_dict[i]) / np.sum(p_sum_dict[i])
+  0%|          | 1/1000 [01:01<17:04:29, 61.53s/it]#epoch:01 stage:1 train_loss:1.121e-02 val_loss:1.214e-02  time:1m2s
+
+ bg_pi:nan bg_ri:0.000 p_pi:nan p_ri:0.000 r_pi:0.238 r_ri:1.000 t_pi:nan t_ri:0.000
+  0%|          | 2/1000 [02:01<16:53:56, 60.96s/it]#epoch:02 stage:1 train_loss:9.894e-03 val_loss:1.126e-02  time:0m60s
+
+ bg_pi:0.750 bg_ri:0.674 p_pi:0.937 p_ri:0.553 r_pi:0.501 r_ri:0.958 t_pi:0.861 t_ri:0.596
+  0%|          | 3/1000 [03:01<16:50:09, 60.79s/it]#epoch:03 stage:1 train_loss:9.281e-03 val_loss:9.392e-03  time:1m0s
+
+ bg_pi:0.696 bg_ri:0.901 p_pi:0.664 p_ri:0.952 r_pi:0.797 r_ri:0.949 t_pi:0.931 t_ri:0.649
+  0%|          | 4/1000 [04:01<16:46:13, 60.62s/it]#epoch:04 stage:1 train_loss:9.034e-03 val_loss:9.113e-03  time:1m0s
+
+ bg_pi:0.706 bg_ri:0.917 p_pi:0.652 p_ri:0.956 r_pi:0.824 r_ri:0.938 t_pi:0.931 t_ri:0.664
+  0%|          | 5/1000 [05:01<16:41:40, 60.40s/it]#epoch:05 stage:1 train_loss:8.896e-03 val_loss:9.005e-03  time:0m60s
+
+ bg_pi:0.700 bg_ri:0.919 p_pi:0.687 p_ri:0.938 r_pi:0.778 r_ri:0.956 t_pi:0.940 t_ri:0.650
+  1%|          | 6/1000 [06:01<16:36:54, 60.18s/it]#epoch:06 stage:1 train_loss:8.804e-03 val_loss:8.846e-03  time:0m60s
+
+ bg_pi:0.720 bg_ri:0.910 p_pi:0.717 p_ri:0.913 r_pi:0.817 r_ri:0.953 t_pi:0.931 t_ri:0.710
+  1%|          | 7/1000 [07:02<16:39:49, 60.41s/it]#epoch:07 stage:1 train_loss:8.739e-03 val_loss:8.723e-03  time:1m1s
+
+ bg_pi:0.752 bg_ri:0.900 p_pi:0.743 p_ri:0.890 r_pi:0.842 r_ri:0.938 t_pi:0.912 t_ri:0.757
+  1%|          | 8/1000 [08:03<16:44:47, 60.77s/it]#epoch:08 stage:1 train_loss:8.686e-03 val_loss:8.651e-03  time:1m2s
+
+ bg_pi:0.785 bg_ri:0.858 p_pi:0.787 p_ri:0.864 r_pi:0.852 r_ri:0.936 t_pi:0.893 t_ri:0.801
+  1%|          | 9/1000 [09:04<16:45:20, 60.87s/it]#epoch:09 stage:1 train_loss:8.641e-03 val_loss:8.623e-03  time:1m1s
+
+ bg_pi:0.782 bg_ri:0.835 p_pi:0.788 p_ri:0.848 r_pi:0.854 r_ri:0.944 t_pi:0.886 t_ri:0.803
+  1%|          | 10/1000 [10:07<16:50:08, 61.22s/it]#epoch:10 stage:1 train_loss:8.602e-03 val_loss:8.590e-03  time:1m2s
+
+ bg_pi:0.798 bg_ri:0.852 p_pi:0.785 p_ri:0.843 r_pi:0.859 r_ri:0.927 t_pi:0.881 t_ri:0.811
+  1%|          | 11/1000 [11:08<16:49:19, 61.23s/it]#epoch:11 stage:1 train_loss:8.571e-03 val_loss:8.562e-03  time:1m1s
+
+ bg_pi:0.781 bg_ri:0.831 p_pi:0.784 p_ri:0.834 r_pi:0.887 r_ri:0.939 t_pi:0.881 t_ri:0.823
+  1%|          | 12/1000 [12:09<16:46:06, 61.10s/it]#epoch:12 stage:1 train_loss:8.536e-03 val_loss:8.523e-03  time:1m1s
+
+ bg_pi:0.803 bg_ri:0.858 p_pi:0.788 p_ri:0.849 r_pi:0.883 r_ri:0.931 t_pi:0.888 t_ri:0.827
+  1%|▏         | 13/1000 [13:11<16:53:34, 61.62s/it]#epoch:13 stage:1 train_loss:8.504e-03 val_loss:8.506e-03  time:1m3s
+
+ bg_pi:0.801 bg_ri:0.861 p_pi:0.789 p_ri:0.846 r_pi:0.889 r_ri:0.930 t_pi:0.888 t_ri:0.829
+  1%|▏         | 14/1000 [14:15<17:00:26, 62.10s/it]#epoch:14 stage:1 train_loss:8.479e-03 val_loss:8.489e-03  time:1m3s
+
+ bg_pi:0.795 bg_ri:0.853 p_pi:0.795 p_ri:0.841 r_pi:0.899 r_ri:0.919 t_pi:0.880 t_ri:0.837
+  2%|▏         | 15/1000 [15:18<17:03:54, 62.37s/it]#epoch:15 stage:1 train_loss:8.454e-03 val_loss:8.459e-03  time:1m3s
+
+ bg_pi:0.803 bg_ri:0.846 p_pi:0.795 p_ri:0.837 r_pi:0.888 r_ri:0.922 t_pi:0.878 t_ri:0.834
+  2%|▏         | 16/1000 [16:19<17:00:16, 62.21s/it]#epoch:16 stage:1 train_loss:8.433e-03 val_loss:8.443e-03  time:1m2s
+
+ bg_pi:0.811 bg_ri:0.838 p_pi:0.795 p_ri:0.842 r_pi:0.865 r_ri:0.915 t_pi:0.874 t_ri:0.825
+  2%|▏         | 17/1000 [17:21<16:56:55, 62.07s/it]#epoch:17 stage:1 train_loss:8.413e-03 val_loss:8.457e-03  time:1m2s
+
+ bg_pi:0.816 bg_ri:0.839 p_pi:0.799 p_ri:0.841 r_pi:0.851 r_ri:0.938 t_pi:0.884 t_ri:0.819
+  2%|▏         | 18/1000 [18:23<16:53:19, 61.91s/it]#epoch:18 stage:1 train_loss:8.391e-03 val_loss:8.403e-03  time:1m2s
+
+ bg_pi:0.813 bg_ri:0.830 p_pi:0.801 p_ri:0.856 r_pi:0.867 r_ri:0.935 t_pi:0.884 t_ri:0.828
+  2%|▏         | 19/1000 [19:23<16:44:00, 61.41s/it]#epoch:19 stage:1 train_loss:8.369e-03 val_loss:8.372e-03  time:1m0s
+
+ bg_pi:0.799 bg_ri:0.837 p_pi:0.804 p_ri:0.845 r_pi:0.879 r_ri:0.924 t_pi:0.879 t_ri:0.832
+  2%|▏         | 20/1000 [20:23<16:35:57, 60.98s/it]#epoch:20 stage:1 train_loss:8.351e-03 val_loss:8.364e-03  time:0m60s
+
+ bg_pi:0.788 bg_ri:0.836 p_pi:0.803 p_ri:0.835 r_pi:0.873 r_ri:0.921 t_pi:0.875 t_ri:0.825
+  2%|▏         | 21/1000 [21:24<16:35:53, 61.04s/it]#epoch:21 stage:1 train_loss:8.334e-03 val_loss:8.355e-03  time:1m1s
+
+ bg_pi:0.802 bg_ri:0.835 p_pi:0.792 p_ri:0.841 r_pi:0.869 r_ri:0.912 t_pi:0.871 t_ri:0.825
+  2%|▏         | 22/1000 [22:25<16:32:29, 60.89s/it]#epoch:22 stage:1 train_loss:8.313e-03 val_loss:8.342e-03  time:1m1s
+
+ bg_pi:0.812 bg_ri:0.839 p_pi:0.803 p_ri:0.842 r_pi:0.878 r_ri:0.934 t_pi:0.884 t_ri:0.836
+  2%|▏         | 23/1000 [23:26<16:32:10, 60.93s/it]#epoch:23 stage:1 train_loss:8.294e-03 val_loss:8.327e-03  time:1m1s
+
+ bg_pi:0.810 bg_ri:0.824 p_pi:0.811 p_ri:0.830 r_pi:0.886 r_ri:0.918 t_pi:0.870 t_ri:0.844
+  2%|▏         | 24/1000 [24:27<16:31:32, 60.96s/it]#epoch:24 stage:1 train_loss:8.281e-03 val_loss:8.302e-03  time:1m1s
+
+ bg_pi:0.790 bg_ri:0.831 p_pi:0.801 p_ri:0.825 r_pi:0.880 r_ri:0.914 t_pi:0.868 t_ri:0.830
+  2%|▎         | 25/1000 [25:28<16:33:06, 61.11s/it]#epoch:25 stage:1 train_loss:8.269e-03 val_loss:8.295e-03  time:1m1s
+
+ bg_pi:0.811 bg_ri:0.844 p_pi:0.806 p_ri:0.830 r_pi:0.900 r_ri:0.915 t_pi:0.874 t_ri:0.849
+  3%|▎         | 26/1000 [26:31<16:39:44, 61.59s/it]#epoch:26 stage:1 train_loss:8.251e-03 val_loss:8.287e-03  time:1m3s
+
+ bg_pi:0.824 bg_ri:0.838 p_pi:0.811 p_ri:0.836 r_pi:0.878 r_ri:0.930 t_pi:0.881 t_ri:0.843
+  3%|▎         | 27/1000 [27:32<16:35:38, 61.40s/it]#epoch:27 stage:1 train_loss:8.236e-03 val_loss:8.276e-03  time:1m1s
+
+ bg_pi:0.811 bg_ri:0.830 p_pi:0.815 p_ri:0.843 r_pi:0.863 r_ri:0.924 t_pi:0.875 t_ri:0.830
+  3%|▎         | 28/1000 [28:34<16:36:11, 61.49s/it]#epoch:28 stage:1 train_loss:8.226e-03 val_loss:8.258e-03  time:1m2s
+
+ bg_pi:0.805 bg_ri:0.827 p_pi:0.815 p_ri:0.834 r_pi:0.858 r_ri:0.916 t_pi:0.868 t_ri:0.826
+  3%|▎         | 29/1000 [29:34<16:27:59, 61.05s/it]#epoch:29 stage:1 train_loss:8.216e-03 val_loss:8.265e-03  time:0m60s
+
+ bg_pi:0.813 bg_ri:0.839 p_pi:0.789 p_ri:0.833 r_pi:0.865 r_ri:0.915 t_pi:0.871 t_ri:0.824
+  3%|▎         | 30/1000 [30:34<16:24:33, 60.90s/it]#epoch:30 stage:1 train_loss:8.203e-03 val_loss:8.273e-03  time:1m1s
+
+ bg_pi:0.817 bg_ri:0.859 p_pi:0.781 p_ri:0.836 r_pi:0.851 r_ri:0.897 t_pi:0.867 t_ri:0.814
+  3%|▎         | 31/1000 [31:37<16:33:21, 61.51s/it]#epoch:31 stage:1 train_loss:8.193e-03 val_loss:8.248e-03  time:1m3s
+
+ bg_pi:0.816 bg_ri:0.849 p_pi:0.786 p_ri:0.843 r_pi:0.856 r_ri:0.915 t_pi:0.875 t_ri:0.817
+  3%|▎         | 32/1000 [32:37<16:25:30, 61.09s/it]#epoch:32 stage:1 train_loss:8.179e-03 val_loss:8.229e-03  time:1m0s
+
+ bg_pi:0.805 bg_ri:0.861 p_pi:0.793 p_ri:0.849 r_pi:0.872 r_ri:0.910 t_pi:0.879 t_ri:0.824
+  3%|▎         | 33/1000 [33:37<16:18:51, 60.74s/it]#epoch:33 stage:1 train_loss:8.163e-03 val_loss:8.214e-03  time:0m60s
+
+ bg_pi:0.809 bg_ri:0.858 p_pi:0.794 p_ri:0.847 r_pi:0.882 r_ri:0.917 t_pi:0.880 t_ri:0.831
+  3%|▎         | 34/1000 [34:37<16:14:38, 60.54s/it]#epoch:34 stage:1 train_loss:8.150e-03 val_loss:8.204e-03  time:1m0s
+
+ bg_pi:0.814 bg_ri:0.847 p_pi:0.808 p_ri:0.834 r_pi:0.878 r_ri:0.919 t_pi:0.877 t_ri:0.838
+  4%|▎         | 35/1000 [35:37<16:11:59, 60.44s/it]#epoch:35 stage:1 train_loss:8.138e-03 val_loss:8.189e-03  time:1m0s
+
+ bg_pi:0.819 bg_ri:0.843 p_pi:0.809 p_ri:0.847 r_pi:0.871 r_ri:0.926 t_pi:0.881 t_ri:0.834
+  4%|▎         | 36/1000 [36:37<16:07:48, 60.24s/it]#epoch:36 stage:1 train_loss:8.126e-03 val_loss:8.178e-03  time:0m60s
+
+ bg_pi:0.817 bg_ri:0.842 p_pi:0.810 p_ri:0.838 r_pi:0.874 r_ri:0.916 t_pi:0.875 t_ri:0.837
+  4%|▎         | 37/1000 [37:37<16:06:52, 60.24s/it]#epoch:37 stage:1 train_loss:8.114e-03 val_loss:8.171e-03  time:1m0s
+
+ bg_pi:0.797 bg_ri:0.827 p_pi:0.803 p_ri:0.836 r_pi:0.877 r_ri:0.906 t_pi:0.866 t_ri:0.832
+  4%|▍         | 38/1000 [38:39<16:10:47, 60.55s/it]#epoch:38 stage:1 train_loss:8.104e-03 val_loss:8.162e-03  time:1m1s
+
+ bg_pi:0.801 bg_ri:0.828 p_pi:0.807 p_ri:0.835 r_pi:0.874 r_ri:0.906 t_pi:0.866 t_ri:0.834
+  4%|▍         | 39/1000 [39:39<16:07:12, 60.39s/it]#epoch:39 stage:1 train_loss:8.095e-03 val_loss:8.157e-03  time:0m60s
+
+ bg_pi:0.806 bg_ri:0.823 p_pi:0.801 p_ri:0.837 r_pi:0.866 r_ri:0.908 t_pi:0.864 t_ri:0.827
+  4%|▍         | 40/1000 [40:40<16:12:02, 60.75s/it]#epoch:40 stage:1 train_loss:8.088e-03 val_loss:8.160e-03  time:1m2s
+
+ bg_pi:0.811 bg_ri:0.850 p_pi:0.801 p_ri:0.835 r_pi:0.877 r_ri:0.918 t_pi:0.878 t_ri:0.834
+  4%|▍         | 41/1000 [41:42<16:18:11, 61.20s/it]#epoch:41 stage:1 train_loss:8.083e-03 val_loss:8.151e-03  time:1m2s
+
+ bg_pi:0.824 bg_ri:0.843 p_pi:0.797 p_ri:0.844 r_pi:0.881 r_ri:0.916 t_pi:0.877 t_ri:0.839
+  4%|▍         | 42/1000 [42:45<16:21:20, 61.46s/it]#epoch:42 stage:1 train_loss:8.080e-03 val_loss:8.146e-03  time:1m2s
+
+ bg_pi:0.830 bg_ri:0.862 p_pi:0.806 p_ri:0.845 r_pi:0.871 r_ri:0.912 t_pi:0.880 t_ri:0.837
+  4%|▍         | 43/1000 [43:47<16:23:10, 61.64s/it]#epoch:43 stage:1 train_loss:8.075e-03 val_loss:8.130e-03  time:1m2s
+
+ bg_pi:0.824 bg_ri:0.850 p_pi:0.814 p_ri:0.855 r_pi:0.872 r_ri:0.922 t_pi:0.884 t_ri:0.838
+  4%|▍         | 44/1000 [44:48<16:23:04, 61.70s/it]#epoch:44 stage:1 train_loss:8.066e-03 val_loss:8.136e-03  time:1m2s
+
+ bg_pi:0.827 bg_ri:0.828 p_pi:0.797 p_ri:0.848 r_pi:0.865 r_ri:0.904 t_pi:0.867 t_ri:0.833
+  4%|▍         | 45/1000 [45:50<16:19:41, 61.55s/it]#epoch:45 stage:1 train_loss:8.058e-03 val_loss:8.117e-03  time:1m1s
+
+ bg_pi:0.828 bg_ri:0.822 p_pi:0.805 p_ri:0.842 r_pi:0.863 r_ri:0.908 t_pi:0.866 t_ri:0.835
+  5%|▍         | 46/1000 [46:51<16:17:36, 61.49s/it]#epoch:46 stage:1 train_loss:8.048e-03 val_loss:8.123e-03  time:1m1s
+
+ bg_pi:0.840 bg_ri:0.837 p_pi:0.819 p_ri:0.845 r_pi:0.882 r_ri:0.900 t_pi:0.869 t_ri:0.854
+  5%|▍         | 47/1000 [47:52<16:15:52, 61.44s/it]#epoch:47 stage:1 train_loss:8.041e-03 val_loss:8.105e-03  time:1m1s
+
+ bg_pi:0.835 bg_ri:0.832 p_pi:0.811 p_ri:0.839 r_pi:0.874 r_ri:0.906 t_pi:0.869 t_ri:0.846
+  5%|▍         | 48/1000 [48:52<16:07:27, 60.97s/it]#epoch:48 stage:1 train_loss:8.042e-03 val_loss:8.126e-03  time:0m60s
+
+ bg_pi:0.829 bg_ri:0.835 p_pi:0.796 p_ri:0.832 r_pi:0.885 r_ri:0.878 t_pi:0.856 t_ri:0.846
+  5%|▍         | 49/1000 [49:52<16:00:29, 60.60s/it]#epoch:49 stage:1 train_loss:8.041e-03 val_loss:8.105e-03  time:0m60s
+
+ bg_pi:0.817 bg_ri:0.845 p_pi:0.805 p_ri:0.834 r_pi:0.869 r_ri:0.904 t_pi:0.869 t_ri:0.834
+  5%|▌         | 50/1000 [50:54<16:07:17, 61.09s/it]#epoch:50 stage:1 train_loss:8.032e-03 val_loss:8.095e-03  time:1m2s
+
+ bg_pi:0.822 bg_ri:0.832 p_pi:0.807 p_ri:0.839 r_pi:0.876 r_ri:0.897 t_pi:0.864 t_ri:0.841
+  5%|▌         | 51/1000 [51:56<16:08:11, 61.21s/it]#epoch:51 stage:1 train_loss:8.021e-03 val_loss:8.078e-03  time:1m1s
+
+ bg_pi:0.819 bg_ri:0.829 p_pi:0.833 p_ri:0.834 r_pi:0.887 r_ri:0.920 t_pi:0.875 t_ri:0.855
+  5%|▌         | 52/1000 [52:58<16:13:13, 61.60s/it]#epoch:52 stage:1 train_loss:8.013e-03 val_loss:8.074e-03  time:1m2s
+
+ bg_pi:0.798 bg_ri:0.810 p_pi:0.820 p_ri:0.832 r_pi:0.890 r_ri:0.934 t_pi:0.875 t_ri:0.846
+  5%|▌         | 53/1000 [54:00<16:14:20, 61.73s/it]#epoch:53 stage:1 train_loss:8.005e-03 val_loss:8.058e-03  time:1m2s
+
+ bg_pi:0.802 bg_ri:0.804 p_pi:0.817 p_ri:0.829 r_pi:0.895 r_ri:0.914 t_pi:0.863 t_ri:0.850
+  5%|▌         | 54/1000 [55:02<16:14:24, 61.80s/it]#epoch:54 stage:1 train_loss:7.993e-03 val_loss:8.060e-03  time:1m2s
+
+ bg_pi:0.826 bg_ri:0.828 p_pi:0.829 p_ri:0.838 r_pi:0.885 r_ri:0.902 t_pi:0.866 t_ri:0.855
+  6%|▌         | 55/1000 [56:03<16:09:01, 61.53s/it]#epoch:55 stage:1 train_loss:7.984e-03 val_loss:8.064e-03  time:1m1s
+
+ bg_pi:0.821 bg_ri:0.828 p_pi:0.816 p_ri:0.836 r_pi:0.874 r_ri:0.909 t_pi:0.867 t_ri:0.842
+  6%|▌         | 56/1000 [57:04<16:04:48, 61.32s/it]#epoch:56 stage:1 train_loss:7.983e-03 val_loss:8.062e-03  time:1m1s
+
+ bg_pi:0.816 bg_ri:0.827 p_pi:0.812 p_ri:0.832 r_pi:0.899 r_ri:0.914 t_pi:0.870 t_ri:0.853
+  6%|▌         | 57/1000 [58:07<16:09:57, 61.72s/it]#epoch:57 stage:1 train_loss:7.978e-03 val_loss:8.047e-03  time:1m3s
+
+ bg_pi:0.808 bg_ri:0.826 p_pi:0.821 p_ri:0.834 r_pi:0.891 r_ri:0.924 t_pi:0.875 t_ri:0.849
+  6%|▌         | 58/1000 [59:08<16:07:39, 61.63s/it]#epoch:58 stage:1 train_loss:7.974e-03 val_loss:8.048e-03  time:1m1s
+
+ bg_pi:0.804 bg_ri:0.797 p_pi:0.833 p_ri:0.829 r_pi:0.901 r_ri:0.918 t_pi:0.864 t_ri:0.859
+  6%|▌         | 59/1000 [1:00:08<16:00:02, 61.21s/it]#epoch:59 stage:1 train_loss:7.971e-03 val_loss:8.055e-03  time:1m0s
+
+ bg_pi:0.808 bg_ri:0.809 p_pi:0.808 p_ri:0.839 r_pi:0.880 r_ri:0.933 t_pi:0.874 t_ri:0.838
+  6%|▌         | 60/1000 [1:01:10<16:01:12, 61.35s/it]#epoch:60 stage:1 train_loss:7.963e-03 val_loss:8.039e-03  time:1m2s
+
+ bg_pi:0.830 bg_ri:0.828 p_pi:0.820 p_ri:0.840 r_pi:0.889 r_ri:0.909 t_pi:0.870 t_ri:0.855
+  6%|▌         | 61/1000 [1:02:12<16:03:06, 61.54s/it]#epoch:61 stage:1 train_loss:7.955e-03 val_loss:8.038e-03  time:1m2s
+
+ bg_pi:0.832 bg_ri:0.834 p_pi:0.820 p_ri:0.836 r_pi:0.876 r_ri:0.899 t_pi:0.865 t_ri:0.849
+  6%|▌         | 62/1000 [1:03:13<16:01:00, 61.47s/it]#epoch:62 stage:1 train_loss:7.950e-03 val_loss:8.035e-03  time:1m1s
+
+ bg_pi:0.819 bg_ri:0.840 p_pi:0.816 p_ri:0.831 r_pi:0.884 r_ri:0.903 t_pi:0.868 t_ri:0.848
+  6%|▋         | 63/1000 [1:04:15<16:00:29, 61.50s/it]#epoch:63 stage:1 train_loss:7.947e-03 val_loss:8.044e-03  time:1m2s
+
+ bg_pi:0.816 bg_ri:0.829 p_pi:0.824 p_ri:0.837 r_pi:0.900 r_ri:0.895 t_pi:0.864 t_ri:0.858
+  6%|▋         | 64/1000 [1:05:17<16:01:44, 61.65s/it]#epoch:64 stage:1 train_loss:7.943e-03 val_loss:8.021e-03  time:1m2s
+
+ bg_pi:0.813 bg_ri:0.831 p_pi:0.832 p_ri:0.835 r_pi:0.890 r_ri:0.914 t_pi:0.872 t_ri:0.854
+  6%|▋         | 65/1000 [1:06:18<16:00:14, 61.62s/it]#epoch:65 stage:1 train_loss:7.937e-03 val_loss:8.030e-03  time:1m2s
+
+ bg_pi:0.815 bg_ri:0.813 p_pi:0.818 p_ri:0.832 r_pi:0.884 r_ri:0.910 t_pi:0.863 t_ri:0.847
+  7%|▋         | 66/1000 [1:07:20<15:58:56, 61.60s/it]#epoch:66 stage:1 train_loss:7.931e-03 val_loss:8.031e-03  time:1m2s
+
+ bg_pi:0.821 bg_ri:0.815 p_pi:0.811 p_ri:0.838 r_pi:0.895 r_ri:0.920 t_pi:0.871 t_ri:0.853
+  7%|▋         | 67/1000 [1:08:21<15:56:52, 61.53s/it]#epoch:67 stage:1 train_loss:7.926e-03 val_loss:8.036e-03  time:1m1s
+
+ bg_pi:0.814 bg_ri:0.813 p_pi:0.824 p_ri:0.833 r_pi:0.915 r_ri:0.917 t_pi:0.871 t_ri:0.867
+  7%|▋         | 68/1000 [1:09:23<15:57:16, 61.63s/it]#epoch:68 stage:1 train_loss:7.920e-03 val_loss:8.017e-03  time:1m2s
+
+ bg_pi:0.817 bg_ri:0.811 p_pi:0.817 p_ri:0.838 r_pi:0.893 r_ri:0.913 t_pi:0.867 t_ri:0.853
+  7%|▋         | 69/1000 [1:10:25<15:57:22, 61.70s/it]#epoch:69 stage:1 train_loss:7.917e-03 val_loss:8.016e-03  time:1m2s
+
+ bg_pi:0.826 bg_ri:0.827 p_pi:0.808 p_ri:0.830 r_pi:0.886 r_ri:0.915 t_pi:0.870 t_ri:0.848
+  7%|▋         | 70/1000 [1:11:27<15:57:45, 61.79s/it]#epoch:70 stage:1 train_loss:7.916e-03 val_loss:8.023e-03  time:1m2s
+
+ bg_pi:0.843 bg_ri:0.840 p_pi:0.822 p_ri:0.838 r_pi:0.890 r_ri:0.917 t_pi:0.876 t_ri:0.860
+  7%|▋         | 71/1000 [1:12:29<15:58:45, 61.92s/it]#epoch:71 stage:1 train_loss:7.914e-03 val_loss:8.005e-03  time:1m2s
+
+ bg_pi:0.823 bg_ri:0.830 p_pi:0.824 p_ri:0.841 r_pi:0.884 r_ri:0.912 t_pi:0.872 t_ri:0.851
+  7%|▋         | 72/1000 [1:13:31<15:55:53, 61.80s/it]#epoch:72 stage:1 train_loss:7.912e-03 val_loss:8.022e-03  time:1m2s
+
+ bg_pi:0.832 bg_ri:0.825 p_pi:0.825 p_ri:0.831 r_pi:0.891 r_ri:0.875 t_pi:0.853 t_ri:0.861
+  7%|▋         | 73/1000 [1:14:33<15:57:46, 61.99s/it]#epoch:73 stage:1 train_loss:7.913e-03 val_loss:8.014e-03  time:1m2s
+
+ bg_pi:0.845 bg_ri:0.833 p_pi:0.817 p_ri:0.835 r_pi:0.874 r_ri:0.903 t_pi:0.867 t_ri:0.851
+  7%|▋         | 74/1000 [1:15:35<15:57:33, 62.04s/it]#epoch:74 stage:1 train_loss:7.905e-03 val_loss:8.006e-03  time:1m2s
+
+ bg_pi:0.829 bg_ri:0.826 p_pi:0.810 p_ri:0.835 r_pi:0.899 r_ri:0.915 t_pi:0.871 t_ri:0.857
+  8%|▊         | 75/1000 [1:16:38<15:59:56, 62.27s/it]#epoch:75 stage:1 train_loss:7.909e-03 val_loss:8.005e-03  time:1m3s
+
+ bg_pi:0.808 bg_ri:0.807 p_pi:0.815 p_ri:0.838 r_pi:0.898 r_ri:0.926 t_pi:0.873 t_ri:0.853
+  8%|▊         | 76/1000 [1:17:41<16:02:19, 62.49s/it]#epoch:76 stage:1 train_loss:7.918e-03 val_loss:8.019e-03  time:1m3s
+
+ bg_pi:0.798 bg_ri:0.790 p_pi:0.799 p_ri:0.830 r_pi:0.878 r_ri:0.930 t_pi:0.865 t_ri:0.834
+  8%|▊         | 77/1000 [1:18:43<15:58:06, 62.28s/it]#epoch:77 stage:1 train_loss:7.917e-03 val_loss:8.013e-03  time:1m2s
+
+ bg_pi:0.832 bg_ri:0.830 p_pi:0.811 p_ri:0.840 r_pi:0.869 r_ri:0.879 t_pi:0.855 t_ri:0.843
+  8%|▊         | 78/1000 [1:19:45<15:55:53, 62.21s/it]#epoch:78 stage:1 train_loss:7.911e-03 val_loss:8.010e-03  time:1m2s
+
+ bg_pi:0.814 bg_ri:0.801 p_pi:0.794 p_ri:0.817 r_pi:0.873 r_ri:0.887 t_pi:0.845 t_ri:0.836
+  8%|▊         | 79/1000 [1:20:48<15:57:13, 62.36s/it]#epoch:79 stage:1 train_loss:7.914e-03 val_loss:8.034e-03  time:1m3s
+
+ bg_pi:0.801 bg_ri:0.777 p_pi:0.793 p_ri:0.824 r_pi:0.854 r_ri:0.889 t_pi:0.839 t_ri:0.821
+  8%|▊         | 80/1000 [1:21:49<15:51:08, 62.03s/it]#epoch:80 stage:1 train_loss:7.916e-03 val_loss:7.993e-03  time:1m1s
+
+ bg_pi:0.817 bg_ri:0.820 p_pi:0.799 p_ri:0.833 r_pi:0.893 r_ri:0.901 t_pi:0.861 t_ri:0.846
+  8%|▊         | 81/1000 [1:22:51<15:51:12, 62.10s/it]#epoch:81 stage:1 train_loss:7.902e-03 val_loss:7.984e-03  time:1m2s
+
+ bg_pi:0.825 bg_ri:0.831 p_pi:0.816 p_ri:0.838 r_pi:0.884 r_ri:0.925 t_pi:0.877 t_ri:0.848
+  8%|▊         | 82/1000 [1:23:53<15:50:04, 62.10s/it]#epoch:82 stage:1 train_loss:7.882e-03 val_loss:7.989e-03  time:1m2s
+
+ bg_pi:0.821 bg_ri:0.834 p_pi:0.810 p_ri:0.830 r_pi:0.876 r_ri:0.907 t_pi:0.868 t_ri:0.843
+  8%|▊         | 83/1000 [1:24:55<15:47:47, 62.02s/it]#epoch:83 stage:1 train_loss:7.874e-03 val_loss:7.993e-03  time:1m2s
+
+ bg_pi:0.805 bg_ri:0.794 p_pi:0.798 p_ri:0.824 r_pi:0.883 r_ri:0.896 t_pi:0.850 t_ri:0.840
+  8%|▊         | 84/1000 [1:25:57<15:47:44, 62.08s/it]#epoch:84 stage:1 train_loss:7.870e-03 val_loss:7.996e-03  time:1m2s
+
+ bg_pi:0.808 bg_ri:0.787 p_pi:0.806 p_ri:0.817 r_pi:0.865 r_ri:0.897 t_pi:0.846 t_ri:0.833
+  8%|▊         | 85/1000 [1:26:59<15:43:39, 61.88s/it]#epoch:85 stage:1 train_loss:7.869e-03 val_loss:8.000e-03  time:1m1s
+
+ bg_pi:0.809 bg_ri:0.806 p_pi:0.804 p_ri:0.819 r_pi:0.871 r_ri:0.875 t_pi:0.841 t_ri:0.836
+  9%|▊         | 86/1000 [1:28:01<15:42:04, 61.84s/it]#epoch:86 stage:1 train_loss:7.870e-03 val_loss:7.988e-03  time:1m2s
+
+ bg_pi:0.809 bg_ri:0.795 p_pi:0.798 p_ri:0.819 r_pi:0.886 r_ri:0.905 t_pi:0.853 t_ri:0.842
+  9%|▊         | 87/1000 [1:29:02<15:40:34, 61.81s/it]#epoch:87 stage:1 train_loss:7.871e-03 val_loss:7.966e-03  time:1m2s
+
+ bg_pi:0.818 bg_ri:0.816 p_pi:0.827 p_ri:0.831 r_pi:0.892 r_ri:0.924 t_pi:0.872 t_ri:0.856
+  9%|▉         | 88/1000 [1:30:04<15:41:09, 61.92s/it]#epoch:88 stage:1 train_loss:7.862e-03 val_loss:7.972e-03  time:1m2s
+
+ bg_pi:0.842 bg_ri:0.821 p_pi:0.830 p_ri:0.831 r_pi:0.893 r_ri:0.907 t_pi:0.865 t_ri:0.865
+  9%|▉         | 89/1000 [1:31:07<15:42:39, 62.09s/it]#epoch:89 stage:1 train_loss:7.857e-03 val_loss:7.974e-03  time:1m2s
+
+ bg_pi:0.822 bg_ri:0.825 p_pi:0.814 p_ri:0.828 r_pi:0.895 r_ri:0.908 t_pi:0.866 t_ri:0.855
+  9%|▉         | 90/1000 [1:32:10<15:45:37, 62.35s/it]#epoch:90 stage:1 train_loss:7.850e-03 val_loss:7.967e-03  time:1m3s
+
+ bg_pi:0.818 bg_ri:0.821 p_pi:0.818 p_ri:0.829 r_pi:0.891 r_ri:0.909 t_pi:0.866 t_ri:0.853
+  9%|▉         | 91/1000 [1:33:11<15:37:37, 61.89s/it]#epoch:91 stage:1 train_loss:7.846e-03 val_loss:7.966e-03  time:1m1s
+
+ bg_pi:0.815 bg_ri:0.812 p_pi:0.827 p_ri:0.823 r_pi:0.895 r_ri:0.901 t_pi:0.858 t_ri:0.857
+  9%|▉         | 92/1000 [1:34:13<15:40:36, 62.15s/it]#epoch:92 stage:1 train_loss:7.843e-03 val_loss:7.967e-03  time:1m3s
+
+ bg_pi:0.823 bg_ri:0.802 p_pi:0.815 p_ri:0.831 r_pi:0.887 r_ri:0.907 t_pi:0.859 t_ri:0.852
+  9%|▉         | 93/1000 [1:35:14<15:32:12, 61.67s/it]#epoch:93 stage:1 train_loss:7.840e-03 val_loss:7.971e-03  time:1m1s
+
+ bg_pi:0.822 bg_ri:0.798 p_pi:0.815 p_ri:0.834 r_pi:0.871 r_ri:0.904 t_pi:0.856 t_ri:0.843
+  9%|▉         | 94/1000 [1:36:16<15:31:08, 61.66s/it]#epoch:94 stage:1 train_loss:7.838e-03 val_loss:7.960e-03  time:1m2s
+
+ bg_pi:0.821 bg_ri:0.806 p_pi:0.815 p_ri:0.830 r_pi:0.883 r_ri:0.899 t_pi:0.856 t_ri:0.849
+ 10%|▉         | 95/1000 [1:37:18<15:31:30, 61.76s/it]#epoch:95 stage:1 train_loss:7.838e-03 val_loss:7.990e-03  time:1m2s
+
+ bg_pi:0.815 bg_ri:0.807 p_pi:0.791 p_ri:0.821 r_pi:0.871 r_ri:0.896 t_pi:0.852 t_ri:0.834
+ 10%|▉         | 96/1000 [1:38:20<15:34:38, 62.03s/it]#epoch:96 stage:1 train_loss:7.838e-03 val_loss:7.973e-03  time:1m3s
+
+ bg_pi:0.823 bg_ri:0.812 p_pi:0.803 p_ri:0.829 r_pi:0.884 r_ri:0.897 t_pi:0.857 t_ri:0.847
+ 10%|▉         | 97/1000 [1:39:22<15:34:12, 62.07s/it]#epoch:97 stage:1 train_loss:7.837e-03 val_loss:7.973e-03  time:1m2s
+
+ bg_pi:0.820 bg_ri:0.804 p_pi:0.807 p_ri:0.822 r_pi:0.882 r_ri:0.892 t_pi:0.851 t_ri:0.847
+ 10%|▉         | 98/1000 [1:40:25<15:33:06, 62.07s/it]#epoch:98 stage:1 train_loss:7.838e-03 val_loss:7.967e-03  time:1m2s
+
+ bg_pi:0.810 bg_ri:0.807 p_pi:0.803 p_ri:0.817 r_pi:0.885 r_ri:0.901 t_pi:0.854 t_ri:0.843
+ 10%|▉         | 99/1000 [1:41:27<15:32:44, 62.11s/it]#epoch:99 stage:1 train_loss:7.837e-03 val_loss:7.981e-03  time:1m2s
+
+ bg_pi:0.802 bg_ri:0.789 p_pi:0.796 p_ri:0.809 r_pi:0.878 r_ri:0.894 t_pi:0.843 t_ri:0.836
+ 10%|█         | 100/1000 [1:42:29<15:33:58, 62.27s/it]#epoch:100 stage:1 train_loss:7.839e-03 val_loss:7.974e-03  time:1m3s
+
+ bg_pi:0.820 bg_ri:0.799 p_pi:0.798 p_ri:0.828 r_pi:0.879 r_ri:0.879 t_pi:0.844 t_ri:0.842
+ 10%|█         | 101/1000 [1:43:32<15:35:50, 62.46s/it]#epoch:101 stage:1 train_loss:7.842e-03 val_loss:7.955e-03  time:1m3s
+
+ bg_pi:0.819 bg_ri:0.818 p_pi:0.830 p_ri:0.820 r_pi:0.874 r_ri:0.889 t_pi:0.854 t_ri:0.849
+ 10%|█         | 102/1000 [1:44:35<15:36:06, 62.55s/it]#epoch:102 stage:1 train_loss:7.841e-03 val_loss:7.954e-03  time:1m3s
+
+ bg_pi:0.840 bg_ri:0.814 p_pi:0.829 p_ri:0.835 r_pi:0.912 r_ri:0.918 t_pi:0.871 t_ri:0.875
+ 10%|█         | 103/1000 [1:45:38<15:36:51, 62.67s/it]#epoch:103 stage:1 train_loss:7.835e-03 val_loss:7.961e-03  time:1m3s
+
+ bg_pi:0.843 bg_ri:0.831 p_pi:0.821 p_ri:0.836 r_pi:0.880 r_ri:0.921 t_pi:0.876 t_ri:0.855
+ 10%|█         | 104/1000 [1:46:41<15:35:53, 62.67s/it]#epoch:104 stage:1 train_loss:7.823e-03 val_loss:7.946e-03  time:1m3s
+
+ bg_pi:0.829 bg_ri:0.818 p_pi:0.821 p_ri:0.833 r_pi:0.890 r_ri:0.910 t_pi:0.866 t_ri:0.856
+ 10%|█         | 105/1000 [1:47:43<15:34:32, 62.65s/it]#epoch:105 stage:1 train_loss:7.813e-03 val_loss:7.948e-03  time:1m3s
+
+ bg_pi:0.813 bg_ri:0.806 p_pi:0.824 p_ri:0.823 r_pi:0.891 r_ri:0.909 t_pi:0.860 t_ri:0.854
+ 11%|█         | 106/1000 [1:48:45<15:29:59, 62.42s/it]#epoch:106 stage:1 train_loss:7.810e-03 val_loss:7.950e-03  time:1m2s
+
+ bg_pi:0.817 bg_ri:0.792 p_pi:0.821 p_ri:0.823 r_pi:0.892 r_ri:0.896 t_pi:0.850 t_ri:0.855
+ 11%|█         | 107/1000 [1:49:47<15:26:25, 62.25s/it]#epoch:107 stage:1 train_loss:7.808e-03 val_loss:7.959e-03  time:1m2s
+
+ bg_pi:0.818 bg_ri:0.796 p_pi:0.807 p_ri:0.822 r_pi:0.887 r_ri:0.893 t_pi:0.849 t_ri:0.849
+ 11%|█         | 108/1000 [1:50:49<15:25:12, 62.23s/it]#epoch:108 stage:1 train_loss:7.806e-03 val_loss:7.968e-03  time:1m2s
+
+ bg_pi:0.814 bg_ri:0.801 p_pi:0.800 p_ri:0.817 r_pi:0.882 r_ri:0.885 t_pi:0.845 t_ri:0.843
+ 11%|█         | 109/1000 [1:51:52<15:25:46, 62.34s/it]#epoch:109 stage:1 train_loss:7.807e-03 val_loss:7.963e-03  time:1m3s
+
+ bg_pi:0.832 bg_ri:0.807 p_pi:0.800 p_ri:0.819 r_pi:0.887 r_ri:0.886 t_pi:0.849 t_ri:0.851
+ 11%|█         | 110/1000 [1:52:54<15:23:30, 62.26s/it]#epoch:110 stage:1 train_loss:7.809e-03 val_loss:7.951e-03  time:1m2s
+
+ bg_pi:0.824 bg_ri:0.814 p_pi:0.806 p_ri:0.818 r_pi:0.894 r_ri:0.894 t_pi:0.854 t_ri:0.854
+ 11%|█         | 111/1000 [1:53:56<15:21:37, 62.20s/it]#epoch:111 stage:1 train_loss:7.813e-03 val_loss:7.941e-03  time:1m2s
+
+ bg_pi:0.819 bg_ri:0.795 p_pi:0.824 p_ri:0.825 r_pi:0.898 r_ri:0.921 t_pi:0.864 t_ri:0.860
+ 11%|█         | 112/1000 [1:54:58<15:18:49, 62.08s/it]#epoch:112 stage:1 train_loss:7.811e-03 val_loss:7.945e-03  time:1m2s
+
+ bg_pi:0.822 bg_ri:0.791 p_pi:0.820 p_ri:0.831 r_pi:0.883 r_ri:0.909 t_pi:0.858 t_ri:0.852
+ 11%|█▏        | 113/1000 [1:56:00<15:20:11, 62.24s/it]#epoch:113 stage:1 train_loss:7.807e-03 val_loss:7.943e-03  time:1m3s
+
+ bg_pi:0.842 bg_ri:0.828 p_pi:0.826 p_ri:0.830 r_pi:0.889 r_ri:0.896 t_pi:0.862 t_ri:0.862
+ 11%|█▏        | 114/1000 [1:57:03<15:20:54, 62.36s/it]#epoch:114 stage:1 train_loss:7.802e-03 val_loss:7.944e-03  time:1m3s
+
+ bg_pi:0.847 bg_ri:0.817 p_pi:0.821 p_ri:0.836 r_pi:0.898 r_ri:0.910 t_pi:0.867 t_ri:0.867
+ 12%|█▏        | 115/1000 [1:58:06<15:20:45, 62.42s/it]#epoch:115 stage:1 train_loss:7.799e-03 val_loss:7.936e-03  time:1m3s
+
+ bg_pi:0.838 bg_ri:0.805 p_pi:0.830 p_ri:0.834 r_pi:0.903 r_ri:0.908 t_pi:0.863 t_ri:0.870
+ 12%|█▏        | 116/1000 [1:59:07<15:15:22, 62.13s/it]#epoch:116 stage:1 train_loss:7.796e-03 val_loss:7.933e-03  time:1m1s
+
+ bg_pi:0.828 bg_ri:0.825 p_pi:0.830 p_ri:0.831 r_pi:0.898 r_ri:0.904 t_pi:0.865 t_ri:0.863
+ 12%|█▏        | 117/1000 [2:00:08<15:10:53, 61.89s/it]#epoch:117 stage:1 train_loss:7.792e-03 val_loss:7.942e-03  time:1m1s
+
+ bg_pi:0.834 bg_ri:0.823 p_pi:0.823 p_ri:0.828 r_pi:0.886 r_ri:0.894 t_pi:0.859 t_ri:0.857
+ 12%|█▏        | 118/1000 [2:01:10<15:08:34, 61.81s/it]#epoch:118 stage:1 train_loss:7.788e-03 val_loss:7.953e-03  time:1m2s
+
+ bg_pi:0.829 bg_ri:0.822 p_pi:0.816 p_ri:0.832 r_pi:0.887 r_ri:0.890 t_pi:0.858 t_ri:0.854
+ 12%|█▏        | 119/1000 [2:02:12<15:08:10, 61.85s/it]#epoch:119 stage:1 train_loss:7.788e-03 val_loss:7.948e-03  time:1m2s
+
+ bg_pi:0.827 bg_ri:0.824 p_pi:0.814 p_ri:0.825 r_pi:0.896 r_ri:0.898 t_pi:0.861 t_ri:0.858
+ 12%|█▏        | 120/1000 [2:03:14<15:09:50, 62.03s/it]#epoch:120 stage:1 train_loss:7.789e-03 val_loss:7.938e-03  time:1m2s
+
+ bg_pi:0.812 bg_ri:0.804 p_pi:0.831 p_ri:0.822 r_pi:0.900 r_ri:0.916 t_pi:0.864 t_ri:0.861
+ 12%|█▏        | 121/1000 [2:04:17<15:10:10, 62.13s/it]#epoch:121 stage:1 train_loss:7.794e-03 val_loss:7.940e-03  time:1m2s
+
+ bg_pi:0.826 bg_ri:0.799 p_pi:0.827 p_ri:0.815 r_pi:0.897 r_ri:0.903 t_pi:0.855 t_ri:0.864
+ 12%|█▏        | 122/1000 [2:05:18<15:03:25, 61.74s/it]#epoch:122 stage:1 train_loss:7.791e-03 val_loss:7.954e-03  time:1m1s
+
+ bg_pi:0.823 bg_ri:0.818 p_pi:0.818 p_ri:0.829 r_pi:0.884 r_ri:0.878 t_pi:0.851 t_ri:0.853
+ 12%|█▏        | 123/1000 [2:06:20<15:06:21, 62.01s/it]#epoch:123 stage:1 train_loss:7.787e-03 val_loss:7.944e-03  time:1m3s
+
+ bg_pi:0.831 bg_ri:0.792 p_pi:0.816 p_ri:0.821 r_pi:0.891 r_ri:0.892 t_pi:0.849 t_ri:0.859
+ 12%|█▏        | 124/1000 [2:07:22<15:05:46, 62.04s/it]#epoch:124 stage:1 train_loss:7.782e-03 val_loss:7.944e-03  time:1m2s
+
+ bg_pi:0.819 bg_ri:0.793 p_pi:0.803 p_ri:0.826 r_pi:0.897 r_ri:0.899 t_pi:0.853 t_ri:0.853
+ 12%|█▎        | 125/1000 [2:08:24<15:05:28, 62.09s/it]#epoch:125 stage:1 train_loss:7.781e-03 val_loss:7.952e-03  time:1m2s
+
+ bg_pi:0.808 bg_ri:0.781 p_pi:0.809 p_ri:0.810 r_pi:0.889 r_ri:0.891 t_pi:0.842 t_ri:0.849
+ 13%|█▎        | 126/1000 [2:09:27<15:06:55, 62.26s/it]#epoch:126 stage:1 train_loss:7.779e-03 val_loss:7.949e-03  time:1m3s
+
+ bg_pi:0.811 bg_ri:0.788 p_pi:0.804 p_ri:0.816 r_pi:0.885 r_ri:0.896 t_pi:0.847 t_ri:0.845
+ 13%|█▎        | 127/1000 [2:10:30<15:08:21, 62.43s/it]#epoch:127 stage:1 train_loss:7.781e-03 val_loss:7.937e-03  time:1m3s
+
+ bg_pi:0.823 bg_ri:0.791 p_pi:0.817 p_ri:0.825 r_pi:0.883 r_ri:0.884 t_pi:0.845 t_ri:0.852
+ 13%|█▎        | 128/1000 [2:11:33<15:08:38, 62.52s/it]#epoch:128 stage:1 train_loss:7.784e-03 val_loss:7.940e-03  time:1m3s
+
+ bg_pi:0.841 bg_ri:0.813 p_pi:0.816 p_ri:0.820 r_pi:0.905 r_ri:0.892 t_pi:0.855 t_ri:0.868
+ 13%|█▎        | 129/1000 [2:12:35<15:05:25, 62.37s/it]#epoch:129 stage:1 train_loss:7.787e-03 val_loss:7.940e-03  time:1m2s
+
+ bg_pi:0.842 bg_ri:0.811 p_pi:0.835 p_ri:0.829 r_pi:0.918 r_ri:0.894 t_pi:0.860 t_ri:0.882
+ 13%|█▎        | 130/1000 [2:13:37<15:03:59, 62.34s/it]#epoch:130 stage:1 train_loss:7.781e-03 val_loss:7.935e-03  time:1m2s
+
+ bg_pi:0.842 bg_ri:0.819 p_pi:0.819 p_ri:0.829 r_pi:0.898 r_ri:0.899 t_pi:0.861 t_ri:0.865
+ 13%|█▎        | 131/1000 [2:14:38<14:57:40, 61.98s/it]#epoch:131 stage:1 train_loss:7.775e-03 val_loss:7.936e-03  time:1m1s
+
+ bg_pi:0.826 bg_ri:0.799 p_pi:0.817 p_ri:0.818 r_pi:0.899 r_ri:0.894 t_pi:0.851 t_ri:0.861
+ 13%|█▎        | 132/1000 [2:15:39<14:50:54, 61.58s/it]#epoch:132 stage:1 train_loss:7.770e-03 val_loss:7.942e-03  time:1m1s
+
+ bg_pi:0.820 bg_ri:0.789 p_pi:0.821 p_ri:0.814 r_pi:0.901 r_ri:0.879 t_pi:0.842 t_ri:0.863
+ 13%|█▎        | 133/1000 [2:16:39<14:46:02, 61.32s/it]#epoch:133 stage:1 train_loss:7.768e-03 val_loss:7.942e-03  time:1m1s
+
+ bg_pi:0.819 bg_ri:0.793 p_pi:0.821 p_ri:0.812 r_pi:0.906 r_ri:0.881 t_pi:0.843 t_ri:0.866
+ 13%|█▎        | 134/1000 [2:17:40<14:41:09, 61.05s/it]#epoch:134 stage:1 train_loss:7.769e-03 val_loss:7.933e-03  time:1m0s
+
+ bg_pi:0.830 bg_ri:0.797 p_pi:0.818 p_ri:0.819 r_pi:0.904 r_ri:0.902 t_pi:0.855 t_ri:0.866
+ 14%|█▎        | 135/1000 [2:18:41<14:42:21, 61.20s/it]#epoch:135 stage:1 train_loss:7.769e-03 val_loss:7.934e-03  time:1m2s
+
+ bg_pi:0.836 bg_ri:0.816 p_pi:0.818 p_ri:0.831 r_pi:0.902 r_ri:0.895 t_pi:0.859 t_ri:0.864
+ 14%|█▎        | 136/1000 [2:19:44<14:46:48, 61.58s/it]#epoch:136 stage:1 train_loss:7.771e-03 val_loss:7.936e-03  time:1m2s
+
+ bg_pi:0.841 bg_ri:0.822 p_pi:0.822 p_ri:0.837 r_pi:0.903 r_ri:0.893 t_pi:0.861 t_ri:0.867
+ 14%|█▎        | 137/1000 [2:20:46<14:48:38, 61.78s/it]#epoch:137 stage:1 train_loss:7.769e-03 val_loss:7.936e-03  time:1m2s
+
+ bg_pi:0.836 bg_ri:0.809 p_pi:0.820 p_ri:0.827 r_pi:0.906 r_ri:0.896 t_pi:0.858 t_ri:0.869
+ 14%|█▍        | 138/1000 [2:21:47<14:44:04, 61.54s/it]#epoch:138 stage:1 train_loss:7.763e-03 val_loss:7.933e-03  time:1m1s
+
+ bg_pi:0.831 bg_ri:0.807 p_pi:0.822 p_ri:0.829 r_pi:0.895 r_ri:0.905 t_pi:0.860 t_ri:0.861
+ 14%|█▍        | 139/1000 [2:22:48<14:39:28, 61.29s/it]#epoch:139 stage:1 train_loss:7.760e-03 val_loss:7.945e-03  time:1m1s
+
+ bg_pi:0.819 bg_ri:0.786 p_pi:0.805 p_ri:0.832 r_pi:0.890 r_ri:0.891 t_pi:0.849 t_ri:0.851
+ 14%|█▍        | 140/1000 [2:23:49<14:39:21, 61.35s/it]#epoch:140 stage:1 train_loss:7.757e-03 val_loss:7.930e-03  time:1m1s
+
+ bg_pi:0.818 bg_ri:0.808 p_pi:0.818 p_ri:0.828 r_pi:0.905 r_ri:0.901 t_pi:0.859 t_ri:0.861
+ 14%|█▍        | 141/1000 [2:24:51<14:41:41, 61.59s/it]#epoch:141 stage:1 train_loss:7.753e-03 val_loss:7.939e-03  time:1m2s
+
+ bg_pi:0.835 bg_ri:0.814 p_pi:0.818 p_ri:0.836 r_pi:0.909 r_ri:0.903 t_pi:0.864 t_ri:0.868
+ 14%|█▍        | 142/1000 [2:25:54<14:45:07, 61.90s/it]#epoch:142 stage:1 train_loss:7.749e-03 val_loss:7.942e-03  time:1m3s
+
+ bg_pi:0.825 bg_ri:0.815 p_pi:0.817 p_ri:0.836 r_pi:0.909 r_ri:0.906 t_pi:0.865 t_ri:0.864
+ 14%|█▍        | 143/1000 [2:26:56<14:44:32, 61.93s/it]#epoch:143 stage:1 train_loss:7.751e-03 val_loss:7.948e-03  time:1m2s
+
+ bg_pi:0.822 bg_ri:0.809 p_pi:0.809 p_ri:0.835 r_pi:0.905 r_ri:0.911 t_pi:0.865 t_ri:0.858
+ 14%|█▍        | 144/1000 [2:27:58<14:42:37, 61.87s/it]#epoch:144 stage:1 train_loss:7.751e-03 val_loss:7.954e-03  time:1m2s
+
+ bg_pi:0.817 bg_ri:0.808 p_pi:0.801 p_ri:0.828 r_pi:0.909 r_ri:0.913 t_pi:0.864 t_ri:0.857
+ 14%|█▍        | 145/1000 [2:29:00<14:42:46, 61.95s/it]#epoch:145 stage:1 train_loss:7.753e-03 val_loss:7.951e-03  time:1m2s
+
+ bg_pi:0.813 bg_ri:0.808 p_pi:0.805 p_ri:0.831 r_pi:0.911 r_ri:0.915 t_pi:0.865 t_ri:0.857
+ 15%|█▍        | 146/1000 [2:30:01<14:39:22, 61.78s/it]#epoch:146 stage:1 train_loss:7.756e-03 val_loss:7.955e-03  time:1m1s
+
+ bg_pi:0.816 bg_ri:0.795 p_pi:0.801 p_ri:0.834 r_pi:0.911 r_ri:0.911 t_pi:0.861 t_ri:0.858
+ 15%|█▍        | 147/1000 [2:31:03<14:35:56, 61.61s/it]#epoch:147 stage:1 train_loss:7.761e-03 val_loss:7.963e-03  time:1m1s
+
+ bg_pi:0.816 bg_ri:0.806 p_pi:0.798 p_ri:0.834 r_pi:0.916 r_ri:0.905 t_pi:0.862 t_ri:0.860
+ 15%|█▍        | 148/1000 [2:32:04<14:35:41, 61.67s/it]#epoch:148 stage:1 train_loss:7.761e-03 val_loss:7.949e-03  time:1m2s
+
+ bg_pi:0.831 bg_ri:0.814 p_pi:0.808 p_ri:0.838 r_pi:0.913 r_ri:0.920 t_pi:0.871 t_ri:0.865
+ 15%|█▍        | 149/1000 [2:33:07<14:39:18, 62.00s/it]#epoch:149 stage:1 train_loss:7.764e-03 val_loss:7.951e-03  time:1m3s
+
+ bg_pi:0.832 bg_ri:0.806 p_pi:0.814 p_ri:0.841 r_pi:0.917 r_ri:0.922 t_pi:0.871 t_ri:0.869
+ 15%|█▌        | 150/1000 [2:34:11<14:44:49, 62.46s/it]#epoch:150 stage:1 train_loss:7.765e-03 val_loss:7.959e-03  time:1m4s
+
+ bg_pi:0.817 bg_ri:0.808 p_pi:0.803 p_ri:0.835 r_pi:0.919 r_ri:0.922 t_pi:0.871 t_ri:0.862
+ 15%|█▌        | 151/1000 [2:35:12<14:40:25, 62.22s/it]#epoch:151 stage:1 train_loss:7.766e-03 val_loss:7.957e-03  time:1m2s
+
+ bg_pi:0.821 bg_ri:0.804 p_pi:0.794 p_ri:0.835 r_pi:0.911 r_ri:0.919 t_pi:0.867 t_ri:0.856
+ 15%|█▌        | 152/1000 [2:36:13<14:34:42, 61.89s/it]#epoch:152 stage:1 train_loss:7.763e-03 val_loss:7.940e-03  time:1m1s
+
+ bg_pi:0.827 bg_ri:0.800 p_pi:0.823 p_ri:0.814 r_pi:0.889 r_ri:0.935 t_pi:0.868 t_ri:0.857
+ 15%|█▌        | 153/1000 [2:37:16<14:36:21, 62.08s/it]#epoch:153 stage:1 train_loss:7.756e-03 val_loss:7.931e-03  time:1m3s
+
+ bg_pi:0.835 bg_ri:0.807 p_pi:0.823 p_ri:0.812 r_pi:0.889 r_ri:0.933 t_pi:0.868 t_ri:0.859
+ 15%|█▌        | 154/1000 [2:38:19<14:37:30, 62.23s/it]#epoch:154 stage:1 train_loss:7.750e-03 val_loss:7.936e-03  time:1m3s
+
+ bg_pi:0.835 bg_ri:0.794 p_pi:0.822 p_ri:0.809 r_pi:0.895 r_ri:0.932 t_pi:0.864 t_ri:0.863
+ 16%|█▌        | 155/1000 [2:39:21<14:37:17, 62.29s/it]#epoch:155 stage:1 train_loss:7.749e-03 val_loss:7.935e-03  time:1m2s
+
+ bg_pi:0.835 bg_ri:0.796 p_pi:0.826 p_ri:0.817 r_pi:0.899 r_ri:0.931 t_pi:0.866 t_ri:0.866
+ 16%|█▌        | 156/1000 [2:40:23<14:35:48, 62.26s/it]#epoch:156 stage:1 train_loss:7.748e-03 val_loss:7.930e-03  time:1m2s
+
+ bg_pi:0.824 bg_ri:0.803 p_pi:0.829 p_ri:0.820 r_pi:0.905 r_ri:0.917 t_pi:0.863 t_ri:0.867
+ 16%|█▌        | 157/1000 [2:41:24<14:26:55, 61.70s/it]#epoch:157 stage:1 train_loss:7.747e-03 val_loss:7.926e-03  time:1m0s
+
+ bg_pi:0.822 bg_ri:0.804 p_pi:0.840 p_ri:0.824 r_pi:0.902 r_ri:0.911 t_pi:0.862 t_ri:0.868
+ 16%|█▌        | 158/1000 [2:42:26<14:30:09, 62.01s/it]#epoch:158 stage:1 train_loss:7.744e-03 val_loss:7.924e-03  time:1m3s
+
+ bg_pi:0.821 bg_ri:0.806 p_pi:0.843 p_ri:0.829 r_pi:0.896 r_ri:0.911 t_pi:0.863 t_ri:0.865
+ 16%|█▌        | 159/1000 [2:43:29<14:32:24, 62.24s/it]#epoch:159 stage:1 train_loss:7.742e-03 val_loss:7.932e-03  time:1m3s
+
+ bg_pi:0.818 bg_ri:0.811 p_pi:0.846 p_ri:0.838 r_pi:0.893 r_ri:0.918 t_pi:0.870 t_ri:0.863
+ 16%|█▌        | 160/1000 [2:44:32<14:33:40, 62.41s/it]#epoch:160 stage:1 train_loss:7.741e-03 val_loss:7.938e-03  time:1m3s
+
+ bg_pi:0.815 bg_ri:0.814 p_pi:0.845 p_ri:0.840 r_pi:0.898 r_ri:0.923 t_pi:0.874 t_ri:0.863
+ 16%|█▌        | 161/1000 [2:45:34<14:32:54, 62.42s/it]#epoch:161 stage:1 train_loss:7.737e-03 val_loss:7.935e-03  time:1m2s
+
+ bg_pi:0.820 bg_ri:0.805 p_pi:0.845 p_ri:0.834 r_pi:0.901 r_ri:0.920 t_pi:0.869 t_ri:0.868
+ 16%|█▌        | 162/1000 [2:46:35<14:25:51, 61.99s/it]#epoch:162 stage:1 train_loss:7.733e-03 val_loss:7.931e-03  time:1m1s
+
+ bg_pi:0.821 bg_ri:0.808 p_pi:0.843 p_ri:0.828 r_pi:0.903 r_ri:0.915 t_pi:0.867 t_ri:0.869
+ 16%|█▋        | 163/1000 [2:47:36<14:19:47, 61.63s/it]#epoch:163 stage:1 train_loss:7.729e-03 val_loss:7.936e-03  time:1m1s
+
+ bg_pi:0.822 bg_ri:0.810 p_pi:0.839 p_ri:0.829 r_pi:0.906 r_ri:0.917 t_pi:0.868 t_ri:0.869
+ 16%|█▋        | 164/1000 [2:48:37<14:13:44, 61.27s/it]#epoch:164 stage:1 train_loss:7.728e-03 val_loss:7.939e-03  time:1m0s
+
+ bg_pi:0.822 bg_ri:0.810 p_pi:0.831 p_ri:0.832 r_pi:0.904 r_ri:0.927 t_pi:0.873 t_ri:0.865
+ 16%|█▋        | 165/1000 [2:49:38<14:14:06, 61.37s/it]#epoch:165 stage:1 train_loss:7.727e-03 val_loss:7.944e-03  time:1m2s
+
+ bg_pi:0.817 bg_ri:0.801 p_pi:0.829 p_ri:0.826 r_pi:0.902 r_ri:0.932 t_pi:0.871 t_ri:0.863
+ 17%|█▋        | 166/1000 [2:50:39<14:12:33, 61.34s/it]#epoch:166 stage:1 train_loss:7.730e-03 val_loss:7.946e-03  time:1m1s
+
+ bg_pi:0.808 bg_ri:0.794 p_pi:0.831 p_ri:0.820 r_pi:0.902 r_ri:0.930 t_pi:0.867 t_ri:0.862
+ 17%|█▋        | 167/1000 [2:51:40<14:10:13, 61.24s/it]#epoch:167 stage:1 train_loss:7.732e-03 val_loss:7.947e-03  time:1m1s
+
+ bg_pi:0.821 bg_ri:0.796 p_pi:0.835 p_ri:0.823 r_pi:0.904 r_ri:0.935 t_pi:0.871 t_ri:0.868
+ 17%|█▋        | 168/1000 [2:52:41<14:05:15, 60.96s/it]#epoch:168 stage:1 train_loss:7.736e-03 val_loss:7.942e-03  time:1m0s
+
+ bg_pi:0.833 bg_ri:0.819 p_pi:0.837 p_ri:0.828 r_pi:0.907 r_ri:0.926 t_pi:0.874 t_ri:0.872
+ 17%|█▋        | 169/1000 [2:53:41<14:02:47, 60.85s/it]#epoch:169 stage:1 train_loss:7.735e-03 val_loss:7.942e-03  time:1m1s
+
+ bg_pi:0.823 bg_ri:0.821 p_pi:0.832 p_ri:0.831 r_pi:0.908 r_ri:0.920 t_pi:0.872 t_ri:0.868
+ 17%|█▋        | 170/1000 [2:54:42<14:02:46, 60.92s/it]#epoch:170 stage:1 train_loss:7.739e-03 val_loss:7.925e-03  time:1m1s
+
+ bg_pi:0.823 bg_ri:0.803 p_pi:0.840 p_ri:0.833 r_pi:0.900 r_ri:0.911 t_pi:0.864 t_ri:0.867
+ 17%|█▋        | 171/1000 [2:55:45<14:06:46, 61.29s/it]#epoch:171 stage:1 train_loss:7.743e-03 val_loss:7.933e-03  time:1m2s
+
+ bg_pi:0.828 bg_ri:0.809 p_pi:0.852 p_ri:0.838 r_pi:0.888 r_ri:0.906 t_pi:0.864 t_ri:0.866
+ 17%|█▋        | 172/1000 [2:56:47<14:08:30, 61.49s/it]#epoch:172 stage:1 train_loss:7.746e-03 val_loss:7.931e-03  time:1m2s
+
+ bg_pi:0.831 bg_ri:0.804 p_pi:0.836 p_ri:0.839 r_pi:0.885 r_ri:0.898 t_pi:0.859 t_ri:0.861
+ 17%|█▋        | 173/1000 [2:57:48<14:08:52, 61.59s/it]#epoch:173 stage:1 train_loss:7.741e-03 val_loss:7.943e-03  time:1m2s
+
+ bg_pi:0.848 bg_ri:0.804 p_pi:0.823 p_ri:0.843 r_pi:0.885 r_ri:0.900 t_pi:0.860 t_ri:0.861
+ 17%|█▋        | 174/1000 [2:58:52<14:14:54, 62.10s/it]#epoch:174 stage:1 train_loss:7.734e-03 val_loss:7.945e-03  time:1m3s
+
+ bg_pi:0.855 bg_ri:0.799 p_pi:0.823 p_ri:0.842 r_pi:0.891 r_ri:0.902 t_pi:0.860 t_ri:0.867
+ 18%|█▊        | 175/1000 [2:59:54<14:15:14, 62.20s/it]#epoch:175 stage:1 train_loss:7.727e-03 val_loss:7.940e-03  time:1m2s
+
+ bg_pi:0.854 bg_ri:0.803 p_pi:0.823 p_ri:0.842 r_pi:0.897 r_ri:0.900 t_pi:0.861 t_ri:0.870
+ 18%|█▊        | 176/1000 [3:00:56<14:13:31, 62.15s/it]#epoch:176 stage:1 train_loss:7.721e-03 val_loss:7.934e-03  time:1m2s
+
+ bg_pi:0.846 bg_ri:0.804 p_pi:0.828 p_ri:0.841 r_pi:0.899 r_ri:0.909 t_pi:0.865 t_ri:0.870
+ 18%|█▊        | 177/1000 [3:01:59<14:16:45, 62.46s/it]#epoch:177 stage:1 train_loss:7.717e-03 val_loss:7.937e-03  time:1m3s
+
+ bg_pi:0.841 bg_ri:0.804 p_pi:0.830 p_ri:0.840 r_pi:0.902 r_ri:0.914 t_pi:0.867 t_ri:0.870
+ 18%|█▊        | 178/1000 [3:03:02<14:16:52, 62.55s/it]#epoch:178 stage:1 train_loss:7.712e-03 val_loss:7.942e-03  time:1m3s
+
+ bg_pi:0.838 bg_ri:0.807 p_pi:0.832 p_ri:0.840 r_pi:0.901 r_ri:0.918 t_pi:0.869 t_ri:0.869
+ 18%|█▊        | 179/1000 [3:04:05<14:18:58, 62.77s/it]#epoch:179 stage:1 train_loss:7.709e-03 val_loss:7.944e-03  time:1m3s
+
+ bg_pi:0.835 bg_ri:0.805 p_pi:0.834 p_ri:0.839 r_pi:0.899 r_ri:0.922 t_pi:0.871 t_ri:0.868
+ 18%|█▊        | 180/1000 [3:05:08<14:17:50, 62.77s/it]#epoch:180 stage:1 train_loss:7.709e-03 val_loss:7.945e-03  time:1m3s
+
+ bg_pi:0.833 bg_ri:0.802 p_pi:0.834 p_ri:0.839 r_pi:0.897 r_ri:0.923 t_pi:0.871 t_ri:0.867
+ 18%|█▊        | 181/1000 [3:06:11<14:16:31, 62.75s/it]#epoch:181 stage:1 train_loss:7.712e-03 val_loss:7.946e-03  time:1m3s
+
+ bg_pi:0.846 bg_ri:0.799 p_pi:0.839 p_ri:0.844 r_pi:0.895 r_ri:0.919 t_pi:0.869 t_ri:0.871
+ 18%|█▊        | 182/1000 [3:07:13<14:12:21, 62.52s/it]#epoch:182 stage:1 train_loss:7.717e-03 val_loss:7.949e-03  time:1m2s
+
+ bg_pi:0.857 bg_ri:0.799 p_pi:0.845 p_ri:0.843 r_pi:0.895 r_ri:0.916 t_pi:0.868 t_ri:0.877
+ 18%|█▊        | 183/1000 [3:08:16<14:12:50, 62.63s/it]#epoch:183 stage:1 train_loss:7.721e-03 val_loss:7.945e-03  time:1m3s
+
+ bg_pi:0.849 bg_ri:0.804 p_pi:0.843 p_ri:0.840 r_pi:0.901 r_ri:0.912 t_pi:0.867 t_ri:0.877
+ 18%|█▊        | 184/1000 [3:09:18<14:11:48, 62.63s/it]#epoch:184 stage:1 train_loss:7.723e-03 val_loss:7.945e-03  time:1m3s
+
+ bg_pi:0.838 bg_ri:0.816 p_pi:0.836 p_ri:0.839 r_pi:0.903 r_ri:0.912 t_pi:0.869 t_ri:0.871
+ 18%|█▊        | 185/1000 [3:10:21<14:11:17, 62.67s/it]#epoch:185 stage:1 train_loss:7.724e-03 val_loss:7.936e-03  time:1m3s
+
+ bg_pi:0.834 bg_ri:0.815 p_pi:0.827 p_ri:0.834 r_pi:0.893 r_ri:0.912 t_pi:0.867 t_ri:0.862
+ 19%|█▊        | 186/1000 [3:11:24<14:09:56, 62.65s/it]#epoch:186 stage:1 train_loss:7.724e-03 val_loss:7.937e-03  time:1m3s
+
+ bg_pi:0.834 bg_ri:0.810 p_pi:0.821 p_ri:0.824 r_pi:0.884 r_ri:0.906 t_pi:0.861 t_ri:0.856
+ 19%|█▊        | 187/1000 [3:12:26<14:08:40, 62.63s/it]#epoch:187 stage:1 train_loss:7.721e-03 val_loss:7.944e-03  time:1m3s
+
+ bg_pi:0.833 bg_ri:0.821 p_pi:0.820 p_ri:0.823 r_pi:0.882 r_ri:0.897 t_pi:0.858 t_ri:0.854
+ 19%|█▉        | 188/1000 [3:13:29<14:06:36, 62.56s/it]#epoch:188 stage:1 train_loss:7.717e-03 val_loss:7.950e-03  time:1m2s
+
+ bg_pi:0.832 bg_ri:0.824 p_pi:0.821 p_ri:0.825 r_pi:0.881 r_ri:0.888 t_pi:0.856 t_ri:0.854
+ 19%|█▉        | 189/1000 [3:14:31<14:05:33, 62.56s/it]#epoch:189 stage:1 train_loss:7.713e-03 val_loss:7.947e-03  time:1m3s
+
+ bg_pi:0.833 bg_ri:0.825 p_pi:0.819 p_ri:0.829 r_pi:0.886 r_ri:0.886 t_pi:0.856 t_ri:0.856
+ 19%|█▉        | 190/1000 [3:15:33<14:01:21, 62.32s/it]#epoch:190 stage:1 train_loss:7.710e-03 val_loss:7.942e-03  time:1m2s
+
+ bg_pi:0.837 bg_ri:0.821 p_pi:0.817 p_ri:0.830 r_pi:0.890 r_ri:0.894 t_pi:0.859 t_ri:0.858
+ 19%|█▉        | 191/1000 [3:16:36<14:01:18, 62.40s/it]#epoch:191 stage:1 train_loss:7.705e-03 val_loss:7.943e-03  time:1m3s
+
+ bg_pi:0.836 bg_ri:0.818 p_pi:0.816 p_ri:0.832 r_pi:0.894 r_ri:0.903 t_pi:0.863 t_ri:0.860
+ 19%|█▉        | 192/1000 [3:17:38<13:59:15, 62.32s/it]#epoch:192 stage:1 train_loss:7.700e-03 val_loss:7.948e-03  time:1m2s
+
+ bg_pi:0.839 bg_ri:0.818 p_pi:0.820 p_ri:0.834 r_pi:0.899 r_ri:0.915 t_pi:0.869 t_ri:0.864
+ 19%|█▉        | 193/1000 [3:18:40<13:58:01, 62.31s/it]#epoch:193 stage:1 train_loss:7.699e-03 val_loss:7.946e-03  time:1m2s
+
+ bg_pi:0.842 bg_ri:0.816 p_pi:0.824 p_ri:0.835 r_pi:0.900 r_ri:0.917 t_pi:0.870 t_ri:0.867
+ 19%|█▉        | 194/1000 [3:19:42<13:53:53, 62.08s/it]#epoch:194 stage:1 train_loss:7.697e-03 val_loss:7.945e-03  time:1m2s
+
+ bg_pi:0.842 bg_ri:0.814 p_pi:0.829 p_ri:0.835 r_pi:0.897 r_ri:0.913 t_pi:0.868 t_ri:0.868
+ 20%|█▉        | 195/1000 [3:20:43<13:51:27, 61.97s/it]#epoch:195 stage:1 train_loss:7.698e-03 val_loss:7.947e-03  time:1m2s
+
+ bg_pi:0.843 bg_ri:0.814 p_pi:0.833 p_ri:0.836 r_pi:0.893 r_ri:0.906 t_pi:0.865 t_ri:0.867
+ 20%|█▉        | 196/1000 [3:21:44<13:46:19, 61.67s/it]#epoch:196 stage:1 train_loss:7.698e-03 val_loss:7.948e-03  time:1m1s
+
+ bg_pi:0.844 bg_ri:0.817 p_pi:0.835 p_ri:0.837 r_pi:0.891 r_ri:0.901 t_pi:0.864 t_ri:0.867
+ 20%|█▉        | 197/1000 [3:22:45<13:42:57, 61.49s/it]#epoch:197 stage:1 train_loss:7.699e-03 val_loss:7.948e-03  time:1m1s
+
+ bg_pi:0.841 bg_ri:0.823 p_pi:0.834 p_ri:0.838 r_pi:0.891 r_ri:0.899 t_pi:0.865 t_ri:0.865
+ 20%|█▉        | 198/1000 [3:23:46<13:40:03, 61.35s/it]#epoch:198 stage:1 train_loss:7.699e-03 val_loss:7.949e-03  time:1m1s
+
+ bg_pi:0.838 bg_ri:0.825 p_pi:0.830 p_ri:0.836 r_pi:0.891 r_ri:0.901 t_pi:0.866 t_ri:0.863
+ 20%|█▉        | 199/1000 [3:24:47<13:37:30, 61.24s/it]#epoch:199 stage:1 train_loss:7.700e-03 val_loss:7.951e-03  time:1m1s
+
+ bg_pi:0.836 bg_ri:0.824 p_pi:0.825 p_ri:0.831 r_pi:0.891 r_ri:0.905 t_pi:0.866 t_ri:0.861
+ 20%|██        | 200/1000 [3:25:47<13:31:40, 60.88s/it]#epoch:200 stage:1 train_loss:7.701e-03 val_loss:7.951e-03  time:1m0s
+
+ bg_pi:0.836 bg_ri:0.822 p_pi:0.819 p_ri:0.826 r_pi:0.891 r_ri:0.910 t_pi:0.866 t_ri:0.860
+ 20%|██        | 201/1000 [3:26:49<13:34:09, 61.14s/it]#epoch:201 stage:1 train_loss:7.701e-03 val_loss:7.947e-03  time:1m2s
+
+ bg_pi:0.837 bg_ri:0.820 p_pi:0.817 p_ri:0.827 r_pi:0.894 r_ri:0.912 t_pi:0.867 t_ri:0.860
+ 20%|██        | 202/1000 [3:27:50<13:31:49, 61.04s/it]#epoch:202 stage:1 train_loss:7.704e-03 val_loss:7.944e-03  time:1m1s
+
+ bg_pi:0.835 bg_ri:0.813 p_pi:0.821 p_ri:0.830 r_pi:0.899 r_ri:0.911 t_pi:0.865 t_ri:0.864
+ 20%|██        | 203/1000 [3:28:51<13:32:34, 61.17s/it]#epoch:203 stage:1 train_loss:7.711e-03 val_loss:7.946e-03  time:1m1s
+
+ bg_pi:0.820 bg_ri:0.778 p_pi:0.825 p_ri:0.830 r_pi:0.896 r_ri:0.904 t_pi:0.853 t_ri:0.861
+ 20%|██        | 204/1000 [3:29:52<13:29:24, 61.01s/it]#epoch:204 stage:1 train_loss:7.722e-03 val_loss:7.954e-03  time:1m1s
+
+ bg_pi:0.802 bg_ri:0.769 p_pi:0.821 p_ri:0.820 r_pi:0.881 r_ri:0.900 t_pi:0.846 t_ri:0.848
+ 20%|██        | 205/1000 [3:30:53<13:29:19, 61.08s/it]#epoch:205 stage:1 train_loss:7.722e-03 val_loss:7.957e-03  time:1m1s
+
+ bg_pi:0.803 bg_ri:0.780 p_pi:0.815 p_ri:0.812 r_pi:0.876 r_ri:0.893 t_pi:0.843 t_ri:0.843
+ 21%|██        | 206/1000 [3:31:55<13:29:36, 61.18s/it]#epoch:206 stage:1 train_loss:7.718e-03 val_loss:7.948e-03  time:1m1s
+
+ bg_pi:0.813 bg_ri:0.780 p_pi:0.813 p_ri:0.820 r_pi:0.888 r_ri:0.892 t_pi:0.845 t_ri:0.852
+ 21%|██        | 207/1000 [3:32:57<13:31:47, 61.42s/it]#epoch:207 stage:1 train_loss:7.710e-03 val_loss:7.945e-03  time:1m2s
+
+ bg_pi:0.820 bg_ri:0.785 p_pi:0.809 p_ri:0.829 r_pi:0.892 r_ri:0.902 t_pi:0.853 t_ri:0.853
+ 21%|██        | 208/1000 [3:33:59<13:33:58, 61.66s/it]#epoch:208 stage:1 train_loss:7.701e-03 val_loss:7.942e-03  time:1m2s
+
+ bg_pi:0.822 bg_ri:0.789 p_pi:0.815 p_ri:0.830 r_pi:0.892 r_ri:0.907 t_pi:0.856 t_ri:0.856
+ 21%|██        | 209/1000 [3:35:03<13:41:38, 62.32s/it]#epoch:209 stage:1 train_loss:7.693e-03 val_loss:7.942e-03  time:1m4s
+
+ bg_pi:0.823 bg_ri:0.787 p_pi:0.822 p_ri:0.829 r_pi:0.891 r_ri:0.908 t_pi:0.857 t_ri:0.858
+ 21%|██        | 210/1000 [3:36:05<13:40:51, 62.34s/it]#epoch:210 stage:1 train_loss:7.689e-03 val_loss:7.941e-03  time:1m2s
+
+ bg_pi:0.824 bg_ri:0.786 p_pi:0.826 p_ri:0.828 r_pi:0.890 r_ri:0.908 t_pi:0.856 t_ri:0.859
+ 21%|██        | 211/1000 [3:37:07<13:39:26, 62.32s/it]#epoch:211 stage:1 train_loss:7.688e-03 val_loss:7.943e-03  time:1m2s
+
+ bg_pi:0.822 bg_ri:0.787 p_pi:0.827 p_ri:0.827 r_pi:0.890 r_ri:0.907 t_pi:0.856 t_ri:0.859
+ 21%|██        | 212/1000 [3:38:11<13:42:02, 62.59s/it]#epoch:212 stage:1 train_loss:7.688e-03 val_loss:7.945e-03  time:1m3s
+
+ bg_pi:0.820 bg_ri:0.786 p_pi:0.827 p_ri:0.827 r_pi:0.889 r_ri:0.904 t_pi:0.854 t_ri:0.858
+ 21%|██▏       | 213/1000 [3:39:13<13:39:45, 62.50s/it]#epoch:213 stage:1 train_loss:7.688e-03 val_loss:7.947e-03  time:1m2s
+
+ bg_pi:0.818 bg_ri:0.784 p_pi:0.825 p_ri:0.826 r_pi:0.890 r_ri:0.901 t_pi:0.852 t_ri:0.857
+ 21%|██▏       | 214/1000 [3:40:15<13:39:05, 62.53s/it]#epoch:214 stage:1 train_loss:7.688e-03 val_loss:7.952e-03  time:1m3s
+
+ bg_pi:0.812 bg_ri:0.779 p_pi:0.818 p_ri:0.823 r_pi:0.889 r_ri:0.899 t_pi:0.849 t_ri:0.854
+ 22%|██▏       | 215/1000 [3:41:18<13:38:24, 62.55s/it]#epoch:215 stage:1 train_loss:7.689e-03 val_loss:7.954e-03  time:1m3s
+
+ bg_pi:0.813 bg_ri:0.780 p_pi:0.814 p_ri:0.822 r_pi:0.889 r_ri:0.899 t_pi:0.849 t_ri:0.852
+ 22%|██▏       | 216/1000 [3:42:20<13:33:37, 62.27s/it]#epoch:216 stage:1 train_loss:7.690e-03 val_loss:7.952e-03  time:1m2s
+
+ bg_pi:0.818 bg_ri:0.786 p_pi:0.812 p_ri:0.823 r_pi:0.888 r_ri:0.901 t_pi:0.852 t_ri:0.852
+ 22%|██▏       | 217/1000 [3:43:22<13:32:27, 62.26s/it]#epoch:217 stage:1 train_loss:7.689e-03 val_loss:7.948e-03  time:1m2s
+
+ bg_pi:0.824 bg_ri:0.792 p_pi:0.815 p_ri:0.826 r_pi:0.888 r_ri:0.904 t_pi:0.855 t_ri:0.854
+ 22%|██▏       | 218/1000 [3:44:22<13:24:48, 61.75s/it]#epoch:218 stage:1 train_loss:7.686e-03 val_loss:7.947e-03  time:1m1s
+
+ bg_pi:0.827 bg_ri:0.796 p_pi:0.819 p_ri:0.830 r_pi:0.890 r_ri:0.906 t_pi:0.858 t_ri:0.858
+ 22%|██▏       | 219/1000 [3:45:23<13:18:19, 61.33s/it]#epoch:219 stage:1 train_loss:7.683e-03 val_loss:7.947e-03  time:1m0s
+
+ bg_pi:0.829 bg_ri:0.798 p_pi:0.823 p_ri:0.833 r_pi:0.894 r_ri:0.906 t_pi:0.860 t_ri:0.861
+ 22%|██▏       | 220/1000 [3:46:24<13:15:25, 61.19s/it]#epoch:220 stage:1 train_loss:7.681e-03 val_loss:7.947e-03  time:1m1s
+
+ bg_pi:0.829 bg_ri:0.798 p_pi:0.826 p_ri:0.833 r_pi:0.896 r_ri:0.906 t_pi:0.860 t_ri:0.864
+ 22%|██▏       | 221/1000 [3:47:24<13:10:29, 60.89s/it]#epoch:221 stage:1 train_loss:7.680e-03 val_loss:7.947e-03  time:1m0s
+
+ bg_pi:0.829 bg_ri:0.797 p_pi:0.828 p_ri:0.832 r_pi:0.896 r_ri:0.906 t_pi:0.860 t_ri:0.864
+ 22%|██▏       | 222/1000 [3:48:24<13:06:31, 60.66s/it]#epoch:222 stage:1 train_loss:7.679e-03 val_loss:7.948e-03  time:1m0s
+
+ bg_pi:0.828 bg_ri:0.797 p_pi:0.828 p_ri:0.831 r_pi:0.894 r_ri:0.905 t_pi:0.859 t_ri:0.863
+ 22%|██▏       | 223/1000 [3:49:24<13:02:58, 60.46s/it]#epoch:223 stage:1 train_loss:7.679e-03 val_loss:7.948e-03  time:0m60s
+
+ bg_pi:0.827 bg_ri:0.797 p_pi:0.827 p_ri:0.829 r_pi:0.890 r_ri:0.904 t_pi:0.858 t_ri:0.860
+ 22%|██▏       | 224/1000 [3:50:24<13:01:16, 60.41s/it]#epoch:224 stage:1 train_loss:7.679e-03 val_loss:7.950e-03  time:1m0s
+
+ bg_pi:0.825 bg_ri:0.795 p_pi:0.825 p_ri:0.827 r_pi:0.887 r_ri:0.902 t_pi:0.856 t_ri:0.857
+ 22%|██▎       | 225/1000 [3:51:25<13:00:18, 60.41s/it]#epoch:225 stage:1 train_loss:7.679e-03 val_loss:7.954e-03  time:1m0s
+
+ bg_pi:0.819 bg_ri:0.787 p_pi:0.818 p_ri:0.825 r_pi:0.887 r_ri:0.900 t_pi:0.852 t_ri:0.854
+ 23%|██▎       | 226/1000 [3:52:26<13:02:55, 60.69s/it]#epoch:226 stage:1 train_loss:7.680e-03 val_loss:7.957e-03  time:1m1s
+
+ bg_pi:0.817 bg_ri:0.783 p_pi:0.815 p_ri:0.825 r_pi:0.891 r_ri:0.901 t_pi:0.851 t_ri:0.854
+ 23%|██▎       | 227/1000 [3:53:29<13:08:58, 61.24s/it]#epoch:227 stage:1 train_loss:7.680e-03 val_loss:7.956e-03  time:1m3s
+
+ bg_pi:0.817 bg_ri:0.782 p_pi:0.816 p_ri:0.826 r_pi:0.892 r_ri:0.903 t_pi:0.852 t_ri:0.856
+ 23%|██▎       | 228/1000 [3:54:31<13:12:11, 61.57s/it]#epoch:228 stage:1 train_loss:7.680e-03 val_loss:7.952e-03  time:1m2s
+
+ bg_pi:0.820 bg_ri:0.787 p_pi:0.819 p_ri:0.827 r_pi:0.892 r_ri:0.904 t_pi:0.854 t_ri:0.857
+ 23%|██▎       | 229/1000 [3:55:31<13:06:09, 61.18s/it]#epoch:229 stage:1 train_loss:7.679e-03 val_loss:7.950e-03  time:1m0s
+
+ bg_pi:0.824 bg_ri:0.795 p_pi:0.823 p_ri:0.828 r_pi:0.890 r_ri:0.904 t_pi:0.857 t_ri:0.858
+ 23%|██▎       | 230/1000 [3:56:33<13:07:03, 61.33s/it]#epoch:230 stage:1 train_loss:7.677e-03 val_loss:7.951e-03  time:1m2s
+
+ bg_pi:0.828 bg_ri:0.799 p_pi:0.824 p_ri:0.829 r_pi:0.890 r_ri:0.904 t_pi:0.858 t_ri:0.859
+ 23%|██▎       | 231/1000 [3:57:35<13:08:33, 61.53s/it]#epoch:231 stage:1 train_loss:7.675e-03 val_loss:7.952e-03  time:1m2s
+
+ bg_pi:0.830 bg_ri:0.800 p_pi:0.824 p_ri:0.831 r_pi:0.891 r_ri:0.903 t_pi:0.859 t_ri:0.860
+ 23%|██▎       | 232/1000 [3:58:37<13:09:43, 61.70s/it]#epoch:232 stage:1 train_loss:7.674e-03 val_loss:7.953e-03  time:1m2s
+
+ bg_pi:0.830 bg_ri:0.799 p_pi:0.823 p_ri:0.832 r_pi:0.892 r_ri:0.903 t_pi:0.859 t_ri:0.861
+ 23%|██▎       | 233/1000 [3:59:39<13:11:06, 61.89s/it]#epoch:233 stage:1 train_loss:7.673e-03 val_loss:7.954e-03  time:1m2s
+
+ bg_pi:0.829 bg_ri:0.799 p_pi:0.822 p_ri:0.832 r_pi:0.894 r_ri:0.903 t_pi:0.859 t_ri:0.861
+ 23%|██▎       | 234/1000 [4:00:40<13:07:22, 61.67s/it]#epoch:234 stage:1 train_loss:7.673e-03 val_loss:7.955e-03  time:1m1s
+
+ bg_pi:0.828 bg_ri:0.798 p_pi:0.821 p_ri:0.831 r_pi:0.894 r_ri:0.904 t_pi:0.858 t_ri:0.860
+ 24%|██▎       | 235/1000 [4:01:43<13:08:03, 61.81s/it]#epoch:235 stage:1 train_loss:7.673e-03 val_loss:7.955e-03  time:1m2s
+
+ bg_pi:0.827 bg_ri:0.796 p_pi:0.821 p_ri:0.830 r_pi:0.893 r_ri:0.904 t_pi:0.858 t_ri:0.859
+ 24%|██▎       | 236/1000 [4:02:43<13:02:52, 61.48s/it]#epoch:236 stage:1 train_loss:7.673e-03 val_loss:7.956e-03  time:1m1s
+
+ bg_pi:0.823 bg_ri:0.791 p_pi:0.820 p_ri:0.827 r_pi:0.889 r_ri:0.903 t_pi:0.855 t_ri:0.857
+ 24%|██▎       | 237/1000 [4:03:43<12:56:52, 61.09s/it]#epoch:237 stage:1 train_loss:7.673e-03 val_loss:7.957e-03  time:1m0s
+
+ bg_pi:0.821 bg_ri:0.788 p_pi:0.820 p_ri:0.826 r_pi:0.888 r_ri:0.902 t_pi:0.853 t_ri:0.856
+ 24%|██▍       | 238/1000 [4:04:43<12:49:23, 60.58s/it]#epoch:238 stage:1 train_loss:7.673e-03 val_loss:7.957e-03  time:0m59s
+
+ bg_pi:0.820 bg_ri:0.787 p_pi:0.820 p_ri:0.826 r_pi:0.889 r_ri:0.901 t_pi:0.853 t_ri:0.856
+ 24%|██▍       | 239/1000 [4:05:43<12:46:28, 60.43s/it]#epoch:239 stage:1 train_loss:7.673e-03 val_loss:7.957e-03  time:1m0s
+
+ bg_pi:0.821 bg_ri:0.789 p_pi:0.820 p_ri:0.828 r_pi:0.891 r_ri:0.901 t_pi:0.854 t_ri:0.857
+ 24%|██▍       | 240/1000 [4:06:46<12:55:26, 61.22s/it]#epoch:240 stage:1 train_loss:7.672e-03 val_loss:7.956e-03  time:1m3s
+
+ bg_pi:0.823 bg_ri:0.792 p_pi:0.820 p_ri:0.829 r_pi:0.892 r_ri:0.902 t_pi:0.856 t_ri:0.858
+ 24%|██▍       | 241/1000 [4:07:47<12:55:27, 61.30s/it]#epoch:241 stage:1 train_loss:7.671e-03 val_loss:7.956e-03  time:1m1s
+
+ bg_pi:0.826 bg_ri:0.796 p_pi:0.821 p_ri:0.831 r_pi:0.892 r_ri:0.903 t_pi:0.858 t_ri:0.859
+ 24%|██▍       | 242/1000 [4:08:48<12:53:01, 61.19s/it]#epoch:242 stage:1 train_loss:7.670e-03 val_loss:7.956e-03  time:1m1s
+
+ bg_pi:0.829 bg_ri:0.798 p_pi:0.822 p_ri:0.831 r_pi:0.892 r_ri:0.904 t_pi:0.858 t_ri:0.860
+ 24%|██▍       | 243/1000 [4:09:51<12:58:31, 61.71s/it]#epoch:243 stage:1 train_loss:7.670e-03 val_loss:7.956e-03  time:1m3s
+
+ bg_pi:0.829 bg_ri:0.799 p_pi:0.823 p_ri:0.831 r_pi:0.891 r_ri:0.904 t_pi:0.859 t_ri:0.860
+ 24%|██▍       | 244/1000 [4:10:54<12:59:47, 61.89s/it]#epoch:244 stage:1 train_loss:7.669e-03 val_loss:7.956e-03  time:1m2s
+
+ bg_pi:0.829 bg_ri:0.800 p_pi:0.823 p_ri:0.831 r_pi:0.891 r_ri:0.903 t_pi:0.858 t_ri:0.860
+ 24%|██▍       | 245/1000 [4:11:57<13:02:31, 62.19s/it]#epoch:245 stage:1 train_loss:7.669e-03 val_loss:7.957e-03  time:1m3s
+
+ bg_pi:0.827 bg_ri:0.798 p_pi:0.823 p_ri:0.830 r_pi:0.891 r_ri:0.902 t_pi:0.858 t_ri:0.859
+ 25%|██▍       | 246/1000 [4:13:00<13:05:58, 62.54s/it]#epoch:246 stage:1 train_loss:7.669e-03 val_loss:7.957e-03  time:1m3s
+
+ bg_pi:0.826 bg_ri:0.796 p_pi:0.823 p_ri:0.830 r_pi:0.891 r_ri:0.901 t_pi:0.856 t_ri:0.859
+ 25%|██▍       | 247/1000 [4:14:03<13:07:07, 62.72s/it]#epoch:247 stage:1 train_loss:7.668e-03 val_loss:7.958e-03  time:1m3s
+
+ bg_pi:0.823 bg_ri:0.792 p_pi:0.821 p_ri:0.829 r_pi:0.891 r_ri:0.901 t_pi:0.855 t_ri:0.858
+ 25%|██▍       | 248/1000 [4:15:04<12:59:26, 62.19s/it]#epoch:248 stage:1 train_loss:7.668e-03 val_loss:7.959e-03  time:1m1s
+
+ bg_pi:0.823 bg_ri:0.791 p_pi:0.820 p_ri:0.828 r_pi:0.891 r_ri:0.902 t_pi:0.855 t_ri:0.857
+ 25%|██▍       | 249/1000 [4:16:04<12:51:28, 61.64s/it]#epoch:249 stage:1 train_loss:7.668e-03 val_loss:7.959e-03  time:1m0s
+
+ bg_pi:0.823 bg_ri:0.791 p_pi:0.820 p_ri:0.829 r_pi:0.890 r_ri:0.902 t_pi:0.855 t_ri:0.857
+ 25%|██▌       | 250/1000 [4:17:05<12:47:33, 61.40s/it]#epoch:250 stage:1 train_loss:7.668e-03 val_loss:7.959e-03  time:1m1s
+
+ bg_pi:0.824 bg_ri:0.793 p_pi:0.820 p_ri:0.829 r_pi:0.891 r_ri:0.902 t_pi:0.856 t_ri:0.857
+ 25%|██▌       | 251/1000 [4:18:06<12:43:29, 61.16s/it]#epoch:251 stage:1 train_loss:7.667e-03 val_loss:7.959e-03  time:1m1s
+
+ bg_pi:0.826 bg_ri:0.796 p_pi:0.820 p_ri:0.830 r_pi:0.891 r_ri:0.903 t_pi:0.857 t_ri:0.858
+ 25%|██▌       | 252/1000 [4:19:05<12:37:03, 60.73s/it]#epoch:252 stage:1 train_loss:7.667e-03 val_loss:7.959e-03  time:0m60s
+
+ bg_pi:0.826 bg_ri:0.797 p_pi:0.821 p_ri:0.830 r_pi:0.892 r_ri:0.902 t_pi:0.857 t_ri:0.859
+ 25%|██▌       | 253/1000 [4:20:06<12:33:44, 60.54s/it]#epoch:253 stage:1 train_loss:7.666e-03 val_loss:7.959e-03  time:1m0s
+
+ bg_pi:0.827 bg_ri:0.798 p_pi:0.822 p_ri:0.830 r_pi:0.892 r_ri:0.902 t_pi:0.858 t_ri:0.859
+ 25%|██▌       | 254/1000 [4:21:06<12:30:33, 60.37s/it]#epoch:254 stage:1 train_loss:7.666e-03 val_loss:7.959e-03  time:0m60s
+
+ bg_pi:0.827 bg_ri:0.797 p_pi:0.822 p_ri:0.830 r_pi:0.892 r_ri:0.902 t_pi:0.857 t_ri:0.859
+ 26%|██▌       | 255/1000 [4:22:08<12:35:28, 60.84s/it]#epoch:255 stage:1 train_loss:7.666e-03 val_loss:7.959e-03  time:1m2s
+
+ bg_pi:0.826 bg_ri:0.797 p_pi:0.822 p_ri:0.830 r_pi:0.892 r_ri:0.902 t_pi:0.857 t_ri:0.859
+ 26%|██▌       | 256/1000 [4:23:10<12:38:50, 61.20s/it]#epoch:256 stage:1 train_loss:7.666e-03 val_loss:7.960e-03  time:1m2s
+
+ bg_pi:0.826 bg_ri:0.796 p_pi:0.822 p_ri:0.830 r_pi:0.891 r_ri:0.901 t_pi:0.856 t_ri:0.859
+ 26%|██▌       | 257/1000 [4:24:12<12:42:01, 61.54s/it]#epoch:257 stage:1 train_loss:7.665e-03 val_loss:7.960e-03  time:1m2s
+
+ bg_pi:0.825 bg_ri:0.794 p_pi:0.822 p_ri:0.829 r_pi:0.891 r_ri:0.901 t_pi:0.856 t_ri:0.858
+ 26%|██▌       | 258/1000 [4:25:13<12:38:35, 61.34s/it]#epoch:258 stage:1 train_loss:7.665e-03 val_loss:7.961e-03  time:1m1s
+
+ bg_pi:0.824 bg_ri:0.793 p_pi:0.821 p_ri:0.829 r_pi:0.891 r_ri:0.901 t_pi:0.855 t_ri:0.858
+ 26%|██▌       | 259/1000 [4:26:15<12:40:14, 61.56s/it]#epoch:259 stage:1 train_loss:7.665e-03 val_loss:7.961e-03  time:1m2s
+
+ bg_pi:0.824 bg_ri:0.794 p_pi:0.820 p_ri:0.829 r_pi:0.891 r_ri:0.902 t_pi:0.856 t_ri:0.858
+ 26%|██▌       | 260/1000 [4:27:16<12:37:23, 61.41s/it]#epoch:260 stage:1 train_loss:7.665e-03 val_loss:7.961e-03  time:1m1s
+
+ bg_pi:0.825 bg_ri:0.795 p_pi:0.820 p_ri:0.830 r_pi:0.891 r_ri:0.902 t_pi:0.856 t_ri:0.858

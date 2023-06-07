@@ -1,0 +1,619 @@
+cuda is True
+device is cuda
+training with pre_train
+ECG_mae_segmentation_U_12(
+  (encoder): EncoderMAE(
+    (patch_embed): PatchEmbed_1D(
+      (proj): Conv1d(1, 40, kernel_size=(12,), stride=(12,))
+      (norm): Identity()
+    )
+    (blocks): ModuleList(
+      (0): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (1): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (2): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (3): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (4): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (5): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (6): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (7): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (8): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (9): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (10): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+      (11): Block(
+        (norm1): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=40, out_features=120, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=40, out_features=40, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (ls1): Identity()
+        (drop_path1): Identity()
+        (norm2): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=40, out_features=80, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=80, out_features=40, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+        (ls2): Identity()
+        (drop_path2): Identity()
+      )
+    )
+    (norm): LayerNorm((40,), eps=1e-05, elementwise_affine=True)
+  )
+  (upsample_1_1): ConvTranspose1d(40, 20, kernel_size=(9,), stride=(3,), padding=(3,))
+  (upsample_2_1): ConvTranspose1d(20, 10, kernel_size=(8,), stride=(2,), padding=(3,))
+  (upsample_3_1): ConvTranspose1d(10, 6, kernel_size=(7,), stride=(1,), padding=(3,))
+  (upsample_4_1): ConvTranspose1d(6, 4, kernel_size=(8,), stride=(2,), padding=(3,))
+  (upsample_1_2): ConvTranspose1d(40, 20, kernel_size=(9,), stride=(3,), padding=(3,))
+  (upsample_2_2): ConvTranspose1d(20, 10, kernel_size=(8,), stride=(2,), padding=(3,))
+  (upsample_3_2): ConvTranspose1d(10, 6, kernel_size=(7,), stride=(1,), padding=(3,))
+  (upsample_4_2): ConvTranspose1d(6, 4, kernel_size=(8,), stride=(2,), padding=(3,))
+  (conv_out): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(4, 4, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (conv_cat1): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(40, 20, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(20, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (conv_cat2): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(20, 10, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (conv_cat3): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(12, 6, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (conv_cat4): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(8, 4, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+)
+train_datasize 1662 val_datasize 399
+
+  0%|          | 0/250 [00:00<?, ?it/s]
+  0%|          | 1/250 [03:18<13:44:04, 198.57s/it]#epoch:01 stage:1 train_loss:5.685e-03 val_loss:6.099e-03  time:3m19s
+
+ bg_pi:0.129 bg_ri:0.997 p_pi:0.891 p_ri:0.269 r_pi:0.903 r_ri:0.087 t_pi:0.994 t_ri:0.006
+
+  1%|          | 2/250 [06:31<13:26:14, 195.06s/it]#epoch:02 stage:1 train_loss:5.161e-03 val_loss:5.627e-03  time:3m13s
+
+ bg_pi:0.362 bg_ri:0.910 p_pi:0.708 p_ri:0.875 r_pi:0.655 r_ri:0.540 t_pi:0.929 t_ri:0.632
+
+  1%|          | 3/250 [09:41<13:14:34, 193.01s/it]#epoch:03 stage:1 train_loss:4.829e-03 val_loss:4.956e-03  time:3m11s
+
+ bg_pi:0.511 bg_ri:0.885 p_pi:0.641 p_ri:0.951 r_pi:0.717 r_ri:0.772 t_pi:0.932 t_ri:0.658
+
+  2%|▏         | 4/250 [12:54<13:11:20, 193.01s/it]#epoch:04 stage:1 train_loss:4.665e-03 val_loss:4.812e-03  time:3m13s
+
+ bg_pi:0.423 bg_ri:0.901 p_pi:0.657 p_ri:0.947 r_pi:0.707 r_ri:0.645 t_pi:0.949 t_ri:0.653
+
+  2%|▏         | 5/250 [16:09<13:10:59, 193.71s/it]#epoch:05 stage:1 train_loss:4.587e-03 val_loss:4.773e-03  time:3m15s
+
+ bg_pi:0.381 bg_ri:0.895 p_pi:0.667 p_ri:0.951 r_pi:0.682 r_ri:0.511 t_pi:0.944 t_ri:0.667
+
+  2%|▏         | 6/250 [19:24<13:08:45, 193.96s/it]#epoch:06 stage:1 train_loss:4.552e-03 val_loss:4.761e-03  time:3m14s
+
+ bg_pi:0.381 bg_ri:0.899 p_pi:0.679 p_ri:0.943 r_pi:0.707 r_ri:0.502 t_pi:0.943 t_ri:0.684
+
+  3%|▎         | 7/250 [22:39<13:06:54, 194.30s/it]#epoch:07 stage:1 train_loss:4.526e-03 val_loss:4.729e-03  time:3m15s
+
+ bg_pi:0.383 bg_ri:0.889 p_pi:0.702 p_ri:0.938 r_pi:0.719 r_ri:0.499 t_pi:0.933 t_ri:0.701
+
+  3%|▎         | 8/250 [25:57<13:09:30, 195.74s/it]#epoch:08 stage:1 train_loss:4.505e-03 val_loss:4.698e-03  time:3m19s
+
+ bg_pi:0.395 bg_ri:0.883 p_pi:0.720 p_ri:0.934 r_pi:0.743 r_ri:0.502 t_pi:0.929 t_ri:0.728
+
+  4%|▎         | 9/250 [29:14<13:07:27, 196.05s/it]#epoch:09 stage:1 train_loss:4.491e-03 val_loss:4.695e-03  time:3m17s
+
+ bg_pi:0.400 bg_ri:0.875 p_pi:0.715 p_ri:0.908 r_pi:0.739 r_ri:0.512 t_pi:0.922 t_ri:0.731
+
+  4%|▍         | 10/250 [32:30<13:04:15, 196.06s/it]#epoch:10 stage:1 train_loss:4.469e-03 val_loss:4.676e-03  time:3m16s
+
+ bg_pi:0.413 bg_ri:0.875 p_pi:0.730 p_ri:0.901 r_pi:0.758 r_ri:0.528 t_pi:0.918 t_ri:0.749
+
+  4%|▍         | 11/250 [35:43<12:56:21, 194.90s/it]#epoch:11 stage:1 train_loss:4.459e-03 val_loss:4.657e-03  time:3m12s
+
+ bg_pi:0.455 bg_ri:0.876 p_pi:0.730 p_ri:0.896 r_pi:0.791 r_ri:0.604 t_pi:0.911 t_ri:0.760
+
+  5%|▍         | 12/250 [39:00<12:55:34, 195.52s/it]#epoch:12 stage:1 train_loss:4.417e-03 val_loss:4.906e-03  time:3m17s
+
+ bg_pi:0.274 bg_ri:0.895 p_pi:0.702 p_ri:0.919 r_pi:0.979 r_ri:0.017 t_pi:0.915 t_ri:0.734
+
+  5%|▌         | 13/250 [42:13<12:49:25, 194.79s/it]#epoch:13 stage:1 train_loss:4.311e-03 val_loss:4.482e-03  time:3m13s
+
+ bg_pi:0.679 bg_ri:0.849 p_pi:0.724 p_ri:0.894 r_pi:0.780 r_ri:0.910 t_pi:0.908 t_ri:0.756
+
+  6%|▌         | 14/250 [45:22<12:40:06, 193.25s/it]#epoch:14 stage:1 train_loss:4.279e-03 val_loss:4.461e-03  time:3m10s
+
+ bg_pi:0.687 bg_ri:0.838 p_pi:0.734 p_ri:0.890 r_pi:0.752 r_ri:0.915 t_pi:0.906 t_ri:0.747
+
+  6%|▌         | 15/250 [48:37<12:38:20, 193.62s/it]#epoch:15 stage:1 train_loss:4.255e-03 val_loss:4.468e-03  time:3m14s
+
+ bg_pi:0.687 bg_ri:0.844 p_pi:0.750 p_ri:0.887 r_pi:0.773 r_ri:0.905 t_pi:0.904 t_ri:0.765
+
+  6%|▋         | 16/250 [51:50<12:34:50, 193.55s/it]#epoch:16 stage:1 train_loss:4.240e-03 val_loss:4.448e-03  time:3m13s
+
+ bg_pi:0.717 bg_ri:0.829 p_pi:0.736 p_ri:0.861 r_pi:0.776 r_ri:0.898 t_pi:0.892 t_ri:0.776
+
+  7%|▋         | 17/250 [58:06<16:04:37, 248.40s/it]#epoch:17 stage:1 train_loss:4.226e-03 val_loss:4.429e-03  time:6m16s
+
+ bg_pi:0.705 bg_ri:0.821 p_pi:0.749 p_ri:0.851 r_pi:0.771 r_ri:0.902 t_pi:0.891 t_ri:0.776
+
+  7%|▋         | 18/250 [1:01:30<15:08:35, 234.98s/it]#epoch:18 stage:1 train_loss:4.218e-03 val_loss:4.402e-03  time:3m24s
+
+ bg_pi:0.693 bg_ri:0.848 p_pi:0.748 p_ri:0.866 r_pi:0.763 r_ri:0.921 t_pi:0.906 t_ri:0.761
+
+  8%|▊         | 19/250 [1:04:47<14:20:42, 223.56s/it]#epoch:19 stage:1 train_loss:4.205e-03 val_loss:4.401e-03  time:3m17s
+
+ bg_pi:0.692 bg_ri:0.847 p_pi:0.749 p_ri:0.855 r_pi:0.777 r_ri:0.911 t_pi:0.899 t_ri:0.770
+
+  8%|▊         | 20/250 [1:08:01<13:42:54, 214.67s/it]#epoch:20 stage:1 train_loss:4.190e-03 val_loss:4.394e-03  time:3m14s
+
+ bg_pi:0.694 bg_ri:0.830 p_pi:0.746 p_ri:0.851 r_pi:0.779 r_ri:0.905 t_pi:0.893 t_ri:0.773
+
+  8%|▊         | 21/250 [1:11:08<13:07:37, 206.36s/it]#epoch:21 stage:1 train_loss:4.184e-03 val_loss:4.385e-03  time:3m7s
+
+ bg_pi:0.699 bg_ri:0.837 p_pi:0.744 p_ri:0.838 r_pi:0.777 r_ri:0.916 t_pi:0.895 t_ri:0.771
+
+  9%|▉         | 22/250 [1:14:17<12:44:12, 201.11s/it]#epoch:22 stage:1 train_loss:4.174e-03 val_loss:4.374e-03  time:3m9s
+
+ bg_pi:0.699 bg_ri:0.849 p_pi:0.753 p_ri:0.857 r_pi:0.762 r_ri:0.910 t_pi:0.900 t_ri:0.765
+
+  9%|▉         | 23/250 [1:17:24<12:25:07, 196.95s/it]#epoch:23 stage:1 train_loss:4.164e-03 val_loss:4.374e-03  time:3m7s
+
+ bg_pi:0.706 bg_ri:0.845 p_pi:0.745 p_ri:0.841 r_pi:0.785 r_ri:0.914 t_pi:0.899 t_ri:0.780
+
+ 10%|▉         | 24/250 [1:20:27<12:06:16, 192.82s/it]#epoch:24 stage:1 train_loss:4.156e-03 val_loss:4.367e-03  time:3m3s
+
+ bg_pi:0.740 bg_ri:0.805 p_pi:0.763 p_ri:0.853 r_pi:0.768 r_ri:0.909 t_pi:0.891 t_ri:0.791
+
+ 10%|█         | 25/250 [1:23:33<11:55:39, 190.84s/it]#epoch:25 stage:1 train_loss:4.145e-03 val_loss:4.362e-03  time:3m6s
+
+ bg_pi:0.698 bg_ri:0.856 p_pi:0.749 p_ri:0.846 r_pi:0.773 r_ri:0.923 t_pi:0.904 t_ri:0.769
+
+ 10%|█         | 26/250 [1:26:37<11:45:00, 188.84s/it]#epoch:26 stage:1 train_loss:4.136e-03 val_loss:4.360e-03  time:3m4s
+
+ bg_pi:0.721 bg_ri:0.814 p_pi:0.750 p_ri:0.842 r_pi:0.787 r_ri:0.905 t_pi:0.889 t_ri:0.790
+
+ 11%|█         | 27/250 [1:29:45<11:39:59, 188.34s/it]#epoch:27 stage:1 train_loss:4.128e-03 val_loss:4.349e-03  time:3m7s
+
+ bg_pi:0.705 bg_ri:0.830 p_pi:0.744 p_ri:0.859 r_pi:0.775 r_ri:0.917 t_pi:0.900 t_ri:0.773
+
+ 11%|█         | 28/250 [1:32:52<11:35:25, 187.95s/it]#epoch:28 stage:1 train_loss:4.125e-03 val_loss:4.349e-03  time:3m7s
+
+ bg_pi:0.705 bg_ri:0.840 p_pi:0.748 p_ri:0.842 r_pi:0.759 r_ri:0.921 t_pi:0.899 t_ri:0.766
+
+ 12%|█▏        | 29/250 [1:35:58<11:30:27, 187.46s/it]#epoch:29 stage:1 train_loss:4.120e-03 val_loss:4.334e-03  time:3m6s
+
+ bg_pi:0.719 bg_ri:0.810 p_pi:0.758 p_ri:0.845 r_pi:0.793 r_ri:0.893 t_pi:0.885 t_ri:0.796
+
+ 12%|█▏        | 30/250 [1:39:01<11:23:00, 186.27s/it]#epoch:30 stage:1 train_loss:4.109e-03 val_loss:4.327e-03  time:3m3s
+
+ bg_pi:0.719 bg_ri:0.814 p_pi:0.758 p_ri:0.859 r_pi:0.778 r_ri:0.904 t_pi:0.892 t_ri:0.787
+
+ 12%|█▏        | 31/250 [1:42:12<11:25:00, 187.67s/it]#epoch:31 stage:1 train_loss:4.101e-03 val_loss:4.330e-03  time:3m11s
+
+ bg_pi:0.704 bg_ri:0.829 p_pi:0.752 p_ri:0.856 r_pi:0.784 r_ri:0.911 t_pi:0.896 t_ri:0.779
+
+ 13%|█▎        | 32/250 [1:45:17<11:18:33, 186.76s/it]#epoch:32 stage:1 train_loss:4.094e-03 val_loss:4.330e-03  time:3m5s
+
+ bg_pi:0.713 bg_ri:0.825 p_pi:0.740 p_ri:0.839 r_pi:0.777 r_ri:0.904 t_pi:0.889 t_ri:0.777
+
+ 13%|█▎        | 33/250 [1:50:53<13:57:40, 231.62s/it]#epoch:33 stage:1 train_loss:4.086e-03 val_loss:4.322e-03  time:5m36s
+
+ bg_pi:0.716 bg_ri:0.838 p_pi:0.757 p_ri:0.853 r_pi:0.777 r_ri:0.911 t_pi:0.898 t_ri:0.781
+
+ 14%|█▎        | 34/250 [1:54:19<13:25:15, 223.68s/it]#epoch:34 stage:1 train_loss:4.081e-03 val_loss:4.310e-03  time:3m25s
+
+ bg_pi:0.745 bg_ri:0.810 p_pi:0.757 p_ri:0.850 r_pi:0.799 r_ri:0.895 t_pi:0.887 t_ri:0.806
+
+ 14%|█▍        | 35/250 [1:57:24<12:40:06, 212.12s/it]#epoch:35 stage:1 train_loss:4.076e-03 val_loss:4.315e-03  time:3m5s
+
+ bg_pi:0.714 bg_ri:0.841 p_pi:0.753 p_ri:0.842 r_pi:0.786 r_ri:0.909 t_pi:0.894 t_ri:0.784
+
+ 14%|█▍        | 36/250 [2:00:29<12:07:25, 203.95s/it]#epoch:36 stage:1 train_loss:4.069e-03 val_loss:4.302e-03  time:3m5s
+
+ bg_pi:0.717 bg_ri:0.808 p_pi:0.764 p_ri:0.835 r_pi:0.788 r_ri:0.888 t_pi:0.879 t_ri:0.796
+
+ 15%|█▍        | 37/250 [2:03:34<11:44:45, 198.52s/it]#epoch:37 stage:1 train_loss:4.065e-03 val_loss:4.315e-03  time:3m6s
+
+ bg_pi:0.715 bg_ri:0.815 p_pi:0.745 p_ri:0.832 r_pi:0.782 r_ri:0.898 t_pi:0.884 t_ri:0.786
+
+ 15%|█▌        | 38/250 [2:06:35<11:21:55, 193.00s/it]#epoch:38 stage:1 train_loss:4.056e-03 val_loss:4.290e-03  time:3m0s
+
+ bg_pi:0.741 bg_ri:0.794 p_pi:0.780 p_ri:0.842 r_pi:0.804 r_ri:0.878 t_pi:0.877 t_ri:0.818
+
+ 16%|█▌        | 39/250 [2:09:36<11:06:53, 189.64s/it]#epoch:39 stage:1 train_loss:4.049e-03 val_loss:4.291e-03  time:3m2s
+
+ bg_pi:0.752 bg_ri:0.793 p_pi:0.756 p_ri:0.849 r_pi:0.795 r_ri:0.887 t_pi:0.881 t_ri:0.808
+
+ 16%|█▌        | 40/250 [2:12:43<11:00:41, 188.77s/it]#epoch:40 stage:1 train_loss:4.045e-03 val_loss:4.301e-03  time:3m7s
+
+ bg_pi:0.721 bg_ri:0.814 p_pi:0.757 p_ri:0.835 r_pi:0.791 r_ri:0.903 t_pi:0.887 t_ri:0.796
+
+ 16%|█▋        | 41/250 [2:15:42<10:47:37, 185.92s/it]#epoch:41 stage:1 train_loss:4.040e-03 val_loss:4.290e-03  time:2m59s
+
+ bg_pi:0.733 bg_ri:0.831 p_pi:0.760 p_ri:0.842 r_pi:0.780 r_ri:0.904 t_pi:0.891 t_ri:0.791
+
+ 17%|█▋        | 42/250 [2:18:47<10:43:07, 185.52s/it]#epoch:42 stage:1 train_loss:4.037e-03 val_loss:4.282e-03  time:3m5s
+
+ bg_pi:0.733 bg_ri:0.792 p_pi:0.753 p_ri:0.840 r_pi:0.800 r_ri:0.884 t_pi:0.877 t_ri:0.805
+
+ 17%|█▋        | 43/250 [2:21:52<10:39:49, 185.46s/it]#epoch:43 stage:1 train_loss:4.029e-03 val_loss:4.282e-03  time:3m5s
+
+ bg_pi:0.744 bg_ri:0.800 p_pi:0.761 p_ri:0.851 r_pi:0.792 r_ri:0.892 t_pi:0.884 t_ri:0.806
+
+ 18%|█▊        | 44/250 [2:24:57<10:36:22, 185.35s/it]#epoch:44 stage:1 train_loss:4.023e-03 val_loss:4.278e-03  time:3m5s
+
+ bg_pi:0.744 bg_ri:0.812 p_pi:0.765 p_ri:0.838 r_pi:0.804 r_ri:0.878 t_pi:0.880 t_ri:0.814
+
+ 18%|█▊        | 45/250 [2:27:57<10:27:09, 183.56s/it]#epoch:45 stage:1 train_loss:4.020e-03 val_loss:4.283e-03  time:2m59s
+
+ bg_pi:0.716 bg_ri:0.830 p_pi:0.760 p_ri:0.851 r_pi:0.774 r_ri:0.919 t_pi:0.899 t_ri:0.781
+
+ 18%|█▊        | 46/250 [2:30:59<10:22:30, 183.09s/it]#epoch:46 stage:1 train_loss:4.017e-03 val_loss:4.283e-03  time:3m2s
+
+ bg_pi:0.741 bg_ri:0.817 p_pi:0.762 p_ri:0.847 r_pi:0.773 r_ri:0.901 t_pi:0.889 t_ri:0.793
+
+ 19%|█▉        | 47/250 [2:34:03<10:20:35, 183.43s/it]#epoch:47 stage:1 train_loss:4.007e-03 val_loss:4.274e-03  time:3m4s
+
+ bg_pi:0.735 bg_ri:0.796 p_pi:0.763 p_ri:0.836 r_pi:0.805 r_ri:0.877 t_pi:0.875 t_ri:0.812
+
+ 19%|█▉        | 48/250 [2:37:03<10:14:15, 182.46s/it]#epoch:48 stage:1 train_loss:4.008e-03 val_loss:4.275e-03  time:3m0s
+
+ bg_pi:0.741 bg_ri:0.800 p_pi:0.759 p_ri:0.844 r_pi:0.786 r_ri:0.897 t_pi:0.884 t_ri:0.800
+
+ 20%|█▉        | 49/250 [2:43:00<13:06:14, 234.70s/it]#epoch:49 stage:1 train_loss:4.006e-03 val_loss:4.278e-03  time:5m57s
+
+ bg_pi:0.727 bg_ri:0.830 p_pi:0.761 p_ri:0.851 r_pi:0.785 r_ri:0.896 t_pi:0.891 t_ri:0.794
+
+ 20%|██        | 50/250 [2:46:25<12:32:38, 225.79s/it]#epoch:50 stage:1 train_loss:4.004e-03 val_loss:4.259e-03  time:3m25s
+
+ bg_pi:0.767 bg_ri:0.789 p_pi:0.785 p_ri:0.851 r_pi:0.802 r_ri:0.895 t_pi:0.884 t_ri:0.824
+
+ 20%|██        | 51/250 [2:49:29<11:47:32, 213.33s/it]#epoch:51 stage:1 train_loss:4.000e-03 val_loss:4.258e-03  time:3m4s
+
+ bg_pi:0.756 bg_ri:0.803 p_pi:0.775 p_ri:0.841 r_pi:0.806 r_ri:0.881 t_pi:0.878 t_ri:0.819
+
+ 21%|██        | 52/250 [2:52:35<11:16:58, 205.15s/it]#epoch:52 stage:1 train_loss:3.998e-03 val_loss:4.257e-03  time:3m6s
+
+ bg_pi:0.753 bg_ri:0.773 p_pi:0.778 p_ri:0.845 r_pi:0.809 r_ri:0.882 t_pi:0.877 t_ri:0.826
+
+ 21%|██        | 53/250 [2:55:42<10:56:09, 199.84s/it]#epoch:53 stage:1 train_loss:3.993e-03 val_loss:4.265e-03  time:3m7s
+
+ bg_pi:0.731 bg_ri:0.808 p_pi:0.773 p_ri:0.825 r_pi:0.790 r_ri:0.875 t_pi:0.875 t_ri:0.807
+
+ 22%|██▏       | 54/250 [2:58:48<10:38:31, 195.47s/it]#epoch:54 stage:1 train_loss:3.991e-03 val_loss:4.271e-03  time:3m5s
+
+ bg_pi:0.719 bg_ri:0.823 p_pi:0.745 p_ri:0.834 r_pi:0.794 r_ri:0.895 t_pi:0.884 t_ri:0.791
+
+ 22%|██▏       | 55/250 [3:01:53<10:25:10, 192.36s/it]#epoch:55 stage:1 train_loss:3.987e-03 val_loss:4.257e-03  time:3m5s
+
+ bg_pi:0.731 bg_ri:0.800 p_pi:0.758 p_ri:0.831 r_pi:0.807 r_ri:0.879 t_pi:0.875 t_ri:0.810
+
+ 22%|██▏       | 56/250 [3:05:01<10:17:27, 190.97s/it]#epoch:56 stage:1 train_loss:3.976e-03 val_loss:4.245e-03  time:3m8s
+
+ bg_pi:0.738 bg_ri:0.803 p_pi:0.782 p_ri:0.839 r_pi:0.803 r_ri:0.889 t_pi:0.882 t_ri:0.815
+
+ 23%|██▎       | 57/250 [3:08:06<10:08:42, 189.24s/it]#epoch:57 stage:1 train_loss:3.970e-03 val_loss:4.257e-03  time:3m5s
+
+ bg_pi:0.735 bg_ri:0.803 p_pi:0.766 p_ri:0.847 r_pi:0.791 r_ri:0.900 t_pi:0.887 t_ri:0.802
+
+ 23%|██▎       | 58/250 [3:11:13<10:03:42, 188.66s/it]#epoch:58 stage:1 train_loss:3.970e-03 val_loss:4.245e-03  time:3m7s
+
+ bg_pi:0.740 bg_ri:0.792 p_pi:0.768 p_ri:0.828 r_pi:0.802 r_ri:0.887 t_pi:0.875 t_ri:0.812
+
+ 24%|██▎       | 59/250 [3:14:12<9:51:25, 185.79s/it] #epoch:59 stage:1 train_loss:3.965e-03 val_loss:4.252e-03  time:2m59s
+
+ bg_pi:0.737 bg_ri:0.802 p_pi:0.770 p_ri:0.841 r_pi:0.790 r_ri:0.890 t_pi:0.881 t_ri:0.805
+
+ 24%|██▍       | 60/250 [3:17:14<9:44:10, 184.47s/it]#epoch:60 stage:1 train_loss:3.961e-03 val_loss:4.243e-03  time:3m1s
+
+ bg_pi:0.742 bg_ri:0.813 p_pi:0.765 p_ri:0.844 r_pi:0.803 r_ri:0.880 t_pi:0.881 t_ri:0.811
+
+ 24%|██▍       | 61/250 [3:20:16<9:39:36, 184.00s/it]#epoch:61 stage:1 train_loss:3.963e-03 val_loss:4.239e-03  time:3m3s
+
+ bg_pi:0.740 bg_ri:0.792 p_pi:0.765 p_ri:0.832 r_pi:0.811 r_ri:0.868 t_pi:0.871 t_ri:0.818
+
+ 25%|██▍       | 62/250 [3:23:15<9:31:47, 182.49s/it]#epoch:62 stage:1 train_loss:3.961e-03 val_loss:4.254e-03  time:2m59s
+
+ bg_pi:0.726 bg_ri:0.802 p_pi:0.763 p_ri:0.841 r_pi:0.790 r_ri:0.881 t_pi:0.878 t_ri:0.800
+
+ 25%|██▌       | 63/250 [3:26:20<9:30:35, 183.08s/it]#epoch:63 stage:1 train_loss:3.956e-03 val_loss:4.247e-03  time:3m4s
+
+ bg_pi:0.747 bg_ri:0.809 p_pi:0.772 p_ri:0.846 r_pi:0.794 r_ri:0.881 t_pi:0.881 t_ri:0.810
+
+ 26%|██▌       | 64/250 [3:29:24<9:28:24, 183.36s/it]#epoch:64 stage:1 train_loss:3.954e-03 val_loss:4.247e-03  time:3m4s
+
+ bg_pi:0.759 bg_ri:0.769 p_pi:0.777 p_ri:0.848 r_pi:0.802 r_ri:0.873 t_pi:0.871 t_ri:0.822
+
+ 26%|██▌       | 65/250 [3:35:12<11:58:12, 232.93s/it]#epoch:65 stage:1 train_loss:3.952e-03 val_loss:4.243e-03  time:5m49s
+
+ bg_pi:0.745 bg_ri:0.790 p_pi:0.776 p_ri:0.841 r_pi:0.806 r_ri:0.853 t_pi:0.867 t_ri:0.820
+ 26%|██▋       | 66/250 [3:38:40<11:30:59, 225.32s/it]#epoch:66 stage:1 train_loss:3.952e-03 val_loss:4.249e-03  time:3m28s
+
+ bg_pi:0.763 bg_ri:0.794 p_pi:0.779 p_ri:0.841 r_pi:0.797 r_ri:0.850 t_pi:0.867 t_ri:0.823
+ 26%|██▋       | 66/250 [3:40:18<10:14:10, 200.27s/it]
+Traceback (most recent call last):
+  File "train.py", line 248, in <module>
+    train(args)
+  File "train.py", line 74, in train
+    train_procedure(args,model,model_save_dir)
+  File "train.py", line 107, in train_procedure
+    val_loss,all_pi,all_ri= val_epoch(model, criterion, val_dataloader)
+  File "train.py", line 174, in val_epoch
+    y_pred = np.array([output_sliding_voting(i,9) for i in out_pred])
+  File "train.py", line 174, in <listcomp>
+    y_pred = np.array([output_sliding_voting(i,9) for i in out_pred])
+  File "train.py", line 23, in output_sliding_voting
+    output = pd.Series(output).rolling(window).apply(lambda x : mode(x)[0][0]).fillna(method='bfill')
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/pandas/core/window/rolling.py", line 1843, in apply
+    return super().apply(
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/pandas/core/window/rolling.py", line 1321, in apply
+    return self._apply(
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/pandas/core/window/rolling.py", line 590, in _apply
+    return self._apply_blockwise(homogeneous_func, name)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/pandas/core/window/rolling.py", line 442, in _apply_blockwise
+    return self._apply_series(homogeneous_func, name)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/pandas/core/window/rolling.py", line 431, in _apply_series
+    result = homogeneous_func(values)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/pandas/core/window/rolling.py", line 582, in homogeneous_func
+    result = calc(values)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/pandas/core/window/rolling.py", line 579, in calc
+    return func(x, start, end, min_periods, *numba_args)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/pandas/core/window/rolling.py", line 1348, in apply_func
+    return window_func(values, begin, end, min_periods)
+  File "pandas/_libs/window/aggregations.pyx", line 1315, in pandas._libs.window.aggregations.roll_apply
+  File "train.py", line 23, in <lambda>
+    output = pd.Series(output).rolling(window).apply(lambda x : mode(x)[0][0]).fillna(method='bfill')
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/scipy/stats/_stats_py.py", line 414, in mode
+    contains_nan, nan_policy = _contains_nan(a, nan_policy)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/scipy/stats/_stats_py.py", line 92, in _contains_nan
+    contains_nan = np.isnan(np.sum(a))
+  File "<__array_function__ internals>", line 180, in sum
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/numpy/core/fromnumeric.py", line 2296, in sum
+    return _wrapreduction(a, np.add, 'sum', axis, dtype, out, keepdims=keepdims,
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/numpy/core/fromnumeric.py", line 86, in _wrapreduction
+    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 28022) is killed by signal: Terminated. 

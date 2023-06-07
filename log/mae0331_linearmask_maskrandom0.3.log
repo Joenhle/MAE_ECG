@@ -1,0 +1,581 @@
+MAE_linearmask(
+  (encoder): ViT1D(
+    (to_patch_embedding): Sequential(
+      (0): Rearrange('b (sl pl) -> b sl pl', pl=10)
+      (1): Linear(in_features=10, out_features=8, bias=True)
+    )
+    (dropout): Dropout(p=0.0, inplace=False)
+    (transformer): Transformer(
+      (layers): ModuleList(
+        (0): ModuleList(
+          (0): PreNorm(
+            (norm): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+            (fn): Attention(
+              (attend): Softmax(dim=-1)
+              (to_qkv): Linear(in_features=8, out_features=96, bias=False)
+              (to_out): Sequential(
+                (0): Linear(in_features=32, out_features=8, bias=True)
+                (1): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+          (1): PreNorm(
+            (norm): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+            (fn): FeedForward(
+              (net): Sequential(
+                (0): Linear(in_features=8, out_features=8, bias=True)
+                (1): GELU()
+                (2): Dropout(p=0.0, inplace=False)
+                (3): Linear(in_features=8, out_features=8, bias=True)
+                (4): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+        )
+        (1): ModuleList(
+          (0): PreNorm(
+            (norm): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+            (fn): Attention(
+              (attend): Softmax(dim=-1)
+              (to_qkv): Linear(in_features=8, out_features=96, bias=False)
+              (to_out): Sequential(
+                (0): Linear(in_features=32, out_features=8, bias=True)
+                (1): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+          (1): PreNorm(
+            (norm): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+            (fn): FeedForward(
+              (net): Sequential(
+                (0): Linear(in_features=8, out_features=8, bias=True)
+                (1): GELU()
+                (2): Dropout(p=0.0, inplace=False)
+                (3): Linear(in_features=8, out_features=8, bias=True)
+                (4): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+        )
+        (2): ModuleList(
+          (0): PreNorm(
+            (norm): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+            (fn): Attention(
+              (attend): Softmax(dim=-1)
+              (to_qkv): Linear(in_features=8, out_features=96, bias=False)
+              (to_out): Sequential(
+                (0): Linear(in_features=32, out_features=8, bias=True)
+                (1): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+          (1): PreNorm(
+            (norm): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+            (fn): FeedForward(
+              (net): Sequential(
+                (0): Linear(in_features=8, out_features=8, bias=True)
+                (1): GELU()
+                (2): Dropout(p=0.0, inplace=False)
+                (3): Linear(in_features=8, out_features=8, bias=True)
+                (4): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+        )
+        (3): ModuleList(
+          (0): PreNorm(
+            (norm): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+            (fn): Attention(
+              (attend): Softmax(dim=-1)
+              (to_qkv): Linear(in_features=8, out_features=96, bias=False)
+              (to_out): Sequential(
+                (0): Linear(in_features=32, out_features=8, bias=True)
+                (1): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+          (1): PreNorm(
+            (norm): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+            (fn): FeedForward(
+              (net): Sequential(
+                (0): Linear(in_features=8, out_features=8, bias=True)
+                (1): GELU()
+                (2): Dropout(p=0.0, inplace=False)
+                (3): Linear(in_features=8, out_features=8, bias=True)
+                (4): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+        )
+      )
+    )
+    (to_latent): Identity()
+    (mlp_head): Sequential(
+      (0): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (1): Linear(in_features=8, out_features=1000, bias=True)
+    )
+  )
+  (to_patch): Rearrange('b (sl pl) -> b sl pl', pl=10)
+  (patch_to_emb): Linear(in_features=10, out_features=8, bias=True)
+  (to_linear_mask): Linear_mask()
+  (enc_to_dec): Linear(in_features=8, out_features=5, bias=True)
+  (decoder): Transformer(
+    (layers): ModuleList(
+      (0): ModuleList(
+        (0): PreNorm(
+          (norm): LayerNorm((5,), eps=1e-05, elementwise_affine=True)
+          (fn): Attention(
+            (attend): Softmax(dim=-1)
+            (to_qkv): Linear(in_features=5, out_features=192, bias=False)
+            (to_out): Sequential(
+              (0): Linear(in_features=64, out_features=5, bias=True)
+              (1): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+        (1): PreNorm(
+          (norm): LayerNorm((5,), eps=1e-05, elementwise_affine=True)
+          (fn): FeedForward(
+            (net): Sequential(
+              (0): Linear(in_features=5, out_features=20, bias=True)
+              (1): GELU()
+              (2): Dropout(p=0.0, inplace=False)
+              (3): Linear(in_features=20, out_features=5, bias=True)
+              (4): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+      )
+      (1): ModuleList(
+        (0): PreNorm(
+          (norm): LayerNorm((5,), eps=1e-05, elementwise_affine=True)
+          (fn): Attention(
+            (attend): Softmax(dim=-1)
+            (to_qkv): Linear(in_features=5, out_features=192, bias=False)
+            (to_out): Sequential(
+              (0): Linear(in_features=64, out_features=5, bias=True)
+              (1): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+        (1): PreNorm(
+          (norm): LayerNorm((5,), eps=1e-05, elementwise_affine=True)
+          (fn): FeedForward(
+            (net): Sequential(
+              (0): Linear(in_features=5, out_features=20, bias=True)
+              (1): GELU()
+              (2): Dropout(p=0.0, inplace=False)
+              (3): Linear(in_features=20, out_features=5, bias=True)
+              (4): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+      )
+      (2): ModuleList(
+        (0): PreNorm(
+          (norm): LayerNorm((5,), eps=1e-05, elementwise_affine=True)
+          (fn): Attention(
+            (attend): Softmax(dim=-1)
+            (to_qkv): Linear(in_features=5, out_features=192, bias=False)
+            (to_out): Sequential(
+              (0): Linear(in_features=64, out_features=5, bias=True)
+              (1): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+        (1): PreNorm(
+          (norm): LayerNorm((5,), eps=1e-05, elementwise_affine=True)
+          (fn): FeedForward(
+            (net): Sequential(
+              (0): Linear(in_features=5, out_features=20, bias=True)
+              (1): GELU()
+              (2): Dropout(p=0.0, inplace=False)
+              (3): Linear(in_features=20, out_features=5, bias=True)
+              (4): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+      )
+      (3): ModuleList(
+        (0): PreNorm(
+          (norm): LayerNorm((5,), eps=1e-05, elementwise_affine=True)
+          (fn): Attention(
+            (attend): Softmax(dim=-1)
+            (to_qkv): Linear(in_features=5, out_features=192, bias=False)
+            (to_out): Sequential(
+              (0): Linear(in_features=64, out_features=5, bias=True)
+              (1): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+        (1): PreNorm(
+          (norm): LayerNorm((5,), eps=1e-05, elementwise_affine=True)
+          (fn): FeedForward(
+            (net): Sequential(
+              (0): Linear(in_features=5, out_features=20, bias=True)
+              (1): GELU()
+              (2): Dropout(p=0.0, inplace=False)
+              (3): Linear(in_features=20, out_features=5, bias=True)
+              (4): Dropout(p=0.0, inplace=False)
+            )
+          )
+        )
+      )
+    )
+  )
+  (decoder_pos_emb): Embedding(251, 5)
+  (to_pixels): Linear(in_features=5, out_features=10, bias=True)
+  (loss_funtion): MSELoss()
+)/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+  0%|          | 0/200 [00:00<?, ?it/s]
+train_datasize 96844 val_datasize 24211
+100,loss:1.691e+05 
+200,loss:1.178e+05 
+300,loss:8.727e+04 
+  0%|          | 1/200 [01:19<4:23:39, 79.49s/it]#epoch:01 stage:1 train_loss:5.146e+02 val_loss:2.733e+02  time:1m19s
+
+
+100,loss:5.634e+04 
+200,loss:4.449e+04 
+300,loss:3.305e+04 
+  1%|          | 2/200 [02:38<4:21:59, 79.39s/it]#epoch:02 stage:1 train_loss:1.807e+02 val_loss:1.081e+02  time:1m19s
+
+
+100,loss:2.465e+04 
+200,loss:2.103e+04 
+300,loss:1.893e+04 
+  2%|▏         | 3/200 [03:58<4:20:41, 79.40s/it]#epoch:03 stage:1 train_loss:8.350e+01 val_loss:6.958e+01  time:1m19s
+
+
+100,loss:1.662e+04 
+200,loss:1.611e+04 
+300,loss:1.491e+04 
+  2%|▏         | 4/200 [05:17<4:19:20, 79.39s/it]#epoch:04 stage:1 train_loss:6.229e+01 val_loss:5.513e+01  time:1m19s
+
+
+100,loss:1.241e+04 
+200,loss:1.199e+04 
+300,loss:1.052e+04 
+  2%|▎         | 5/200 [06:36<4:17:50, 79.34s/it]#epoch:05 stage:1 train_loss:4.654e+01 val_loss:3.715e+01  time:1m19s
+
+
+100,loss:8.204e+03 
+200,loss:7.551e+03 
+300,loss:6.370e+03 
+  3%|▎         | 6/200 [07:55<4:16:25, 79.31s/it]#epoch:06 stage:1 train_loss:2.911e+01 val_loss:2.268e+01  time:1m19s
+
+
+100,loss:5.153e+03 
+200,loss:5.101e+03 
+300,loss:4.349e+03 
+  4%|▎         | 7/200 [09:15<4:15:05, 79.30s/it]#epoch:07 stage:1 train_loss:1.915e+01 val_loss:1.658e+01  time:1m19s
+
+
+100,loss:3.973e+03 
+200,loss:3.683e+03 
+300,loss:4.009e+03 
+  4%|▍         | 8/200 [10:34<4:13:49, 79.32s/it]#epoch:08 stage:1 train_loss:1.494e+01 val_loss:1.361e+01  time:1m19s
+
+
+100,loss:3.146e+03 
+200,loss:3.382e+03 
+300,loss:3.096e+03 
+  4%|▍         | 9/200 [11:53<4:12:36, 79.35s/it]#epoch:09 stage:1 train_loss:1.256e+01 val_loss:1.157e+01  time:1m19s
+
+
+100,loss:2.699e+03 
+200,loss:3.332e+03 
+300,loss:2.706e+03 
+  5%|▌         | 10/200 [13:13<4:11:12, 79.33s/it]#epoch:10 stage:1 train_loss:1.082e+01 val_loss:9.973e+00  time:1m19s
+
+
+100,loss:2.608e+03 
+200,loss:2.283e+03 
+300,loss:2.126e+03 
+  6%|▌         | 11/200 [14:32<4:09:48, 79.31s/it]#epoch:11 stage:1 train_loss:9.390e+00 val_loss:8.810e+00  time:1m19s
+
+
+100,loss:2.013e+03 
+200,loss:2.197e+03 
+300,loss:1.937e+03 
+  6%|▌         | 12/200 [15:51<4:08:30, 79.31s/it]#epoch:12 stage:1 train_loss:8.171e+00 val_loss:7.732e+00  time:1m19s
+
+
+100,loss:2.487e+03 
+200,loss:1.796e+03 
+300,loss:1.691e+03 
+  6%|▋         | 13/200 [17:11<4:07:16, 79.34s/it]#epoch:13 stage:1 train_loss:7.133e+00 val_loss:6.647e+00  time:1m19s
+
+
+100,loss:1.397e+03 
+200,loss:1.435e+03 
+300,loss:1.396e+03 
+  7%|▋         | 14/200 [18:30<4:05:58, 79.35s/it]#epoch:14 stage:1 train_loss:6.128e+00 val_loss:5.735e+00  time:1m19s
+
+
+100,loss:1.251e+03 
+200,loss:1.354e+03 
+300,loss:1.311e+03 
+  8%|▊         | 15/200 [19:49<4:04:39, 79.35s/it]#epoch:15 stage:1 train_loss:5.334e+00 val_loss:5.012e+00  time:1m19s
+
+
+100,loss:1.140e+03 
+200,loss:1.221e+03 
+300,loss:1.102e+03 
+  8%|▊         | 16/200 [21:09<4:03:39, 79.45s/it]#epoch:16 stage:1 train_loss:4.708e+00 val_loss:4.566e+00  time:1m20s
+
+
+********** step into stage02 lr 3.000e-05f
+100,loss:1.187e+03 
+200,loss:1.089e+03 
+300,loss:1.112e+03 
+  8%|▊         | 17/200 [22:28<4:02:10, 79.40s/it]#epoch:17 stage:2 train_loss:4.474e+00 val_loss:4.449e+00  time:1m19s
+
+
+100,loss:1.130e+03 
+200,loss:1.150e+03 
+300,loss:1.073e+03 
+  9%|▉         | 18/200 [23:48<4:00:55, 79.42s/it]#epoch:18 stage:2 train_loss:4.418e+00 val_loss:4.451e+00  time:1m19s
+
+
+100,loss:1.114e+03 
+200,loss:1.018e+03 
+300,loss:9.720e+02 
+ 10%|▉         | 19/200 [25:07<3:59:33, 79.41s/it]#epoch:19 stage:2 train_loss:4.364e+00 val_loss:4.426e+00  time:1m19s
+
+
+100,loss:1.028e+03 
+200,loss:1.025e+03 
+300,loss:9.801e+02 
+ 10%|█         | 20/200 [26:27<3:58:07, 79.38s/it]#epoch:20 stage:2 train_loss:4.327e+00 val_loss:4.345e+00  time:1m19s
+
+
+100,loss:1.100e+03 
+200,loss:1.076e+03 
+300,loss:1.035e+03 
+ 10%|█         | 21/200 [27:46<3:56:48, 79.38s/it]#epoch:21 stage:2 train_loss:4.236e+00 val_loss:4.266e+00  time:1m19s
+
+
+100,loss:9.279e+02 
+200,loss:9.958e+02 
+300,loss:1.053e+03 
+ 11%|█         | 22/200 [29:05<3:55:27, 79.37s/it]#epoch:22 stage:2 train_loss:4.228e+00 val_loss:4.175e+00  time:1m19s
+
+
+100,loss:1.062e+03 
+200,loss:1.298e+03 
+300,loss:1.435e+03 
+ 12%|█▏        | 23/200 [30:25<3:54:02, 79.33s/it]#epoch:23 stage:2 train_loss:4.117e+00 val_loss:4.107e+00  time:1m19s
+
+
+100,loss:1.068e+03 
+200,loss:9.554e+02 
+300,loss:1.285e+03 
+ 12%|█▏        | 24/200 [31:44<3:52:38, 79.31s/it]#epoch:24 stage:2 train_loss:4.079e+00 val_loss:4.133e+00  time:1m19s
+
+
+********** step into stage03 lr 3.000e-06f
+100,loss:8.641e+02 
+200,loss:1.101e+03 
+300,loss:8.972e+02 
+ 12%|█▎        | 25/200 [33:03<3:51:25, 79.35s/it]#epoch:25 stage:3 train_loss:4.052e+00 val_loss:4.057e+00  time:1m19s
+
+
+100,loss:1.149e+03 
+200,loss:9.130e+02 
+300,loss:8.882e+02 
+ 13%|█▎        | 26/200 [34:23<3:50:07, 79.35s/it]#epoch:26 stage:3 train_loss:4.049e+00 val_loss:4.048e+00  time:1m19s
+
+
+100,loss:9.678e+02 
+200,loss:9.244e+02 
+300,loss:1.046e+03 
+ 14%|█▎        | 27/200 [35:42<3:48:50, 79.37s/it]#epoch:27 stage:3 train_loss:4.026e+00 val_loss:4.007e+00  time:1m19s
+
+
+100,loss:1.075e+03 
+200,loss:9.507e+02 
+300,loss:1.024e+03 
+ 14%|█▍        | 28/200 [37:01<3:47:31, 79.37s/it]#epoch:28 stage:3 train_loss:4.042e+00 val_loss:4.057e+00  time:1m19s
+
+
+100,loss:9.523e+02 
+200,loss:1.090e+03 
+300,loss:1.081e+03 
+ 14%|█▍        | 29/200 [38:21<3:46:22, 79.43s/it]#epoch:29 stage:3 train_loss:4.029e+00 val_loss:3.988e+00  time:1m20s
+
+
+100,loss:1.035e+03 
+200,loss:1.607e+03 
+300,loss:9.879e+02 
+ 15%|█▌        | 30/200 [39:40<3:44:58, 79.40s/it]#epoch:30 stage:3 train_loss:4.026e+00 val_loss:4.018e+00  time:1m19s
+
+
+100,loss:9.243e+02 
+200,loss:1.095e+03 
+300,loss:9.472e+02 
+ 16%|█▌        | 31/200 [41:00<3:43:32, 79.37s/it]#epoch:31 stage:3 train_loss:4.045e+00 val_loss:4.012e+00  time:1m19s
+
+
+100,loss:9.418e+02 
+200,loss:9.902e+02 
+300,loss:1.289e+03 
+ 16%|█▌        | 32/200 [42:19<3:42:22, 79.42s/it]#epoch:32 stage:3 train_loss:4.014e+00 val_loss:4.000e+00  time:1m20s
+
+
+100,loss:9.710e+02 
+200,loss:1.026e+03 
+300,loss:9.238e+02 
+ 16%|█▋        | 33/200 [43:38<3:40:58, 79.39s/it]#epoch:33 stage:3 train_loss:4.003e+00 val_loss:4.006e+00  time:1m19s
+
+
+100,loss:1.031e+03 
+200,loss:1.057e+03 
+300,loss:9.361e+02 
+ 17%|█▋        | 34/200 [44:58<3:39:36, 79.38s/it]#epoch:34 stage:3 train_loss:4.005e+00 val_loss:4.049e+00  time:1m19s
+
+
+100,loss:1.142e+03 
+200,loss:1.194e+03 
+300,loss:1.055e+03 
+ 18%|█▊        | 35/200 [46:17<3:38:14, 79.36s/it]#epoch:35 stage:3 train_loss:3.978e+00 val_loss:3.928e+00  time:1m19s
+
+
+100,loss:9.416e+02 
+200,loss:1.284e+03 
+300,loss:9.492e+02 
+ 18%|█▊        | 36/200 [47:37<3:37:01, 79.40s/it]#epoch:36 stage:3 train_loss:3.956e+00 val_loss:3.886e+00  time:1m19s
+
+
+100,loss:1.088e+03 
+200,loss:1.045e+03 
+300,loss:1.095e+03 
+ 18%|█▊        | 37/200 [48:56<3:35:42, 79.40s/it]#epoch:37 stage:3 train_loss:3.953e+00 val_loss:3.983e+00  time:1m19s
+
+
+100,loss:1.338e+03 
+200,loss:1.113e+03 
+300,loss:9.697e+02 
+ 19%|█▉        | 38/200 [50:15<3:34:25, 79.42s/it]#epoch:38 stage:3 train_loss:3.913e+00 val_loss:3.905e+00  time:1m19s
+
+
+100,loss:8.826e+02 
+200,loss:1.513e+03 
+300,loss:1.022e+03 
+ 20%|█▉        | 39/200 [51:35<3:33:11, 79.45s/it]#epoch:39 stage:3 train_loss:3.951e+00 val_loss:3.944e+00  time:1m20s
+
+
+100,loss:1.126e+03 
+200,loss:8.994e+02 
+300,loss:1.040e+03 
+ 20%|██        | 40/200 [52:54<3:31:52, 79.46s/it]#epoch:40 stage:3 train_loss:3.937e+00 val_loss:3.964e+00  time:1m19s
+
+
+********** step into stage04 lr 3.000e-07f
+100,loss:8.967e+02 
+200,loss:1.008e+03 
+300,loss:1.039e+03 
+ 20%|██        | 41/200 [54:14<3:30:36, 79.47s/it]#epoch:41 stage:4 train_loss:3.888e+00 val_loss:3.932e+00  time:1m19s
+
+
+100,loss:9.138e+02 
+200,loss:8.872e+02 
+300,loss:9.791e+02 
+ 21%|██        | 42/200 [55:33<3:29:11, 79.44s/it]#epoch:42 stage:4 train_loss:3.963e+00 val_loss:3.892e+00  time:1m19s
+
+
+100,loss:9.351e+02 
+200,loss:8.920e+02 
+300,loss:9.646e+02 
+ 22%|██▏       | 43/200 [56:53<3:27:47, 79.41s/it]#epoch:43 stage:4 train_loss:3.954e+00 val_loss:3.905e+00  time:1m19s
+
+
+100,loss:9.769e+02 
+200,loss:9.804e+02 
+300,loss:8.716e+02 
+ 22%|██▏       | 44/200 [58:12<3:26:24, 79.39s/it]#epoch:44 stage:4 train_loss:3.935e+00 val_loss:3.990e+00  time:1m19s
+
+
+100,loss:1.012e+03 
+200,loss:1.350e+03 
+300,loss:8.627e+02 
+ 22%|██▎       | 45/200 [59:32<3:25:17, 79.46s/it]#epoch:45 stage:4 train_loss:3.914e+00 val_loss:3.910e+00  time:1m20s
+
+
+100,loss:9.842e+02 
+200,loss:8.387e+02 
+300,loss:8.902e+02 
+ 23%|██▎       | 46/200 [1:00:51<3:24:00, 79.48s/it]#epoch:46 stage:4 train_loss:3.938e+00 val_loss:3.978e+00  time:1m20s
+
+
+100,loss:1.061e+03 
+200,loss:9.050e+02 
+300,loss:1.024e+03 
+ 24%|██▎       | 47/200 [1:02:11<3:22:45, 79.52s/it]#epoch:47 stage:4 train_loss:3.927e+00 val_loss:3.937e+00  time:1m20s
+
+
+100,loss:8.358e+02 
+200,loss:9.711e+02 
+300,loss:1.388e+03 
+ 24%|██▍       | 48/200 [1:03:30<3:21:21, 79.48s/it]#epoch:48 stage:4 train_loss:3.943e+00 val_loss:3.902e+00  time:1m19s
+
+
+100,loss:8.637e+02 
+200,loss:9.082e+02 
+300,loss:8.956e+02 
+ 24%|██▍       | 49/200 [1:04:50<3:20:01, 79.48s/it]#epoch:49 stage:4 train_loss:3.930e+00 val_loss:3.968e+00  time:1m19s
+
+
+100,loss:1.003e+03 
+200,loss:9.129e+02 
+300,loss:9.989e+02 
+ 25%|██▌       | 50/200 [1:06:09<3:18:38, 79.45s/it]#epoch:50 stage:4 train_loss:3.957e+00 val_loss:3.958e+00  time:1m19s
+
+
+100,loss:9.604e+02 
+200,loss:9.483e+02 
+300,loss:9.652e+02 
+ 26%|██▌       | 51/200 [1:07:29<3:17:29, 79.53s/it]#epoch:51 stage:4 train_loss:3.922e+00 val_loss:3.926e+00  time:1m20s
+
+
+100,loss:9.434e+02 
+200,loss:9.386e+02 
+300,loss:8.083e+02 
+ 26%|██▌       | 52/200 [1:08:48<3:16:11, 79.53s/it]#epoch:52 stage:4 train_loss:3.917e+00 val_loss:3.960e+00  time:1m20s
+
+
+100,loss:9.651e+02 
+200,loss:1.044e+03 
+300,loss:9.519e+02 
+ 26%|██▋       | 53/200 [1:10:08<3:14:41, 79.47s/it]#epoch:53 stage:4 train_loss:3.936e+00 val_loss:3.909e+00  time:1m19s
+
+
+100,loss:9.773e+02 
+200,loss:9.538e+02 
+300,loss:9.423e+02 
+ 27%|██▋       | 54/200 [1:11:27<3:13:25, 79.49s/it]#epoch:54 stage:4 train_loss:3.937e+00 val_loss:3.988e+00  time:1m20s
+
+
+ 27%|██▋       | 54/200 [1:11:56<3:14:29, 79.93s/it]
+100,loss:9.698e+02 
+Traceback (most recent call last):
+  File "pre_train.py", line 127, in <module>
+    pre_train(args)
+  File "pre_train.py", line 46, in pre_train
+    pre_train_procedure(args,model,model_save_dir)
+  File "pre_train.py", line 70, in pre_train_procedure
+    train_loss = train_epoch(model, optimizer, criterion,train_dataloader, show_interval=100)/len_train_dataset
+  File "pre_train.py", line 99, in train_epoch
+    optimizer.step()
+  File "/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 26, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/optim/adam.py", line 119, in step
+    group['eps']
+  File "/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/optim/functional.py", line 94, in adam
+    denom = (exp_avg_sq.sqrt() / math.sqrt(bias_correction2)).add_(eps)
+  File "/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 18252) is killed by signal: Terminated. 

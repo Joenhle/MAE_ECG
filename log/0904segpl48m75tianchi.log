@@ -1,0 +1,682 @@
+cuda is True
+device is cuda
+freeze
+training with pre_train
+linearprobe,freeze encoder
+encoder.cls_token
+False
+encoder.pos_embed
+False
+encoder.patch_embed.proj.weight
+False
+encoder.patch_embed.proj.bias
+False
+encoder.blocks.0.norm1.weight
+False
+encoder.blocks.0.norm1.bias
+False
+encoder.blocks.0.attn.qkv.weight
+False
+encoder.blocks.0.attn.qkv.bias
+False
+encoder.blocks.0.attn.proj.weight
+False
+encoder.blocks.0.attn.proj.bias
+False
+encoder.blocks.0.norm2.weight
+False
+encoder.blocks.0.norm2.bias
+False
+encoder.blocks.0.mlp.fc1.weight
+False
+encoder.blocks.0.mlp.fc1.bias
+False
+encoder.blocks.0.mlp.fc2.weight
+False
+encoder.blocks.0.mlp.fc2.bias
+False
+encoder.blocks.1.norm1.weight
+False
+encoder.blocks.1.norm1.bias
+False
+encoder.blocks.1.attn.qkv.weight
+False
+encoder.blocks.1.attn.qkv.bias
+False
+encoder.blocks.1.attn.proj.weight
+False
+encoder.blocks.1.attn.proj.bias
+False
+encoder.blocks.1.norm2.weight
+False
+encoder.blocks.1.norm2.bias
+False
+encoder.blocks.1.mlp.fc1.weight
+False
+encoder.blocks.1.mlp.fc1.bias
+False
+encoder.blocks.1.mlp.fc2.weight
+False
+encoder.blocks.1.mlp.fc2.bias
+False
+encoder.blocks.2.norm1.weight
+False
+encoder.blocks.2.norm1.bias
+False
+encoder.blocks.2.attn.qkv.weight
+False
+encoder.blocks.2.attn.qkv.bias
+False
+encoder.blocks.2.attn.proj.weight
+False
+encoder.blocks.2.attn.proj.bias
+False
+encoder.blocks.2.norm2.weight
+False
+encoder.blocks.2.norm2.bias
+False
+encoder.blocks.2.mlp.fc1.weight
+False
+encoder.blocks.2.mlp.fc1.bias
+False
+encoder.blocks.2.mlp.fc2.weight
+False
+encoder.blocks.2.mlp.fc2.bias
+False
+encoder.blocks.3.norm1.weight
+False
+encoder.blocks.3.norm1.bias
+False
+encoder.blocks.3.attn.qkv.weight
+False
+encoder.blocks.3.attn.qkv.bias
+False
+encoder.blocks.3.attn.proj.weight
+False
+encoder.blocks.3.attn.proj.bias
+False
+encoder.blocks.3.norm2.weight
+False
+encoder.blocks.3.norm2.bias
+False
+encoder.blocks.3.mlp.fc1.weight
+False
+encoder.blocks.3.mlp.fc1.bias
+False
+encoder.blocks.3.mlp.fc2.weight
+False
+encoder.blocks.3.mlp.fc2.bias
+False
+encoder.blocks.4.norm1.weight
+False
+encoder.blocks.4.norm1.bias
+False
+encoder.blocks.4.attn.qkv.weight
+False
+encoder.blocks.4.attn.qkv.bias
+False
+encoder.blocks.4.attn.proj.weight
+False
+encoder.blocks.4.attn.proj.bias
+False
+encoder.blocks.4.norm2.weight
+False
+encoder.blocks.4.norm2.bias
+False
+encoder.blocks.4.mlp.fc1.weight
+False
+encoder.blocks.4.mlp.fc1.bias
+False
+encoder.blocks.4.mlp.fc2.weight
+False
+encoder.blocks.4.mlp.fc2.bias
+False
+encoder.blocks.5.norm1.weight
+False
+encoder.blocks.5.norm1.bias
+False
+encoder.blocks.5.attn.qkv.weight
+False
+encoder.blocks.5.attn.qkv.bias
+False
+encoder.blocks.5.attn.proj.weight
+False
+encoder.blocks.5.attn.proj.bias
+False
+encoder.blocks.5.norm2.weight
+False
+encoder.blocks.5.norm2.bias
+False
+encoder.blocks.5.mlp.fc1.weight
+False
+encoder.blocks.5.mlp.fc1.bias
+False
+encoder.blocks.5.mlp.fc2.weight
+False
+encoder.blocks.5.mlp.fc2.bias
+False
+encoder.blocks.6.norm1.weight
+False
+encoder.blocks.6.norm1.bias
+False
+encoder.blocks.6.attn.qkv.weight
+False
+encoder.blocks.6.attn.qkv.bias
+False
+encoder.blocks.6.attn.proj.weight
+False
+encoder.blocks.6.attn.proj.bias
+False
+encoder.blocks.6.norm2.weight
+False
+encoder.blocks.6.norm2.bias
+False
+encoder.blocks.6.mlp.fc1.weight
+False
+encoder.blocks.6.mlp.fc1.bias
+False
+encoder.blocks.6.mlp.fc2.weight
+False
+encoder.blocks.6.mlp.fc2.bias
+False
+encoder.blocks.7.norm1.weight
+False
+encoder.blocks.7.norm1.bias
+False
+encoder.blocks.7.attn.qkv.weight
+False
+encoder.blocks.7.attn.qkv.bias
+False
+encoder.blocks.7.attn.proj.weight
+False
+encoder.blocks.7.attn.proj.bias
+False
+encoder.blocks.7.norm2.weight
+False
+encoder.blocks.7.norm2.bias
+False
+encoder.blocks.7.mlp.fc1.weight
+False
+encoder.blocks.7.mlp.fc1.bias
+False
+encoder.blocks.7.mlp.fc2.weight
+False
+encoder.blocks.7.mlp.fc2.bias
+False
+encoder.blocks.8.norm1.weight
+False
+encoder.blocks.8.norm1.bias
+False
+encoder.blocks.8.attn.qkv.weight
+False
+encoder.blocks.8.attn.qkv.bias
+False
+encoder.blocks.8.attn.proj.weight
+False
+encoder.blocks.8.attn.proj.bias
+False
+encoder.blocks.8.norm2.weight
+False
+encoder.blocks.8.norm2.bias
+False
+encoder.blocks.8.mlp.fc1.weight
+False
+encoder.blocks.8.mlp.fc1.bias
+False
+encoder.blocks.8.mlp.fc2.weight
+False
+encoder.blocks.8.mlp.fc2.bias
+False
+encoder.blocks.9.norm1.weight
+False
+encoder.blocks.9.norm1.bias
+False
+encoder.blocks.9.attn.qkv.weight
+False
+encoder.blocks.9.attn.qkv.bias
+False
+encoder.blocks.9.attn.proj.weight
+False
+encoder.blocks.9.attn.proj.bias
+False
+encoder.blocks.9.norm2.weight
+False
+encoder.blocks.9.norm2.bias
+False
+encoder.blocks.9.mlp.fc1.weight
+False
+encoder.blocks.9.mlp.fc1.bias
+False
+encoder.blocks.9.mlp.fc2.weight
+False
+encoder.blocks.9.mlp.fc2.bias
+False
+encoder.blocks.10.norm1.weight
+False
+encoder.blocks.10.norm1.bias
+False
+encoder.blocks.10.attn.qkv.weight
+False
+encoder.blocks.10.attn.qkv.bias
+False
+encoder.blocks.10.attn.proj.weight
+False
+encoder.blocks.10.attn.proj.bias
+False
+encoder.blocks.10.norm2.weight
+False
+encoder.blocks.10.norm2.bias
+False
+encoder.blocks.10.mlp.fc1.weight
+False
+encoder.blocks.10.mlp.fc1.bias
+False
+encoder.blocks.10.mlp.fc2.weight
+False
+encoder.blocks.10.mlp.fc2.bias
+False
+encoder.blocks.11.norm1.weight
+False
+encoder.blocks.11.norm1.bias
+False
+encoder.blocks.11.attn.qkv.weight
+False
+encoder.blocks.11.attn.qkv.bias
+False
+encoder.blocks.11.attn.proj.weight
+False
+encoder.blocks.11.attn.proj.bias
+False
+encoder.blocks.11.norm2.weight
+False
+encoder.blocks.11.norm2.bias
+False
+encoder.blocks.11.mlp.fc1.weight
+False
+encoder.blocks.11.mlp.fc1.bias
+False
+encoder.blocks.11.mlp.fc2.weight
+False
+encoder.blocks.11.mlp.fc2.bias
+False
+encoder.norm.weight
+False
+encoder.norm.bias
+False
+upsample_1_1.weight
+True
+upsample_1_1.bias
+True
+upsample_2_1.weight
+True
+upsample_2_1.bias
+True
+upsample_3_1.weight
+True
+upsample_3_1.bias
+True
+upsample_4_1.weight
+True
+upsample_4_1.bias
+True
+upsample_1_2.weight
+True
+upsample_1_2.bias
+True
+upsample_2_2.weight
+True
+upsample_2_2.bias
+True
+upsample_3_2.weight
+True
+upsample_3_2.bias
+True
+upsample_4_2.weight
+True
+upsample_4_2.bias
+True
+conv_out.seq.0.weight
+True
+conv_out.seq.1.weight
+True
+conv_out.seq.1.bias
+True
+conv_cat1.seq.0.weight
+True
+conv_cat1.seq.1.weight
+True
+conv_cat1.seq.1.bias
+True
+conv_cat2.seq.0.weight
+True
+conv_cat2.seq.1.weight
+True
+conv_cat2.seq.1.bias
+True
+conv_cat3.seq.0.weight
+True
+conv_cat3.seq.1.weight
+True
+conv_cat3.seq.1.bias
+True
+conv_cat4.seq.0.weight
+True
+conv_cat4.seq.1.weight
+True
+conv_cat4.seq.1.bias
+True
+ECG_mae_segmentation_U_48(
+  (encoder): EncoderMAE(
+    (patch_embed): PatchEmbed_1D(
+      (proj): Conv1d(1, 160, kernel_size=(48,), stride=(48,))
+      (norm): Identity()
+    )
+    (blocks): ModuleList(
+      (0): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (1): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (2): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (3): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (4): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (5): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (6): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (7): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (8): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (9): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (10): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (11): Block(
+        (norm1): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (qkv): Linear(in_features=160, out_features=480, bias=True)
+          (attn_drop): Dropout(p=0.0, inplace=False)
+          (proj): Linear(in_features=160, out_features=160, bias=True)
+          (proj_drop): Dropout(p=0.0, inplace=False)
+        )
+        (drop_path): Identity()
+        (norm2): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+        (mlp): Mlp(
+          (fc1): Linear(in_features=160, out_features=320, bias=True)
+          (act): GELU()
+          (drop1): Dropout(p=0.0, inplace=False)
+          (fc2): Linear(in_features=320, out_features=160, bias=True)
+          (drop2): Dropout(p=0.0, inplace=False)
+        )
+      )
+    )
+    (norm): LayerNorm((160,), eps=1e-05, elementwise_affine=True)
+  )
+  (upsample_1_1): ConvTranspose1d(160, 80, kernel_size=(10,), stride=(4,), padding=(3,))
+  (upsample_2_1): ConvTranspose1d(80, 40, kernel_size=(8,), stride=(2,), padding=(3,))
+  (upsample_3_1): ConvTranspose1d(40, 10, kernel_size=(9,), stride=(3,), padding=(3,))
+  (upsample_4_1): ConvTranspose1d(10, 4, kernel_size=(8,), stride=(2,), padding=(3,))
+  (upsample_1_2): ConvTranspose1d(160, 80, kernel_size=(10,), stride=(4,), padding=(3,))
+  (upsample_2_2): ConvTranspose1d(80, 40, kernel_size=(8,), stride=(2,), padding=(3,))
+  (upsample_3_2): ConvTranspose1d(40, 10, kernel_size=(9,), stride=(3,), padding=(3,))
+  (upsample_4_2): ConvTranspose1d(10, 4, kernel_size=(8,), stride=(2,), padding=(3,))
+  (conv_out): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(4, 4, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (conv_cat1): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(160, 80, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (conv_cat2): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(80, 40, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (conv_cat3): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(20, 10, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+  (conv_cat4): CBR_1D(
+    (seq): Sequential(
+      (0): Conv1d(8, 4, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+    )
+  )
+)  0%|          | 0/1000 [00:00<?, ?it/s]
+train_datasize 800 val_datasize 200
+  0%|          | 1/1000 [01:02<17:15:35, 62.20s/it]#epoch:01 stage:1 train_loss:1.143e-02 val_loss:1.149e-02  time:1m2s
+
+ bg_pi:0.289 bg_ri:0.884 p_pi:0.622 p_ri:0.899 r_pi:0.718 r_ri:0.724 t_pi:0.860 t_ri:0.214
+  0%|          | 2/1000 [02:08<17:34:32, 63.40s/it]#epoch:02 stage:1 train_loss:1.045e-02 val_loss:1.029e-02  time:1m6s
+
+ bg_pi:0.520 bg_ri:0.851 p_pi:0.471 p_ri:0.967 r_pi:0.708 r_ri:0.943 t_pi:0.927 t_ri:0.327
+  0%|          | 3/1000 [03:15<17:53:27, 64.60s/it]#epoch:03 stage:1 train_loss:9.706e-03 val_loss:9.603e-03  time:1m7s
+
+ bg_pi:0.565 bg_ri:0.849 p_pi:0.529 p_ri:0.974 r_pi:0.736 r_ri:0.964 t_pi:0.918 t_ri:0.425
+ERROR: Unexpected bus error encountered in worker. This might be caused by insufficient shared memory (shm).
+ ERROR: Unexpected bus error encountered in worker. This might be caused by insufficient shared memory (shm).
+ ERROR: Unexpected bus error encountered in worker. This might be caused by insufficient shared memory (shm).
+   0%|          | 3/1000 [03:18<18:18:30, 66.11s/it]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 872, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/root/miniconda3/envs/ECG/lib/python3.7/queue.py", line 179, in get
+    self.not_empty.wait(remaining)
+  File "/root/miniconda3/envs/ECG/lib/python3.7/threading.py", line 300, in wait
+    gotit = waiter.acquire(True, timeout)
+  File "/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 9538) is killed by signal: Bus error. It is possible that dataloader's workers are out of shared memory. Please try to raise your shared memory limit.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "train.py", line 260, in <module>
+    train(args)
+  File "train.py", line 81, in train
+    train_procedure(args,model,model_save_dir)
+  File "train.py", line 112, in train_procedure
+    train_loss = train_epoch(model, optimizer, criterion,train_dataloader, show_interval=100)/len_train_dataset
+  File "train.py", line 150, in train_epoch
+    for inputs,target in train_dataloader:
+  File "/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 435, in __next__
+    data = self._next_data()
+  File "/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1068, in _next_data
+    idx, data = self._get_data()
+  File "/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1024, in _get_data
+    success, data = self._try_get_data()
+  File "/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 885, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 9538) exited unexpectedly

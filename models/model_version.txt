@@ -1,0 +1,3 @@
+mae_1d 初始模型
+mae_1d_conv 在均匀遮盖下，对连续的patch做卷积
+mae_1d_restructed_by_all 使用全部的token进行重构，再取出对应列

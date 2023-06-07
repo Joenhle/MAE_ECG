@@ -1,0 +1,976 @@
+start train
+MultiResUnet(
+  (mres_block1): MultiResBlock(
+    (conv1d_bn): Sequential(
+      (0): Conv1d(1, 25, kernel_size=(1,), stride=(1,), bias=False)
+      (1): BatchNorm1d(25, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (conv3x3): Sequential(
+      (0): Conv1d(1, 4, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv5x5): Sequential(
+      (0): Conv1d(4, 8, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv7x7): Sequential(
+      (0): Conv1d(8, 13, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(13, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (bn_1): BatchNorm1d(25, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (bn_2): BatchNorm1d(25, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (pool): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (res_path1): ResPath(
+    (first_block): ResPathBlock(
+      (conv1d_bn1): Sequential(
+        (0): Conv1d(25, 16, kernel_size=(1,), stride=(1,), bias=False)
+        (1): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (conv1d_bn2): Sequential(
+        (0): Conv1d(25, 16, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+        (1): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+        (2): ReLU()
+      )
+      (relu): ReLU()
+      (bn): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (blocks): Sequential(
+      (0): ResPathBlock(
+        (conv1d_bn1): Sequential(
+          (0): Conv1d(16, 16, kernel_size=(1,), stride=(1,), bias=False)
+          (1): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1d_bn2): Sequential(
+          (0): Conv1d(16, 16, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+          (1): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+          (2): ReLU()
+        )
+        (relu): ReLU()
+        (bn): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): ResPathBlock(
+        (conv1d_bn1): Sequential(
+          (0): Conv1d(16, 16, kernel_size=(1,), stride=(1,), bias=False)
+          (1): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1d_bn2): Sequential(
+          (0): Conv1d(16, 16, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+          (1): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+          (2): ReLU()
+        )
+        (relu): ReLU()
+        (bn): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResPathBlock(
+        (conv1d_bn1): Sequential(
+          (0): Conv1d(16, 16, kernel_size=(1,), stride=(1,), bias=False)
+          (1): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1d_bn2): Sequential(
+          (0): Conv1d(16, 16, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+          (1): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+          (2): ReLU()
+        )
+        (relu): ReLU()
+        (bn): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (mres_block2): MultiResBlock(
+    (conv1d_bn): Sequential(
+      (0): Conv1d(25, 51, kernel_size=(1,), stride=(1,), bias=False)
+      (1): BatchNorm1d(51, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (conv3x3): Sequential(
+      (0): Conv1d(25, 8, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv5x5): Sequential(
+      (0): Conv1d(8, 17, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(17, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv7x7): Sequential(
+      (0): Conv1d(17, 26, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(26, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (bn_1): BatchNorm1d(51, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (bn_2): BatchNorm1d(51, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_path2): ResPath(
+    (first_block): ResPathBlock(
+      (conv1d_bn1): Sequential(
+        (0): Conv1d(51, 32, kernel_size=(1,), stride=(1,), bias=False)
+        (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (conv1d_bn2): Sequential(
+        (0): Conv1d(51, 32, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+        (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+        (2): ReLU()
+      )
+      (relu): ReLU()
+      (bn): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (blocks): Sequential(
+      (0): ResPathBlock(
+        (conv1d_bn1): Sequential(
+          (0): Conv1d(32, 32, kernel_size=(1,), stride=(1,), bias=False)
+          (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1d_bn2): Sequential(
+          (0): Conv1d(32, 32, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+          (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+          (2): ReLU()
+        )
+        (relu): ReLU()
+        (bn): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): ResPathBlock(
+        (conv1d_bn1): Sequential(
+          (0): Conv1d(32, 32, kernel_size=(1,), stride=(1,), bias=False)
+          (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1d_bn2): Sequential(
+          (0): Conv1d(32, 32, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+          (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+          (2): ReLU()
+        )
+        (relu): ReLU()
+        (bn): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (mres_block3): MultiResBlock(
+    (conv1d_bn): Sequential(
+      (0): Conv1d(51, 105, kernel_size=(1,), stride=(1,), bias=False)
+      (1): BatchNorm1d(105, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (conv3x3): Sequential(
+      (0): Conv1d(51, 17, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(17, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv5x5): Sequential(
+      (0): Conv1d(17, 35, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(35, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv7x7): Sequential(
+      (0): Conv1d(35, 53, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(53, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (bn_1): BatchNorm1d(105, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (bn_2): BatchNorm1d(105, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_path3): ResPath(
+    (first_block): ResPathBlock(
+      (conv1d_bn1): Sequential(
+        (0): Conv1d(105, 64, kernel_size=(1,), stride=(1,), bias=False)
+        (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (conv1d_bn2): Sequential(
+        (0): Conv1d(105, 64, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+        (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+        (2): ReLU()
+      )
+      (relu): ReLU()
+      (bn): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (blocks): Sequential(
+      (0): ResPathBlock(
+        (conv1d_bn1): Sequential(
+          (0): Conv1d(64, 64, kernel_size=(1,), stride=(1,), bias=False)
+          (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1d_bn2): Sequential(
+          (0): Conv1d(64, 64, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+          (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+          (2): ReLU()
+        )
+        (relu): ReLU()
+        (bn): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (mres_block4): MultiResBlock(
+    (conv1d_bn): Sequential(
+      (0): Conv1d(105, 212, kernel_size=(1,), stride=(1,), bias=False)
+      (1): BatchNorm1d(212, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (conv3x3): Sequential(
+      (0): Conv1d(105, 35, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(35, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv5x5): Sequential(
+      (0): Conv1d(35, 71, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(71, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv7x7): Sequential(
+      (0): Conv1d(71, 106, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(106, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (bn_1): BatchNorm1d(212, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (bn_2): BatchNorm1d(212, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_path4): ResPath(
+    (first_block): ResPathBlock(
+      (conv1d_bn1): Sequential(
+        (0): Conv1d(212, 128, kernel_size=(1,), stride=(1,), bias=False)
+        (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (conv1d_bn2): Sequential(
+        (0): Conv1d(212, 128, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+        (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+        (2): ReLU()
+      )
+      (relu): ReLU()
+      (bn): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (blocks): Sequential()
+  )
+  (mres_block5): MultiResBlock(
+    (conv1d_bn): Sequential(
+      (0): Conv1d(212, 426, kernel_size=(1,), stride=(1,), bias=False)
+      (1): BatchNorm1d(426, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (conv3x3): Sequential(
+      (0): Conv1d(212, 71, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(71, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv5x5): Sequential(
+      (0): Conv1d(71, 142, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(142, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv7x7): Sequential(
+      (0): Conv1d(142, 213, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(213, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (bn_1): BatchNorm1d(426, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (bn_2): BatchNorm1d(426, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (deconv1): ConvTranspose1d(426, 128, kernel_size=(8,), stride=(2,), padding=(3,))
+  (mres_block6): MultiResBlock(
+    (conv1d_bn): Sequential(
+      (0): Conv1d(256, 212, kernel_size=(1,), stride=(1,), bias=False)
+      (1): BatchNorm1d(212, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (conv3x3): Sequential(
+      (0): Conv1d(256, 35, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(35, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv5x5): Sequential(
+      (0): Conv1d(35, 71, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(71, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv7x7): Sequential(
+      (0): Conv1d(71, 106, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(106, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (bn_1): BatchNorm1d(212, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (bn_2): BatchNorm1d(212, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (deconv2): ConvTranspose1d(212, 64, kernel_size=(8,), stride=(2,), padding=(3,))
+  (mres_block7): MultiResBlock(
+    (conv1d_bn): Sequential(
+      (0): Conv1d(128, 105, kernel_size=(1,), stride=(1,), bias=False)
+      (1): BatchNorm1d(105, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (conv3x3): Sequential(
+      (0): Conv1d(128, 17, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(17, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv5x5): Sequential(
+      (0): Conv1d(17, 35, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(35, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv7x7): Sequential(
+      (0): Conv1d(35, 53, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(53, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (bn_1): BatchNorm1d(105, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (bn_2): BatchNorm1d(105, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (deconv3): ConvTranspose1d(105, 32, kernel_size=(8,), stride=(2,), padding=(3,))
+  (mres_block8): MultiResBlock(
+    (conv1d_bn): Sequential(
+      (0): Conv1d(64, 51, kernel_size=(1,), stride=(1,), bias=False)
+      (1): BatchNorm1d(51, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (conv3x3): Sequential(
+      (0): Conv1d(64, 8, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv5x5): Sequential(
+      (0): Conv1d(8, 17, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(17, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv7x7): Sequential(
+      (0): Conv1d(17, 26, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(26, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (bn_1): BatchNorm1d(51, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (bn_2): BatchNorm1d(51, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (deconv4): ConvTranspose1d(51, 16, kernel_size=(8,), stride=(2,), padding=(3,))
+  (mres_block9): MultiResBlock(
+    (conv1d_bn): Sequential(
+      (0): Conv1d(32, 25, kernel_size=(1,), stride=(1,), bias=False)
+      (1): BatchNorm1d(25, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (conv3x3): Sequential(
+      (0): Conv1d(32, 4, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv5x5): Sequential(
+      (0): Conv1d(4, 8, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (conv7x7): Sequential(
+      (0): Conv1d(8, 13, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(13, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (2): ReLU()
+    )
+    (bn_1): BatchNorm1d(25, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (bn_2): BatchNorm1d(25, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv10): Sequential(
+    (0): Conv1d(25, 4, kernel_size=(9,), stride=(1,), padding=(4,), bias=False)
+    (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): Tanh()
+  )
+)  0%|          | 0/200 [00:00<?, ?it/s]
+train_datasize 1662 val_datasize 399
+  0%|          | 1/200 [02:04<6:52:08, 124.26s/it]#epoch:01 stage:1 train_loss:8.359e-03 val_loss:7.738e-03  time:2m4s
+
+ bg_pi:0.619 bg_ri:0.894 p_pi:0.736 p_ri:0.827 r_pi:0.650 r_ri:0.954 t_pi:0.915 t_ri:0.642
+  1%|          | 2/200 [04:09<6:50:57, 124.53s/it]#epoch:02 stage:1 train_loss:7.367e-03 val_loss:7.293e-03  time:2m5s
+
+ bg_pi:0.695 bg_ri:0.880 p_pi:0.703 p_ri:0.899 r_pi:0.776 r_ri:0.942 t_pi:0.929 t_ri:0.745
+  2%|▏         | 3/200 [06:15<6:50:12, 124.94s/it]#epoch:03 stage:1 train_loss:7.203e-03 val_loss:7.165e-03  time:2m6s
+
+ bg_pi:0.707 bg_ri:0.848 p_pi:0.718 p_ri:0.893 r_pi:0.784 r_ri:0.904 t_pi:0.904 t_ri:0.765
+  2%|▏         | 4/200 [08:21<6:49:30, 125.36s/it]#epoch:04 stage:1 train_loss:7.086e-03 val_loss:7.043e-03  time:2m6s
+
+ bg_pi:0.737 bg_ri:0.840 p_pi:0.733 p_ri:0.871 r_pi:0.810 r_ri:0.919 t_pi:0.905 t_ri:0.795
+  2%|▎         | 5/200 [10:26<6:47:21, 125.34s/it]#epoch:05 stage:1 train_loss:6.982e-03 val_loss:6.955e-03  time:2m5s
+
+ bg_pi:0.726 bg_ri:0.845 p_pi:0.741 p_ri:0.857 r_pi:0.798 r_ri:0.889 t_pi:0.891 t_ri:0.791
+  3%|▎         | 6/200 [12:33<6:46:22, 125.68s/it]#epoch:06 stage:1 train_loss:6.886e-03 val_loss:6.879e-03  time:2m6s
+
+ bg_pi:0.738 bg_ri:0.839 p_pi:0.744 p_ri:0.867 r_pi:0.814 r_ri:0.906 t_pi:0.899 t_ri:0.802
+  4%|▎         | 7/200 [14:38<6:43:32, 125.46s/it]#epoch:07 stage:1 train_loss:6.802e-03 val_loss:6.808e-03  time:2m5s
+
+ bg_pi:0.697 bg_ri:0.829 p_pi:0.748 p_ri:0.861 r_pi:0.806 r_ri:0.915 t_pi:0.899 t_ri:0.787
+  4%|▍         | 8/200 [16:44<6:42:18, 125.72s/it]#epoch:08 stage:1 train_loss:6.725e-03 val_loss:6.729e-03  time:2m6s
+
+ bg_pi:0.750 bg_ri:0.833 p_pi:0.751 p_ri:0.854 r_pi:0.794 r_ri:0.896 t_pi:0.892 t_ri:0.801
+  4%|▍         | 9/200 [18:49<6:39:34, 125.52s/it]#epoch:09 stage:1 train_loss:6.655e-03 val_loss:6.660e-03  time:2m5s
+
+ bg_pi:0.732 bg_ri:0.808 p_pi:0.759 p_ri:0.855 r_pi:0.793 r_ri:0.885 t_pi:0.884 t_ri:0.801
+  5%|▌         | 10/200 [20:55<6:37:22, 125.48s/it]#epoch:10 stage:1 train_loss:6.584e-03 val_loss:6.607e-03  time:2m5s
+
+ bg_pi:0.739 bg_ri:0.838 p_pi:0.751 p_ri:0.845 r_pi:0.811 r_ri:0.861 t_pi:0.878 t_ri:0.809
+  6%|▌         | 11/200 [22:58<6:33:20, 124.87s/it]#epoch:11 stage:1 train_loss:6.517e-03 val_loss:6.537e-03  time:2m3s
+
+ bg_pi:0.735 bg_ri:0.812 p_pi:0.761 p_ri:0.843 r_pi:0.821 r_ri:0.894 t_pi:0.885 t_ri:0.815
+  6%|▌         | 12/200 [25:02<6:30:25, 124.60s/it]#epoch:12 stage:1 train_loss:6.458e-03 val_loss:6.499e-03  time:2m4s
+
+ bg_pi:0.703 bg_ri:0.838 p_pi:0.748 p_ri:0.850 r_pi:0.810 r_ri:0.906 t_pi:0.895 t_ri:0.790
+  6%|▋         | 13/200 [27:08<6:29:57, 125.12s/it]#epoch:13 stage:1 train_loss:6.409e-03 val_loss:6.448e-03  time:2m6s
+
+ bg_pi:0.749 bg_ri:0.846 p_pi:0.758 p_ri:0.843 r_pi:0.815 r_ri:0.919 t_pi:0.901 t_ri:0.810
+  7%|▋         | 14/200 [29:16<6:29:46, 125.73s/it]#epoch:14 stage:1 train_loss:6.348e-03 val_loss:6.375e-03  time:2m7s
+
+ bg_pi:0.725 bg_ri:0.822 p_pi:0.765 p_ri:0.845 r_pi:0.808 r_ri:0.908 t_pi:0.892 t_ri:0.804
+  8%|▊         | 15/200 [31:20<6:26:36, 125.39s/it]#epoch:15 stage:1 train_loss:6.298e-03 val_loss:6.343e-03  time:2m4s
+
+ bg_pi:0.767 bg_ri:0.802 p_pi:0.758 p_ri:0.837 r_pi:0.823 r_ri:0.845 t_pi:0.866 t_ri:0.829
+  8%|▊         | 16/200 [33:25<6:23:40, 125.11s/it]#epoch:16 stage:1 train_loss:6.253e-03 val_loss:6.295e-03  time:2m4s
+
+ bg_pi:0.730 bg_ri:0.824 p_pi:0.749 p_ri:0.854 r_pi:0.814 r_ri:0.919 t_pi:0.898 t_ri:0.801
+  8%|▊         | 17/200 [35:29<6:20:30, 124.76s/it]#epoch:17 stage:1 train_loss:6.212e-03 val_loss:6.268e-03  time:2m4s
+
+ bg_pi:0.738 bg_ri:0.828 p_pi:0.761 p_ri:0.835 r_pi:0.803 r_ri:0.882 t_pi:0.882 t_ri:0.807
+  9%|▉         | 18/200 [37:33<6:18:06, 124.65s/it]#epoch:18 stage:1 train_loss:6.170e-03 val_loss:6.209e-03  time:2m4s
+
+ bg_pi:0.726 bg_ri:0.832 p_pi:0.768 p_ri:0.828 r_pi:0.815 r_ri:0.903 t_pi:0.890 t_ri:0.810
+ 10%|▉         | 19/200 [39:37<6:15:48, 124.58s/it]#epoch:19 stage:1 train_loss:6.133e-03 val_loss:6.212e-03  time:2m4s
+
+ bg_pi:0.765 bg_ri:0.845 p_pi:0.751 p_ri:0.852 r_pi:0.811 r_ri:0.898 t_pi:0.895 t_ri:0.812
+ 10%|█         | 20/200 [41:41<6:12:31, 124.17s/it]#epoch:20 stage:1 train_loss:6.089e-03 val_loss:6.118e-03  time:2m3s
+
+ bg_pi:0.776 bg_ri:0.804 p_pi:0.768 p_ri:0.844 r_pi:0.837 r_ri:0.839 t_pi:0.867 t_ri:0.841
+ 10%|█         | 21/200 [43:45<6:10:25, 124.17s/it]#epoch:21 stage:1 train_loss:6.045e-03 val_loss:6.095e-03  time:2m4s
+
+ bg_pi:0.774 bg_ri:0.795 p_pi:0.780 p_ri:0.838 r_pi:0.812 r_ri:0.905 t_pi:0.887 t_ri:0.830
+ 11%|█         | 22/200 [45:49<6:08:32, 124.23s/it]#epoch:22 stage:1 train_loss:6.013e-03 val_loss:6.119e-03  time:2m4s
+
+ bg_pi:0.730 bg_ri:0.843 p_pi:0.764 p_ri:0.838 r_pi:0.788 r_ri:0.899 t_pi:0.892 t_ri:0.796
+ 12%|█▏        | 23/200 [47:53<6:06:29, 124.23s/it]#epoch:23 stage:1 train_loss:5.987e-03 val_loss:6.036e-03  time:2m4s
+
+ bg_pi:0.759 bg_ri:0.784 p_pi:0.774 p_ri:0.830 r_pi:0.815 r_ri:0.877 t_pi:0.873 t_ri:0.828
+ 12%|█▏        | 24/200 [49:57<6:03:54, 124.06s/it]#epoch:24 stage:1 train_loss:5.955e-03 val_loss:5.985e-03  time:2m4s
+
+ bg_pi:0.764 bg_ri:0.796 p_pi:0.780 p_ri:0.830 r_pi:0.829 r_ri:0.877 t_pi:0.876 t_ri:0.837
+ 12%|█▎        | 25/200 [52:00<6:01:17, 123.87s/it]#epoch:25 stage:1 train_loss:5.921e-03 val_loss:5.972e-03  time:2m3s
+
+ bg_pi:0.768 bg_ri:0.794 p_pi:0.773 p_ri:0.836 r_pi:0.827 r_ri:0.860 t_pi:0.870 t_ri:0.835
+ 13%|█▎        | 26/200 [54:04<5:58:52, 123.75s/it]#epoch:26 stage:1 train_loss:5.890e-03 val_loss:5.977e-03  time:2m3s
+
+ bg_pi:0.752 bg_ri:0.814 p_pi:0.753 p_ri:0.835 r_pi:0.822 r_ri:0.901 t_pi:0.887 t_ri:0.819
+ 14%|█▎        | 27/200 [56:07<5:56:21, 123.59s/it]#epoch:27 stage:1 train_loss:5.857e-03 val_loss:5.954e-03  time:2m3s
+
+ bg_pi:0.755 bg_ri:0.816 p_pi:0.753 p_ri:0.829 r_pi:0.812 r_ri:0.879 t_pi:0.878 t_ri:0.816
+ 14%|█▍        | 28/200 [58:12<5:55:21, 123.96s/it]#epoch:28 stage:1 train_loss:5.834e-03 val_loss:5.968e-03  time:2m5s
+
+ bg_pi:0.754 bg_ri:0.820 p_pi:0.765 p_ri:0.849 r_pi:0.835 r_ri:0.904 t_pi:0.894 t_ri:0.827
+ 14%|█▍        | 29/200 [1:00:14<5:51:39, 123.39s/it]#epoch:29 stage:1 train_loss:5.817e-03 val_loss:5.982e-03  time:2m2s
+
+ bg_pi:0.779 bg_ri:0.737 p_pi:0.788 p_ri:0.811 r_pi:0.842 r_ri:0.824 t_pi:0.847 t_ri:0.859
+ 15%|█▌        | 30/200 [1:02:18<5:50:33, 123.72s/it]#epoch:30 stage:1 train_loss:5.795e-03 val_loss:5.916e-03  time:2m4s
+
+ bg_pi:0.746 bg_ri:0.820 p_pi:0.763 p_ri:0.827 r_pi:0.811 r_ri:0.900 t_pi:0.886 t_ri:0.815
+ 16%|█▌        | 31/200 [1:04:23<5:48:56, 123.89s/it]#epoch:31 stage:1 train_loss:5.759e-03 val_loss:5.870e-03  time:2m4s
+
+ bg_pi:0.761 bg_ri:0.807 p_pi:0.775 p_ri:0.818 r_pi:0.815 r_ri:0.883 t_pi:0.876 t_ri:0.826
+ 16%|█▌        | 32/200 [1:06:29<5:48:36, 124.50s/it]#epoch:32 stage:1 train_loss:5.737e-03 val_loss:5.868e-03  time:2m6s
+
+ bg_pi:0.763 bg_ri:0.781 p_pi:0.745 p_ri:0.805 r_pi:0.811 r_ri:0.897 t_pi:0.873 t_ri:0.818
+ 16%|█▋        | 33/200 [1:08:32<5:45:50, 124.26s/it]#epoch:33 stage:1 train_loss:5.714e-03 val_loss:5.871e-03  time:2m4s
+
+ bg_pi:0.750 bg_ri:0.812 p_pi:0.766 p_ri:0.834 r_pi:0.815 r_ri:0.896 t_pi:0.885 t_ri:0.819
+ 17%|█▋        | 34/200 [1:10:34<5:41:21, 123.38s/it]#epoch:34 stage:1 train_loss:5.686e-03 val_loss:5.802e-03  time:2m1s
+
+ bg_pi:0.763 bg_ri:0.796 p_pi:0.774 p_ri:0.816 r_pi:0.817 r_ri:0.881 t_pi:0.873 t_ri:0.829
+ 18%|█▊        | 35/200 [1:12:36<5:38:42, 123.16s/it]#epoch:35 stage:1 train_loss:5.668e-03 val_loss:5.816e-03  time:2m3s
+
+ bg_pi:0.768 bg_ri:0.803 p_pi:0.781 p_ri:0.825 r_pi:0.839 r_ri:0.850 t_pi:0.868 t_ri:0.844
+ 18%|█▊        | 36/200 [1:14:42<5:38:16, 123.76s/it]#epoch:36 stage:1 train_loss:5.655e-03 val_loss:5.835e-03  time:2m5s
+
+ bg_pi:0.757 bg_ri:0.807 p_pi:0.767 p_ri:0.818 r_pi:0.800 r_ri:0.886 t_pi:0.877 t_ri:0.816
+ 18%|█▊        | 37/200 [1:16:46<5:36:23, 123.82s/it]#epoch:37 stage:1 train_loss:5.624e-03 val_loss:5.794e-03  time:2m4s
+
+ bg_pi:0.754 bg_ri:0.813 p_pi:0.787 p_ri:0.834 r_pi:0.827 r_ri:0.899 t_pi:0.887 t_ri:0.831
+ 19%|█▉        | 38/200 [1:18:51<5:35:31, 124.27s/it]#epoch:38 stage:1 train_loss:5.606e-03 val_loss:5.774e-03  time:2m5s
+
+ bg_pi:0.761 bg_ri:0.819 p_pi:0.776 p_ri:0.829 r_pi:0.824 r_ri:0.890 t_pi:0.883 t_ri:0.829
+ 20%|█▉        | 39/200 [1:20:55<5:33:07, 124.15s/it]#epoch:39 stage:1 train_loss:5.587e-03 val_loss:5.785e-03  time:2m4s
+
+ bg_pi:0.757 bg_ri:0.801 p_pi:0.765 p_ri:0.815 r_pi:0.818 r_ri:0.891 t_pi:0.877 t_ri:0.824
+ 20%|██        | 40/200 [1:22:59<5:30:50, 124.06s/it]#epoch:40 stage:1 train_loss:5.571e-03 val_loss:5.756e-03  time:2m4s
+
+ bg_pi:0.766 bg_ri:0.792 p_pi:0.775 p_ri:0.840 r_pi:0.849 r_ri:0.886 t_pi:0.881 t_ri:0.844
+ 20%|██        | 41/200 [1:25:02<5:28:37, 124.01s/it]#epoch:41 stage:1 train_loss:5.552e-03 val_loss:5.764e-03  time:2m4s
+
+ bg_pi:0.759 bg_ri:0.794 p_pi:0.776 p_ri:0.849 r_pi:0.825 r_ri:0.884 t_pi:0.883 t_ri:0.832
+ 21%|██        | 42/200 [1:27:07<5:27:06, 124.22s/it]#epoch:42 stage:1 train_loss:5.544e-03 val_loss:5.728e-03  time:2m5s
+
+ bg_pi:0.780 bg_ri:0.807 p_pi:0.795 p_ri:0.821 r_pi:0.833 r_ri:0.885 t_pi:0.880 t_ri:0.847
+ 22%|██▏       | 43/200 [1:29:09<5:23:16, 123.55s/it]#epoch:43 stage:1 train_loss:5.532e-03 val_loss:5.707e-03  time:2m2s
+
+ bg_pi:0.780 bg_ri:0.786 p_pi:0.800 p_ri:0.818 r_pi:0.827 r_ri:0.877 t_pi:0.872 t_ri:0.846
+ 22%|██▏       | 44/200 [1:31:12<5:20:22, 123.22s/it]#epoch:44 stage:1 train_loss:5.503e-03 val_loss:5.750e-03  time:2m2s
+
+ bg_pi:0.741 bg_ri:0.813 p_pi:0.767 p_ri:0.815 r_pi:0.810 r_ri:0.897 t_pi:0.880 t_ri:0.813
+ 22%|██▎       | 45/200 [1:33:14<5:17:58, 123.09s/it]#epoch:45 stage:1 train_loss:5.479e-03 val_loss:5.768e-03  time:2m3s
+
+ bg_pi:0.742 bg_ri:0.822 p_pi:0.775 p_ri:0.826 r_pi:0.801 r_ri:0.890 t_pi:0.883 t_ri:0.813
+ 23%|██▎       | 46/200 [1:35:18<5:16:06, 123.16s/it]#epoch:46 stage:1 train_loss:5.479e-03 val_loss:5.741e-03  time:2m3s
+
+ bg_pi:0.726 bg_ri:0.811 p_pi:0.770 p_ri:0.821 r_pi:0.816 r_ri:0.904 t_pi:0.885 t_ri:0.813
+ 24%|██▎       | 47/200 [1:37:22<5:14:48, 123.46s/it]#epoch:47 stage:1 train_loss:5.460e-03 val_loss:5.698e-03  time:2m4s
+
+ bg_pi:0.778 bg_ri:0.793 p_pi:0.781 p_ri:0.833 r_pi:0.827 r_ri:0.869 t_pi:0.873 t_ri:0.839
+ 24%|██▍       | 48/200 [1:39:25<5:12:53, 123.51s/it]#epoch:48 stage:1 train_loss:5.456e-03 val_loss:5.674e-03  time:2m4s
+
+ bg_pi:0.751 bg_ri:0.755 p_pi:0.802 p_ri:0.796 r_pi:0.836 r_ri:0.850 t_pi:0.855 t_ri:0.850
+ 24%|██▍       | 49/200 [1:41:30<5:11:39, 123.84s/it]#epoch:49 stage:1 train_loss:5.445e-03 val_loss:5.675e-03  time:2m5s
+
+ bg_pi:0.757 bg_ri:0.788 p_pi:0.773 p_ri:0.829 r_pi:0.822 r_ri:0.876 t_pi:0.873 t_ri:0.830
+ 25%|██▌       | 50/200 [1:43:34<5:10:00, 124.00s/it]#epoch:50 stage:1 train_loss:5.415e-03 val_loss:5.665e-03  time:2m4s
+
+ bg_pi:0.780 bg_ri:0.783 p_pi:0.790 p_ri:0.819 r_pi:0.841 r_ri:0.836 t_pi:0.859 t_ri:0.854
+ 26%|██▌       | 51/200 [1:45:37<5:06:30, 123.43s/it]#epoch:51 stage:1 train_loss:5.398e-03 val_loss:5.661e-03  time:2m2s
+
+ bg_pi:0.771 bg_ri:0.783 p_pi:0.799 p_ri:0.810 r_pi:0.835 r_ri:0.878 t_pi:0.871 t_ri:0.849
+ 26%|██▌       | 52/200 [1:47:42<5:05:38, 123.91s/it]#epoch:52 stage:1 train_loss:5.376e-03 val_loss:5.709e-03  time:2m5s
+
+ bg_pi:0.738 bg_ri:0.800 p_pi:0.767 p_ri:0.838 r_pi:0.802 r_ri:0.899 t_pi:0.883 t_ri:0.809
+ 26%|██▋       | 53/200 [1:49:44<5:02:10, 123.33s/it]#epoch:53 stage:1 train_loss:5.360e-03 val_loss:5.697e-03  time:2m2s
+
+ bg_pi:0.754 bg_ri:0.819 p_pi:0.775 p_ri:0.839 r_pi:0.800 r_ri:0.897 t_pi:0.887 t_ri:0.814
+ 27%|██▋       | 54/200 [1:51:49<5:01:26, 123.88s/it]#epoch:54 stage:1 train_loss:5.340e-03 val_loss:5.648e-03  time:2m5s
+
+ bg_pi:0.768 bg_ri:0.779 p_pi:0.781 p_ri:0.800 r_pi:0.836 r_ri:0.888 t_pi:0.872 t_ri:0.845
+ 28%|██▊       | 55/200 [1:53:53<4:59:50, 124.07s/it]#epoch:55 stage:1 train_loss:5.327e-03 val_loss:5.652e-03  time:2m4s
+
+ bg_pi:0.766 bg_ri:0.801 p_pi:0.781 p_ri:0.834 r_pi:0.824 r_ri:0.890 t_pi:0.883 t_ri:0.834
+ 28%|██▊       | 56/200 [1:55:58<4:58:31, 124.38s/it]#epoch:56 stage:1 train_loss:5.303e-03 val_loss:5.632e-03  time:2m5s
+
+ bg_pi:0.772 bg_ri:0.800 p_pi:0.793 p_ri:0.827 r_pi:0.828 r_ri:0.875 t_pi:0.877 t_ri:0.844
+ 28%|██▊       | 57/200 [1:58:03<4:56:32, 124.42s/it]#epoch:57 stage:1 train_loss:5.293e-03 val_loss:5.665e-03  time:2m4s
+
+ bg_pi:0.758 bg_ri:0.828 p_pi:0.781 p_ri:0.844 r_pi:0.814 r_ri:0.896 t_pi:0.891 t_ri:0.824
+ 29%|██▉       | 58/200 [2:00:08<4:54:51, 124.59s/it]#epoch:58 stage:1 train_loss:5.289e-03 val_loss:5.628e-03  time:2m5s
+
+ bg_pi:0.784 bg_ri:0.788 p_pi:0.791 p_ri:0.818 r_pi:0.824 r_ri:0.876 t_pi:0.872 t_ri:0.844
+ 30%|██▉       | 59/200 [2:02:12<4:52:35, 124.51s/it]#epoch:59 stage:1 train_loss:5.265e-03 val_loss:5.621e-03  time:2m4s
+
+ bg_pi:0.810 bg_ri:0.750 p_pi:0.784 p_ri:0.824 r_pi:0.842 r_ri:0.849 t_pi:0.859 t_ri:0.861
+ 30%|███       | 60/200 [2:04:17<4:50:42, 124.59s/it]#epoch:60 stage:1 train_loss:5.248e-03 val_loss:5.646e-03  time:2m5s
+
+ bg_pi:0.762 bg_ri:0.788 p_pi:0.768 p_ri:0.842 r_pi:0.830 r_ri:0.894 t_pi:0.882 t_ri:0.832
+ 30%|███       | 61/200 [2:06:21<4:48:33, 124.56s/it]#epoch:61 stage:1 train_loss:5.239e-03 val_loss:5.611e-03  time:2m4s
+
+ bg_pi:0.765 bg_ri:0.786 p_pi:0.785 p_ri:0.806 r_pi:0.819 r_ri:0.888 t_pi:0.872 t_ri:0.834
+ 31%|███       | 62/200 [2:08:24<4:45:24, 124.09s/it]#epoch:62 stage:1 train_loss:5.239e-03 val_loss:5.630e-03  time:2m3s
+
+ bg_pi:0.764 bg_ri:0.780 p_pi:0.793 p_ri:0.842 r_pi:0.834 r_ri:0.844 t_pi:0.865 t_ri:0.845
+ 32%|███▏      | 63/200 [2:10:28<4:42:48, 123.86s/it]#epoch:63 stage:1 train_loss:5.225e-03 val_loss:5.623e-03  time:2m3s
+
+ bg_pi:0.763 bg_ri:0.803 p_pi:0.784 p_ri:0.809 r_pi:0.814 r_ri:0.868 t_pi:0.870 t_ri:0.832
+ 32%|███▏      | 64/200 [2:12:30<4:39:49, 123.45s/it]#epoch:64 stage:1 train_loss:5.208e-03 val_loss:5.603e-03  time:2m2s
+
+ bg_pi:0.773 bg_ri:0.776 p_pi:0.785 p_ri:0.821 r_pi:0.830 r_ri:0.873 t_pi:0.870 t_ri:0.844
+ 32%|███▎      | 65/200 [2:14:32<4:36:47, 123.02s/it]#epoch:65 stage:1 train_loss:5.200e-03 val_loss:5.635e-03  time:2m2s
+
+ bg_pi:0.769 bg_ri:0.793 p_pi:0.774 p_ri:0.832 r_pi:0.837 r_ri:0.852 t_pi:0.868 t_ri:0.843
+ 33%|███▎      | 66/200 [2:16:35<4:34:33, 122.93s/it]#epoch:66 stage:1 train_loss:5.197e-03 val_loss:5.601e-03  time:2m3s
+
+ bg_pi:0.754 bg_ri:0.783 p_pi:0.797 p_ri:0.837 r_pi:0.830 r_ri:0.868 t_pi:0.872 t_ri:0.840
+ 34%|███▎      | 67/200 [2:18:38<4:32:44, 123.04s/it]#epoch:67 stage:1 train_loss:5.189e-03 val_loss:5.627e-03  time:2m3s
+
+ bg_pi:0.765 bg_ri:0.771 p_pi:0.777 p_ri:0.835 r_pi:0.823 r_ri:0.861 t_pi:0.867 t_ri:0.836
+ 34%|███▍      | 68/200 [2:20:40<4:30:04, 122.76s/it]#epoch:68 stage:1 train_loss:5.185e-03 val_loss:5.598e-03  time:2m2s
+
+ bg_pi:0.761 bg_ri:0.788 p_pi:0.780 p_ri:0.823 r_pi:0.817 r_ri:0.886 t_pi:0.876 t_ri:0.831
+ 34%|███▍      | 69/200 [2:22:42<4:27:16, 122.41s/it]#epoch:69 stage:1 train_loss:5.173e-03 val_loss:5.601e-03  time:2m2s
+
+ bg_pi:0.773 bg_ri:0.785 p_pi:0.784 p_ri:0.828 r_pi:0.828 r_ri:0.894 t_pi:0.879 t_ri:0.839
+ 35%|███▌      | 70/200 [2:24:47<4:26:45, 123.12s/it]#epoch:70 stage:1 train_loss:5.159e-03 val_loss:5.585e-03  time:2m5s
+
+ bg_pi:0.764 bg_ri:0.783 p_pi:0.780 p_ri:0.829 r_pi:0.829 r_ri:0.860 t_pi:0.869 t_ri:0.840
+ 36%|███▌      | 71/200 [2:26:50<4:24:45, 123.14s/it]#epoch:71 stage:1 train_loss:5.141e-03 val_loss:5.592e-03  time:2m3s
+
+ bg_pi:0.759 bg_ri:0.759 p_pi:0.786 p_ri:0.833 r_pi:0.837 r_ri:0.863 t_pi:0.867 t_ri:0.846
+ 36%|███▌      | 72/200 [2:28:55<4:23:50, 123.68s/it]#epoch:72 stage:1 train_loss:5.124e-03 val_loss:5.594e-03  time:2m5s
+
+ bg_pi:0.765 bg_ri:0.786 p_pi:0.784 p_ri:0.838 r_pi:0.818 r_ri:0.890 t_pi:0.880 t_ri:0.832
+ 36%|███▋      | 73/200 [2:30:57<4:20:51, 123.24s/it]#epoch:73 stage:1 train_loss:5.110e-03 val_loss:5.608e-03  time:2m2s
+
+ bg_pi:0.760 bg_ri:0.787 p_pi:0.792 p_ri:0.833 r_pi:0.811 r_ri:0.877 t_pi:0.875 t_ri:0.832
+ 37%|███▋      | 74/200 [2:33:01<4:19:01, 123.35s/it]#epoch:74 stage:1 train_loss:5.105e-03 val_loss:5.589e-03  time:2m4s
+
+ bg_pi:0.774 bg_ri:0.790 p_pi:0.789 p_ri:0.828 r_pi:0.817 r_ri:0.879 t_pi:0.874 t_ri:0.836
+ 38%|███▊      | 75/200 [2:35:03<4:16:01, 122.89s/it]#epoch:75 stage:1 train_loss:5.091e-03 val_loss:5.571e-03  time:2m2s
+
+ bg_pi:0.781 bg_ri:0.787 p_pi:0.790 p_ri:0.824 r_pi:0.830 r_ri:0.867 t_pi:0.871 t_ri:0.846
+ 38%|███▊      | 76/200 [2:37:07<4:14:53, 123.33s/it]#epoch:76 stage:1 train_loss:5.075e-03 val_loss:5.586e-03  time:2m4s
+
+ bg_pi:0.766 bg_ri:0.797 p_pi:0.781 p_ri:0.832 r_pi:0.822 r_ri:0.876 t_pi:0.875 t_ri:0.833
+ 38%|███▊      | 77/200 [2:39:12<4:13:38, 123.73s/it]#epoch:77 stage:1 train_loss:5.072e-03 val_loss:5.610e-03  time:2m5s
+
+ bg_pi:0.754 bg_ri:0.812 p_pi:0.770 p_ri:0.824 r_pi:0.808 r_ri:0.884 t_pi:0.878 t_ri:0.819
+ 39%|███▉      | 78/200 [2:41:18<4:12:58, 124.41s/it]#epoch:78 stage:1 train_loss:5.063e-03 val_loss:5.581e-03  time:2m6s
+
+ bg_pi:0.764 bg_ri:0.796 p_pi:0.779 p_ri:0.840 r_pi:0.827 r_ri:0.872 t_pi:0.876 t_ri:0.835
+ 40%|███▉      | 79/200 [2:43:20<4:09:58, 123.96s/it]#epoch:79 stage:1 train_loss:5.059e-03 val_loss:5.574e-03  time:2m3s
+
+ bg_pi:0.772 bg_ri:0.790 p_pi:0.792 p_ri:0.824 r_pi:0.817 r_ri:0.889 t_pi:0.878 t_ri:0.837
+ 40%|████      | 80/200 [2:45:22<4:06:23, 123.19s/it]#epoch:80 stage:1 train_loss:5.055e-03 val_loss:5.578e-03  time:2m1s
+
+ bg_pi:0.766 bg_ri:0.784 p_pi:0.791 p_ri:0.855 r_pi:0.823 r_ri:0.873 t_pi:0.878 t_ri:0.839
+ 40%|████      | 81/200 [2:47:25<4:04:11, 123.12s/it]#epoch:81 stage:1 train_loss:5.049e-03 val_loss:5.618e-03  time:2m3s
+
+ bg_pi:0.756 bg_ri:0.811 p_pi:0.770 p_ri:0.857 r_pi:0.817 r_ri:0.884 t_pi:0.885 t_ri:0.822
+ 41%|████      | 82/200 [2:49:29<4:02:39, 123.38s/it]#epoch:82 stage:1 train_loss:5.041e-03 val_loss:5.580e-03  time:2m4s
+
+ bg_pi:0.752 bg_ri:0.801 p_pi:0.771 p_ri:0.838 r_pi:0.819 r_ri:0.895 t_pi:0.884 t_ri:0.824
+ 42%|████▏     | 83/200 [2:51:31<4:00:02, 123.10s/it]#epoch:83 stage:1 train_loss:5.034e-03 val_loss:5.555e-03  time:2m2s
+
+ bg_pi:0.774 bg_ri:0.786 p_pi:0.785 p_ri:0.830 r_pi:0.830 r_ri:0.863 t_pi:0.870 t_ri:0.843
+ 42%|████▏     | 84/200 [2:53:35<3:58:29, 123.36s/it]#epoch:84 stage:1 train_loss:5.023e-03 val_loss:5.548e-03  time:2m4s
+
+ bg_pi:0.769 bg_ri:0.787 p_pi:0.793 p_ri:0.823 r_pi:0.836 r_ri:0.877 t_pi:0.874 t_ri:0.847
+ 42%|████▎     | 85/200 [2:55:40<3:57:17, 123.80s/it]#epoch:85 stage:1 train_loss:5.019e-03 val_loss:5.574e-03  time:2m5s
+
+ bg_pi:0.764 bg_ri:0.798 p_pi:0.777 p_ri:0.830 r_pi:0.815 r_ri:0.896 t_pi:0.883 t_ri:0.829
+ 43%|████▎     | 86/200 [2:57:43<3:54:49, 123.59s/it]#epoch:86 stage:1 train_loss:5.015e-03 val_loss:5.565e-03  time:2m3s
+
+ bg_pi:0.775 bg_ri:0.790 p_pi:0.791 p_ri:0.837 r_pi:0.830 r_ri:0.875 t_pi:0.876 t_ri:0.844
+ 44%|████▎     | 87/200 [2:59:48<3:53:20, 123.89s/it]#epoch:87 stage:1 train_loss:5.010e-03 val_loss:5.570e-03  time:2m5s
+
+ bg_pi:0.763 bg_ri:0.797 p_pi:0.773 p_ri:0.841 r_pi:0.822 r_ri:0.880 t_pi:0.879 t_ri:0.831
+ 44%|████▍     | 88/200 [3:01:52<3:51:29, 124.01s/it]#epoch:88 stage:1 train_loss:5.006e-03 val_loss:5.540e-03  time:2m4s
+
+ bg_pi:0.769 bg_ri:0.785 p_pi:0.780 p_ri:0.823 r_pi:0.825 r_ri:0.871 t_pi:0.870 t_ri:0.837
+ 44%|████▍     | 89/200 [3:03:56<3:49:30, 124.06s/it]#epoch:89 stage:1 train_loss:5.001e-03 val_loss:5.590e-03  time:2m4s
+
+ bg_pi:0.749 bg_ri:0.805 p_pi:0.765 p_ri:0.853 r_pi:0.819 r_ri:0.885 t_pi:0.884 t_ri:0.821
+ 45%|████▌     | 90/200 [3:05:59<3:47:00, 123.82s/it]#epoch:90 stage:1 train_loss:4.999e-03 val_loss:5.561e-03  time:2m3s
+
+ bg_pi:0.748 bg_ri:0.791 p_pi:0.781 p_ri:0.845 r_pi:0.824 r_ri:0.882 t_pi:0.880 t_ri:0.830
+ 46%|████▌     | 91/200 [3:08:00<3:43:18, 122.92s/it]#epoch:91 stage:1 train_loss:4.999e-03 val_loss:5.569e-03  time:2m1s
+
+ bg_pi:0.765 bg_ri:0.794 p_pi:0.772 p_ri:0.840 r_pi:0.823 r_ri:0.880 t_pi:0.878 t_ri:0.832
+ 46%|████▌     | 92/200 [3:10:04<3:41:29, 123.05s/it]#epoch:92 stage:1 train_loss:4.992e-03 val_loss:5.542e-03  time:2m3s
+
+ bg_pi:0.775 bg_ri:0.783 p_pi:0.787 p_ri:0.827 r_pi:0.831 r_ri:0.862 t_pi:0.869 t_ri:0.845
+ 46%|████▋     | 93/200 [3:12:05<3:38:43, 122.65s/it]#epoch:93 stage:1 train_loss:4.989e-03 val_loss:5.542e-03  time:2m2s
+
+ bg_pi:0.765 bg_ri:0.801 p_pi:0.787 p_ri:0.822 r_pi:0.822 r_ri:0.876 t_pi:0.875 t_ri:0.836
+ 47%|████▋     | 94/200 [3:14:08<3:36:52, 122.76s/it]#epoch:94 stage:1 train_loss:4.985e-03 val_loss:5.526e-03  time:2m3s
+
+ bg_pi:0.773 bg_ri:0.783 p_pi:0.788 p_ri:0.835 r_pi:0.835 r_ri:0.873 t_pi:0.874 t_ri:0.845
+ 48%|████▊     | 95/200 [3:16:10<3:34:06, 122.34s/it]#epoch:95 stage:1 train_loss:4.978e-03 val_loss:5.582e-03  time:2m1s
+
+ bg_pi:0.745 bg_ri:0.806 p_pi:0.761 p_ri:0.840 r_pi:0.810 r_ri:0.892 t_pi:0.884 t_ri:0.816
+ 48%|████▊     | 96/200 [3:18:12<3:31:53, 122.25s/it]#epoch:96 stage:1 train_loss:4.979e-03 val_loss:5.563e-03  time:2m2s
+
+ bg_pi:0.760 bg_ri:0.792 p_pi:0.777 p_ri:0.832 r_pi:0.825 r_ri:0.880 t_pi:0.877 t_ri:0.834
+ 48%|████▊     | 97/200 [3:20:14<3:30:03, 122.36s/it]#epoch:97 stage:1 train_loss:4.977e-03 val_loss:5.533e-03  time:2m3s
+
+ bg_pi:0.756 bg_ri:0.785 p_pi:0.788 p_ri:0.827 r_pi:0.826 r_ri:0.873 t_pi:0.872 t_ri:0.836
+ 49%|████▉     | 98/200 [3:22:16<3:27:49, 122.25s/it]#epoch:98 stage:1 train_loss:4.972e-03 val_loss:5.549e-03  time:2m2s
+
+ bg_pi:0.768 bg_ri:0.780 p_pi:0.786 p_ri:0.834 r_pi:0.825 r_ri:0.871 t_pi:0.872 t_ri:0.839
+ 50%|████▉     | 99/200 [3:24:17<3:25:00, 121.78s/it]#epoch:99 stage:1 train_loss:4.972e-03 val_loss:5.554e-03  time:2m1s
+
+ bg_pi:0.755 bg_ri:0.799 p_pi:0.774 p_ri:0.824 r_pi:0.813 r_ri:0.887 t_pi:0.878 t_ri:0.826
+ 50%|█████     | 100/200 [3:26:20<3:23:36, 122.16s/it]#epoch:100 stage:1 train_loss:4.976e-03 val_loss:5.545e-03  time:2m3s
+
+ bg_pi:0.776 bg_ri:0.786 p_pi:0.787 p_ri:0.829 r_pi:0.816 r_ri:0.876 t_pi:0.875 t_ri:0.838
+ 50%|█████     | 101/200 [3:28:22<3:21:28, 122.10s/it]#epoch:101 stage:1 train_loss:4.982e-03 val_loss:5.567e-03  time:2m2s
+
+ bg_pi:0.763 bg_ri:0.779 p_pi:0.779 p_ri:0.821 r_pi:0.814 r_ri:0.871 t_pi:0.869 t_ri:0.832
+ 51%|█████     | 102/200 [3:30:25<3:19:59, 122.45s/it]#epoch:102 stage:1 train_loss:4.987e-03 val_loss:5.562e-03  time:2m3s
+
+ bg_pi:0.748 bg_ri:0.805 p_pi:0.778 p_ri:0.820 r_pi:0.812 r_ri:0.899 t_pi:0.882 t_ri:0.821
+ 52%|█████▏    | 103/200 [3:32:27<3:17:37, 122.24s/it]#epoch:103 stage:1 train_loss:4.988e-03 val_loss:5.548e-03  time:2m2s
+
+ bg_pi:0.777 bg_ri:0.786 p_pi:0.781 p_ri:0.834 r_pi:0.823 r_ri:0.868 t_pi:0.872 t_ri:0.839
+ 52%|█████▏    | 104/200 [3:34:30<3:15:43, 122.33s/it]#epoch:104 stage:1 train_loss:4.986e-03 val_loss:5.597e-03  time:2m2s
+
+ bg_pi:0.764 bg_ri:0.788 p_pi:0.765 p_ri:0.850 r_pi:0.807 r_ri:0.874 t_pi:0.876 t_ri:0.822
+ 52%|█████▎    | 105/200 [3:36:33<3:13:57, 122.50s/it]#epoch:105 stage:1 train_loss:4.987e-03 val_loss:5.554e-03  time:2m3s
+
+ bg_pi:0.755 bg_ri:0.796 p_pi:0.773 p_ri:0.830 r_pi:0.820 r_ri:0.870 t_pi:0.874 t_ri:0.830
+ 53%|█████▎    | 106/200 [3:38:34<3:11:31, 122.25s/it]#epoch:106 stage:1 train_loss:4.984e-03 val_loss:5.533e-03  time:2m2s
+
+ bg_pi:0.768 bg_ri:0.790 p_pi:0.778 p_ri:0.840 r_pi:0.819 r_ri:0.882 t_pi:0.878 t_ri:0.832
+ 54%|█████▎    | 107/200 [3:40:37<3:09:54, 122.52s/it]#epoch:107 stage:1 train_loss:4.973e-03 val_loss:5.529e-03  time:2m3s
+
+ bg_pi:0.770 bg_ri:0.782 p_pi:0.785 p_ri:0.822 r_pi:0.824 r_ri:0.869 t_pi:0.869 t_ri:0.839
+ 54%|█████▍    | 108/200 [3:42:41<3:08:26, 122.90s/it]#epoch:108 stage:1 train_loss:4.964e-03 val_loss:5.540e-03  time:2m4s
+
+ bg_pi:0.764 bg_ri:0.786 p_pi:0.787 p_ri:0.840 r_pi:0.821 r_ri:0.868 t_pi:0.872 t_ri:0.835
+ 55%|█████▍    | 109/200 [3:44:43<3:05:42, 122.45s/it]#epoch:109 stage:1 train_loss:4.959e-03 val_loss:5.551e-03  time:2m1s
+
+ bg_pi:0.765 bg_ri:0.786 p_pi:0.772 p_ri:0.836 r_pi:0.819 r_ri:0.870 t_pi:0.873 t_ri:0.831
+ 55%|█████▌    | 110/200 [3:46:47<3:04:24, 122.94s/it]#epoch:110 stage:1 train_loss:4.948e-03 val_loss:5.542e-03  time:2m4s
+
+ bg_pi:0.763 bg_ri:0.803 p_pi:0.771 p_ri:0.836 r_pi:0.820 r_ri:0.889 t_pi:0.882 t_ri:0.828
+ 56%|█████▌    | 111/200 [3:48:50<3:02:27, 123.01s/it]#epoch:111 stage:1 train_loss:4.934e-03 val_loss:5.499e-03  time:2m3s
+
+ bg_pi:0.778 bg_ri:0.791 p_pi:0.787 p_ri:0.822 r_pi:0.829 r_ri:0.878 t_pi:0.874 t_ri:0.843
+ 56%|█████▌    | 112/200 [3:50:54<3:00:49, 123.29s/it]#epoch:112 stage:1 train_loss:4.930e-03 val_loss:5.518e-03  time:2m4s
+
+ bg_pi:0.763 bg_ri:0.786 p_pi:0.789 p_ri:0.826 r_pi:0.821 r_ri:0.881 t_pi:0.875 t_ri:0.836
+ 56%|█████▋    | 113/200 [3:52:55<2:57:48, 122.63s/it]#epoch:113 stage:1 train_loss:4.922e-03 val_loss:5.516e-03  time:2m1s
+
+ bg_pi:0.770 bg_ri:0.789 p_pi:0.781 p_ri:0.831 r_pi:0.819 r_ri:0.874 t_pi:0.875 t_ri:0.837
+ 57%|█████▋    | 114/200 [3:54:56<2:55:20, 122.33s/it]#epoch:114 stage:1 train_loss:4.916e-03 val_loss:5.529e-03  time:2m2s
+
+ bg_pi:0.767 bg_ri:0.795 p_pi:0.776 p_ri:0.833 r_pi:0.824 r_ri:0.883 t_pi:0.878 t_ri:0.834
+ 57%|█████▊    | 115/200 [3:56:59<2:53:18, 122.33s/it]#epoch:115 stage:1 train_loss:4.914e-03 val_loss:5.520e-03  time:2m2s
+
+ bg_pi:0.766 bg_ri:0.790 p_pi:0.775 p_ri:0.836 r_pi:0.819 r_ri:0.883 t_pi:0.878 t_ri:0.831
+ 58%|█████▊    | 116/200 [3:59:01<2:51:15, 122.32s/it]#epoch:116 stage:1 train_loss:4.908e-03 val_loss:5.518e-03  time:2m2s
+
+ bg_pi:0.766 bg_ri:0.782 p_pi:0.784 p_ri:0.835 r_pi:0.820 r_ri:0.879 t_pi:0.876 t_ri:0.836
+ 58%|█████▊    | 117/200 [4:01:04<2:49:32, 122.56s/it]#epoch:117 stage:1 train_loss:4.905e-03 val_loss:5.518e-03  time:2m3s
+
+ bg_pi:0.769 bg_ri:0.792 p_pi:0.780 p_ri:0.831 r_pi:0.815 r_ri:0.888 t_pi:0.878 t_ri:0.831
+ 59%|█████▉    | 118/200 [4:03:06<2:47:22, 122.47s/it]#epoch:118 stage:1 train_loss:4.907e-03 val_loss:5.538e-03  time:2m2s
+
+ bg_pi:0.750 bg_ri:0.799 p_pi:0.776 p_ri:0.835 r_pi:0.814 r_ri:0.890 t_pi:0.882 t_ri:0.823
+ 60%|█████▉    | 119/200 [4:05:09<2:45:26, 122.55s/it]#epoch:119 stage:1 train_loss:4.906e-03 val_loss:5.501e-03  time:2m3s
+
+ bg_pi:0.769 bg_ri:0.787 p_pi:0.778 p_ri:0.831 r_pi:0.821 r_ri:0.882 t_pi:0.876 t_ri:0.834
+ 60%|██████    | 120/200 [4:07:12<2:43:19, 122.49s/it]#epoch:120 stage:1 train_loss:4.900e-03 val_loss:5.504e-03  time:2m2s
+
+ bg_pi:0.771 bg_ri:0.788 p_pi:0.786 p_ri:0.828 r_pi:0.824 r_ri:0.875 t_pi:0.875 t_ri:0.840
+ 60%|██████    | 121/200 [4:09:12<2:40:29, 121.89s/it]#epoch:121 stage:1 train_loss:4.897e-03 val_loss:5.516e-03  time:2m0s
+
+ bg_pi:0.768 bg_ri:0.794 p_pi:0.777 p_ri:0.838 r_pi:0.823 r_ri:0.875 t_pi:0.877 t_ri:0.835
+ 61%|██████    | 122/200 [4:11:16<2:39:15, 122.51s/it]#epoch:122 stage:1 train_loss:4.900e-03 val_loss:5.511e-03  time:2m4s
+
+ bg_pi:0.764 bg_ri:0.790 p_pi:0.784 p_ri:0.826 r_pi:0.816 r_ri:0.886 t_pi:0.877 t_ri:0.833
+ 62%|██████▏   | 123/200 [4:13:18<2:37:03, 122.39s/it]#epoch:123 stage:1 train_loss:4.896e-03 val_loss:5.505e-03  time:2m2s
+
+ bg_pi:0.775 bg_ri:0.775 p_pi:0.781 p_ri:0.828 r_pi:0.819 r_ri:0.876 t_pi:0.872 t_ri:0.838
+ 62%|██████▏   | 124/200 [4:15:21<2:35:14, 122.56s/it]#epoch:124 stage:1 train_loss:4.891e-03 val_loss:5.508e-03  time:2m3s
+
+ bg_pi:0.757 bg_ri:0.793 p_pi:0.783 p_ri:0.832 r_pi:0.821 r_ri:0.875 t_pi:0.875 t_ri:0.832
+ 62%|██████▎   | 125/200 [4:17:24<2:33:12, 122.57s/it]#epoch:125 stage:1 train_loss:4.887e-03 val_loss:5.513e-03  time:2m3s
+
+ bg_pi:0.762 bg_ri:0.793 p_pi:0.783 p_ri:0.835 r_pi:0.823 r_ri:0.880 t_pi:0.879 t_ri:0.836
+ 63%|██████▎   | 126/200 [4:19:26<2:31:08, 122.54s/it]#epoch:126 stage:1 train_loss:4.885e-03 val_loss:5.501e-03  time:2m2s
+
+ bg_pi:0.767 bg_ri:0.788 p_pi:0.780 p_ri:0.834 r_pi:0.826 r_ri:0.875 t_pi:0.875 t_ri:0.838
+ 64%|██████▎   | 127/200 [4:21:29<2:29:09, 122.59s/it]#epoch:127 stage:1 train_loss:4.885e-03 val_loss:5.518e-03  time:2m3s
+
+ bg_pi:0.768 bg_ri:0.794 p_pi:0.776 p_ri:0.836 r_pi:0.816 r_ri:0.885 t_pi:0.880 t_ri:0.832
+ 64%|██████▍   | 128/200 [4:23:31<2:27:07, 122.60s/it]#epoch:128 stage:1 train_loss:4.882e-03 val_loss:5.504e-03  time:2m3s
+
+ bg_pi:0.759 bg_ri:0.781 p_pi:0.776 p_ri:0.831 r_pi:0.818 r_ri:0.876 t_pi:0.873 t_ri:0.831
+ 64%|██████▍   | 129/200 [4:25:33<2:24:32, 122.15s/it]#epoch:129 stage:1 train_loss:4.879e-03 val_loss:5.505e-03  time:2m1s
+
+ bg_pi:0.771 bg_ri:0.792 p_pi:0.786 p_ri:0.828 r_pi:0.822 r_ri:0.885 t_pi:0.878 t_ri:0.838
+ 65%|██████▌   | 130/200 [4:27:36<2:22:48, 122.41s/it]#epoch:130 stage:1 train_loss:4.879e-03 val_loss:5.515e-03  time:2m3s
+
+ bg_pi:0.766 bg_ri:0.788 p_pi:0.780 p_ri:0.832 r_pi:0.816 r_ri:0.874 t_pi:0.873 t_ri:0.832
+ 66%|██████▌   | 131/200 [4:29:38<2:20:51, 122.48s/it]#epoch:131 stage:1 train_loss:4.879e-03 val_loss:5.500e-03  time:2m3s
+
+ bg_pi:0.759 bg_ri:0.798 p_pi:0.779 p_ri:0.830 r_pi:0.821 r_ri:0.883 t_pi:0.879 t_ri:0.832
+ 66%|██████▌   | 132/200 [4:31:40<2:18:40, 122.36s/it]#epoch:132 stage:1 train_loss:4.879e-03 val_loss:5.502e-03  time:2m2s
+
+ bg_pi:0.772 bg_ri:0.778 p_pi:0.789 p_ri:0.830 r_pi:0.824 r_ri:0.878 t_pi:0.873 t_ri:0.840
+ 66%|██████▋   | 133/200 [4:33:42<2:16:17, 122.06s/it]#epoch:133 stage:1 train_loss:4.878e-03 val_loss:5.516e-03  time:2m1s
+
+ bg_pi:0.767 bg_ri:0.794 p_pi:0.778 p_ri:0.836 r_pi:0.818 r_ri:0.877 t_pi:0.877 t_ri:0.832
+ 67%|██████▋   | 134/200 [4:35:47<2:15:13, 122.93s/it]#epoch:134 stage:1 train_loss:4.874e-03 val_loss:5.503e-03  time:2m5s
+
+ bg_pi:0.770 bg_ri:0.789 p_pi:0.780 p_ri:0.830 r_pi:0.825 r_ri:0.873 t_pi:0.874 t_ri:0.838
+ 68%|██████▊   | 135/200 [4:37:48<2:12:47, 122.58s/it]#epoch:135 stage:1 train_loss:4.870e-03 val_loss:5.512e-03  time:2m2s
+
+ bg_pi:0.757 bg_ri:0.793 p_pi:0.776 p_ri:0.836 r_pi:0.816 r_ri:0.888 t_pi:0.880 t_ri:0.828
+ 68%|██████▊   | 136/200 [4:39:51<2:10:41, 122.52s/it]#epoch:136 stage:1 train_loss:4.871e-03 val_loss:5.502e-03  time:2m2s
+
+ bg_pi:0.772 bg_ri:0.795 p_pi:0.778 p_ri:0.833 r_pi:0.823 r_ri:0.884 t_pi:0.877 t_ri:0.833
+ 68%|██████▊   | 137/200 [4:41:55<2:09:11, 123.03s/it]#epoch:137 stage:1 train_loss:4.869e-03 val_loss:5.501e-03  time:2m4s
+
+ bg_pi:0.765 bg_ri:0.794 p_pi:0.779 p_ri:0.830 r_pi:0.821 r_ri:0.877 t_pi:0.875 t_ri:0.834
+ 69%|██████▉   | 138/200 [4:44:00<2:07:40, 123.56s/it]#epoch:138 stage:1 train_loss:4.868e-03 val_loss:5.502e-03  time:2m5s
+
+ bg_pi:0.765 bg_ri:0.791 p_pi:0.780 p_ri:0.831 r_pi:0.818 r_ri:0.893 t_pi:0.881 t_ri:0.831
+ 70%|██████▉   | 139/200 [4:46:03<2:05:33, 123.50s/it]#epoch:139 stage:1 train_loss:4.870e-03 val_loss:5.507e-03  time:2m3s
+
+ bg_pi:0.760 bg_ri:0.798 p_pi:0.778 p_ri:0.832 r_pi:0.826 r_ri:0.876 t_pi:0.877 t_ri:0.834
+ 70%|███████   | 140/200 [4:48:07<2:03:37, 123.62s/it]#epoch:140 stage:1 train_loss:4.866e-03 val_loss:5.505e-03  time:2m4s
+
+ bg_pi:0.765 bg_ri:0.791 p_pi:0.779 p_ri:0.840 r_pi:0.824 r_ri:0.881 t_pi:0.878 t_ri:0.834
+ 70%|███████   | 141/200 [4:50:11<2:01:33, 123.61s/it]#epoch:141 stage:1 train_loss:4.863e-03 val_loss:5.498e-03  time:2m4s
+
+ bg_pi:0.766 bg_ri:0.784 p_pi:0.779 p_ri:0.837 r_pi:0.823 r_ri:0.879 t_pi:0.877 t_ri:0.836
+ 71%|███████   | 142/200 [4:52:16<1:59:53, 124.03s/it]#epoch:142 stage:1 train_loss:4.861e-03 val_loss:5.507e-03  time:2m5s
+
+ bg_pi:0.758 bg_ri:0.793 p_pi:0.776 p_ri:0.828 r_pi:0.817 r_ri:0.887 t_pi:0.878 t_ri:0.828
+ 72%|███████▏  | 143/200 [4:54:20<1:57:59, 124.20s/it]#epoch:143 stage:1 train_loss:4.861e-03 val_loss:5.508e-03  time:2m5s
+
+ bg_pi:0.762 bg_ri:0.793 p_pi:0.778 p_ri:0.834 r_pi:0.815 r_ri:0.886 t_pi:0.879 t_ri:0.829
+ 72%|███████▏  | 144/200 [4:56:24<1:55:52, 124.14s/it]#epoch:144 stage:1 train_loss:4.861e-03 val_loss:5.505e-03  time:2m4s
+
+ bg_pi:0.769 bg_ri:0.794 p_pi:0.780 p_ri:0.835 r_pi:0.820 r_ri:0.884 t_pi:0.879 t_ri:0.833
+ 72%|███████▎  | 145/200 [4:58:26<1:53:01, 123.30s/it]#epoch:145 stage:1 train_loss:4.858e-03 val_loss:5.502e-03  time:2m1s
+
+ bg_pi:0.769 bg_ri:0.785 p_pi:0.783 p_ri:0.830 r_pi:0.820 r_ri:0.879 t_pi:0.875 t_ri:0.836
+ 73%|███████▎  | 146/200 [5:00:30<1:51:11, 123.55s/it]#epoch:146 stage:1 train_loss:4.857e-03 val_loss:5.502e-03  time:2m4s
+
+ bg_pi:0.763 bg_ri:0.792 p_pi:0.776 p_ri:0.833 r_pi:0.820 r_ri:0.887 t_pi:0.879 t_ri:0.830
+ 74%|███████▎  | 147/200 [5:02:32<1:48:55, 123.30s/it]#epoch:147 stage:1 train_loss:4.857e-03 val_loss:5.509e-03  time:2m3s
+
+ bg_pi:0.760 bg_ri:0.792 p_pi:0.777 p_ri:0.833 r_pi:0.812 r_ri:0.880 t_pi:0.877 t_ri:0.828
+ 74%|███████▍  | 148/200 [5:04:36<1:46:59, 123.45s/it]#epoch:148 stage:1 train_loss:4.856e-03 val_loss:5.494e-03  time:2m4s
+
+ bg_pi:0.771 bg_ri:0.792 p_pi:0.778 p_ri:0.833 r_pi:0.822 r_ri:0.883 t_pi:0.878 t_ri:0.835
+ 74%|███████▍  | 149/200 [5:06:39<1:44:52, 123.39s/it]#epoch:149 stage:1 train_loss:4.857e-03 val_loss:5.503e-03  time:2m3s
+
+ bg_pi:0.766 bg_ri:0.790 p_pi:0.782 p_ri:0.833 r_pi:0.821 r_ri:0.878 t_pi:0.876 t_ri:0.835
+ 75%|███████▌  | 150/200 [5:08:44<1:43:00, 123.61s/it]#epoch:150 stage:1 train_loss:4.858e-03 val_loss:5.510e-03  time:2m4s
+
+ bg_pi:0.769 bg_ri:0.791 p_pi:0.774 p_ri:0.838 r_pi:0.816 r_ri:0.886 t_pi:0.878 t_ri:0.829
+ 76%|███████▌  | 151/200 [5:10:49<1:41:16, 124.01s/it]#epoch:151 stage:1 train_loss:4.857e-03 val_loss:5.505e-03  time:2m5s
+
+ bg_pi:0.767 bg_ri:0.790 p_pi:0.782 p_ri:0.835 r_pi:0.818 r_ri:0.875 t_pi:0.875 t_ri:0.833
+ 76%|███████▌  | 152/200 [5:12:52<1:38:57, 123.69s/it]#epoch:152 stage:1 train_loss:4.857e-03 val_loss:5.506e-03  time:2m3s
+
+ bg_pi:0.758 bg_ri:0.797 p_pi:0.780 p_ri:0.835 r_pi:0.823 r_ri:0.888 t_pi:0.880 t_ri:0.830
+ 76%|███████▋  | 153/200 [5:14:56<1:36:58, 123.79s/it]#epoch:153 stage:1 train_loss:4.858e-03 val_loss:5.511e-03  time:2m4s
+
+ bg_pi:0.760 bg_ri:0.801 p_pi:0.782 p_ri:0.837 r_pi:0.822 r_ri:0.881 t_pi:0.879 t_ri:0.831
+ 77%|███████▋  | 154/200 [5:17:01<1:35:18, 124.32s/it]#epoch:154 stage:1 train_loss:4.861e-03 val_loss:5.504e-03  time:2m6s
+
+ bg_pi:0.767 bg_ri:0.785 p_pi:0.781 p_ri:0.828 r_pi:0.812 r_ri:0.886 t_pi:0.876 t_ri:0.830
+ 78%|███████▊  | 155/200 [5:19:08<1:33:46, 125.03s/it]#epoch:155 stage:1 train_loss:4.857e-03 val_loss:5.496e-03  time:2m7s
+
+ bg_pi:0.774 bg_ri:0.789 p_pi:0.780 p_ri:0.831 r_pi:0.819 r_ri:0.880 t_pi:0.876 t_ri:0.835
+ 78%|███████▊  | 156/200 [5:21:12<1:31:31, 124.81s/it]#epoch:156 stage:1 train_loss:4.852e-03 val_loss:5.505e-03  time:2m4s
+
+ bg_pi:0.759 bg_ri:0.789 p_pi:0.780 p_ri:0.837 r_pi:0.818 r_ri:0.878 t_pi:0.876 t_ri:0.831
+ 78%|███████▊  | 157/200 [5:23:15<1:28:57, 124.13s/it]#epoch:157 stage:1 train_loss:4.850e-03 val_loss:5.494e-03  time:2m2s
+
+ bg_pi:0.769 bg_ri:0.791 p_pi:0.779 p_ri:0.833 r_pi:0.818 r_ri:0.879 t_pi:0.877 t_ri:0.835
+ 79%|███████▉  | 158/200 [5:25:17<1:26:32, 123.63s/it]#epoch:158 stage:1 train_loss:4.852e-03 val_loss:5.497e-03  time:2m2s
+
+ bg_pi:0.764 bg_ri:0.801 p_pi:0.782 p_ri:0.825 r_pi:0.823 r_ri:0.873 t_pi:0.875 t_ri:0.835
+ 80%|███████▉  | 159/200 [5:27:18<1:23:57, 122.86s/it]#epoch:159 stage:1 train_loss:4.851e-03 val_loss:5.486e-03  time:2m1s
+
+ bg_pi:0.771 bg_ri:0.791 p_pi:0.782 p_ri:0.830 r_pi:0.818 r_ri:0.885 t_pi:0.878 t_ri:0.834
+ 80%|████████  | 160/200 [5:29:19<1:21:33, 122.33s/it]#epoch:160 stage:1 train_loss:4.847e-03 val_loss:5.495e-03  time:2m1s
+
+ bg_pi:0.772 bg_ri:0.793 p_pi:0.782 p_ri:0.828 r_pi:0.818 r_ri:0.892 t_pi:0.880 t_ri:0.833
+ 80%|████████  | 161/200 [5:31:21<1:19:19, 122.05s/it]#epoch:161 stage:1 train_loss:4.848e-03 val_loss:5.495e-03  time:2m1s
+
+ bg_pi:0.771 bg_ri:0.800 p_pi:0.780 p_ri:0.829 r_pi:0.822 r_ri:0.888 t_pi:0.880 t_ri:0.834
+ 81%|████████  | 162/200 [5:33:22<1:17:11, 121.88s/it]#epoch:162 stage:1 train_loss:4.847e-03 val_loss:5.497e-03  time:2m1s
+
+ bg_pi:0.768 bg_ri:0.793 p_pi:0.780 p_ri:0.833 r_pi:0.821 r_ri:0.883 t_pi:0.878 t_ri:0.834
+ 82%|████████▏ | 163/200 [5:35:23<1:14:58, 121.59s/it]#epoch:163 stage:1 train_loss:4.846e-03 val_loss:5.491e-03  time:2m1s
+
+ bg_pi:0.759 bg_ri:0.791 p_pi:0.782 p_ri:0.830 r_pi:0.817 r_ri:0.888 t_pi:0.879 t_ri:0.831
+ 82%|████████▏ | 164/200 [5:37:25<1:12:58, 121.61s/it]#epoch:164 stage:1 train_loss:4.847e-03 val_loss:5.502e-03  time:2m2s
+
+ bg_pi:0.772 bg_ri:0.791 p_pi:0.777 p_ri:0.835 r_pi:0.814 r_ri:0.887 t_pi:0.880 t_ri:0.831
+ 82%|████████▎ | 165/200 [5:39:26<1:10:57, 121.66s/it]#epoch:165 stage:1 train_loss:4.845e-03 val_loss:5.484e-03  time:2m2s
+
+ bg_pi:0.772 bg_ri:0.785 p_pi:0.781 p_ri:0.825 r_pi:0.822 r_ri:0.880 t_pi:0.874 t_ri:0.837
+ 83%|████████▎ | 166/200 [5:41:28<1:08:53, 121.57s/it]#epoch:166 stage:1 train_loss:4.843e-03 val_loss:5.492e-03  time:2m1s
+
+ bg_pi:0.774 bg_ri:0.790 p_pi:0.781 p_ri:0.832 r_pi:0.815 r_ri:0.885 t_pi:0.878 t_ri:0.833
+ 84%|████████▎ | 167/200 [5:43:30<1:06:59, 121.81s/it]#epoch:167 stage:1 train_loss:4.844e-03 val_loss:5.500e-03  time:2m2s
+
+ bg_pi:0.769 bg_ri:0.795 p_pi:0.781 p_ri:0.830 r_pi:0.812 r_ri:0.883 t_pi:0.878 t_ri:0.831
+ 84%|████████▍ | 168/200 [5:45:32<1:04:55, 121.72s/it]#epoch:168 stage:1 train_loss:4.844e-03 val_loss:5.483e-03  time:2m1s
+
+ bg_pi:0.771 bg_ri:0.789 p_pi:0.787 p_ri:0.828 r_pi:0.824 r_ri:0.886 t_pi:0.877 t_ri:0.838
+ 84%|████████▍ | 169/200 [5:47:34<1:02:59, 121.91s/it]#epoch:169 stage:1 train_loss:4.843e-03 val_loss:5.496e-03  time:2m2s
+
+ bg_pi:0.761 bg_ri:0.794 p_pi:0.786 p_ri:0.836 r_pi:0.819 r_ri:0.880 t_pi:0.877 t_ri:0.832
+ 85%|████████▌ | 170/200 [5:49:37<1:01:05, 122.17s/it]#epoch:170 stage:1 train_loss:4.842e-03 val_loss:5.500e-03  time:2m3s
+
+ bg_pi:0.761 bg_ri:0.788 p_pi:0.780 p_ri:0.838 r_pi:0.813 r_ri:0.885 t_pi:0.879 t_ri:0.829
+ 86%|████████▌ | 171/200 [5:51:37<58:48, 121.68s/it]  #epoch:171 stage:1 train_loss:4.843e-03 val_loss:5.504e-03  time:2m0s
+
+ bg_pi:0.753 bg_ri:0.802 p_pi:0.773 p_ri:0.839 r_pi:0.818 r_ri:0.888 t_pi:0.882 t_ri:0.825
+ 86%|████████▌ | 172/200 [5:53:39<56:42, 121.53s/it]#epoch:172 stage:1 train_loss:4.840e-03 val_loss:5.489e-03  time:2m1s
+
+ bg_pi:0.767 bg_ri:0.793 p_pi:0.786 p_ri:0.827 r_pi:0.823 r_ri:0.884 t_pi:0.878 t_ri:0.837
+ 86%|████████▋ | 173/200 [5:55:40<54:38, 121.41s/it]#epoch:173 stage:1 train_loss:4.840e-03 val_loss:5.487e-03  time:2m1s
+
+ bg_pi:0.769 bg_ri:0.791 p_pi:0.785 p_ri:0.828 r_pi:0.819 r_ri:0.883 t_pi:0.877 t_ri:0.836
+ 87%|████████▋ | 174/200 [5:57:42<52:46, 121.79s/it]#epoch:174 stage:1 train_loss:4.838e-03 val_loss:5.498e-03  time:2m3s
+
+ bg_pi:0.757 bg_ri:0.793 p_pi:0.775 p_ri:0.834 r_pi:0.815 r_ri:0.886 t_pi:0.879 t_ri:0.827
+ 88%|████████▊ | 175/200 [5:59:44<50:43, 121.74s/it]#epoch:175 stage:1 train_loss:4.838e-03 val_loss:5.511e-03  time:2m2s
+
+ bg_pi:0.752 bg_ri:0.793 p_pi:0.777 p_ri:0.843 r_pi:0.814 r_ri:0.893 t_pi:0.883 t_ri:0.824
+ 88%|████████▊ | 176/200 [6:01:45<48:38, 121.62s/it]#epoch:176 stage:1 train_loss:4.840e-03 val_loss:5.500e-03  time:2m1s
+
+ bg_pi:0.755 bg_ri:0.793 p_pi:0.773 p_ri:0.838 r_pi:0.818 r_ri:0.888 t_pi:0.881 t_ri:0.827
+ 88%|████████▊ | 177/200 [6:03:46<46:31, 121.38s/it]#epoch:177 stage:1 train_loss:4.836e-03 val_loss:5.495e-03  time:2m1s
+
+ bg_pi:0.767 bg_ri:0.794 p_pi:0.778 p_ri:0.835 r_pi:0.818 r_ri:0.887 t_pi:0.879 t_ri:0.831
+ 89%|████████▉ | 178/200 [6:05:50<44:47, 122.15s/it]#epoch:178 stage:1 train_loss:4.833e-03 val_loss:5.482e-03  time:2m4s
+
+ bg_pi:0.774 bg_ri:0.778 p_pi:0.783 p_ri:0.831 r_pi:0.823 r_ri:0.881 t_pi:0.874 t_ri:0.839
+ 90%|████████▉ | 179/200 [6:07:53<42:48, 122.29s/it]#epoch:179 stage:1 train_loss:4.830e-03 val_loss:5.494e-03  time:2m3s
+
+ bg_pi:0.772 bg_ri:0.793 p_pi:0.782 p_ri:0.834 r_pi:0.817 r_ri:0.887 t_pi:0.880 t_ri:0.834
+ 90%|█████████ | 180/200 [6:09:54<40:37, 121.86s/it]#epoch:180 stage:1 train_loss:4.828e-03 val_loss:5.492e-03  time:2m1s
+
+ bg_pi:0.760 bg_ri:0.791 p_pi:0.782 p_ri:0.827 r_pi:0.815 r_ri:0.886 t_pi:0.878 t_ri:0.830
+ 90%|█████████ | 181/200 [6:11:56<38:38, 122.03s/it]#epoch:181 stage:1 train_loss:4.827e-03 val_loss:5.484e-03  time:2m2s
+
+ bg_pi:0.767 bg_ri:0.792 p_pi:0.781 p_ri:0.832 r_pi:0.816 r_ri:0.886 t_pi:0.879 t_ri:0.832
+ 91%|█████████ | 182/200 [6:13:58<36:33, 121.89s/it]#epoch:182 stage:1 train_loss:4.828e-03 val_loss:5.484e-03  time:2m2s
+
+ bg_pi:0.770 bg_ri:0.792 p_pi:0.780 p_ri:0.831 r_pi:0.819 r_ri:0.886 t_pi:0.879 t_ri:0.834
+ 92%|█████████▏| 183/200 [6:16:02<34:44, 122.63s/it]#epoch:183 stage:1 train_loss:4.827e-03 val_loss:5.485e-03  time:2m4s
+
+ bg_pi:0.770 bg_ri:0.787 p_pi:0.782 p_ri:0.833 r_pi:0.821 r_ri:0.882 t_pi:0.877 t_ri:0.836
+ 92%|█████████▏| 184/200 [6:18:04<32:38, 122.42s/it]#epoch:184 stage:1 train_loss:4.828e-03 val_loss:5.508e-03  time:2m2s
+
+ bg_pi:0.763 bg_ri:0.799 p_pi:0.774 p_ri:0.834 r_pi:0.810 r_ri:0.893 t_pi:0.882 t_ri:0.824
+ 92%|█████████▎| 185/200 [6:20:08<30:42, 122.82s/it]#epoch:185 stage:1 train_loss:4.826e-03 val_loss:5.495e-03  time:2m4s
+
+ bg_pi:0.768 bg_ri:0.791 p_pi:0.782 p_ri:0.837 r_pi:0.815 r_ri:0.885 t_pi:0.879 t_ri:0.832
+ 93%|█████████▎| 186/200 [6:22:11<28:42, 123.01s/it]#epoch:186 stage:1 train_loss:4.823e-03 val_loss:5.490e-03  time:2m3s
+
+ bg_pi:0.767 bg_ri:0.792 p_pi:0.779 p_ri:0.833 r_pi:0.815 r_ri:0.887 t_pi:0.880 t_ri:0.832
+ 94%|█████████▎| 187/200 [6:24:12<26:32, 122.53s/it]#epoch:187 stage:1 train_loss:4.824e-03 val_loss:5.499e-03  time:2m1s
+
+ bg_pi:0.761 bg_ri:0.795 p_pi:0.774 p_ri:0.831 r_pi:0.813 r_ri:0.885 t_pi:0.878 t_ri:0.827
+ 94%|█████████▍| 188/200 [6:26:14<24:25, 122.12s/it]#epoch:188 stage:1 train_loss:4.823e-03 val_loss:5.495e-03  time:2m1s
+
+ bg_pi:0.757 bg_ri:0.799 p_pi:0.778 p_ri:0.830 r_pi:0.815 r_ri:0.890 t_pi:0.880 t_ri:0.827
+ 94%|█████████▍| 189/200 [6:28:15<22:21, 121.92s/it]#epoch:189 stage:1 train_loss:4.823e-03 val_loss:5.493e-03  time:2m1s
+
+ bg_pi:0.763 bg_ri:0.799 p_pi:0.776 p_ri:0.829 r_pi:0.811 r_ri:0.886 t_pi:0.878 t_ri:0.825
+ 95%|█████████▌| 190/200 [6:30:16<20:16, 121.60s/it]#epoch:190 stage:1 train_loss:4.823e-03 val_loss:5.492e-03  time:2m1s
+
+ bg_pi:0.769 bg_ri:0.787 p_pi:0.776 p_ri:0.833 r_pi:0.816 r_ri:0.886 t_pi:0.878 t_ri:0.831
+ 96%|█████████▌| 191/200 [6:32:17<18:12, 121.34s/it]#epoch:191 stage:1 train_loss:4.821e-03 val_loss:5.486e-03  time:2m1s
+
+ bg_pi:0.770 bg_ri:0.780 p_pi:0.779 p_ri:0.829 r_pi:0.818 r_ri:0.884 t_pi:0.875 t_ri:0.835
+ 96%|█████████▌| 192/200 [6:34:18<16:10, 121.37s/it]#epoch:192 stage:1 train_loss:4.818e-03 val_loss:5.491e-03  time:2m1s
+
+ bg_pi:0.761 bg_ri:0.797 p_pi:0.777 p_ri:0.832 r_pi:0.816 r_ri:0.888 t_pi:0.881 t_ri:0.829
+ 96%|█████████▋| 193/200 [6:36:22<14:14, 122.14s/it]#epoch:193 stage:1 train_loss:4.818e-03 val_loss:5.493e-03  time:2m4s
+
+ bg_pi:0.763 bg_ri:0.793 p_pi:0.779 p_ri:0.834 r_pi:0.810 r_ri:0.889 t_pi:0.881 t_ri:0.828
+ 97%|█████████▋| 194/200 [6:38:24<12:12, 122.16s/it]#epoch:194 stage:1 train_loss:4.818e-03 val_loss:5.496e-03  time:2m2s
+
+ bg_pi:0.765 bg_ri:0.793 p_pi:0.778 p_ri:0.831 r_pi:0.815 r_ri:0.887 t_pi:0.879 t_ri:0.830
+ 98%|█████████▊| 195/200 [6:40:26<10:10, 122.19s/it]#epoch:195 stage:1 train_loss:4.816e-03 val_loss:5.481e-03  time:2m2s
+
+ bg_pi:0.766 bg_ri:0.790 p_pi:0.783 p_ri:0.831 r_pi:0.818 r_ri:0.884 t_pi:0.876 t_ri:0.832
+ 98%|█████████▊| 196/200 [6:42:30<08:10, 122.55s/it]#epoch:196 stage:1 train_loss:4.818e-03 val_loss:5.493e-03  time:2m3s
+
+ bg_pi:0.768 bg_ri:0.790 p_pi:0.777 p_ri:0.830 r_pi:0.816 r_ri:0.891 t_pi:0.878 t_ri:0.829
+ 98%|█████████▊| 197/200 [6:44:33<06:08, 122.75s/it]#epoch:197 stage:1 train_loss:4.816e-03 val_loss:5.487e-03  time:2m3s
+
+ bg_pi:0.766 bg_ri:0.784 p_pi:0.780 p_ri:0.832 r_pi:0.818 r_ri:0.884 t_pi:0.877 t_ri:0.833
+ 99%|█████████▉| 198/200 [6:46:35<04:04, 122.39s/it]#epoch:198 stage:1 train_loss:4.812e-03 val_loss:5.489e-03  time:2m2s
+
+ bg_pi:0.766 bg_ri:0.790 p_pi:0.779 p_ri:0.834 r_pi:0.817 r_ri:0.889 t_pi:0.879 t_ri:0.831
+100%|█████████▉| 199/200 [6:48:37<02:02, 122.49s/it]#epoch:199 stage:1 train_loss:4.811e-03 val_loss:5.483e-03  time:2m3s
+
+ bg_pi:0.767 bg_ri:0.791 p_pi:0.783 p_ri:0.834 r_pi:0.818 r_ri:0.889 t_pi:0.879 t_ri:0.832
+100%|██████████| 200/200 [6:50:38<00:00, 121.84s/it]100%|██████████| 200/200 [6:50:38<00:00, 123.19s/it]
+#epoch:200 stage:1 train_loss:4.813e-03 val_loss:5.500e-03  time:2m0s
+
+ bg_pi:0.759 bg_ri:0.790 p_pi:0.777 p_ri:0.837 r_pi:0.810 r_ri:0.895 t_pi:0.882 t_ri:0.826

@@ -1,0 +1,3756 @@
+device :cuda
+MaskedAutoencoderViT(
+  (patch_embed): PatchEmbed_1D(
+    (proj): Conv1d(1, 40, kernel_size=(12,), stride=(12,))
+    (norm): Identity()
+  )
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=40, out_features=120, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=40, out_features=40, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=40, out_features=80, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=80, out_features=40, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): LayerNorm((40,), eps=1e-06, elementwise_affine=True)
+  (decoder_embed): Linear(in_features=40, out_features=20, bias=True)
+  (decoder_blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=20, out_features=60, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=20, out_features=20, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=20, out_features=40, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=40, out_features=20, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=20, out_features=60, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=20, out_features=20, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=20, out_features=40, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=40, out_features=20, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=20, out_features=60, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=20, out_features=20, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=20, out_features=40, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=40, out_features=20, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=20, out_features=60, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=20, out_features=20, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=20, out_features=40, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=40, out_features=20, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=20, out_features=60, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=20, out_features=20, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=20, out_features=40, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=40, out_features=20, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=20, out_features=60, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=20, out_features=20, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=20, out_features=40, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=40, out_features=20, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=20, out_features=60, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=20, out_features=20, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=20, out_features=40, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=40, out_features=20, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=20, out_features=60, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=20, out_features=20, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=20, out_features=40, bias=True)
+        (act): GELU()
+        (drop1): Dropout(p=0.0, inplace=False)
+        (fc2): Linear(in_features=40, out_features=20, bias=True)
+        (drop2): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (decoder_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+  (decoder_pred): Linear(in_features=20, out_features=12, bias=True)
+)/root/miniconda3/envs/ECG/lib/python3.7/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+  0%|          | 0/1000 [00:00<?, ?it/s]
+train_datasize 96844 val_datasize 24211
+100,loss:8.887e+03 
+200,loss:6.964e+03 
+300,loss:5.437e+04 
+  0%|          | 1/1000 [02:29<41:22:20, 149.09s/it]#epoch:01 stage:1 train_loss:6.057e+06 val_loss:1.380e+06  time:2m29s
+
+
+100,loss:8.219e+03 
+200,loss:6.442e+03 
+300,loss:5.329e+04 
+  0%|          | 2/1000 [04:57<41:14:57, 148.80s/it]#epoch:02 stage:1 train_loss:5.805e+06 val_loss:1.322e+06  time:2m28s
+
+
+100,loss:7.627e+03 
+200,loss:6.089e+03 
+300,loss:5.235e+04 
+  0%|          | 3/1000 [07:26<41:12:53, 148.82s/it]#epoch:03 stage:1 train_loss:5.597e+06 val_loss:1.276e+06  time:2m29s
+
+
+100,loss:7.143e+03 
+200,loss:5.841e+03 
+300,loss:5.149e+04 
+  0%|          | 4/1000 [09:54<41:10:30, 148.83s/it]#epoch:04 stage:1 train_loss:5.427e+06 val_loss:1.236e+06  time:2m29s
+
+
+100,loss:6.714e+03 
+200,loss:5.598e+03 
+300,loss:5.059e+04 
+  0%|          | 5/1000 [12:23<41:08:28, 148.85s/it]#epoch:05 stage:1 train_loss:5.259e+06 val_loss:1.179e+06  time:2m29s
+
+
+100,loss:5.920e+03 
+200,loss:4.797e+03 
+300,loss:4.907e+04 
+  1%|          | 6/1000 [14:52<41:03:22, 148.69s/it]#epoch:06 stage:1 train_loss:4.938e+06 val_loss:1.090e+06  time:2m28s
+
+
+100,loss:5.106e+03 
+200,loss:4.245e+03 
+300,loss:4.777e+04 
+  1%|          | 7/1000 [17:21<41:03:59, 148.88s/it]#epoch:07 stage:1 train_loss:4.631e+06 val_loss:1.033e+06  time:2m29s
+
+
+100,loss:4.435e+03 
+200,loss:3.812e+03 
+300,loss:4.654e+04 
+  1%|          | 8/1000 [19:51<41:04:48, 149.08s/it]#epoch:08 stage:1 train_loss:4.364e+06 val_loss:9.579e+05  time:2m30s
+
+
+100,loss:3.925e+03 
+200,loss:3.411e+03 
+300,loss:4.533e+04 
+  1%|          | 9/1000 [22:20<41:06:06, 149.31s/it]#epoch:09 stage:1 train_loss:4.132e+06 val_loss:9.050e+05  time:2m30s
+
+
+100,loss:3.475e+03 
+200,loss:3.039e+03 
+300,loss:4.418e+04 
+  1%|          | 10/1000 [24:50<41:03:05, 149.28s/it]#epoch:10 stage:1 train_loss:3.919e+06 val_loss:8.520e+05  time:2m29s
+
+
+100,loss:3.302e+03 
+200,loss:2.764e+03 
+300,loss:4.310e+04 
+  1%|          | 11/1000 [27:19<40:58:57, 149.18s/it]#epoch:11 stage:1 train_loss:3.732e+06 val_loss:8.091e+05  time:2m29s
+
+
+100,loss:2.821e+03 
+200,loss:2.524e+03 
+300,loss:4.212e+04 
+  1%|          | 12/1000 [29:48<40:59:20, 149.35s/it]#epoch:12 stage:1 train_loss:3.559e+06 val_loss:7.674e+05  time:2m30s
+
+
+100,loss:2.543e+03 
+200,loss:2.348e+03 
+300,loss:4.110e+04 
+  1%|▏         | 13/1000 [32:17<40:54:28, 149.21s/it]#epoch:13 stage:1 train_loss:3.402e+06 val_loss:7.445e+05  time:2m29s
+
+
+100,loss:2.347e+03 
+200,loss:2.242e+03 
+300,loss:4.015e+04 
+  1%|▏         | 14/1000 [34:46<40:51:05, 149.15s/it]#epoch:14 stage:1 train_loss:3.276e+06 val_loss:7.060e+05  time:2m29s
+
+
+100,loss:2.434e+03 
+200,loss:2.151e+03 
+300,loss:3.922e+04 
+  2%|▏         | 15/1000 [37:16<40:53:28, 149.45s/it]#epoch:15 stage:1 train_loss:3.157e+06 val_loss:6.805e+05  time:2m30s
+
+
+100,loss:2.240e+03 
+200,loss:2.103e+03 
+300,loss:3.831e+04 
+  2%|▏         | 16/1000 [39:45<40:49:39, 149.37s/it]#epoch:16 stage:1 train_loss:3.068e+06 val_loss:6.532e+05  time:2m29s
+
+
+100,loss:2.030e+03 
+200,loss:2.169e+03 
+300,loss:3.739e+04 
+  2%|▏         | 17/1000 [42:14<40:44:24, 149.20s/it]#epoch:17 stage:1 train_loss:2.942e+06 val_loss:6.335e+05  time:2m29s
+
+
+100,loss:1.878e+03 
+200,loss:1.941e+03 
+300,loss:3.649e+04 
+  2%|▏         | 18/1000 [44:44<40:44:38, 149.37s/it]#epoch:18 stage:1 train_loss:2.823e+06 val_loss:5.999e+05  time:2m30s
+
+
+100,loss:1.961e+03 
+200,loss:1.871e+03 
+300,loss:3.552e+04 
+  2%|▏         | 19/1000 [47:14<40:44:13, 149.49s/it]#epoch:19 stage:1 train_loss:2.716e+06 val_loss:5.812e+05  time:2m30s
+
+
+100,loss:1.697e+03 
+200,loss:1.780e+03 
+300,loss:3.456e+04 
+  2%|▏         | 20/1000 [49:43<40:42:06, 149.52s/it]#epoch:20 stage:1 train_loss:2.597e+06 val_loss:5.518e+05  time:2m30s
+
+
+100,loss:1.558e+03 
+200,loss:1.673e+03 
+300,loss:3.360e+04 
+  2%|▏         | 21/1000 [52:13<40:41:56, 149.66s/it]#epoch:21 stage:1 train_loss:2.483e+06 val_loss:5.250e+05  time:2m30s
+
+
+100,loss:1.451e+03 
+200,loss:1.557e+03 
+300,loss:3.270e+04 
+  2%|▏         | 22/1000 [54:42<40:36:08, 149.46s/it]#epoch:22 stage:1 train_loss:2.373e+06 val_loss:4.956e+05  time:2m29s
+
+
+100,loss:1.366e+03 
+200,loss:1.482e+03 
+300,loss:3.176e+04 
+  2%|▏         | 23/1000 [57:11<40:31:09, 149.30s/it]#epoch:23 stage:1 train_loss:2.272e+06 val_loss:4.761e+05  time:2m29s
+
+
+100,loss:1.310e+03 
+200,loss:1.416e+03 
+300,loss:3.099e+04 
+  2%|▏         | 24/1000 [59:40<40:27:12, 149.21s/it]#epoch:24 stage:1 train_loss:2.177e+06 val_loss:4.525e+05  time:2m29s
+
+
+100,loss:1.258e+03 
+200,loss:1.333e+03 
+300,loss:3.004e+04 
+  2%|▎         | 25/1000 [1:02:09<40:21:53, 149.04s/it]#epoch:25 stage:1 train_loss:2.090e+06 val_loss:4.333e+05  time:2m29s
+
+
+100,loss:1.196e+03 
+200,loss:1.244e+03 
+300,loss:2.917e+04 
+  3%|▎         | 26/1000 [1:04:38<40:19:09, 149.02s/it]#epoch:26 stage:1 train_loss:2.010e+06 val_loss:4.357e+05  time:2m29s
+
+
+100,loss:1.176e+03 
+200,loss:1.194e+03 
+300,loss:2.834e+04 
+  3%|▎         | 27/1000 [1:07:07<40:18:26, 149.13s/it]#epoch:27 stage:1 train_loss:1.951e+06 val_loss:3.906e+05  time:2m29s
+
+
+100,loss:1.027e+03 
+200,loss:1.070e+03 
+300,loss:2.748e+04 
+  3%|▎         | 28/1000 [1:09:37<40:16:41, 149.18s/it]#epoch:28 stage:1 train_loss:1.832e+06 val_loss:3.783e+05  time:2m29s
+
+
+100,loss:9.106e+02 
+200,loss:9.768e+02 
+300,loss:2.659e+04 
+  3%|▎         | 29/1000 [1:12:06<40:14:20, 149.19s/it]#epoch:29 stage:1 train_loss:1.735e+06 val_loss:3.522e+05  time:2m29s
+
+
+100,loss:8.353e+02 
+200,loss:8.920e+02 
+300,loss:2.580e+04 
+  3%|▎         | 30/1000 [1:14:35<40:14:02, 149.32s/it]#epoch:30 stage:1 train_loss:1.656e+06 val_loss:3.408e+05  time:2m30s
+
+
+100,loss:8.031e+02 
+200,loss:9.059e+02 
+300,loss:2.499e+04 
+  3%|▎         | 31/1000 [1:17:05<40:12:08, 149.36s/it]#epoch:31 stage:1 train_loss:1.593e+06 val_loss:3.144e+05  time:2m29s
+
+
+100,loss:7.362e+02 
+200,loss:7.870e+02 
+300,loss:2.423e+04 
+  3%|▎         | 32/1000 [1:19:35<40:11:41, 149.49s/it]#epoch:32 stage:1 train_loss:1.521e+06 val_loss:3.341e+05  time:2m30s
+
+
+100,loss:7.196e+02 
+200,loss:7.766e+02 
+300,loss:2.349e+04 
+  3%|▎         | 33/1000 [1:22:04<40:08:36, 149.45s/it]#epoch:33 stage:1 train_loss:1.465e+06 val_loss:3.017e+05  time:2m29s
+
+
+100,loss:8.480e+02 
+200,loss:7.569e+02 
+300,loss:2.276e+04 
+  3%|▎         | 34/1000 [1:24:33<40:01:46, 149.18s/it]#epoch:34 stage:1 train_loss:1.441e+06 val_loss:2.750e+05  time:2m29s
+
+
+100,loss:6.692e+02 
+200,loss:6.807e+02 
+300,loss:2.207e+04 
+  4%|▎         | 35/1000 [1:27:01<39:57:25, 149.06s/it]#epoch:35 stage:1 train_loss:1.344e+06 val_loss:2.651e+05  time:2m29s
+
+
+100,loss:6.874e+02 
+200,loss:6.814e+02 
+300,loss:2.138e+04 
+  4%|▎         | 36/1000 [1:29:31<39:57:55, 149.25s/it]#epoch:36 stage:1 train_loss:1.355e+06 val_loss:2.495e+05  time:2m30s
+
+
+100,loss:5.905e+02 
+200,loss:6.861e+02 
+300,loss:2.069e+04 
+  4%|▎         | 37/1000 [1:32:00<39:54:33, 149.19s/it]#epoch:37 stage:1 train_loss:1.250e+06 val_loss:2.380e+05  time:2m29s
+
+
+100,loss:5.833e+02 
+200,loss:6.048e+02 
+300,loss:2.001e+04 
+  4%|▍         | 38/1000 [1:34:29<39:50:29, 149.09s/it]#epoch:38 stage:1 train_loss:1.204e+06 val_loss:2.274e+05  time:2m29s
+
+
+100,loss:5.688e+02 
+200,loss:5.785e+02 
+300,loss:1.936e+04 
+  4%|▍         | 39/1000 [1:36:58<39:46:18, 148.99s/it]#epoch:39 stage:1 train_loss:1.167e+06 val_loss:2.202e+05  time:2m29s
+
+
+100,loss:5.421e+02 
+200,loss:5.480e+02 
+300,loss:1.873e+04 
+  4%|▍         | 40/1000 [1:39:27<39:45:14, 149.08s/it]#epoch:40 stage:1 train_loss:1.110e+06 val_loss:2.131e+05  time:2m29s
+
+
+100,loss:4.838e+02 
+200,loss:5.340e+02 
+300,loss:1.814e+04 
+  4%|▍         | 41/1000 [1:41:56<39:40:12, 148.92s/it]#epoch:41 stage:1 train_loss:1.071e+06 val_loss:1.993e+05  time:2m29s
+
+
+100,loss:4.754e+02 
+200,loss:5.257e+02 
+300,loss:1.751e+04 
+  4%|▍         | 42/1000 [1:44:25<39:41:28, 149.15s/it]#epoch:42 stage:1 train_loss:1.027e+06 val_loss:1.890e+05  time:2m30s
+
+
+100,loss:4.496e+02 
+200,loss:4.841e+02 
+300,loss:1.692e+04 
+  4%|▍         | 43/1000 [1:46:55<39:42:34, 149.38s/it]#epoch:43 stage:1 train_loss:9.879e+05 val_loss:1.818e+05  time:2m30s
+
+
+100,loss:5.120e+02 
+200,loss:4.898e+02 
+300,loss:1.636e+04 
+  4%|▍         | 44/1000 [1:49:24<39:38:48, 149.30s/it]#epoch:44 stage:1 train_loss:9.578e+05 val_loss:1.784e+05  time:2m29s
+
+
+100,loss:4.273e+02 
+200,loss:5.195e+02 
+300,loss:1.582e+04 
+  4%|▍         | 45/1000 [1:51:54<39:38:25, 149.43s/it]#epoch:45 stage:1 train_loss:9.334e+05 val_loss:1.746e+05  time:2m30s
+
+
+100,loss:4.341e+02 
+200,loss:4.564e+02 
+300,loss:1.526e+04 
+  5%|▍         | 46/1000 [1:54:23<39:33:14, 149.26s/it]#epoch:46 stage:1 train_loss:8.853e+05 val_loss:1.601e+05  time:2m29s
+
+
+100,loss:4.438e+02 
+200,loss:4.753e+02 
+300,loss:1.479e+04 
+  5%|▍         | 47/1000 [1:56:52<39:30:44, 149.26s/it]#epoch:47 stage:1 train_loss:1.259e+06 val_loss:7.553e+05  time:2m29s
+
+
+100,loss:1.414e+03 
+200,loss:1.040e+03 
+300,loss:1.493e+04 
+  5%|▍         | 48/1000 [1:59:22<39:29:14, 149.32s/it]#epoch:48 stage:1 train_loss:1.245e+06 val_loss:1.874e+05  time:2m29s
+
+
+100,loss:8.887e+02 
+200,loss:7.641e+02 
+300,loss:1.419e+04 
+  5%|▍         | 49/1000 [2:01:51<39:26:13, 149.29s/it]#epoch:49 stage:1 train_loss:9.351e+05 val_loss:1.682e+05  time:2m29s
+
+
+100,loss:7.539e+02 
+200,loss:6.508e+02 
+300,loss:1.364e+04 
+  5%|▌         | 50/1000 [2:04:20<39:22:57, 149.24s/it]#epoch:50 stage:1 train_loss:8.609e+05 val_loss:1.524e+05  time:2m29s
+
+
+100,loss:5.530e+02 
+200,loss:5.006e+02 
+300,loss:1.305e+04 
+  5%|▌         | 51/1000 [2:06:49<39:21:21, 149.30s/it]#epoch:51 stage:1 train_loss:7.887e+05 val_loss:1.391e+05  time:2m29s
+
+
+100,loss:4.296e+02 
+200,loss:4.665e+02 
+300,loss:1.257e+04 
+  5%|▌         | 52/1000 [2:09:19<39:18:07, 149.25s/it]#epoch:52 stage:1 train_loss:7.759e+05 val_loss:1.392e+05  time:2m29s
+
+
+100,loss:4.187e+02 
+200,loss:4.240e+02 
+300,loss:1.215e+04 
+  5%|▌         | 53/1000 [2:11:48<39:14:23, 149.17s/it]#epoch:53 stage:1 train_loss:7.118e+05 val_loss:1.326e+05  time:2m29s
+
+
+100,loss:3.792e+02 
+200,loss:4.148e+02 
+300,loss:1.170e+04 
+  5%|▌         | 54/1000 [2:14:16<39:09:36, 149.02s/it]#epoch:54 stage:1 train_loss:6.788e+05 val_loss:1.220e+05  time:2m29s
+
+
+100,loss:3.901e+02 
+200,loss:4.331e+02 
+300,loss:1.130e+04 
+  6%|▌         | 55/1000 [2:16:46<39:11:55, 149.33s/it]#epoch:55 stage:1 train_loss:6.632e+05 val_loss:1.263e+05  time:2m30s
+
+
+100,loss:3.786e+02 
+200,loss:4.397e+02 
+300,loss:1.088e+04 
+  6%|▌         | 56/1000 [2:19:15<39:06:15, 149.13s/it]#epoch:56 stage:1 train_loss:6.507e+05 val_loss:1.166e+05  time:2m29s
+
+
+100,loss:3.555e+02 
+200,loss:4.078e+02 
+300,loss:1.043e+04 
+  6%|▌         | 57/1000 [2:21:43<39:00:16, 148.90s/it]#epoch:57 stage:1 train_loss:6.152e+05 val_loss:1.823e+05  time:2m28s
+
+
+100,loss:3.721e+02 
+200,loss:4.280e+02 
+300,loss:1.021e+04 
+  6%|▌         | 58/1000 [2:24:12<38:58:35, 148.96s/it]#epoch:58 stage:1 train_loss:6.267e+05 val_loss:1.390e+05  time:2m29s
+
+
+100,loss:5.483e+02 
+200,loss:4.299e+02 
+300,loss:9.704e+03 
+  6%|▌         | 59/1000 [2:26:41<38:56:08, 148.96s/it]#epoch:59 stage:1 train_loss:6.345e+05 val_loss:1.012e+05  time:2m29s
+
+
+100,loss:3.675e+02 
+200,loss:3.810e+02 
+300,loss:9.293e+03 
+  6%|▌         | 60/1000 [2:29:11<38:56:51, 149.16s/it]#epoch:60 stage:1 train_loss:5.615e+05 val_loss:1.234e+05  time:2m30s
+
+
+100,loss:3.558e+02 
+200,loss:3.941e+02 
+300,loss:8.968e+03 
+  6%|▌         | 61/1000 [2:31:41<38:57:15, 149.35s/it]#epoch:61 stage:1 train_loss:5.536e+05 val_loss:9.622e+04  time:2m30s
+
+
+100,loss:3.611e+02 
+200,loss:3.762e+02 
+300,loss:8.595e+03 
+  6%|▌         | 62/1000 [2:34:10<38:56:24, 149.45s/it]#epoch:62 stage:1 train_loss:5.386e+05 val_loss:1.142e+05  time:2m30s
+
+
+100,loss:3.635e+02 
+200,loss:4.624e+02 
+300,loss:8.274e+03 
+  6%|▋         | 63/1000 [2:36:40<38:54:48, 149.51s/it]#epoch:63 stage:1 train_loss:5.293e+05 val_loss:1.246e+05  time:2m30s
+
+
+100,loss:7.869e+02 
+200,loss:5.364e+02 
+300,loss:8.064e+03 
+  6%|▋         | 64/1000 [2:39:09<38:51:24, 149.45s/it]#epoch:64 stage:1 train_loss:6.650e+05 val_loss:8.805e+04  time:2m29s
+
+
+100,loss:7.159e+02 
+200,loss:4.254e+02 
+300,loss:7.766e+03 
+  6%|▋         | 65/1000 [2:41:38<38:45:01, 149.20s/it]#epoch:65 stage:1 train_loss:6.121e+05 val_loss:8.930e+04  time:2m29s
+
+
+100,loss:3.634e+02 
+200,loss:4.360e+02 
+300,loss:7.419e+03 
+  7%|▋         | 66/1000 [2:44:07<38:42:16, 149.18s/it]#epoch:66 stage:1 train_loss:4.722e+05 val_loss:8.672e+04  time:2m29s
+
+
+100,loss:3.423e+02 
+200,loss:3.650e+02 
+300,loss:7.117e+03 
+  7%|▋         | 67/1000 [2:46:36<38:40:14, 149.21s/it]#epoch:67 stage:1 train_loss:4.541e+05 val_loss:1.017e+05  time:2m29s
+
+
+100,loss:3.922e+02 
+200,loss:4.991e+02 
+300,loss:6.889e+03 
+  7%|▋         | 68/1000 [2:49:06<38:37:15, 149.18s/it]#epoch:68 stage:1 train_loss:4.608e+05 val_loss:9.468e+04  time:2m29s
+
+
+100,loss:3.458e+02 
+200,loss:3.465e+02 
+300,loss:6.601e+03 
+  7%|▋         | 69/1000 [2:51:35<38:37:59, 149.39s/it]#epoch:69 stage:1 train_loss:4.373e+05 val_loss:2.329e+05  time:2m30s
+
+
+100,loss:4.021e+02 
+200,loss:4.574e+02 
+300,loss:6.286e+03 
+  7%|▋         | 70/1000 [2:54:05<38:35:25, 149.38s/it]#epoch:70 stage:1 train_loss:4.654e+05 val_loss:9.180e+04  time:2m29s
+
+
+100,loss:3.891e+02 
+200,loss:3.931e+02 
+300,loss:6.098e+03 
+  7%|▋         | 71/1000 [2:56:33<38:29:08, 149.14s/it]#epoch:71 stage:1 train_loss:5.819e+05 val_loss:1.436e+05  time:2m29s
+
+
+100,loss:1.020e+03 
+200,loss:4.722e+02 
+300,loss:5.903e+03 
+  7%|▋         | 72/1000 [2:59:02<38:24:14, 148.98s/it]#epoch:72 stage:1 train_loss:5.592e+05 val_loss:7.347e+04  time:2m29s
+
+
+100,loss:3.752e+02 
+200,loss:4.354e+02 
+300,loss:5.682e+03 
+  7%|▋         | 73/1000 [3:01:31<38:22:26, 149.02s/it]#epoch:73 stage:1 train_loss:4.049e+05 val_loss:7.024e+04  time:2m29s
+
+
+100,loss:3.594e+02 
+200,loss:3.883e+02 
+300,loss:5.387e+03 
+  7%|▋         | 74/1000 [3:04:00<38:18:33, 148.93s/it]#epoch:74 stage:1 train_loss:3.838e+05 val_loss:7.050e+04  time:2m29s
+
+
+100,loss:4.973e+02 
+200,loss:4.232e+02 
+300,loss:5.177e+03 
+  8%|▊         | 75/1000 [3:06:29<38:16:33, 148.97s/it]#epoch:75 stage:1 train_loss:3.816e+05 val_loss:7.894e+04  time:2m29s
+
+
+100,loss:3.994e+02 
+200,loss:4.379e+02 
+300,loss:5.137e+03 
+  8%|▊         | 76/1000 [3:08:59<38:18:44, 149.27s/it]#epoch:76 stage:1 train_loss:3.741e+05 val_loss:8.577e+04  time:2m30s
+
+
+100,loss:3.489e+02 
+200,loss:4.018e+02 
+300,loss:4.731e+03 
+  8%|▊         | 77/1000 [3:11:29<38:18:25, 149.41s/it]#epoch:77 stage:1 train_loss:3.610e+05 val_loss:7.220e+04  time:2m30s
+
+
+100,loss:3.347e+02 
+200,loss:3.989e+02 
+300,loss:6.236e+03 
+  8%|▊         | 78/1000 [3:13:58<38:15:32, 149.38s/it]#epoch:78 stage:1 train_loss:6.680e+05 val_loss:3.001e+05  time:2m29s
+
+
+100,loss:1.012e+03 
+200,loss:6.135e+02 
+300,loss:4.571e+03 
+  8%|▊         | 79/1000 [3:16:27<38:13:50, 149.44s/it]#epoch:79 stage:1 train_loss:6.358e+05 val_loss:6.819e+04  time:2m30s
+
+
+100,loss:4.241e+02 
+200,loss:4.196e+02 
+300,loss:4.308e+03 
+  8%|▊         | 80/1000 [3:18:57<38:10:53, 149.41s/it]#epoch:80 stage:1 train_loss:3.387e+05 val_loss:6.435e+04  time:2m29s
+
+
+100,loss:3.604e+02 
+200,loss:3.732e+02 
+300,loss:4.103e+03 
+  8%|▊         | 81/1000 [3:21:27<38:11:36, 149.62s/it]#epoch:81 stage:1 train_loss:3.172e+05 val_loss:6.015e+04  time:2m30s
+
+
+100,loss:3.475e+02 
+200,loss:4.170e+02 
+300,loss:4.020e+03 
+  8%|▊         | 82/1000 [3:23:56<38:06:53, 149.47s/it]#epoch:82 stage:1 train_loss:3.302e+05 val_loss:6.170e+04  time:2m29s
+
+
+100,loss:3.382e+02 
+200,loss:3.630e+02 
+300,loss:3.899e+03 
+  8%|▊         | 83/1000 [3:26:26<38:05:19, 149.53s/it]#epoch:83 stage:1 train_loss:3.082e+05 val_loss:6.343e+04  time:2m30s
+
+
+100,loss:3.939e+02 
+200,loss:3.969e+02 
+300,loss:3.613e+03 
+  8%|▊         | 84/1000 [3:28:55<38:00:25, 149.37s/it]#epoch:84 stage:1 train_loss:3.197e+05 val_loss:1.150e+05  time:2m29s
+
+
+100,loss:5.802e+02 
+200,loss:4.804e+02 
+300,loss:3.467e+03 
+  8%|▊         | 85/1000 [3:31:24<37:56:46, 149.30s/it]#epoch:85 stage:1 train_loss:3.573e+05 val_loss:5.990e+04  time:2m29s
+
+
+100,loss:3.889e+02 
+200,loss:3.636e+02 
+300,loss:3.376e+03 
+  9%|▊         | 86/1000 [3:33:54<37:58:43, 149.59s/it]#epoch:86 stage:1 train_loss:3.124e+05 val_loss:8.183e+04  time:2m30s
+
+
+100,loss:3.710e+02 
+200,loss:3.808e+02 
+300,loss:3.165e+03 
+  9%|▊         | 87/1000 [3:36:24<37:58:01, 149.71s/it]#epoch:87 stage:1 train_loss:3.011e+05 val_loss:7.114e+04  time:2m30s
+
+
+100,loss:4.283e+02 
+200,loss:3.492e+02 
+300,loss:3.004e+03 
+  9%|▉         | 88/1000 [3:38:53<37:54:00, 149.61s/it]#epoch:88 stage:1 train_loss:2.927e+05 val_loss:5.740e+04  time:2m29s
+
+
+100,loss:3.327e+02 
+200,loss:3.703e+02 
+300,loss:2.842e+03 
+  9%|▉         | 89/1000 [3:41:24<37:55:19, 149.86s/it]#epoch:89 stage:1 train_loss:2.871e+05 val_loss:1.238e+05  time:2m30s
+
+
+100,loss:6.940e+02 
+200,loss:4.147e+02 
+300,loss:2.703e+03 
+  9%|▉         | 90/1000 [3:43:54<37:53:41, 149.91s/it]#epoch:90 stage:1 train_loss:3.248e+05 val_loss:8.588e+04  time:2m30s
+
+
+100,loss:3.380e+02 
+200,loss:4.531e+02 
+300,loss:2.624e+03 
+  9%|▉         | 91/1000 [3:46:23<37:48:48, 149.76s/it]#epoch:91 stage:1 train_loss:2.985e+05 val_loss:5.367e+04  time:2m29s
+
+
+100,loss:4.597e+02 
+200,loss:4.272e+02 
+300,loss:2.495e+03 
+  9%|▉         | 92/1000 [3:48:52<37:43:01, 149.54s/it]#epoch:92 stage:1 train_loss:2.853e+05 val_loss:5.619e+04  time:2m29s
+
+
+100,loss:3.430e+02 
+200,loss:3.956e+02 
+300,loss:2.362e+03 
+  9%|▉         | 93/1000 [3:51:22<37:39:18, 149.46s/it]#epoch:93 stage:1 train_loss:2.650e+05 val_loss:5.246e+04  time:2m29s
+
+
+100,loss:3.314e+02 
+200,loss:3.696e+02 
+300,loss:2.370e+03 
+  9%|▉         | 94/1000 [3:53:51<37:37:39, 149.51s/it]#epoch:94 stage:1 train_loss:2.534e+05 val_loss:5.036e+04  time:2m30s
+
+
+100,loss:4.446e+02 
+200,loss:6.729e+02 
+300,loss:2.478e+03 
+ 10%|▉         | 95/1000 [3:56:21<37:35:36, 149.54s/it]#epoch:95 stage:1 train_loss:3.383e+05 val_loss:2.660e+05  time:2m30s
+
+
+100,loss:4.343e+02 
+200,loss:3.917e+02 
+300,loss:2.086e+03 
+ 10%|▉         | 96/1000 [3:58:51<37:34:26, 149.63s/it]#epoch:96 stage:1 train_loss:3.760e+05 val_loss:5.321e+04  time:2m30s
+
+
+100,loss:3.490e+02 
+200,loss:3.839e+02 
+300,loss:2.020e+03 
+ 10%|▉         | 97/1000 [4:01:21<37:35:54, 149.89s/it]#epoch:97 stage:1 train_loss:2.545e+05 val_loss:4.943e+04  time:2m30s
+
+
+100,loss:3.840e+02 
+200,loss:4.460e+02 
+300,loss:1.818e+03 
+ 10%|▉         | 98/1000 [4:03:51<37:31:04, 149.74s/it]#epoch:98 stage:1 train_loss:2.433e+05 val_loss:5.052e+04  time:2m29s
+
+
+100,loss:3.661e+02 
+200,loss:3.611e+02 
+300,loss:1.744e+03 
+ 10%|▉         | 99/1000 [4:06:19<37:24:26, 149.46s/it]#epoch:99 stage:1 train_loss:2.443e+05 val_loss:5.483e+04  time:2m29s
+
+
+100,loss:3.472e+02 
+200,loss:3.610e+02 
+300,loss:1.714e+03 
+ 10%|█         | 100/1000 [4:08:49<37:21:38, 149.44s/it]#epoch:100 stage:1 train_loss:2.352e+05 val_loss:5.471e+04  time:2m29s
+
+
+100,loss:3.526e+02 
+200,loss:3.527e+02 
+300,loss:1.550e+03 
+ 10%|█         | 101/1000 [4:11:19<37:22:46, 149.69s/it]#epoch:101 stage:1 train_loss:2.257e+05 val_loss:6.640e+04  time:2m30s
+
+
+100,loss:3.736e+02 
+200,loss:5.267e+02 
+300,loss:1.516e+03 
+ 10%|█         | 102/1000 [4:13:50<37:24:17, 149.95s/it]#epoch:102 stage:1 train_loss:2.521e+05 val_loss:5.706e+04  time:2m31s
+
+
+100,loss:3.786e+03 
+200,loss:2.566e+03 
+300,loss:2.830e+03 
+ 10%|█         | 103/1000 [4:16:20<37:21:42, 149.95s/it]#epoch:103 stage:1 train_loss:1.180e+06 val_loss:9.673e+04  time:2m30s
+
+
+100,loss:6.973e+02 
+200,loss:6.647e+02 
+300,loss:1.739e+03 
+ 10%|█         | 104/1000 [4:18:49<37:16:15, 149.75s/it]#epoch:104 stage:1 train_loss:3.389e+05 val_loss:6.196e+04  time:2m29s
+
+
+100,loss:4.645e+02 
+200,loss:4.860e+02 
+300,loss:1.497e+03 
+ 10%|█         | 105/1000 [4:21:19<37:15:13, 149.85s/it]#epoch:105 stage:1 train_loss:2.617e+05 val_loss:6.503e+04  time:2m30s
+
+
+100,loss:4.107e+02 
+200,loss:4.283e+02 
+300,loss:1.401e+03 
+ 11%|█         | 106/1000 [4:23:49<37:13:59, 149.93s/it]#epoch:106 stage:1 train_loss:2.374e+05 val_loss:5.216e+04  time:2m30s
+
+
+100,loss:4.168e+02 
+200,loss:4.022e+02 
+300,loss:1.270e+03 
+ 11%|█         | 107/1000 [4:26:19<37:13:42, 150.08s/it]#epoch:107 stage:1 train_loss:2.253e+05 val_loss:7.940e+04  time:2m30s
+
+
+100,loss:4.342e+02 
+200,loss:3.877e+02 
+300,loss:1.187e+03 
+ 11%|█         | 108/1000 [4:28:48<37:06:04, 149.74s/it]#epoch:108 stage:1 train_loss:2.258e+05 val_loss:9.792e+04  time:2m29s
+
+
+100,loss:3.529e+02 
+200,loss:3.652e+02 
+300,loss:1.126e+03 
+ 11%|█         | 109/1000 [4:31:18<37:03:45, 149.75s/it]#epoch:109 stage:1 train_loss:2.098e+05 val_loss:4.510e+04  time:2m30s
+
+
+100,loss:3.533e+02 
+200,loss:3.460e+02 
+300,loss:1.074e+03 
+ 11%|█         | 110/1000 [4:33:47<36:58:16, 149.55s/it]#epoch:110 stage:1 train_loss:1.950e+05 val_loss:4.391e+04  time:2m29s
+
+
+100,loss:3.419e+02 
+200,loss:3.478e+02 
+300,loss:1.005e+03 
+ 11%|█         | 111/1000 [4:36:17<36:55:55, 149.56s/it]#epoch:111 stage:1 train_loss:1.857e+05 val_loss:4.742e+04  time:2m30s
+
+
+100,loss:3.534e+02 
+200,loss:3.492e+02 
+300,loss:1.059e+03 
+ 11%|█         | 112/1000 [4:38:46<36:51:57, 149.46s/it]#epoch:112 stage:1 train_loss:2.078e+05 val_loss:1.216e+05  time:2m29s
+
+
+100,loss:1.057e+03 
+200,loss:3.948e+02 
+300,loss:9.430e+02 
+ 11%|█▏        | 113/1000 [4:41:16<36:53:33, 149.73s/it]#epoch:113 stage:1 train_loss:2.930e+05 val_loss:4.257e+04  time:2m30s
+
+
+100,loss:3.119e+02 
+200,loss:3.453e+02 
+300,loss:1.018e+03 
+ 11%|█▏        | 114/1000 [4:43:47<36:52:47, 149.85s/it]#epoch:114 stage:1 train_loss:1.938e+05 val_loss:4.816e+04  time:2m30s
+
+
+100,loss:3.296e+02 
+200,loss:6.185e+02 
+300,loss:1.650e+03 
+ 12%|█▏        | 115/1000 [4:46:17<36:54:28, 150.13s/it]#epoch:115 stage:1 train_loss:2.391e+05 val_loss:4.366e+04  time:2m31s
+
+
+100,loss:3.292e+02 
+200,loss:3.502e+02 
+300,loss:8.284e+02 
+ 12%|█▏        | 116/1000 [4:48:48<36:53:15, 150.22s/it]#epoch:116 stage:1 train_loss:1.792e+05 val_loss:4.359e+04  time:2m30s
+
+
+100,loss:3.117e+02 
+200,loss:3.633e+02 
+300,loss:2.018e+03 
+ 12%|█▏        | 117/1000 [4:51:18<36:51:15, 150.26s/it]#epoch:117 stage:1 train_loss:2.366e+05 val_loss:5.541e+04  time:2m30s
+
+
+100,loss:3.399e+02 
+200,loss:3.274e+02 
+300,loss:7.384e+02 
+ 12%|█▏        | 118/1000 [4:53:49<36:50:13, 150.36s/it]#epoch:118 stage:1 train_loss:1.832e+05 val_loss:3.945e+04  time:2m31s
+
+
+100,loss:3.151e+02 
+200,loss:3.452e+02 
+300,loss:7.230e+02 
+ 12%|█▏        | 119/1000 [4:56:19<36:49:17, 150.46s/it]#epoch:119 stage:1 train_loss:1.700e+05 val_loss:4.317e+04  time:2m31s
+
+
+100,loss:3.482e+02 
+200,loss:4.980e+02 
+300,loss:7.510e+02 
+ 12%|█▏        | 120/1000 [4:58:50<36:45:55, 150.40s/it]#epoch:120 stage:1 train_loss:2.437e+05 val_loss:4.446e+04  time:2m30s
+
+
+100,loss:3.153e+02 
+200,loss:3.795e+02 
+300,loss:7.085e+02 
+ 12%|█▏        | 121/1000 [5:01:19<36:40:38, 150.21s/it]#epoch:121 stage:1 train_loss:1.817e+05 val_loss:4.436e+04  time:2m30s
+
+
+100,loss:3.252e+02 
+200,loss:3.707e+02 
+300,loss:6.606e+02 
+ 12%|█▏        | 122/1000 [5:03:49<36:33:31, 149.90s/it]#epoch:122 stage:1 train_loss:1.758e+05 val_loss:4.376e+04  time:2m29s
+
+
+100,loss:3.238e+02 
+200,loss:5.136e+02 
+300,loss:2.943e+03 
+ 12%|█▏        | 123/1000 [5:06:19<36:33:47, 150.09s/it]#epoch:123 stage:1 train_loss:2.317e+05 val_loss:4.568e+04  time:2m31s
+
+
+100,loss:3.561e+02 
+200,loss:3.404e+02 
+300,loss:6.328e+02 
+ 12%|█▏        | 124/1000 [5:08:49<36:30:44, 150.05s/it]#epoch:124 stage:1 train_loss:1.751e+05 val_loss:4.109e+04  time:2m30s
+
+
+100,loss:3.899e+02 
+200,loss:3.241e+02 
+300,loss:5.993e+02 
+ 12%|█▎        | 125/1000 [5:11:20<36:30:50, 150.23s/it]#epoch:125 stage:1 train_loss:1.704e+05 val_loss:5.196e+04  time:2m31s
+
+
+100,loss:3.081e+02 
+200,loss:5.211e+02 
+300,loss:8.299e+02 
+ 13%|█▎        | 126/1000 [5:13:50<36:27:36, 150.18s/it]#epoch:126 stage:1 train_loss:1.982e+05 val_loss:4.321e+04  time:2m30s
+
+
+100,loss:3.338e+02 
+200,loss:3.835e+02 
+300,loss:5.824e+02 
+ 13%|█▎        | 127/1000 [5:16:21<36:29:25, 150.48s/it]#epoch:127 stage:1 train_loss:1.911e+05 val_loss:7.303e+04  time:2m31s
+
+
+100,loss:3.318e+02 
+200,loss:1.484e+03 
+300,loss:7.250e+03 
+ 13%|█▎        | 128/1000 [5:18:51<36:25:26, 150.37s/it]#epoch:128 stage:1 train_loss:5.124e+05 val_loss:1.236e+05  time:2m30s
+
+
+100,loss:1.381e+03 
+200,loss:1.093e+03 
+300,loss:1.389e+03 
+ 13%|█▎        | 129/1000 [5:21:22<36:23:54, 150.44s/it]#epoch:129 stage:1 train_loss:5.269e+05 val_loss:1.171e+05  time:2m31s
+
+
+100,loss:1.042e+03 
+200,loss:8.483e+02 
+300,loss:9.441e+02 
+ 13%|█▎        | 130/1000 [5:23:52<36:20:18, 150.37s/it]#epoch:130 stage:1 train_loss:3.941e+05 val_loss:7.346e+04  time:2m30s
+
+
+100,loss:6.046e+02 
+200,loss:5.916e+02 
+300,loss:7.155e+02 
+ 13%|█▎        | 131/1000 [5:26:22<36:17:41, 150.36s/it]#epoch:131 stage:1 train_loss:2.578e+05 val_loss:5.954e+04  time:2m30s
+
+
+100,loss:5.362e+02 
+200,loss:5.393e+02 
+300,loss:6.320e+02 
+ 13%|█▎        | 132/1000 [5:28:54<36:19:01, 150.62s/it]#epoch:132 stage:1 train_loss:2.276e+05 val_loss:5.514e+04  time:2m31s
+
+
+100,loss:4.766e+02 
+200,loss:4.976e+02 
+300,loss:6.099e+02 
+ 13%|█▎        | 133/1000 [5:31:24<36:17:26, 150.69s/it]#epoch:133 stage:1 train_loss:2.112e+05 val_loss:5.070e+04  time:2m31s
+
+
+100,loss:4.497e+02 
+200,loss:4.680e+02 
+300,loss:5.897e+02 
+ 13%|█▎        | 134/1000 [5:33:55<36:13:21, 150.58s/it]#epoch:134 stage:1 train_loss:1.997e+05 val_loss:4.976e+04  time:2m30s
+
+
+100,loss:4.339e+02 
+200,loss:4.404e+02 
+300,loss:5.526e+02 
+ 14%|█▎        | 135/1000 [5:36:25<36:07:39, 150.36s/it]#epoch:135 stage:1 train_loss:1.918e+05 val_loss:4.850e+04  time:2m30s
+
+
+100,loss:4.168e+02 
+200,loss:4.461e+02 
+300,loss:5.308e+02 
+ 14%|█▎        | 136/1000 [5:38:55<36:03:55, 150.27s/it]#epoch:136 stage:1 train_loss:1.911e+05 val_loss:4.991e+04  time:2m30s
+
+
+100,loss:4.157e+02 
+200,loss:4.575e+02 
+300,loss:5.510e+02 
+ 14%|█▎        | 137/1000 [5:41:25<36:01:34, 150.28s/it]#epoch:137 stage:1 train_loss:1.903e+05 val_loss:4.675e+04  time:2m30s
+
+
+100,loss:5.117e+02 
+200,loss:4.722e+02 
+300,loss:5.309e+02 
+ 14%|█▍        | 138/1000 [5:43:55<35:58:34, 150.25s/it]#epoch:138 stage:1 train_loss:1.951e+05 val_loss:4.548e+04  time:2m30s
+
+
+100,loss:3.830e+02 
+200,loss:3.860e+02 
+300,loss:5.285e+02 
+ 14%|█▍        | 139/1000 [5:46:25<35:56:49, 150.30s/it]#epoch:139 stage:1 train_loss:1.764e+05 val_loss:5.012e+04  time:2m30s
+
+
+100,loss:5.575e+02 
+200,loss:4.145e+02 
+300,loss:5.770e+02 
+ 14%|█▍        | 140/1000 [5:48:56<35:56:01, 150.42s/it]#epoch:140 stage:1 train_loss:1.928e+05 val_loss:5.233e+04  time:2m31s
+
+
+100,loss:3.447e+02 
+200,loss:3.875e+02 
+300,loss:4.723e+02 
+ 14%|█▍        | 141/1000 [5:51:26<35:51:15, 150.26s/it]#epoch:141 stage:1 train_loss:1.687e+05 val_loss:4.709e+04  time:2m30s
+
+
+100,loss:3.498e+02 
+200,loss:3.657e+02 
+300,loss:5.096e+02 
+ 14%|█▍        | 142/1000 [5:53:57<35:49:35, 150.32s/it]#epoch:142 stage:1 train_loss:1.730e+05 val_loss:4.962e+04  time:2m30s
+
+
+100,loss:3.408e+02 
+200,loss:3.553e+02 
+300,loss:4.620e+02 
+ 14%|█▍        | 143/1000 [5:56:27<35:48:18, 150.41s/it]#epoch:143 stage:1 train_loss:1.670e+05 val_loss:4.919e+04  time:2m31s
+
+
+100,loss:3.176e+02 
+200,loss:3.430e+02 
+300,loss:4.560e+02 
+ 14%|█▍        | 144/1000 [5:58:57<35:42:58, 150.21s/it]#epoch:144 stage:1 train_loss:1.596e+05 val_loss:4.600e+04  time:2m30s
+
+
+100,loss:3.427e+02 
+200,loss:3.497e+02 
+300,loss:4.347e+02 
+ 14%|█▍        | 145/1000 [6:01:27<35:42:06, 150.32s/it]#epoch:145 stage:1 train_loss:1.580e+05 val_loss:4.322e+04  time:2m31s
+
+
+100,loss:3.415e+02 
+200,loss:3.448e+02 
+300,loss:5.386e+02 
+ 15%|█▍        | 146/1000 [6:03:58<35:41:37, 150.47s/it]#epoch:146 stage:1 train_loss:1.698e+05 val_loss:4.560e+04  time:2m31s
+
+
+100,loss:3.292e+02 
+200,loss:3.542e+02 
+300,loss:4.483e+02 
+ 15%|█▍        | 147/1000 [6:06:30<35:42:41, 150.72s/it]#epoch:147 stage:1 train_loss:1.660e+05 val_loss:5.106e+04  time:2m31s
+
+
+100,loss:3.538e+02 
+200,loss:3.629e+02 
+300,loss:4.843e+02 
+ 15%|█▍        | 148/1000 [6:09:00<35:40:05, 150.71s/it]#epoch:148 stage:1 train_loss:1.702e+05 val_loss:4.477e+04  time:2m31s
+
+
+100,loss:3.440e+02 
+200,loss:4.167e+02 
+300,loss:4.631e+02 
+ 15%|█▍        | 149/1000 [6:11:31<35:36:47, 150.66s/it]#epoch:149 stage:1 train_loss:1.981e+05 val_loss:1.057e+05  time:2m30s
+
+
+100,loss:7.492e+02 
+200,loss:5.589e+02 
+300,loss:5.378e+02 
+ 15%|█▌        | 150/1000 [6:14:00<35:28:25, 150.24s/it]#epoch:150 stage:1 train_loss:2.980e+05 val_loss:8.652e+04  time:2m29s
+
+
+100,loss:5.224e+02 
+200,loss:4.436e+02 
+300,loss:4.793e+02 
+ 15%|█▌        | 151/1000 [6:16:30<35:25:28, 150.21s/it]#epoch:151 stage:1 train_loss:2.045e+05 val_loss:4.813e+04  time:2m30s
+
+
+100,loss:5.148e+02 
+200,loss:3.779e+02 
+300,loss:5.137e+02 
+ 15%|█▌        | 152/1000 [6:18:59<35:18:00, 149.86s/it]#epoch:152 stage:1 train_loss:2.199e+05 val_loss:9.072e+04  time:2m29s
+
+
+100,loss:5.743e+02 
+200,loss:5.434e+02 
+300,loss:5.577e+02 
+ 15%|█▌        | 153/1000 [6:21:29<35:13:03, 149.69s/it]#epoch:153 stage:1 train_loss:2.380e+05 val_loss:4.944e+04  time:2m29s
+
+
+100,loss:4.001e+02 
+200,loss:4.103e+02 
+300,loss:4.854e+02 
+ 15%|█▌        | 154/1000 [6:23:58<35:10:12, 149.66s/it]#epoch:154 stage:1 train_loss:1.759e+05 val_loss:4.435e+04  time:2m30s
+
+
+100,loss:3.546e+02 
+200,loss:3.792e+02 
+300,loss:4.425e+02 
+ 16%|█▌        | 155/1000 [6:26:28<35:10:21, 149.85s/it]#epoch:155 stage:1 train_loss:1.637e+05 val_loss:4.665e+04  time:2m30s
+
+
+100,loss:8.750e+02 
+200,loss:5.988e+02 
+300,loss:6.330e+02 
+ 16%|█▌        | 156/1000 [6:28:58<35:07:32, 149.83s/it]#epoch:156 stage:1 train_loss:2.543e+05 val_loss:4.811e+04  time:2m30s
+
+
+100,loss:4.302e+02 
+200,loss:3.979e+02 
+300,loss:4.721e+02 
+ 16%|█▌        | 157/1000 [6:31:28<35:05:43, 149.87s/it]#epoch:157 stage:1 train_loss:1.737e+05 val_loss:4.412e+04  time:2m30s
+
+
+100,loss:3.608e+02 
+200,loss:3.853e+02 
+300,loss:4.912e+02 
+ 16%|█▌        | 158/1000 [6:33:58<35:03:08, 149.87s/it]#epoch:158 stage:1 train_loss:1.622e+05 val_loss:4.097e+04  time:2m30s
+
+
+100,loss:3.903e+02 
+200,loss:3.662e+02 
+300,loss:4.547e+02 
+ 16%|█▌        | 159/1000 [6:36:28<35:01:53, 149.96s/it]#epoch:159 stage:1 train_loss:1.595e+05 val_loss:4.041e+04  time:2m30s
+
+
+100,loss:3.415e+02 
+200,loss:3.875e+02 
+300,loss:4.314e+02 
+ 16%|█▌        | 160/1000 [6:38:59<35:01:49, 150.13s/it]#epoch:160 stage:1 train_loss:1.537e+05 val_loss:4.067e+04  time:2m31s
+
+
+100,loss:3.337e+02 
+200,loss:3.735e+02 
+300,loss:4.864e+02 
+ 16%|█▌        | 161/1000 [6:41:28<34:57:16, 149.98s/it]#epoch:161 stage:1 train_loss:1.544e+05 val_loss:4.213e+04  time:2m30s
+
+
+100,loss:3.273e+02 
+200,loss:3.357e+02 
+300,loss:1.452e+03 
+ 16%|█▌        | 162/1000 [6:43:58<34:54:28, 149.96s/it]#epoch:162 stage:1 train_loss:2.821e+05 val_loss:9.850e+04  time:2m30s
+
+
+100,loss:9.863e+02 
+200,loss:8.070e+02 
+300,loss:8.574e+02 
+ 16%|█▋        | 163/1000 [6:46:28<34:51:50, 149.95s/it]#epoch:163 stage:1 train_loss:3.538e+05 val_loss:8.130e+04  time:2m30s
+
+
+100,loss:7.414e+02 
+200,loss:7.678e+02 
+300,loss:6.908e+02 
+ 16%|█▋        | 164/1000 [6:48:59<34:50:46, 150.06s/it]#epoch:164 stage:1 train_loss:2.990e+05 val_loss:7.632e+04  time:2m30s
+
+
+100,loss:6.710e+02 
+200,loss:7.802e+02 
+300,loss:7.829e+02 
+ 16%|█▋        | 165/1000 [6:51:29<34:50:06, 150.19s/it]#epoch:165 stage:1 train_loss:2.852e+05 val_loss:6.849e+04  time:2m30s
+
+
+100,loss:6.284e+02 
+200,loss:6.556e+02 
+300,loss:6.805e+02 
+ 17%|█▋        | 166/1000 [6:54:00<34:49:24, 150.32s/it]#epoch:166 stage:1 train_loss:2.557e+05 val_loss:6.272e+04  time:2m31s
+
+
+100,loss:5.617e+02 
+200,loss:5.783e+02 
+300,loss:6.690e+02 
+ 17%|█▋        | 167/1000 [6:56:29<34:44:50, 150.17s/it]#epoch:167 stage:1 train_loss:2.366e+05 val_loss:7.466e+04  time:2m30s
+
+
+100,loss:5.541e+02 
+200,loss:7.220e+02 
+300,loss:7.091e+02 
+ 17%|█▋        | 168/1000 [6:58:59<34:37:57, 149.85s/it]#epoch:168 stage:1 train_loss:2.523e+05 val_loss:6.451e+04  time:2m29s
+
+
+100,loss:5.598e+02 
+200,loss:8.449e+02 
+300,loss:7.618e+02 
+ 17%|█▋        | 169/1000 [7:01:29<34:37:14, 149.98s/it]#epoch:169 stage:1 train_loss:2.671e+05 val_loss:6.464e+04  time:2m30s
+
+
+100,loss:6.198e+02 
+200,loss:7.201e+02 
+300,loss:6.664e+02 
+ 17%|█▋        | 170/1000 [7:04:00<34:38:04, 150.22s/it]#epoch:170 stage:1 train_loss:2.573e+05 val_loss:6.472e+04  time:2m31s
+
+
+100,loss:5.686e+02 
+200,loss:6.111e+02 
+300,loss:8.344e+02 
+ 17%|█▋        | 171/1000 [7:06:29<34:32:46, 150.02s/it]#epoch:171 stage:1 train_loss:2.539e+05 val_loss:6.350e+04  time:2m30s
+
+
+100,loss:5.447e+02 
+200,loss:5.205e+02 
+300,loss:5.666e+02 
+ 17%|█▋        | 172/1000 [7:08:58<34:26:45, 149.76s/it]#epoch:172 stage:1 train_loss:2.185e+05 val_loss:5.058e+04  time:2m29s
+
+
+100,loss:4.711e+02 
+200,loss:4.839e+02 
+300,loss:5.409e+02 
+ 17%|█▋        | 173/1000 [7:11:29<34:26:08, 149.90s/it]#epoch:173 stage:1 train_loss:1.972e+05 val_loss:4.879e+04  time:2m30s
+
+
+100,loss:4.202e+02 
+200,loss:4.221e+02 
+300,loss:4.935e+02 
+ 17%|█▋        | 174/1000 [7:13:58<34:22:26, 149.81s/it]#epoch:174 stage:1 train_loss:1.797e+05 val_loss:4.565e+04  time:2m30s
+
+
+100,loss:3.952e+02 
+200,loss:3.919e+02 
+300,loss:4.838e+02 
+ 18%|█▊        | 175/1000 [7:16:28<34:18:00, 149.67s/it]#epoch:175 stage:1 train_loss:1.711e+05 val_loss:4.457e+04  time:2m29s
+
+
+100,loss:3.797e+02 
+200,loss:4.020e+02 
+300,loss:4.634e+02 
+ 18%|█▊        | 176/1000 [7:18:58<34:17:57, 149.85s/it]#epoch:176 stage:1 train_loss:1.666e+05 val_loss:4.289e+04  time:2m30s
+
+
+100,loss:3.751e+02 
+200,loss:3.838e+02 
+300,loss:4.532e+02 
+ 18%|█▊        | 177/1000 [7:21:28<34:15:07, 149.83s/it]#epoch:177 stage:1 train_loss:1.627e+05 val_loss:4.200e+04  time:2m30s
+
+
+100,loss:3.683e+02 
+200,loss:3.751e+02 
+300,loss:4.519e+02 
+ 18%|█▊        | 178/1000 [7:23:58<34:13:49, 149.91s/it]#epoch:178 stage:1 train_loss:1.577e+05 val_loss:4.167e+04  time:2m30s
+
+
+100,loss:3.578e+02 
+200,loss:3.696e+02 
+300,loss:4.426e+02 
+ 18%|█▊        | 179/1000 [7:26:27<34:08:08, 149.68s/it]#epoch:179 stage:1 train_loss:1.539e+05 val_loss:4.014e+04  time:2m29s
+
+
+100,loss:3.522e+02 
+200,loss:3.651e+02 
+300,loss:4.358e+02 
+ 18%|█▊        | 180/1000 [7:28:57<34:08:25, 149.88s/it]#epoch:180 stage:1 train_loss:1.517e+05 val_loss:4.097e+04  time:2m30s
+
+
+100,loss:3.540e+02 
+200,loss:3.532e+02 
+300,loss:4.358e+02 
+ 18%|█▊        | 181/1000 [7:31:27<34:07:01, 149.96s/it]#epoch:181 stage:1 train_loss:1.490e+05 val_loss:3.939e+04  time:2m30s
+
+
+100,loss:3.261e+02 
+200,loss:3.605e+02 
+300,loss:4.459e+02 
+ 18%|█▊        | 182/1000 [7:33:58<34:06:59, 150.15s/it]#epoch:182 stage:1 train_loss:1.487e+05 val_loss:4.121e+04  time:2m31s
+
+
+100,loss:3.346e+02 
+200,loss:3.802e+02 
+300,loss:4.125e+02 
+ 18%|█▊        | 183/1000 [7:36:28<34:02:27, 150.00s/it]#epoch:183 stage:1 train_loss:1.470e+05 val_loss:3.867e+04  time:2m30s
+
+
+100,loss:3.151e+02 
+200,loss:3.450e+02 
+300,loss:4.247e+02 
+ 18%|█▊        | 184/1000 [7:38:59<34:04:19, 150.32s/it]#epoch:184 stage:1 train_loss:1.421e+05 val_loss:3.793e+04  time:2m31s
+
+
+100,loss:3.078e+02 
+200,loss:3.408e+02 
+300,loss:3.980e+02 
+ 18%|█▊        | 185/1000 [7:41:29<34:01:05, 150.26s/it]#epoch:185 stage:1 train_loss:1.398e+05 val_loss:3.884e+04  time:2m30s
+
+
+100,loss:3.074e+02 
+200,loss:3.480e+02 
+300,loss:4.153e+02 
+ 19%|█▊        | 186/1000 [7:43:59<33:57:28, 150.18s/it]#epoch:186 stage:1 train_loss:1.405e+05 val_loss:3.762e+04  time:2m30s
+
+
+100,loss:3.565e+02 
+200,loss:3.401e+02 
+300,loss:4.025e+02 
+ 19%|█▊        | 187/1000 [7:46:30<33:58:16, 150.43s/it]#epoch:187 stage:1 train_loss:1.438e+05 val_loss:3.698e+04  time:2m31s
+
+
+100,loss:3.092e+02 
+200,loss:3.364e+02 
+300,loss:4.279e+02 
+ 19%|█▉        | 188/1000 [7:49:00<33:53:48, 150.28s/it]#epoch:188 stage:1 train_loss:1.401e+05 val_loss:3.848e+04  time:2m30s
+
+
+100,loss:5.659e+02 
+200,loss:1.092e+03 
+300,loss:9.575e+02 
+ 19%|█▉        | 189/1000 [7:51:29<33:48:47, 150.09s/it]#epoch:189 stage:1 train_loss:2.829e+05 val_loss:7.592e+04  time:2m30s
+
+
+100,loss:5.848e+02 
+200,loss:5.451e+02 
+300,loss:5.722e+02 
+ 19%|█▉        | 190/1000 [7:53:59<33:45:56, 150.07s/it]#epoch:190 stage:1 train_loss:2.334e+05 val_loss:4.980e+04  time:2m30s
+
+
+100,loss:4.315e+02 
+200,loss:4.330e+02 
+300,loss:4.670e+02 
+ 19%|█▉        | 191/1000 [7:56:29<33:41:53, 149.96s/it]#epoch:191 stage:1 train_loss:1.763e+05 val_loss:4.380e+04  time:2m30s
+
+
+100,loss:3.796e+02 
+200,loss:3.766e+02 
+300,loss:4.487e+02 
+ 19%|█▉        | 192/1000 [7:58:59<33:40:12, 150.02s/it]#epoch:192 stage:1 train_loss:1.587e+05 val_loss:4.169e+04  time:2m30s
+
+
+100,loss:3.542e+02 
+200,loss:4.123e+02 
+300,loss:4.279e+02 
+ 19%|█▉        | 193/1000 [8:01:29<33:35:51, 149.88s/it]#epoch:193 stage:1 train_loss:1.561e+05 val_loss:4.116e+04  time:2m30s
+
+
+100,loss:3.513e+02 
+200,loss:3.906e+02 
+300,loss:4.250e+02 
+ 19%|█▉        | 194/1000 [8:03:58<33:30:54, 149.70s/it]#epoch:194 stage:1 train_loss:1.537e+05 val_loss:3.931e+04  time:2m29s
+
+
+100,loss:3.389e+02 
+200,loss:3.523e+02 
+300,loss:4.199e+02 
+ 20%|█▉        | 195/1000 [8:06:27<33:27:12, 149.61s/it]#epoch:195 stage:1 train_loss:1.433e+05 val_loss:3.799e+04  time:2m29s
+
+
+100,loss:3.297e+02 
+200,loss:3.474e+02 
+300,loss:4.120e+02 
+ 20%|█▉        | 196/1000 [8:08:57<33:24:06, 149.56s/it]#epoch:196 stage:1 train_loss:1.393e+05 val_loss:3.667e+04  time:2m29s
+
+
+100,loss:3.285e+02 
+200,loss:3.355e+02 
+300,loss:4.456e+02 
+ 20%|█▉        | 197/1000 [8:11:27<33:24:19, 149.76s/it]#epoch:197 stage:1 train_loss:1.401e+05 val_loss:3.845e+04  time:2m30s
+
+
+100,loss:3.175e+02 
+200,loss:3.374e+02 
+300,loss:3.969e+02 
+ 20%|█▉        | 198/1000 [8:13:56<33:19:33, 149.59s/it]#epoch:198 stage:1 train_loss:1.372e+05 val_loss:3.636e+04  time:2m29s
+
+
+100,loss:2.873e+02 
+200,loss:3.267e+02 
+300,loss:4.221e+02 
+ 20%|█▉        | 199/1000 [8:16:26<33:18:48, 149.72s/it]#epoch:199 stage:1 train_loss:1.355e+05 val_loss:3.708e+04  time:2m30s
+
+
+100,loss:2.879e+02 
+200,loss:3.192e+02 
+300,loss:3.906e+02 
+ 20%|██        | 200/1000 [8:18:56<33:15:41, 149.68s/it]#epoch:200 stage:1 train_loss:1.319e+05 val_loss:3.748e+04  time:2m30s
+
+
+100,loss:3.061e+02 
+200,loss:3.171e+02 
+300,loss:3.939e+02 
+ 20%|██        | 201/1000 [8:21:25<33:09:49, 149.42s/it]#epoch:201 stage:1 train_loss:1.346e+05 val_loss:3.574e+04  time:2m29s
+
+
+100,loss:3.064e+02 
+200,loss:3.309e+02 
+300,loss:3.879e+02 
+ 20%|██        | 202/1000 [8:23:54<33:06:16, 149.34s/it]#epoch:202 stage:1 train_loss:1.376e+05 val_loss:4.025e+04  time:2m29s
+
+
+100,loss:3.201e+02 
+200,loss:3.323e+02 
+300,loss:3.685e+02 
+ 20%|██        | 203/1000 [8:26:23<33:04:15, 149.38s/it]#epoch:203 stage:1 train_loss:1.366e+05 val_loss:3.599e+04  time:2m29s
+
+
+100,loss:2.952e+02 
+200,loss:3.379e+02 
+300,loss:4.194e+02 
+ 20%|██        | 204/1000 [8:28:53<33:04:39, 149.60s/it]#epoch:204 stage:1 train_loss:1.336e+05 val_loss:4.140e+04  time:2m30s
+
+
+100,loss:2.802e+02 
+200,loss:3.049e+02 
+300,loss:3.573e+02 
+ 20%|██        | 205/1000 [8:31:23<33:03:46, 149.72s/it]#epoch:205 stage:1 train_loss:1.277e+05 val_loss:3.488e+04  time:2m30s
+
+
+100,loss:3.037e+02 
+200,loss:3.161e+02 
+300,loss:5.146e+02 
+ 21%|██        | 206/1000 [8:33:53<33:01:19, 149.72s/it]#epoch:206 stage:1 train_loss:1.381e+05 val_loss:5.323e+04  time:2m30s
+
+
+100,loss:3.221e+02 
+200,loss:3.351e+02 
+300,loss:3.911e+02 
+ 21%|██        | 207/1000 [8:36:24<33:02:12, 149.98s/it]#epoch:207 stage:1 train_loss:1.418e+05 val_loss:4.004e+04  time:2m31s
+
+
+100,loss:4.388e+02 
+200,loss:5.875e+02 
+300,loss:5.287e+02 
+ 21%|██        | 208/1000 [8:38:54<33:00:03, 150.00s/it]#epoch:208 stage:1 train_loss:2.212e+05 val_loss:4.738e+04  time:2m30s
+
+
+100,loss:3.811e+02 
+200,loss:3.792e+02 
+300,loss:4.596e+02 
+ 21%|██        | 209/1000 [8:41:24<32:57:30, 150.00s/it]#epoch:209 stage:1 train_loss:1.598e+05 val_loss:4.135e+04  time:2m30s
+
+
+100,loss:3.456e+02 
+200,loss:3.611e+02 
+300,loss:4.919e+02 
+ 21%|██        | 210/1000 [8:43:54<32:54:18, 149.95s/it]#epoch:210 stage:1 train_loss:1.468e+05 val_loss:3.869e+04  time:2m30s
+
+
+100,loss:3.179e+02 
+200,loss:3.304e+02 
+300,loss:4.084e+02 
+ 21%|██        | 211/1000 [8:46:24<32:52:21, 149.99s/it]#epoch:211 stage:1 train_loss:1.370e+05 val_loss:3.867e+04  time:2m30s
+
+
+100,loss:3.184e+02 
+200,loss:3.486e+02 
+300,loss:4.101e+02 
+ 21%|██        | 212/1000 [8:48:54<32:49:50, 149.99s/it]#epoch:212 stage:1 train_loss:1.421e+05 val_loss:3.666e+04  time:2m30s
+
+
+100,loss:3.181e+02 
+200,loss:6.533e+02 
+300,loss:5.119e+02 
+ 21%|██▏       | 213/1000 [8:51:24<32:48:15, 150.06s/it]#epoch:213 stage:1 train_loss:2.031e+05 val_loss:4.285e+04  time:2m30s
+
+
+100,loss:3.511e+02 
+200,loss:3.526e+02 
+300,loss:4.111e+02 
+ 21%|██▏       | 214/1000 [8:53:54<32:46:32, 150.12s/it]#epoch:214 stage:1 train_loss:1.463e+05 val_loss:4.001e+04  time:2m30s
+
+
+100,loss:3.340e+02 
+200,loss:3.545e+02 
+300,loss:4.101e+02 
+ 22%|██▏       | 215/1000 [8:56:24<32:41:26, 149.92s/it]#epoch:215 stage:1 train_loss:1.397e+05 val_loss:3.855e+04  time:2m29s
+
+
+100,loss:3.251e+02 
+200,loss:3.243e+02 
+300,loss:4.192e+02 
+ 22%|██▏       | 216/1000 [8:58:54<32:41:02, 150.08s/it]#epoch:216 stage:1 train_loss:1.370e+05 val_loss:3.716e+04  time:2m30s
+
+
+100,loss:3.173e+02 
+200,loss:3.138e+02 
+300,loss:3.891e+02 
+ 22%|██▏       | 217/1000 [9:01:24<32:39:10, 150.13s/it]#epoch:217 stage:1 train_loss:1.320e+05 val_loss:3.585e+04  time:2m30s
+
+
+100,loss:3.085e+02 
+200,loss:3.232e+02 
+300,loss:4.068e+02 
+ 22%|██▏       | 218/1000 [9:03:55<32:37:14, 150.17s/it]#epoch:218 stage:1 train_loss:1.318e+05 val_loss:3.620e+04  time:2m30s
+
+
+100,loss:3.185e+02 
+200,loss:3.107e+02 
+300,loss:4.050e+02 
+ 22%|██▏       | 219/1000 [9:06:25<32:35:28, 150.23s/it]#epoch:219 stage:1 train_loss:1.320e+05 val_loss:3.572e+04  time:2m30s
+
+
+100,loss:3.006e+02 
+200,loss:3.195e+02 
+300,loss:3.690e+02 
+ 22%|██▏       | 220/1000 [9:08:55<32:31:32, 150.12s/it]#epoch:220 stage:1 train_loss:1.295e+05 val_loss:3.851e+04  time:2m30s
+
+
+100,loss:3.297e+02 
+200,loss:3.406e+02 
+300,loss:4.059e+02 
+ 22%|██▏       | 221/1000 [9:11:24<32:25:54, 149.88s/it]#epoch:221 stage:1 train_loss:1.382e+05 val_loss:3.855e+04  time:2m29s
+
+
+100,loss:3.151e+02 
+200,loss:3.353e+02 
+300,loss:3.870e+02 
+ 22%|██▏       | 222/1000 [9:13:54<32:23:54, 149.92s/it]#epoch:222 stage:1 train_loss:1.362e+05 val_loss:3.752e+04  time:2m30s
+
+
+100,loss:3.891e+02 
+200,loss:3.392e+02 
+300,loss:4.012e+02 
+ 22%|██▏       | 223/1000 [9:16:24<32:22:52, 150.03s/it]#epoch:223 stage:1 train_loss:1.468e+05 val_loss:4.005e+04  time:2m30s
+
+
+100,loss:3.130e+02 
+200,loss:3.382e+02 
+300,loss:4.093e+02 
+ 22%|██▏       | 224/1000 [9:18:55<32:21:09, 150.09s/it]#epoch:224 stage:1 train_loss:1.345e+05 val_loss:3.727e+04  time:2m30s
+
+
+100,loss:2.908e+02 
+200,loss:3.477e+02 
+300,loss:3.999e+02 
+ 22%|██▎       | 225/1000 [9:21:25<32:19:00, 150.12s/it]#epoch:225 stage:1 train_loss:1.317e+05 val_loss:3.555e+04  time:2m30s
+
+
+100,loss:3.017e+02 
+200,loss:3.167e+02 
+300,loss:4.035e+02 
+ 23%|██▎       | 226/1000 [9:23:55<32:17:47, 150.22s/it]#epoch:226 stage:1 train_loss:1.266e+05 val_loss:3.453e+04  time:2m30s
+
+
+100,loss:2.882e+02 
+200,loss:3.168e+02 
+300,loss:3.634e+02 
+ 23%|██▎       | 227/1000 [9:26:25<32:14:03, 150.12s/it]#epoch:227 stage:1 train_loss:1.259e+05 val_loss:3.722e+04  time:2m30s
+
+
+100,loss:3.071e+02 
+200,loss:3.117e+02 
+300,loss:3.744e+02 
+ 23%|██▎       | 228/1000 [9:28:55<32:10:57, 150.07s/it]#epoch:228 stage:1 train_loss:1.308e+05 val_loss:3.587e+04  time:2m30s
+
+
+100,loss:2.869e+02 
+200,loss:3.146e+02 
+300,loss:4.070e+02 
+ 23%|██▎       | 229/1000 [9:31:25<32:07:52, 150.03s/it]#epoch:229 stage:1 train_loss:1.289e+05 val_loss:3.470e+04  time:2m30s
+
+
+100,loss:2.710e+02 
+200,loss:3.372e+02 
+300,loss:3.597e+02 
+ 23%|██▎       | 230/1000 [9:33:55<32:05:23, 150.03s/it]#epoch:230 stage:1 train_loss:1.271e+05 val_loss:3.500e+04  time:2m30s
+
+
+100,loss:3.011e+02 
+200,loss:2.992e+02 
+300,loss:3.889e+02 
+ 23%|██▎       | 231/1000 [9:36:25<32:02:30, 150.00s/it]#epoch:231 stage:1 train_loss:1.264e+05 val_loss:3.541e+04  time:2m30s
+
+
+100,loss:3.401e+02 
+200,loss:3.213e+02 
+300,loss:3.946e+02 
+ 23%|██▎       | 232/1000 [9:38:54<31:57:41, 149.82s/it]#epoch:232 stage:1 train_loss:1.308e+05 val_loss:3.392e+04  time:2m29s
+
+
+100,loss:3.775e+02 
+200,loss:3.073e+02 
+300,loss:3.940e+02 
+ 23%|██▎       | 233/1000 [9:41:24<31:53:34, 149.69s/it]#epoch:233 stage:1 train_loss:1.323e+05 val_loss:3.435e+04  time:2m29s
+
+
+100,loss:2.899e+02 
+200,loss:3.157e+02 
+300,loss:3.564e+02 
+ 23%|██▎       | 234/1000 [9:43:53<31:49:12, 149.55s/it]#epoch:234 stage:1 train_loss:1.255e+05 val_loss:3.696e+04  time:2m29s
+
+
+100,loss:3.134e+02 
+200,loss:3.474e+02 
+300,loss:3.700e+02 
+ 24%|██▎       | 235/1000 [9:46:23<31:48:57, 149.72s/it]#epoch:235 stage:1 train_loss:1.286e+05 val_loss:3.514e+04  time:2m30s
+
+
+100,loss:3.009e+02 
+200,loss:3.224e+02 
+300,loss:3.817e+02 
+ 24%|██▎       | 236/1000 [9:48:53<31:45:01, 149.61s/it]#epoch:236 stage:1 train_loss:1.256e+05 val_loss:3.549e+04  time:2m29s
+
+
+100,loss:2.631e+02 
+200,loss:3.086e+02 
+300,loss:3.723e+02 
+ 24%|██▎       | 237/1000 [9:51:23<31:44:40, 149.78s/it]#epoch:237 stage:1 train_loss:1.229e+05 val_loss:3.705e+04  time:2m30s
+
+
+100,loss:2.819e+02 
+200,loss:3.171e+02 
+300,loss:3.710e+02 
+ 24%|██▍       | 238/1000 [9:53:53<31:43:30, 149.88s/it]#epoch:238 stage:1 train_loss:1.241e+05 val_loss:3.453e+04  time:2m30s
+
+
+100,loss:2.880e+02 
+200,loss:2.939e+02 
+300,loss:3.909e+02 
+ 24%|██▍       | 239/1000 [9:56:23<31:42:11, 149.98s/it]#epoch:239 stage:1 train_loss:1.230e+05 val_loss:3.294e+04  time:2m30s
+
+
+100,loss:2.993e+02 
+200,loss:3.000e+02 
+300,loss:3.980e+02 
+ 24%|██▍       | 240/1000 [9:58:52<31:37:10, 149.78s/it]#epoch:240 stage:1 train_loss:1.236e+05 val_loss:3.305e+04  time:2m29s
+
+
+100,loss:3.686e+02 
+200,loss:5.143e+02 
+300,loss:9.153e+02 
+ 24%|██▍       | 241/1000 [10:01:22<31:35:30, 149.84s/it]#epoch:241 stage:1 train_loss:2.079e+05 val_loss:5.437e+04  time:2m30s
+
+
+100,loss:6.251e+02 
+200,loss:6.562e+02 
+300,loss:7.249e+02 
+ 24%|██▍       | 242/1000 [10:03:52<31:34:01, 149.92s/it]#epoch:242 stage:1 train_loss:2.390e+05 val_loss:6.275e+04  time:2m30s
+
+
+100,loss:6.228e+02 
+200,loss:5.783e+02 
+300,loss:5.949e+02 
+ 24%|██▍       | 243/1000 [10:06:22<31:31:20, 149.91s/it]#epoch:243 stage:1 train_loss:2.165e+05 val_loss:5.834e+04  time:2m30s
+
+
+100,loss:7.592e+02 
+200,loss:5.862e+02 
+300,loss:7.174e+02 
+ 24%|██▍       | 244/1000 [10:08:52<31:28:53, 149.91s/it]#epoch:244 stage:1 train_loss:2.444e+05 val_loss:6.556e+04  time:2m30s
+
+
+100,loss:6.041e+02 
+200,loss:6.127e+02 
+300,loss:7.268e+02 
+ 24%|██▍       | 245/1000 [10:11:22<31:25:12, 149.82s/it]#epoch:245 stage:1 train_loss:2.496e+05 val_loss:6.338e+04  time:2m30s
+
+
+100,loss:6.422e+02 
+200,loss:5.196e+02 
+300,loss:5.995e+02 
+ 25%|██▍       | 246/1000 [10:13:52<31:23:06, 149.85s/it]#epoch:246 stage:1 train_loss:2.196e+05 val_loss:5.717e+04  time:2m30s
+
+
+100,loss:6.883e+02 
+200,loss:5.785e+02 
+300,loss:6.169e+02 
+ 25%|██▍       | 247/1000 [10:16:22<31:20:10, 149.81s/it]#epoch:247 stage:1 train_loss:2.284e+05 val_loss:5.664e+04  time:2m30s
+
+
+100,loss:5.891e+02 
+200,loss:4.990e+02 
+300,loss:5.168e+02 
+ 25%|██▍       | 248/1000 [10:18:51<31:17:39, 149.81s/it]#epoch:248 stage:1 train_loss:1.976e+05 val_loss:4.780e+04  time:2m30s
+
+
+100,loss:4.309e+02 
+200,loss:4.349e+02 
+300,loss:4.998e+02 
+ 25%|██▍       | 249/1000 [10:21:21<31:15:27, 149.84s/it]#epoch:249 stage:1 train_loss:1.724e+05 val_loss:4.533e+04  time:2m30s
+
+
+100,loss:4.290e+02 
+200,loss:4.045e+02 
+300,loss:4.699e+02 
+ 25%|██▌       | 250/1000 [10:23:51<31:13:13, 149.86s/it]#epoch:250 stage:1 train_loss:1.658e+05 val_loss:4.405e+04  time:2m30s
+
+
+100,loss:3.973e+02 
+200,loss:3.675e+02 
+300,loss:4.464e+02 
+ 25%|██▌       | 251/1000 [10:26:21<31:11:04, 149.89s/it]#epoch:251 stage:1 train_loss:1.550e+05 val_loss:4.077e+04  time:2m30s
+
+
+100,loss:3.728e+02 
+200,loss:3.655e+02 
+300,loss:4.352e+02 
+ 25%|██▌       | 252/1000 [10:28:51<31:08:09, 149.85s/it]#epoch:252 stage:1 train_loss:1.470e+05 val_loss:3.881e+04  time:2m30s
+
+
+100,loss:3.543e+02 
+200,loss:3.446e+02 
+300,loss:4.253e+02 
+ 25%|██▌       | 253/1000 [10:31:21<31:05:43, 149.86s/it]#epoch:253 stage:1 train_loss:1.438e+05 val_loss:3.890e+04  time:2m30s
+
+
+100,loss:3.513e+02 
+200,loss:3.412e+02 
+300,loss:4.066e+02 
+ 25%|██▌       | 254/1000 [10:33:52<31:08:05, 150.25s/it]#epoch:254 stage:1 train_loss:1.403e+05 val_loss:3.788e+04  time:2m31s
+
+
+100,loss:3.476e+02 
+200,loss:3.394e+02 
+300,loss:4.017e+02 
+ 26%|██▌       | 255/1000 [10:36:22<31:05:50, 150.27s/it]#epoch:255 stage:1 train_loss:1.361e+05 val_loss:3.747e+04  time:2m30s
+
+
+100,loss:3.236e+02 
+200,loss:3.287e+02 
+300,loss:3.801e+02 
+ 26%|██▌       | 256/1000 [10:38:52<31:02:21, 150.19s/it]#epoch:256 stage:1 train_loss:1.322e+05 val_loss:3.580e+04  time:2m30s
+
+
+100,loss:3.236e+02 
+200,loss:3.260e+02 
+300,loss:3.811e+02 
+ 26%|██▌       | 257/1000 [10:41:22<30:59:55, 150.20s/it]#epoch:257 stage:1 train_loss:1.307e+05 val_loss:3.603e+04  time:2m30s
+
+
+100,loss:3.298e+02 
+200,loss:3.180e+02 
+300,loss:4.221e+02 
+ 26%|██▌       | 258/1000 [10:43:53<30:57:21, 150.19s/it]#epoch:258 stage:1 train_loss:1.355e+05 val_loss:3.734e+04  time:2m30s
+
+
+100,loss:3.589e+02 
+200,loss:3.236e+02 
+300,loss:3.892e+02 
+ 26%|██▌       | 259/1000 [10:46:22<30:51:43, 149.94s/it]#epoch:259 stage:1 train_loss:1.361e+05 val_loss:3.558e+04  time:2m29s
+
+
+100,loss:3.196e+02 
+200,loss:3.056e+02 
+300,loss:4.633e+02 
+ 26%|██▌       | 260/1000 [10:48:52<30:50:15, 150.02s/it]#epoch:260 stage:1 train_loss:1.364e+05 val_loss:5.405e+04  time:2m30s
+
+
+100,loss:8.352e+02 
+200,loss:6.948e+02 
+300,loss:7.767e+02 
+ 26%|██▌       | 261/1000 [10:51:22<30:47:44, 150.02s/it]#epoch:261 stage:1 train_loss:2.626e+05 val_loss:6.543e+04  time:2m30s
+
+
+100,loss:6.329e+02 
+200,loss:5.996e+02 
+300,loss:6.882e+02 
+ 26%|██▌       | 262/1000 [10:53:52<30:44:59, 150.00s/it]#epoch:262 stage:1 train_loss:2.297e+05 val_loss:5.712e+04  time:2m30s
+
+
+100,loss:5.339e+02 
+200,loss:5.865e+02 
+300,loss:5.895e+02 
+ 26%|██▋       | 263/1000 [10:56:22<30:42:16, 149.98s/it]#epoch:263 stage:1 train_loss:2.159e+05 val_loss:5.726e+04  time:2m30s
+
+
+100,loss:5.885e+02 
+200,loss:5.594e+02 
+300,loss:7.190e+02 
+ 26%|██▋       | 264/1000 [10:58:52<30:38:51, 149.91s/it]#epoch:264 stage:1 train_loss:2.171e+05 val_loss:6.062e+04  time:2m30s
+
+
+100,loss:5.972e+02 
+200,loss:7.114e+02 
+300,loss:8.057e+02 
+ 26%|██▋       | 265/1000 [11:01:21<30:32:45, 149.61s/it]#epoch:265 stage:1 train_loss:2.655e+05 val_loss:7.597e+04  time:2m29s
+
+
+100,loss:6.095e+02 
+200,loss:6.069e+02 
+300,loss:6.617e+02 
+ 27%|██▋       | 266/1000 [11:03:51<30:31:52, 149.74s/it]#epoch:266 stage:1 train_loss:2.454e+05 val_loss:6.012e+04  time:2m30s
+
+
+100,loss:5.305e+02 
+200,loss:5.630e+02 
+300,loss:5.428e+02 
+ 27%|██▋       | 267/1000 [11:06:21<30:30:27, 149.83s/it]#epoch:267 stage:1 train_loss:2.164e+05 val_loss:5.237e+04  time:2m30s
+
+
+100,loss:5.451e+02 
+200,loss:5.135e+02 
+300,loss:5.053e+02 
+ 27%|██▋       | 268/1000 [11:08:51<30:29:07, 149.93s/it]#epoch:268 stage:1 train_loss:1.908e+05 val_loss:4.838e+04  time:2m30s
+
+
+100,loss:5.047e+02 
+200,loss:5.605e+02 
+300,loss:5.319e+02 
+ 27%|██▋       | 269/1000 [11:11:21<30:25:24, 149.83s/it]#epoch:269 stage:1 train_loss:1.943e+05 val_loss:5.584e+04  time:2m30s
+
+
+100,loss:5.793e+02 
+200,loss:5.562e+02 
+300,loss:5.190e+02 
+ 27%|██▋       | 270/1000 [11:13:50<30:22:33, 149.80s/it]#epoch:270 stage:1 train_loss:1.923e+05 val_loss:4.801e+04  time:2m30s
+
+
+100,loss:4.527e+02 
+200,loss:5.134e+02 
+300,loss:5.233e+02 
+ 27%|██▋       | 271/1000 [11:16:20<30:19:24, 149.75s/it]#epoch:271 stage:1 train_loss:1.773e+05 val_loss:4.631e+04  time:2m30s
+
+
+100,loss:3.980e+02 
+200,loss:4.482e+02 
+300,loss:4.909e+02 
+ 27%|██▋       | 272/1000 [11:18:49<30:15:01, 149.59s/it]#epoch:272 stage:1 train_loss:1.730e+05 val_loss:4.541e+04  time:2m29s
+
+
+100,loss:3.900e+02 
+200,loss:4.472e+02 
+300,loss:4.837e+02 
+ 27%|██▋       | 273/1000 [11:21:19<30:14:43, 149.77s/it]#epoch:273 stage:1 train_loss:1.692e+05 val_loss:4.509e+04  time:2m30s
+
+
+100,loss:3.864e+02 
+200,loss:4.419e+02 
+300,loss:4.768e+02 
+ 27%|██▋       | 274/1000 [11:23:50<30:14:25, 149.95s/it]#epoch:274 stage:1 train_loss:1.676e+05 val_loss:4.468e+04  time:2m30s
+
+
+100,loss:4.043e+02 
+200,loss:4.408e+02 
+300,loss:5.049e+02 
+ 28%|██▊       | 275/1000 [11:26:19<30:08:55, 149.70s/it]#epoch:275 stage:1 train_loss:1.678e+05 val_loss:4.520e+04  time:2m29s
+
+
+100,loss:3.969e+02 
+200,loss:4.496e+02 
+300,loss:4.746e+02 
+ 28%|██▊       | 276/1000 [11:28:49<30:07:31, 149.79s/it]#epoch:276 stage:1 train_loss:1.676e+05 val_loss:4.456e+04  time:2m30s
+
+
+100,loss:3.756e+02 
+200,loss:4.352e+02 
+300,loss:4.782e+02 
+ 28%|██▊       | 277/1000 [11:31:18<30:02:44, 149.61s/it]#epoch:277 stage:1 train_loss:1.662e+05 val_loss:4.525e+04  time:2m29s
+
+
+100,loss:4.156e+02 
+200,loss:4.370e+02 
+300,loss:4.845e+02 
+ 28%|██▊       | 278/1000 [11:33:48<30:01:08, 149.68s/it]#epoch:278 stage:1 train_loss:1.681e+05 val_loss:4.419e+04  time:2m30s
+
+
+100,loss:4.092e+02 
+200,loss:4.403e+02 
+300,loss:4.713e+02 
+ 28%|██▊       | 279/1000 [11:36:17<29:58:17, 149.65s/it]#epoch:279 stage:1 train_loss:1.650e+05 val_loss:4.305e+04  time:2m30s
+
+
+100,loss:3.715e+02 
+200,loss:4.166e+02 
+300,loss:4.770e+02 
+ 28%|██▊       | 280/1000 [11:38:47<29:55:05, 149.59s/it]#epoch:280 stage:1 train_loss:1.624e+05 val_loss:4.302e+04  time:2m29s
+
+
+100,loss:3.891e+02 
+200,loss:4.261e+02 
+300,loss:4.686e+02 
+ 28%|██▊       | 281/1000 [11:41:17<29:53:33, 149.67s/it]#epoch:281 stage:1 train_loss:1.608e+05 val_loss:4.278e+04  time:2m30s
+
+
+100,loss:3.939e+02 
+200,loss:4.488e+02 
+300,loss:4.780e+02 
+ 28%|██▊       | 282/1000 [11:43:47<29:52:06, 149.76s/it]#epoch:282 stage:1 train_loss:1.646e+05 val_loss:4.293e+04  time:2m30s
+
+
+100,loss:3.857e+02 
+200,loss:4.472e+02 
+300,loss:4.816e+02 
+ 28%|██▊       | 283/1000 [11:46:17<29:51:37, 149.93s/it]#epoch:283 stage:1 train_loss:1.673e+05 val_loss:4.394e+04  time:2m30s
+
+
+100,loss:3.809e+02 
+200,loss:4.285e+02 
+300,loss:4.603e+02 
+ 28%|██▊       | 284/1000 [11:48:47<29:49:07, 149.93s/it]#epoch:284 stage:1 train_loss:1.598e+05 val_loss:4.230e+04  time:2m30s
+
+
+100,loss:3.990e+02 
+200,loss:4.289e+02 
+300,loss:4.631e+02 
+ 28%|██▊       | 285/1000 [11:51:17<29:47:36, 150.01s/it]#epoch:285 stage:1 train_loss:1.618e+05 val_loss:4.315e+04  time:2m30s
+
+
+100,loss:3.778e+02 
+200,loss:4.234e+02 
+300,loss:4.813e+02 
+ 29%|██▊       | 286/1000 [11:53:47<29:46:16, 150.11s/it]#epoch:286 stage:1 train_loss:1.608e+05 val_loss:4.351e+04  time:2m30s
+
+
+100,loss:3.916e+02 
+200,loss:4.292e+02 
+300,loss:4.818e+02 
+ 29%|██▊       | 287/1000 [11:56:18<29:43:49, 150.11s/it]#epoch:287 stage:1 train_loss:1.618e+05 val_loss:4.297e+04  time:2m30s
+
+
+100,loss:3.934e+02 
+200,loss:4.197e+02 
+300,loss:4.734e+02 
+ 29%|██▉       | 288/1000 [11:58:47<29:38:45, 149.90s/it]#epoch:288 stage:1 train_loss:1.621e+05 val_loss:4.345e+04  time:2m29s
+
+
+100,loss:4.123e+02 
+200,loss:4.393e+02 
+300,loss:4.645e+02 
+ 29%|██▉       | 289/1000 [12:01:17<29:36:55, 149.95s/it]#epoch:289 stage:1 train_loss:1.628e+05 val_loss:4.325e+04  time:2m30s
+
+
+100,loss:4.078e+02 
+200,loss:4.360e+02 
+300,loss:5.018e+02 
+ 29%|██▉       | 290/1000 [12:03:47<29:34:20, 149.94s/it]#epoch:290 stage:1 train_loss:1.642e+05 val_loss:4.372e+04  time:2m30s
+
+
+100,loss:4.149e+02 
+200,loss:4.227e+02 
+300,loss:5.220e+02 
+ 29%|██▉       | 291/1000 [12:06:17<29:31:00, 149.87s/it]#epoch:291 stage:1 train_loss:1.650e+05 val_loss:4.474e+04  time:2m30s
+
+
+100,loss:3.811e+02 
+200,loss:4.071e+02 
+300,loss:4.840e+02 
+ 29%|██▉       | 292/1000 [12:08:47<29:28:41, 149.89s/it]#epoch:292 stage:1 train_loss:1.622e+05 val_loss:4.410e+04  time:2m30s
+
+
+100,loss:4.207e+02 
+200,loss:4.083e+02 
+300,loss:4.662e+02 
+ 29%|██▉       | 293/1000 [12:11:17<29:28:04, 150.05s/it]#epoch:293 stage:1 train_loss:1.591e+05 val_loss:4.112e+04  time:2m30s
+
+
+100,loss:3.568e+02 
+200,loss:4.069e+02 
+300,loss:4.605e+02 
+ 29%|██▉       | 294/1000 [12:13:48<29:27:10, 150.18s/it]#epoch:294 stage:1 train_loss:1.535e+05 val_loss:4.158e+04  time:2m30s
+
+
+100,loss:3.733e+02 
+200,loss:4.217e+02 
+300,loss:4.426e+02 
+ 30%|██▉       | 295/1000 [12:16:18<29:25:07, 150.22s/it]#epoch:295 stage:1 train_loss:1.521e+05 val_loss:3.978e+04  time:2m30s
+
+
+100,loss:3.567e+02 
+200,loss:4.005e+02 
+300,loss:4.417e+02 
+ 30%|██▉       | 296/1000 [12:18:48<29:20:46, 150.07s/it]#epoch:296 stage:1 train_loss:1.501e+05 val_loss:4.026e+04  time:2m30s
+
+
+100,loss:3.595e+02 
+200,loss:4.084e+02 
+300,loss:4.420e+02 
+ 30%|██▉       | 297/1000 [12:21:18<29:17:54, 150.03s/it]#epoch:297 stage:1 train_loss:1.501e+05 val_loss:4.043e+04  time:2m30s
+
+
+100,loss:3.490e+02 
+200,loss:4.300e+02 
+300,loss:4.547e+02 
+ 30%|██▉       | 298/1000 [12:23:48<29:16:01, 150.09s/it]#epoch:298 stage:1 train_loss:1.490e+05 val_loss:3.982e+04  time:2m30s
+
+
+100,loss:3.643e+02 
+200,loss:3.899e+02 
+300,loss:4.366e+02 
+ 30%|██▉       | 299/1000 [12:26:18<29:12:35, 150.01s/it]#epoch:299 stage:1 train_loss:1.479e+05 val_loss:3.888e+04  time:2m30s
+
+
+100,loss:3.531e+02 
+200,loss:3.905e+02 
+300,loss:4.602e+02 
+ 30%|███       | 300/1000 [12:28:48<29:10:11, 150.02s/it]#epoch:300 stage:1 train_loss:1.471e+05 val_loss:3.900e+04  time:2m30s
+
+
+100,loss:3.663e+02 
+200,loss:4.098e+02 
+300,loss:4.359e+02 
+ 30%|███       | 301/1000 [12:31:18<29:07:15, 149.98s/it]#epoch:301 stage:1 train_loss:1.525e+05 val_loss:4.096e+04  time:2m30s
+
+
+100,loss:3.746e+02 
+200,loss:4.485e+02 
+300,loss:5.306e+02 
+ 30%|███       | 302/1000 [12:33:47<29:02:38, 149.80s/it]#epoch:302 stage:1 train_loss:1.679e+05 val_loss:5.025e+04  time:2m29s
+
+
+100,loss:4.592e+02 
+200,loss:4.680e+02 
+300,loss:4.755e+02 
+ 30%|███       | 303/1000 [12:36:16<28:58:37, 149.67s/it]#epoch:303 stage:1 train_loss:1.764e+05 val_loss:4.314e+04  time:2m29s
+
+
+100,loss:3.732e+02 
+200,loss:4.268e+02 
+300,loss:4.612e+02 
+ 30%|███       | 304/1000 [12:38:47<28:58:22, 149.86s/it]#epoch:304 stage:1 train_loss:1.615e+05 val_loss:4.386e+04  time:2m30s
+
+
+100,loss:3.944e+02 
+200,loss:4.355e+02 
+300,loss:4.870e+02 
+ 30%|███       | 305/1000 [12:41:17<28:56:26, 149.91s/it]#epoch:305 stage:1 train_loss:1.645e+05 val_loss:4.312e+04  time:2m30s
+
+
+100,loss:3.903e+02 
+200,loss:4.233e+02 
+300,loss:4.497e+02 
+ 31%|███       | 306/1000 [12:43:46<28:53:33, 149.88s/it]#epoch:306 stage:1 train_loss:1.589e+05 val_loss:4.164e+04  time:2m30s
+
+
+100,loss:3.759e+02 
+200,loss:3.984e+02 
+300,loss:4.361e+02 
+ 31%|███       | 307/1000 [12:46:16<28:51:48, 149.94s/it]#epoch:307 stage:1 train_loss:1.546e+05 val_loss:4.091e+04  time:2m30s
+
+
+100,loss:3.765e+02 
+200,loss:3.986e+02 
+300,loss:4.383e+02 
+ 31%|███       | 308/1000 [12:48:46<28:49:14, 149.93s/it]#epoch:308 stage:1 train_loss:1.509e+05 val_loss:4.004e+04  time:2m30s
+
+
+100,loss:3.677e+02 
+200,loss:3.959e+02 
+300,loss:4.408e+02 
+ 31%|███       | 309/1000 [12:51:16<28:45:40, 149.84s/it]#epoch:309 stage:1 train_loss:1.499e+05 val_loss:4.040e+04  time:2m30s
+
+
+100,loss:3.670e+02 
+200,loss:3.989e+02 
+300,loss:4.465e+02 
+ 31%|███       | 310/1000 [12:53:46<28:42:54, 149.82s/it]#epoch:310 stage:1 train_loss:1.508e+05 val_loss:3.993e+04  time:2m30s
+
+
+100,loss:3.665e+02 
+200,loss:3.958e+02 
+300,loss:4.353e+02 
+ 31%|███       | 311/1000 [12:56:16<28:41:29, 149.91s/it]#epoch:311 stage:1 train_loss:1.505e+05 val_loss:4.044e+04  time:2m30s
+
+
+100,loss:3.703e+02 
+200,loss:3.968e+02 
+300,loss:4.481e+02 
+ 31%|███       | 312/1000 [12:58:45<28:36:47, 149.72s/it]#epoch:312 stage:1 train_loss:1.523e+05 val_loss:4.034e+04  time:2m29s
+
+
+100,loss:3.565e+02 
+200,loss:4.008e+02 
+300,loss:4.218e+02 
+ 31%|███▏      | 313/1000 [13:01:14<28:31:13, 149.45s/it]#epoch:313 stage:1 train_loss:1.494e+05 val_loss:3.960e+04  time:2m29s
+
+
+100,loss:3.505e+02 
+200,loss:3.739e+02 
+300,loss:4.272e+02 
+ 31%|███▏      | 314/1000 [13:03:44<28:30:06, 149.57s/it]#epoch:314 stage:1 train_loss:1.476e+05 val_loss:3.968e+04  time:2m30s
+
+
+100,loss:3.488e+02 
+200,loss:3.818e+02 
+300,loss:4.337e+02 
+ 32%|███▏      | 315/1000 [13:06:14<28:28:20, 149.64s/it]#epoch:315 stage:1 train_loss:1.485e+05 val_loss:3.977e+04  time:2m30s
+
+
+100,loss:3.493e+02 
+200,loss:3.922e+02 
+300,loss:4.286e+02 
+ 32%|███▏      | 316/1000 [13:08:43<28:26:23, 149.68s/it]#epoch:316 stage:1 train_loss:1.484e+05 val_loss:3.907e+04  time:2m30s
+
+
+100,loss:3.592e+02 
+200,loss:3.863e+02 
+300,loss:4.197e+02 
+ 32%|███▏      | 317/1000 [13:11:13<28:23:34, 149.65s/it]#epoch:317 stage:1 train_loss:1.456e+05 val_loss:3.850e+04  time:2m30s
+
+
+100,loss:3.574e+02 
+200,loss:3.879e+02 
+300,loss:4.272e+02 
+ 32%|███▏      | 318/1000 [13:13:43<28:21:44, 149.71s/it]#epoch:318 stage:1 train_loss:1.451e+05 val_loss:3.856e+04  time:2m30s
+
+
+100,loss:3.545e+02 
+200,loss:3.735e+02 
+300,loss:4.275e+02 
+ 32%|███▏      | 319/1000 [13:16:12<28:17:33, 149.56s/it]#epoch:319 stage:1 train_loss:1.442e+05 val_loss:3.846e+04  time:2m29s
+
+
+100,loss:3.573e+02 
+200,loss:3.860e+02 
+300,loss:4.224e+02 
+ 32%|███▏      | 320/1000 [13:18:42<28:15:38, 149.62s/it]#epoch:320 stage:1 train_loss:1.446e+05 val_loss:3.877e+04  time:2m30s
+
+
+100,loss:3.489e+02 
+200,loss:3.639e+02 
+300,loss:4.260e+02 
+ 32%|███▏      | 321/1000 [13:21:12<28:14:18, 149.72s/it]#epoch:321 stage:1 train_loss:1.435e+05 val_loss:3.826e+04  time:2m30s
+
+
+100,loss:3.556e+02 
+200,loss:3.750e+02 
+300,loss:4.164e+02 
+ 32%|███▏      | 322/1000 [13:23:42<28:12:42, 149.80s/it]#epoch:322 stage:1 train_loss:1.429e+05 val_loss:3.812e+04  time:2m30s
+
+
+100,loss:3.597e+02 
+200,loss:3.584e+02 
+300,loss:4.186e+02 
+ 32%|███▏      | 323/1000 [13:26:12<28:10:06, 149.79s/it]#epoch:323 stage:1 train_loss:1.419e+05 val_loss:3.783e+04  time:2m30s
+
+
+100,loss:3.605e+02 
+200,loss:3.625e+02 
+300,loss:4.416e+02 
+ 32%|███▏      | 324/1000 [13:28:41<28:05:52, 149.63s/it]#epoch:324 stage:1 train_loss:1.417e+05 val_loss:3.816e+04  time:2m29s
+
+
+100,loss:3.715e+02 
+200,loss:3.656e+02 
+300,loss:4.194e+02 
+ 32%|███▎      | 325/1000 [13:31:11<28:03:49, 149.67s/it]#epoch:325 stage:1 train_loss:1.428e+05 val_loss:3.802e+04  time:2m30s
+
+
+100,loss:3.478e+02 
+200,loss:3.566e+02 
+300,loss:4.113e+02 
+ 33%|███▎      | 326/1000 [13:33:40<28:01:12, 149.66s/it]#epoch:326 stage:1 train_loss:1.418e+05 val_loss:3.821e+04  time:2m30s
+
+
+100,loss:3.524e+02 
+200,loss:3.591e+02 
+300,loss:4.034e+02 
+ 33%|███▎      | 327/1000 [13:36:10<27:57:33, 149.56s/it]#epoch:327 stage:1 train_loss:1.417e+05 val_loss:3.770e+04  time:2m29s
+
+
+100,loss:3.591e+02 
+200,loss:3.547e+02 
+300,loss:4.025e+02 
+ 33%|███▎      | 328/1000 [13:38:39<27:56:07, 149.65s/it]#epoch:328 stage:1 train_loss:1.405e+05 val_loss:3.752e+04  time:2m30s
+
+
+100,loss:3.331e+02 
+200,loss:3.498e+02 
+300,loss:4.025e+02 
+ 33%|███▎      | 329/1000 [13:41:09<27:53:51, 149.67s/it]#epoch:329 stage:1 train_loss:1.397e+05 val_loss:3.730e+04  time:2m30s
+
+
+100,loss:3.370e+02 
+200,loss:3.611e+02 
+300,loss:4.017e+02 
+ 33%|███▎      | 330/1000 [13:43:38<27:48:48, 149.45s/it]#epoch:330 stage:1 train_loss:1.395e+05 val_loss:3.725e+04  time:2m29s
+
+
+100,loss:3.281e+02 
+200,loss:3.534e+02 
+300,loss:4.081e+02 
+ 33%|███▎      | 331/1000 [13:46:08<27:47:57, 149.59s/it]#epoch:331 stage:1 train_loss:1.391e+05 val_loss:3.709e+04  time:2m30s
+
+
+100,loss:3.303e+02 
+200,loss:3.666e+02 
+300,loss:4.123e+02 
+ 33%|███▎      | 332/1000 [13:48:37<27:44:31, 149.51s/it]#epoch:332 stage:1 train_loss:1.391e+05 val_loss:3.740e+04  time:2m29s
+
+
+100,loss:3.412e+02 
+200,loss:3.755e+02 
+300,loss:4.158e+02 
+ 33%|███▎      | 333/1000 [13:51:07<27:43:26, 149.64s/it]#epoch:333 stage:1 train_loss:1.410e+05 val_loss:3.762e+04  time:2m30s
+
+
+100,loss:3.372e+02 
+200,loss:3.733e+02 
+300,loss:4.109e+02 
+ 33%|███▎      | 334/1000 [13:53:37<27:43:05, 149.83s/it]#epoch:334 stage:1 train_loss:1.412e+05 val_loss:3.784e+04  time:2m30s
+
+
+100,loss:3.458e+02 
+200,loss:3.768e+02 
+300,loss:4.149e+02 
+ 34%|███▎      | 335/1000 [13:56:07<27:39:56, 149.77s/it]#epoch:335 stage:1 train_loss:1.433e+05 val_loss:3.827e+04  time:2m30s
+
+
+100,loss:3.425e+02 
+200,loss:3.749e+02 
+300,loss:4.118e+02 
+ 34%|███▎      | 336/1000 [13:58:37<27:37:17, 149.76s/it]#epoch:336 stage:1 train_loss:1.427e+05 val_loss:3.794e+04  time:2m30s
+
+
+100,loss:3.331e+02 
+200,loss:3.774e+02 
+300,loss:4.248e+02 
+ 34%|███▎      | 337/1000 [14:01:06<27:33:05, 149.60s/it]#epoch:337 stage:1 train_loss:1.422e+05 val_loss:3.813e+04  time:2m29s
+
+
+100,loss:3.245e+02 
+200,loss:3.983e+02 
+300,loss:4.068e+02 
+ 34%|███▍      | 338/1000 [14:03:36<27:30:34, 149.60s/it]#epoch:338 stage:1 train_loss:1.419e+05 val_loss:3.757e+04  time:2m30s
+
+
+100,loss:3.261e+02 
+200,loss:3.664e+02 
+300,loss:4.073e+02 
+ 34%|███▍      | 339/1000 [14:06:06<27:31:50, 149.94s/it]#epoch:339 stage:1 train_loss:1.404e+05 val_loss:3.752e+04  time:2m31s
+
+
+100,loss:3.335e+02 
+200,loss:3.621e+02 
+300,loss:4.005e+02 
+ 34%|███▍      | 340/1000 [14:08:36<27:29:28, 149.95s/it]#epoch:340 stage:1 train_loss:1.399e+05 val_loss:3.719e+04  time:2m30s
+
+
+100,loss:3.205e+02 
+200,loss:3.640e+02 
+300,loss:4.104e+02 
+ 34%|███▍      | 341/1000 [14:11:07<27:27:36, 150.01s/it]#epoch:341 stage:1 train_loss:1.399e+05 val_loss:3.743e+04  time:2m30s
+
+
+100,loss:3.347e+02 
+200,loss:3.732e+02 
+300,loss:4.248e+02 
+ 34%|███▍      | 342/1000 [14:13:36<27:22:28, 149.77s/it]#epoch:342 stage:1 train_loss:1.414e+05 val_loss:3.767e+04  time:2m29s
+
+
+100,loss:3.322e+02 
+200,loss:3.642e+02 
+300,loss:4.437e+02 
+ 34%|███▍      | 343/1000 [14:16:06<27:20:13, 149.79s/it]#epoch:343 stage:1 train_loss:1.414e+05 val_loss:3.773e+04  time:2m30s
+
+
+100,loss:3.419e+02 
+200,loss:3.716e+02 
+300,loss:4.060e+02 
+ 34%|███▍      | 344/1000 [14:18:36<27:18:09, 149.83s/it]#epoch:344 stage:1 train_loss:1.408e+05 val_loss:3.745e+04  time:2m30s
+
+
+100,loss:3.245e+02 
+200,loss:3.618e+02 
+300,loss:4.112e+02 
+ 34%|███▍      | 345/1000 [14:21:05<27:15:35, 149.83s/it]#epoch:345 stage:1 train_loss:1.402e+05 val_loss:3.752e+04  time:2m30s
+
+
+100,loss:3.270e+02 
+200,loss:3.612e+02 
+300,loss:4.108e+02 
+ 35%|███▍      | 346/1000 [14:23:35<27:13:22, 149.85s/it]#epoch:346 stage:1 train_loss:1.398e+05 val_loss:3.771e+04  time:2m30s
+
+
+100,loss:3.416e+02 
+200,loss:3.690e+02 
+300,loss:4.114e+02 
+ 35%|███▍      | 347/1000 [14:26:05<27:11:00, 149.86s/it]#epoch:347 stage:1 train_loss:1.406e+05 val_loss:3.790e+04  time:2m30s
+
+
+100,loss:3.288e+02 
+200,loss:3.819e+02 
+300,loss:4.134e+02 
+ 35%|███▍      | 348/1000 [14:28:35<27:08:00, 149.82s/it]#epoch:348 stage:1 train_loss:1.418e+05 val_loss:3.865e+04  time:2m30s
+
+
+100,loss:3.382e+02 
+200,loss:3.925e+02 
+300,loss:4.212e+02 
+ 35%|███▍      | 349/1000 [14:31:05<27:06:25, 149.90s/it]#epoch:349 stage:1 train_loss:1.436e+05 val_loss:3.856e+04  time:2m30s
+
+
+100,loss:3.576e+02 
+200,loss:3.841e+02 
+300,loss:4.130e+02 
+ 35%|███▌      | 350/1000 [14:33:34<27:02:30, 149.77s/it]#epoch:350 stage:1 train_loss:1.442e+05 val_loss:3.845e+04  time:2m29s
+
+
+100,loss:3.473e+02 
+200,loss:3.898e+02 
+300,loss:4.197e+02 
+ 35%|███▌      | 351/1000 [14:36:04<26:59:46, 149.75s/it]#epoch:351 stage:1 train_loss:1.449e+05 val_loss:3.868e+04  time:2m30s
+
+
+100,loss:3.449e+02 
+200,loss:3.962e+02 
+300,loss:4.217e+02 
+ 35%|███▌      | 352/1000 [14:38:34<26:58:33, 149.87s/it]#epoch:352 stage:1 train_loss:1.442e+05 val_loss:3.847e+04  time:2m30s
+
+
+100,loss:3.500e+02 
+200,loss:3.863e+02 
+300,loss:4.281e+02 
+ 35%|███▌      | 353/1000 [14:41:04<26:56:46, 149.93s/it]#epoch:353 stage:1 train_loss:1.440e+05 val_loss:3.843e+04  time:2m30s
+
+
+100,loss:3.504e+02 
+200,loss:3.943e+02 
+300,loss:4.087e+02 
+ 35%|███▌      | 354/1000 [14:43:34<26:54:21, 149.94s/it]#epoch:354 stage:1 train_loss:1.431e+05 val_loss:3.837e+04  time:2m30s
+
+
+100,loss:3.542e+02 
+200,loss:3.819e+02 
+300,loss:4.182e+02 
+ 36%|███▌      | 355/1000 [14:46:04<26:50:36, 149.82s/it]#epoch:355 stage:1 train_loss:1.432e+05 val_loss:3.849e+04  time:2m30s
+
+
+100,loss:3.534e+02 
+200,loss:4.336e+02 
+300,loss:4.086e+02 
+ 36%|███▌      | 356/1000 [14:48:34<26:49:31, 149.96s/it]#epoch:356 stage:1 train_loss:1.423e+05 val_loss:3.816e+04  time:2m30s
+
+
+100,loss:3.492e+02 
+200,loss:3.778e+02 
+300,loss:4.081e+02 
+ 36%|███▌      | 357/1000 [14:51:04<26:45:18, 149.80s/it]#epoch:357 stage:1 train_loss:1.426e+05 val_loss:3.864e+04  time:2m29s
+
+
+100,loss:3.478e+02 
+200,loss:3.754e+02 
+300,loss:4.034e+02 
+ 36%|███▌      | 358/1000 [14:53:33<26:42:59, 149.81s/it]#epoch:358 stage:1 train_loss:1.429e+05 val_loss:3.793e+04  time:2m30s
+
+
+100,loss:3.516e+02 
+200,loss:3.728e+02 
+300,loss:4.103e+02 
+ 36%|███▌      | 359/1000 [14:56:03<26:41:03, 149.87s/it]#epoch:359 stage:1 train_loss:1.419e+05 val_loss:3.797e+04  time:2m30s
+
+
+100,loss:3.421e+02 
+200,loss:3.671e+02 
+300,loss:4.033e+02 
+ 36%|███▌      | 360/1000 [14:58:33<26:38:25, 149.85s/it]#epoch:360 stage:1 train_loss:1.409e+05 val_loss:3.762e+04  time:2m30s
+
+
+100,loss:3.481e+02 
+200,loss:3.631e+02 
+300,loss:4.059e+02 
+ 36%|███▌      | 361/1000 [15:01:03<26:35:47, 149.84s/it]#epoch:361 stage:1 train_loss:1.400e+05 val_loss:3.759e+04  time:2m30s
+
+
+100,loss:3.466e+02 
+200,loss:3.776e+02 
+300,loss:4.014e+02 
+ 36%|███▌      | 362/1000 [15:03:32<26:31:01, 149.63s/it]#epoch:362 stage:1 train_loss:1.399e+05 val_loss:3.752e+04  time:2m29s
+
+
+100,loss:3.452e+02 
+200,loss:3.861e+02 
+300,loss:4.006e+02 
+ 36%|███▋      | 363/1000 [15:06:02<26:29:04, 149.68s/it]#epoch:363 stage:1 train_loss:1.397e+05 val_loss:3.736e+04  time:2m30s
+
+
+100,loss:3.430e+02 
+200,loss:3.650e+02 
+300,loss:4.003e+02 
+ 36%|███▋      | 364/1000 [15:08:32<26:28:21, 149.85s/it]#epoch:364 stage:1 train_loss:1.391e+05 val_loss:3.726e+04  time:2m30s
+
+
+100,loss:3.459e+02 
+200,loss:3.661e+02 
+300,loss:3.995e+02 
+ 36%|███▋      | 365/1000 [15:11:02<26:26:36, 149.92s/it]#epoch:365 stage:1 train_loss:1.391e+05 val_loss:3.750e+04  time:2m30s
+
+
+100,loss:3.475e+02 
+200,loss:3.694e+02 
+300,loss:4.008e+02 
+ 37%|███▋      | 366/1000 [15:13:32<26:23:35, 149.87s/it]#epoch:366 stage:1 train_loss:1.393e+05 val_loss:3.743e+04  time:2m30s
+
+
+100,loss:3.515e+02 
+200,loss:3.747e+02 
+300,loss:3.992e+02 
+ 37%|███▋      | 367/1000 [15:16:02<26:21:39, 149.92s/it]#epoch:367 stage:1 train_loss:1.394e+05 val_loss:3.741e+04  time:2m30s
+
+
+100,loss:3.464e+02 
+200,loss:3.682e+02 
+300,loss:4.113e+02 
+ 37%|███▋      | 368/1000 [15:18:32<26:17:44, 149.79s/it]#epoch:368 stage:1 train_loss:1.389e+05 val_loss:3.738e+04  time:2m29s
+
+
+100,loss:3.409e+02 
+200,loss:3.741e+02 
+300,loss:4.022e+02 
+ 37%|███▋      | 369/1000 [15:21:01<26:15:02, 149.77s/it]#epoch:369 stage:1 train_loss:1.390e+05 val_loss:3.741e+04  time:2m30s
+
+
+100,loss:3.342e+02 
+200,loss:3.744e+02 
+300,loss:3.982e+02 
+ 37%|███▋      | 370/1000 [15:23:31<26:11:40, 149.68s/it]#epoch:370 stage:1 train_loss:1.390e+05 val_loss:3.727e+04  time:2m29s
+
+
+100,loss:3.340e+02 
+200,loss:3.661e+02 
+300,loss:4.008e+02 
+ 37%|███▋      | 371/1000 [15:26:00<26:08:28, 149.62s/it]#epoch:371 stage:1 train_loss:1.386e+05 val_loss:3.722e+04  time:2m29s
+
+
+100,loss:3.317e+02 
+200,loss:3.953e+02 
+300,loss:3.907e+02 
+ 37%|███▋      | 372/1000 [15:28:30<26:05:19, 149.55s/it]#epoch:372 stage:1 train_loss:1.379e+05 val_loss:3.704e+04  time:2m29s
+
+
+100,loss:3.311e+02 
+200,loss:3.625e+02 
+300,loss:4.028e+02 
+ 37%|███▋      | 373/1000 [15:30:59<26:03:50, 149.65s/it]#epoch:373 stage:1 train_loss:1.375e+05 val_loss:3.699e+04  time:2m30s
+
+
+100,loss:3.289e+02 
+200,loss:3.613e+02 
+300,loss:3.971e+02 
+ 37%|███▋      | 374/1000 [15:33:29<26:01:25, 149.66s/it]#epoch:374 stage:1 train_loss:1.375e+05 val_loss:3.702e+04  time:2m30s
+
+
+100,loss:3.328e+02 
+200,loss:3.609e+02 
+300,loss:3.913e+02 
+ 38%|███▊      | 375/1000 [15:35:59<25:59:26, 149.71s/it]#epoch:375 stage:1 train_loss:1.371e+05 val_loss:3.682e+04  time:2m30s
+
+
+100,loss:3.435e+02 
+200,loss:3.658e+02 
+300,loss:4.028e+02 
+ 38%|███▊      | 376/1000 [15:38:29<25:56:44, 149.69s/it]#epoch:376 stage:1 train_loss:1.369e+05 val_loss:3.687e+04  time:2m30s
+
+
+100,loss:3.434e+02 
+200,loss:3.752e+02 
+300,loss:3.922e+02 
+ 38%|███▊      | 377/1000 [15:40:58<25:54:14, 149.69s/it]#epoch:377 stage:1 train_loss:1.372e+05 val_loss:3.694e+04  time:2m30s
+
+
+100,loss:3.593e+02 
+200,loss:3.623e+02 
+300,loss:4.016e+02 
+ 38%|███▊      | 378/1000 [15:43:28<25:50:27, 149.56s/it]#epoch:378 stage:1 train_loss:1.370e+05 val_loss:3.689e+04  time:2m29s
+
+
+100,loss:3.508e+02 
+200,loss:3.561e+02 
+300,loss:4.206e+02 
+ 38%|███▊      | 379/1000 [15:45:57<25:48:20, 149.60s/it]#epoch:379 stage:1 train_loss:1.374e+05 val_loss:3.686e+04  time:2m30s
+
+
+100,loss:3.384e+02 
+200,loss:3.774e+02 
+300,loss:3.967e+02 
+ 38%|███▊      | 380/1000 [15:48:27<25:46:20, 149.65s/it]#epoch:380 stage:1 train_loss:1.367e+05 val_loss:3.662e+04  time:2m30s
+
+
+100,loss:3.497e+02 
+200,loss:3.568e+02 
+300,loss:3.891e+02 
+ 38%|███▊      | 381/1000 [15:50:56<25:42:07, 149.48s/it]#epoch:381 stage:1 train_loss:1.356e+05 val_loss:3.635e+04  time:2m29s
+
+
+100,loss:3.441e+02 
+200,loss:3.687e+02 
+300,loss:4.074e+02 
+ 38%|███▊      | 382/1000 [15:53:26<25:41:58, 149.71s/it]#epoch:382 stage:1 train_loss:1.352e+05 val_loss:3.633e+04  time:2m30s
+
+
+100,loss:3.466e+02 
+200,loss:3.609e+02 
+300,loss:3.952e+02 
+ 38%|███▊      | 383/1000 [15:55:56<25:40:23, 149.80s/it]#epoch:383 stage:1 train_loss:1.347e+05 val_loss:3.629e+04  time:2m30s
+
+
+100,loss:3.465e+02 
+200,loss:3.619e+02 
+300,loss:3.876e+02 
+ 38%|███▊      | 384/1000 [15:58:26<25:36:40, 149.68s/it]#epoch:384 stage:1 train_loss:1.349e+05 val_loss:3.620e+04  time:2m29s
+
+
+100,loss:3.502e+02 
+200,loss:3.537e+02 
+300,loss:3.962e+02 
+ 38%|███▊      | 385/1000 [16:00:55<25:32:28, 149.51s/it]#epoch:385 stage:1 train_loss:1.345e+05 val_loss:3.621e+04  time:2m29s
+
+
+100,loss:3.464e+02 
+200,loss:3.581e+02 
+300,loss:3.878e+02 
+ 39%|███▊      | 386/1000 [16:03:24<25:28:48, 149.39s/it]#epoch:386 stage:1 train_loss:1.344e+05 val_loss:3.627e+04  time:2m29s
+
+
+100,loss:3.415e+02 
+200,loss:3.606e+02 
+300,loss:3.870e+02 
+ 39%|███▊      | 387/1000 [16:05:54<25:27:00, 149.46s/it]#epoch:387 stage:1 train_loss:1.341e+05 val_loss:3.612e+04  time:2m30s
+
+
+100,loss:3.488e+02 
+200,loss:3.557e+02 
+300,loss:3.834e+02 
+ 39%|███▉      | 388/1000 [16:08:23<25:25:48, 149.59s/it]#epoch:388 stage:1 train_loss:1.340e+05 val_loss:3.609e+04  time:2m30s
+
+
+100,loss:3.538e+02 
+200,loss:3.670e+02 
+300,loss:3.897e+02 
+ 39%|███▉      | 389/1000 [16:10:54<25:24:42, 149.73s/it]#epoch:389 stage:1 train_loss:1.344e+05 val_loss:3.633e+04  time:2m30s
+
+
+100,loss:3.453e+02 
+200,loss:3.663e+02 
+300,loss:3.993e+02 
+ 39%|███▉      | 390/1000 [16:13:23<25:21:39, 149.67s/it]#epoch:390 stage:1 train_loss:1.360e+05 val_loss:3.672e+04  time:2m30s
+
+
+100,loss:3.493e+02 
+200,loss:3.643e+02 
+300,loss:3.956e+02 
+ 39%|███▉      | 391/1000 [16:15:52<25:17:15, 149.48s/it]#epoch:391 stage:1 train_loss:1.364e+05 val_loss:3.683e+04  time:2m29s
+
+
+100,loss:3.448e+02 
+200,loss:3.614e+02 
+300,loss:3.933e+02 
+ 39%|███▉      | 392/1000 [16:18:21<25:14:15, 149.43s/it]#epoch:392 stage:1 train_loss:1.360e+05 val_loss:3.699e+04  time:2m29s
+
+
+100,loss:3.476e+02 
+200,loss:3.661e+02 
+300,loss:3.895e+02 
+ 39%|███▉      | 393/1000 [16:20:50<25:10:33, 149.31s/it]#epoch:393 stage:1 train_loss:1.370e+05 val_loss:3.688e+04  time:2m29s
+
+
+100,loss:3.481e+02 
+200,loss:3.609e+02 
+300,loss:3.911e+02 
+ 39%|███▉      | 394/1000 [16:23:21<25:10:35, 149.56s/it]#epoch:394 stage:1 train_loss:1.366e+05 val_loss:3.647e+04  time:2m30s
+
+
+100,loss:3.512e+02 
+200,loss:3.549e+02 
+300,loss:3.908e+02 
+ 40%|███▉      | 395/1000 [16:25:50<25:07:59, 149.55s/it]#epoch:395 stage:1 train_loss:1.356e+05 val_loss:3.648e+04  time:2m30s
+
+
+100,loss:3.499e+02 
+200,loss:3.614e+02 
+300,loss:4.074e+02 
+ 40%|███▉      | 396/1000 [16:28:20<25:06:17, 149.63s/it]#epoch:396 stage:1 train_loss:1.350e+05 val_loss:3.656e+04  time:2m30s
+
+
+100,loss:3.447e+02 
+200,loss:3.594e+02 
+300,loss:3.894e+02 
+ 40%|███▉      | 397/1000 [16:30:50<25:03:48, 149.63s/it]#epoch:397 stage:1 train_loss:1.353e+05 val_loss:3.667e+04  time:2m30s
+
+
+100,loss:3.443e+02 
+200,loss:3.638e+02 
+300,loss:3.975e+02 
+ 40%|███▉      | 398/1000 [16:33:19<25:00:06, 149.51s/it]#epoch:398 stage:1 train_loss:1.360e+05 val_loss:3.670e+04  time:2m29s
+
+
+100,loss:3.436e+02 
+200,loss:3.643e+02 
+300,loss:3.942e+02 
+ 40%|███▉      | 399/1000 [16:35:49<24:59:53, 149.74s/it]#epoch:399 stage:1 train_loss:1.361e+05 val_loss:3.674e+04  time:2m30s
+
+
+100,loss:3.411e+02 
+200,loss:3.587e+02 
+300,loss:3.926e+02 
+ 40%|████      | 400/1000 [16:38:19<24:58:21, 149.84s/it]#epoch:400 stage:1 train_loss:1.361e+05 val_loss:3.669e+04  time:2m30s
+
+
+100,loss:3.408e+02 
+200,loss:3.585e+02 
+300,loss:3.961e+02 
+ 40%|████      | 401/1000 [16:40:48<24:54:16, 149.68s/it]#epoch:401 stage:1 train_loss:1.359e+05 val_loss:3.685e+04  time:2m29s
+
+
+100,loss:3.528e+02 
+200,loss:3.660e+02 
+300,loss:3.959e+02 
+ 40%|████      | 402/1000 [16:43:18<24:52:00, 149.70s/it]#epoch:402 stage:1 train_loss:1.368e+05 val_loss:3.684e+04  time:2m30s
+
+
+100,loss:3.493e+02 
+200,loss:3.668e+02 
+300,loss:3.903e+02 
+ 40%|████      | 403/1000 [16:45:48<24:49:59, 149.75s/it]#epoch:403 stage:1 train_loss:1.370e+05 val_loss:3.670e+04  time:2m30s
+
+
+100,loss:3.431e+02 
+200,loss:3.647e+02 
+300,loss:3.899e+02 
+ 40%|████      | 404/1000 [16:48:18<24:47:37, 149.76s/it]#epoch:404 stage:1 train_loss:1.358e+05 val_loss:3.655e+04  time:2m30s
+
+
+100,loss:3.504e+02 
+200,loss:3.586e+02 
+300,loss:3.840e+02 
+ 40%|████      | 405/1000 [16:50:48<24:45:23, 149.79s/it]#epoch:405 stage:1 train_loss:1.354e+05 val_loss:3.654e+04  time:2m30s
+
+
+100,loss:3.493e+02 
+200,loss:3.608e+02 
+300,loss:3.846e+02 
+ 41%|████      | 406/1000 [16:53:17<24:42:20, 149.73s/it]#epoch:406 stage:1 train_loss:1.357e+05 val_loss:3.641e+04  time:2m30s
+
+
+100,loss:3.500e+02 
+200,loss:3.584e+02 
+300,loss:3.917e+02 
+ 41%|████      | 407/1000 [16:55:47<24:40:56, 149.84s/it]#epoch:407 stage:1 train_loss:1.357e+05 val_loss:3.655e+04  time:2m30s
+
+
+100,loss:3.556e+02 
+200,loss:3.591e+02 
+300,loss:3.897e+02 
+ 41%|████      | 408/1000 [16:58:17<24:38:36, 149.86s/it]#epoch:408 stage:1 train_loss:1.358e+05 val_loss:3.665e+04  time:2m30s
+
+
+100,loss:3.514e+02 
+200,loss:3.650e+02 
+300,loss:3.929e+02 
+ 41%|████      | 409/1000 [17:00:47<24:34:46, 149.72s/it]#epoch:409 stage:1 train_loss:1.364e+05 val_loss:3.668e+04  time:2m29s
+
+
+100,loss:3.458e+02 
+200,loss:3.666e+02 
+300,loss:3.891e+02 
+ 41%|████      | 410/1000 [17:03:16<24:31:57, 149.69s/it]#epoch:410 stage:1 train_loss:1.360e+05 val_loss:3.648e+04  time:2m30s
+
+
+100,loss:3.516e+02 
+200,loss:3.675e+02 
+300,loss:3.907e+02 
+ 41%|████      | 411/1000 [17:05:45<24:27:35, 149.50s/it]#epoch:411 stage:1 train_loss:1.357e+05 val_loss:3.660e+04  time:2m29s
+
+
+100,loss:3.495e+02 
+200,loss:3.731e+02 
+300,loss:3.889e+02 
+ 41%|████      | 412/1000 [17:08:15<24:25:00, 149.49s/it]#epoch:412 stage:1 train_loss:1.360e+05 val_loss:3.667e+04  time:2m29s
+
+
+100,loss:3.502e+02 
+200,loss:3.650e+02 
+300,loss:3.825e+02 
+ 41%|████▏     | 413/1000 [17:10:44<24:22:02, 149.44s/it]#epoch:413 stage:1 train_loss:1.360e+05 val_loss:3.664e+04  time:2m29s
+
+
+100,loss:3.497e+02 
+200,loss:3.623e+02 
+300,loss:3.852e+02 
+ 41%|████▏     | 414/1000 [17:13:14<24:20:07, 149.50s/it]#epoch:414 stage:1 train_loss:1.359e+05 val_loss:3.665e+04  time:2m30s
+
+
+100,loss:3.477e+02 
+200,loss:3.636e+02 
+300,loss:3.870e+02 
+ 42%|████▏     | 415/1000 [17:15:43<24:18:01, 149.54s/it]#epoch:415 stage:1 train_loss:1.361e+05 val_loss:3.662e+04  time:2m30s
+
+
+100,loss:3.500e+02 
+200,loss:3.657e+02 
+300,loss:3.860e+02 
+ 42%|████▏     | 416/1000 [17:18:14<24:17:19, 149.73s/it]#epoch:416 stage:1 train_loss:1.361e+05 val_loss:3.676e+04  time:2m30s
+
+
+100,loss:3.518e+02 
+200,loss:3.668e+02 
+300,loss:3.827e+02 
+ 42%|████▏     | 417/1000 [17:20:43<24:14:22, 149.68s/it]#epoch:417 stage:1 train_loss:1.359e+05 val_loss:3.664e+04  time:2m30s
+
+
+100,loss:3.511e+02 
+200,loss:3.719e+02 
+300,loss:3.853e+02 
+ 42%|████▏     | 418/1000 [17:23:13<24:11:49, 149.67s/it]#epoch:418 stage:1 train_loss:1.361e+05 val_loss:3.667e+04  time:2m30s
+
+
+100,loss:3.461e+02 
+200,loss:3.697e+02 
+300,loss:3.865e+02 
+ 42%|████▏     | 419/1000 [17:25:42<24:09:02, 149.64s/it]#epoch:419 stage:1 train_loss:1.362e+05 val_loss:3.637e+04  time:2m30s
+
+
+100,loss:3.654e+02 
+200,loss:3.723e+02 
+300,loss:3.808e+02 
+ 42%|████▏     | 420/1000 [17:28:12<24:06:17, 149.62s/it]#epoch:420 stage:1 train_loss:1.351e+05 val_loss:3.630e+04  time:2m30s
+
+
+100,loss:3.453e+02 
+200,loss:3.716e+02 
+300,loss:3.830e+02 
+ 42%|████▏     | 421/1000 [17:30:42<24:03:36, 149.60s/it]#epoch:421 stage:1 train_loss:1.348e+05 val_loss:3.636e+04  time:2m30s
+
+
+100,loss:3.540e+02 
+200,loss:3.792e+02 
+300,loss:3.833e+02 
+ 42%|████▏     | 422/1000 [17:33:11<24:01:46, 149.66s/it]#epoch:422 stage:1 train_loss:1.350e+05 val_loss:3.635e+04  time:2m30s
+
+
+100,loss:3.489e+02 
+200,loss:3.586e+02 
+300,loss:3.830e+02 
+ 42%|████▏     | 423/1000 [17:35:41<23:59:46, 149.72s/it]#epoch:423 stage:1 train_loss:1.349e+05 val_loss:3.622e+04  time:2m30s
+
+
+100,loss:3.440e+02 
+200,loss:3.556e+02 
+300,loss:3.810e+02 
+ 42%|████▏     | 424/1000 [17:38:11<23:57:26, 149.73s/it]#epoch:424 stage:1 train_loss:1.350e+05 val_loss:3.631e+04  time:2m30s
+
+
+100,loss:3.570e+02 
+200,loss:3.586e+02 
+300,loss:3.824e+02 
+ 42%|████▎     | 425/1000 [17:40:41<23:54:26, 149.68s/it]#epoch:425 stage:1 train_loss:1.349e+05 val_loss:3.625e+04  time:2m30s
+
+
+100,loss:3.520e+02 
+200,loss:3.620e+02 
+300,loss:3.865e+02 
+ 43%|████▎     | 426/1000 [17:43:09<23:49:25, 149.42s/it]#epoch:426 stage:1 train_loss:1.348e+05 val_loss:3.628e+04  time:2m29s
+
+
+100,loss:3.437e+02 
+200,loss:3.566e+02 
+300,loss:3.856e+02 
+ 43%|████▎     | 427/1000 [17:45:38<23:45:59, 149.32s/it]#epoch:427 stage:1 train_loss:1.346e+05 val_loss:3.632e+04  time:2m29s
+
+
+100,loss:3.591e+02 
+200,loss:3.595e+02 
+300,loss:3.840e+02 
+ 43%|████▎     | 428/1000 [17:48:08<23:43:15, 149.29s/it]#epoch:428 stage:1 train_loss:1.348e+05 val_loss:3.630e+04  time:2m29s
+
+
+100,loss:3.433e+02 
+200,loss:3.570e+02 
+300,loss:3.799e+02 
+ 43%|████▎     | 429/1000 [17:50:37<23:41:39, 149.39s/it]#epoch:429 stage:1 train_loss:1.349e+05 val_loss:3.622e+04  time:2m30s
+
+
+100,loss:3.458e+02 
+200,loss:3.686e+02 
+300,loss:3.794e+02 
+ 43%|████▎     | 430/1000 [17:53:07<23:38:56, 149.36s/it]#epoch:430 stage:1 train_loss:1.346e+05 val_loss:3.626e+04  time:2m29s
+
+
+100,loss:3.468e+02 
+200,loss:3.557e+02 
+300,loss:3.837e+02 
+ 43%|████▎     | 431/1000 [17:55:36<23:36:54, 149.41s/it]#epoch:431 stage:1 train_loss:1.344e+05 val_loss:3.625e+04  time:2m29s
+
+
+100,loss:3.470e+02 
+200,loss:3.575e+02 
+300,loss:3.850e+02 
+ 43%|████▎     | 432/1000 [17:58:06<23:35:44, 149.55s/it]#epoch:432 stage:1 train_loss:1.345e+05 val_loss:3.608e+04  time:2m30s
+
+
+100,loss:3.466e+02 
+200,loss:3.784e+02 
+300,loss:3.792e+02 
+ 43%|████▎     | 433/1000 [18:00:36<23:34:55, 149.73s/it]#epoch:433 stage:1 train_loss:1.340e+05 val_loss:3.596e+04  time:2m30s
+
+
+100,loss:3.522e+02 
+200,loss:3.537e+02 
+300,loss:3.893e+02 
+ 43%|████▎     | 434/1000 [18:03:06<23:32:25, 149.73s/it]#epoch:434 stage:1 train_loss:1.338e+05 val_loss:3.594e+04  time:2m30s
+
+
+100,loss:3.434e+02 
+200,loss:3.639e+02 
+300,loss:3.796e+02 
+ 44%|████▎     | 435/1000 [18:05:35<23:27:49, 149.50s/it]#epoch:435 stage:1 train_loss:1.336e+05 val_loss:3.592e+04  time:2m29s
+
+
+100,loss:3.441e+02 
+200,loss:3.628e+02 
+300,loss:3.824e+02 
+ 44%|████▎     | 436/1000 [18:08:04<23:25:23, 149.51s/it]#epoch:436 stage:1 train_loss:1.338e+05 val_loss:3.594e+04  time:2m30s
+
+
+100,loss:3.404e+02 
+200,loss:3.500e+02 
+300,loss:3.824e+02 
+ 44%|████▎     | 437/1000 [18:10:34<23:22:48, 149.50s/it]#epoch:437 stage:1 train_loss:1.332e+05 val_loss:3.595e+04  time:2m29s
+
+
+100,loss:3.380e+02 
+200,loss:3.565e+02 
+300,loss:3.826e+02 
+ 44%|████▍     | 438/1000 [18:13:04<23:21:24, 149.62s/it]#epoch:438 stage:1 train_loss:1.331e+05 val_loss:3.584e+04  time:2m30s
+
+
+100,loss:3.376e+02 
+200,loss:3.537e+02 
+300,loss:3.781e+02 
+ 44%|████▍     | 439/1000 [18:15:34<23:20:42, 149.81s/it]#epoch:439 stage:1 train_loss:1.332e+05 val_loss:3.578e+04  time:2m30s
+
+
+100,loss:3.332e+02 
+200,loss:3.503e+02 
+300,loss:3.776e+02 
+ 44%|████▍     | 440/1000 [18:18:04<23:18:06, 149.80s/it]#epoch:440 stage:1 train_loss:1.331e+05 val_loss:3.584e+04  time:2m30s
+
+
+100,loss:3.332e+02 
+200,loss:3.610e+02 
+300,loss:3.767e+02 
+ 44%|████▍     | 441/1000 [18:20:33<23:15:11, 149.75s/it]#epoch:441 stage:1 train_loss:1.330e+05 val_loss:3.582e+04  time:2m30s
+
+
+100,loss:3.338e+02 
+200,loss:3.513e+02 
+300,loss:3.772e+02 
+ 44%|████▍     | 442/1000 [18:23:03<23:12:09, 149.69s/it]#epoch:442 stage:1 train_loss:1.328e+05 val_loss:3.581e+04  time:2m30s
+
+
+100,loss:3.336e+02 
+200,loss:3.507e+02 
+300,loss:3.769e+02 
+ 44%|████▍     | 443/1000 [18:25:32<23:07:14, 149.43s/it]#epoch:443 stage:1 train_loss:1.330e+05 val_loss:3.583e+04  time:2m29s
+
+
+100,loss:3.378e+02 
+200,loss:3.536e+02 
+300,loss:3.795e+02 
+ 44%|████▍     | 444/1000 [18:28:00<23:02:51, 149.23s/it]#epoch:444 stage:1 train_loss:1.332e+05 val_loss:3.583e+04  time:2m29s
+
+
+100,loss:3.360e+02 
+200,loss:3.550e+02 
+300,loss:3.754e+02 
+ 44%|████▍     | 445/1000 [18:30:30<23:02:28, 149.46s/it]#epoch:445 stage:1 train_loss:1.334e+05 val_loss:3.605e+04  time:2m30s
+
+
+100,loss:3.355e+02 
+200,loss:3.732e+02 
+300,loss:3.768e+02 
+ 45%|████▍     | 446/1000 [18:32:59<22:58:47, 149.33s/it]#epoch:446 stage:1 train_loss:1.329e+05 val_loss:3.598e+04  time:2m29s
+
+
+100,loss:3.377e+02 
+200,loss:3.579e+02 
+300,loss:3.831e+02 
+ 45%|████▍     | 447/1000 [18:35:30<22:58:22, 149.55s/it]#epoch:447 stage:1 train_loss:1.333e+05 val_loss:3.587e+04  time:2m30s
+
+
+100,loss:3.408e+02 
+200,loss:3.609e+02 
+300,loss:3.908e+02 
+ 45%|████▍     | 448/1000 [18:37:59<22:56:12, 149.59s/it]#epoch:448 stage:1 train_loss:1.330e+05 val_loss:3.589e+04  time:2m30s
+
+
+100,loss:3.370e+02 
+200,loss:3.570e+02 
+300,loss:3.754e+02 
+ 45%|████▍     | 449/1000 [18:40:29<22:53:48, 149.60s/it]#epoch:449 stage:1 train_loss:1.331e+05 val_loss:3.596e+04  time:2m30s
+
+
+100,loss:3.354e+02 
+200,loss:3.545e+02 
+300,loss:3.841e+02 
+ 45%|████▌     | 450/1000 [18:42:58<22:49:21, 149.38s/it]#epoch:450 stage:1 train_loss:1.332e+05 val_loss:3.592e+04  time:2m29s
+
+
+100,loss:3.363e+02 
+200,loss:3.559e+02 
+300,loss:3.817e+02 
+ 45%|████▌     | 451/1000 [18:45:28<22:48:04, 149.52s/it]#epoch:451 stage:1 train_loss:1.331e+05 val_loss:3.592e+04  time:2m30s
+
+
+100,loss:3.419e+02 
+200,loss:3.543e+02 
+300,loss:3.757e+02 
+ 45%|████▌     | 452/1000 [18:47:57<22:44:49, 149.43s/it]#epoch:452 stage:1 train_loss:1.333e+05 val_loss:3.590e+04  time:2m29s
+
+
+100,loss:3.447e+02 
+200,loss:3.517e+02 
+300,loss:3.778e+02 
+ 45%|████▌     | 453/1000 [18:50:26<22:42:14, 149.42s/it]#epoch:453 stage:1 train_loss:1.330e+05 val_loss:3.602e+04  time:2m29s
+
+
+100,loss:3.457e+02 
+200,loss:3.529e+02 
+300,loss:3.767e+02 
+ 45%|████▌     | 454/1000 [18:52:55<22:39:14, 149.37s/it]#epoch:454 stage:1 train_loss:1.331e+05 val_loss:3.585e+04  time:2m29s
+
+
+100,loss:3.480e+02 
+200,loss:3.514e+02 
+300,loss:3.763e+02 
+ 46%|████▌     | 455/1000 [18:55:24<22:35:24, 149.22s/it]#epoch:455 stage:1 train_loss:1.333e+05 val_loss:3.603e+04  time:2m29s
+
+
+100,loss:3.545e+02 
+200,loss:3.532e+02 
+300,loss:3.829e+02 
+ 46%|████▌     | 456/1000 [18:57:54<22:33:42, 149.31s/it]#epoch:456 stage:1 train_loss:1.335e+05 val_loss:3.600e+04  time:2m29s
+
+
+100,loss:3.407e+02 
+200,loss:3.571e+02 
+300,loss:3.834e+02 
+ 46%|████▌     | 457/1000 [19:00:23<22:30:56, 149.28s/it]#epoch:457 stage:1 train_loss:1.336e+05 val_loss:3.602e+04  time:2m29s
+
+
+100,loss:3.441e+02 
+200,loss:3.537e+02 
+300,loss:3.772e+02 
+ 46%|████▌     | 458/1000 [19:02:53<22:30:03, 149.45s/it]#epoch:458 stage:1 train_loss:1.336e+05 val_loss:3.606e+04  time:2m30s
+
+
+100,loss:3.417e+02 
+200,loss:3.517e+02 
+300,loss:3.763e+02 
+ 46%|████▌     | 459/1000 [19:05:23<22:29:01, 149.61s/it]#epoch:459 stage:1 train_loss:1.336e+05 val_loss:3.604e+04  time:2m30s
+
+
+100,loss:3.426e+02 
+200,loss:3.612e+02 
+300,loss:3.837e+02 
+ 46%|████▌     | 460/1000 [19:07:53<22:26:44, 149.64s/it]#epoch:460 stage:1 train_loss:1.333e+05 val_loss:3.605e+04  time:2m30s
+
+
+100,loss:3.379e+02 
+200,loss:3.561e+02 
+300,loss:3.841e+02 
+ 46%|████▌     | 461/1000 [19:10:22<22:24:11, 149.63s/it]#epoch:461 stage:1 train_loss:1.337e+05 val_loss:3.616e+04  time:2m30s
+
+
+100,loss:3.369e+02 
+200,loss:3.493e+02 
+300,loss:3.825e+02 
+ 46%|████▌     | 462/1000 [19:12:52<22:21:10, 149.57s/it]#epoch:462 stage:1 train_loss:1.339e+05 val_loss:3.604e+04  time:2m29s
+
+
+100,loss:3.380e+02 
+200,loss:3.693e+02 
+300,loss:3.932e+02 
+ 46%|████▋     | 463/1000 [19:15:22<22:20:41, 149.80s/it]#epoch:463 stage:1 train_loss:1.337e+05 val_loss:3.610e+04  time:2m30s
+
+
+100,loss:3.412e+02 
+200,loss:3.612e+02 
+300,loss:3.794e+02 
+ 46%|████▋     | 464/1000 [19:17:52<22:18:32, 149.84s/it]#epoch:464 stage:1 train_loss:1.338e+05 val_loss:3.623e+04  time:2m30s
+
+
+100,loss:3.384e+02 
+200,loss:3.524e+02 
+300,loss:3.758e+02 
+ 46%|████▋     | 465/1000 [19:20:22<22:15:41, 149.80s/it]#epoch:465 stage:1 train_loss:1.340e+05 val_loss:3.617e+04  time:2m30s
+
+
+100,loss:3.420e+02 
+200,loss:3.499e+02 
+300,loss:3.820e+02 
+ 47%|████▋     | 466/1000 [19:22:51<22:12:53, 149.76s/it]#epoch:466 stage:1 train_loss:1.339e+05 val_loss:3.625e+04  time:2m30s
+
+
+100,loss:3.403e+02 
+200,loss:3.566e+02 
+300,loss:3.768e+02 
+ 47%|████▋     | 467/1000 [19:25:21<22:10:07, 149.73s/it]#epoch:467 stage:1 train_loss:1.339e+05 val_loss:3.623e+04  time:2m30s
+
+
+100,loss:3.401e+02 
+200,loss:3.492e+02 
+300,loss:3.806e+02 
+ 47%|████▋     | 468/1000 [19:27:51<22:07:41, 149.74s/it]#epoch:468 stage:1 train_loss:1.337e+05 val_loss:3.626e+04  time:2m30s
+
+
+100,loss:3.392e+02 
+200,loss:3.538e+02 
+300,loss:3.769e+02 
+ 47%|████▋     | 469/1000 [19:30:20<22:05:06, 149.73s/it]#epoch:469 stage:1 train_loss:1.335e+05 val_loss:3.625e+04  time:2m30s
+
+
+100,loss:3.488e+02 
+200,loss:3.538e+02 
+300,loss:3.836e+02 
+ 47%|████▋     | 470/1000 [19:32:50<22:02:14, 149.69s/it]#epoch:470 stage:1 train_loss:1.336e+05 val_loss:3.611e+04  time:2m30s
+
+
+100,loss:3.430e+02 
+200,loss:3.571e+02 
+300,loss:3.764e+02 
+ 47%|████▋     | 471/1000 [19:35:19<21:59:07, 149.62s/it]#epoch:471 stage:1 train_loss:1.337e+05 val_loss:3.612e+04  time:2m29s
+
+
+100,loss:3.370e+02 
+200,loss:3.551e+02 
+300,loss:3.831e+02 
+ 47%|████▋     | 472/1000 [19:37:49<21:56:45, 149.63s/it]#epoch:472 stage:1 train_loss:1.337e+05 val_loss:3.610e+04  time:2m30s
+
+
+100,loss:3.416e+02 
+200,loss:3.589e+02 
+300,loss:3.758e+02 
+ 47%|████▋     | 473/1000 [19:40:19<21:55:54, 149.82s/it]#epoch:473 stage:1 train_loss:1.336e+05 val_loss:3.618e+04  time:2m30s
+
+
+100,loss:3.374e+02 
+200,loss:3.530e+02 
+300,loss:3.827e+02 
+ 47%|████▋     | 474/1000 [19:42:49<21:53:51, 149.87s/it]#epoch:474 stage:1 train_loss:1.337e+05 val_loss:3.612e+04  time:2m30s
+
+
+100,loss:3.392e+02 
+200,loss:3.550e+02 
+300,loss:3.795e+02 
+ 48%|████▊     | 475/1000 [19:45:19<21:51:15, 149.86s/it]#epoch:475 stage:1 train_loss:1.339e+05 val_loss:3.617e+04  time:2m30s
+
+
+100,loss:3.393e+02 
+200,loss:3.524e+02 
+300,loss:3.782e+02 
+ 48%|████▊     | 476/1000 [19:47:48<21:46:59, 149.66s/it]#epoch:476 stage:1 train_loss:1.338e+05 val_loss:3.615e+04  time:2m29s
+
+
+100,loss:3.401e+02 
+200,loss:3.505e+02 
+300,loss:3.766e+02 
+ 48%|████▊     | 477/1000 [19:50:18<21:44:15, 149.63s/it]#epoch:477 stage:1 train_loss:1.337e+05 val_loss:3.611e+04  time:2m30s
+
+
+100,loss:3.388e+02 
+200,loss:3.549e+02 
+300,loss:3.776e+02 
+ 48%|████▊     | 478/1000 [19:52:48<21:41:57, 149.65s/it]#epoch:478 stage:1 train_loss:1.336e+05 val_loss:3.607e+04  time:2m30s
+
+
+100,loss:3.480e+02 
+200,loss:3.558e+02 
+300,loss:3.798e+02 
+ 48%|████▊     | 479/1000 [19:55:18<21:40:25, 149.76s/it]#epoch:479 stage:1 train_loss:1.337e+05 val_loss:3.620e+04  time:2m30s
+
+
+100,loss:3.405e+02 
+200,loss:3.554e+02 
+300,loss:3.815e+02 
+ 48%|████▊     | 480/1000 [19:57:48<21:38:38, 149.84s/it]#epoch:480 stage:1 train_loss:1.337e+05 val_loss:3.614e+04  time:2m30s
+
+
+100,loss:3.502e+02 
+200,loss:3.535e+02 
+300,loss:3.835e+02 
+ 48%|████▊     | 481/1000 [20:00:17<21:34:30, 149.65s/it]#epoch:481 stage:1 train_loss:1.337e+05 val_loss:3.608e+04  time:2m29s
+
+
+100,loss:3.407e+02 
+200,loss:3.674e+02 
+300,loss:3.763e+02 
+ 48%|████▊     | 482/1000 [20:02:47<21:32:29, 149.71s/it]#epoch:482 stage:1 train_loss:1.336e+05 val_loss:3.613e+04  time:2m30s
+
+
+100,loss:3.422e+02 
+200,loss:3.729e+02 
+300,loss:3.778e+02 
+ 48%|████▊     | 483/1000 [20:05:16<21:30:06, 149.72s/it]#epoch:483 stage:1 train_loss:1.337e+05 val_loss:3.610e+04  time:2m30s
+
+
+100,loss:3.443e+02 
+200,loss:3.566e+02 
+300,loss:3.817e+02 
+ 48%|████▊     | 484/1000 [20:07:46<21:27:54, 149.76s/it]#epoch:484 stage:1 train_loss:1.335e+05 val_loss:3.606e+04  time:2m30s
+
+
+100,loss:3.431e+02 
+200,loss:3.582e+02 
+300,loss:3.786e+02 
+ 48%|████▊     | 485/1000 [20:10:16<21:25:03, 149.72s/it]#epoch:485 stage:1 train_loss:1.333e+05 val_loss:3.609e+04  time:2m30s
+
+
+100,loss:3.469e+02 
+200,loss:3.578e+02 
+300,loss:3.760e+02 
+ 49%|████▊     | 486/1000 [20:12:46<21:22:31, 149.71s/it]#epoch:486 stage:1 train_loss:1.334e+05 val_loss:3.606e+04  time:2m30s
+
+
+100,loss:3.474e+02 
+200,loss:3.603e+02 
+300,loss:3.873e+02 
+ 49%|████▊     | 487/1000 [20:15:15<21:19:54, 149.70s/it]#epoch:487 stage:1 train_loss:1.334e+05 val_loss:3.611e+04  time:2m30s
+
+
+100,loss:3.471e+02 
+200,loss:3.547e+02 
+300,loss:3.786e+02 
+ 49%|████▉     | 488/1000 [20:17:45<21:17:28, 149.70s/it]#epoch:488 stage:1 train_loss:1.335e+05 val_loss:3.606e+04  time:2m30s
+
+
+100,loss:3.435e+02 
+200,loss:3.520e+02 
+300,loss:3.870e+02 
+ 49%|████▉     | 489/1000 [20:20:14<21:13:39, 149.55s/it]#epoch:489 stage:1 train_loss:1.335e+05 val_loss:3.620e+04  time:2m29s
+
+
+100,loss:3.458e+02 
+200,loss:3.509e+02 
+300,loss:3.810e+02 
+ 49%|████▉     | 490/1000 [20:22:44<21:11:21, 149.57s/it]#epoch:490 stage:1 train_loss:1.337e+05 val_loss:3.609e+04  time:2m30s
+
+
+100,loss:3.600e+02 
+200,loss:3.497e+02 
+300,loss:3.779e+02 
+ 49%|████▉     | 491/1000 [20:25:14<21:09:27, 149.64s/it]#epoch:491 stage:1 train_loss:1.334e+05 val_loss:3.610e+04  time:2m30s
+
+
+100,loss:3.540e+02 
+200,loss:3.536e+02 
+300,loss:3.784e+02 
+ 49%|████▉     | 492/1000 [20:27:44<21:08:12, 149.79s/it]#epoch:492 stage:1 train_loss:1.336e+05 val_loss:3.617e+04  time:2m30s
+
+
+100,loss:3.452e+02 
+200,loss:3.514e+02 
+300,loss:3.779e+02 
+ 49%|████▉     | 493/1000 [20:30:13<21:05:13, 149.73s/it]#epoch:493 stage:1 train_loss:1.333e+05 val_loss:3.605e+04  time:2m30s
+
+
+100,loss:3.425e+02 
+200,loss:3.509e+02 
+300,loss:3.912e+02 
+ 49%|████▉     | 494/1000 [20:32:43<21:02:24, 149.69s/it]#epoch:494 stage:1 train_loss:1.335e+05 val_loss:3.608e+04  time:2m30s
+
+
+100,loss:3.384e+02 
+200,loss:3.505e+02 
+300,loss:3.758e+02 
+ 50%|████▉     | 495/1000 [20:35:13<20:59:43, 149.67s/it]#epoch:495 stage:1 train_loss:1.333e+05 val_loss:3.616e+04  time:2m30s
+
+
+100,loss:3.440e+02 
+200,loss:3.502e+02 
+300,loss:3.814e+02 
+ 50%|████▉     | 496/1000 [20:37:42<20:57:16, 149.68s/it]#epoch:496 stage:1 train_loss:1.335e+05 val_loss:3.609e+04  time:2m30s
+
+
+100,loss:3.413e+02 
+200,loss:3.515e+02 
+300,loss:3.783e+02 
+ 50%|████▉     | 497/1000 [20:40:12<20:55:05, 149.71s/it]#epoch:497 stage:1 train_loss:1.335e+05 val_loss:3.607e+04  time:2m30s
+
+
+100,loss:3.454e+02 
+200,loss:3.524e+02 
+300,loss:3.750e+02 
+ 50%|████▉     | 498/1000 [20:42:41<20:51:32, 149.59s/it]#epoch:498 stage:1 train_loss:1.337e+05 val_loss:3.602e+04  time:2m29s
+
+
+100,loss:3.437e+02 
+200,loss:3.523e+02 
+300,loss:3.806e+02 
+ 50%|████▉     | 499/1000 [20:45:11<20:47:58, 149.46s/it]#epoch:499 stage:1 train_loss:1.337e+05 val_loss:3.614e+04  time:2m29s
+
+
+100,loss:3.435e+02 
+200,loss:3.523e+02 
+300,loss:3.764e+02 
+ 50%|█████     | 500/1000 [20:47:40<20:45:35, 149.47s/it]#epoch:500 stage:1 train_loss:1.338e+05 val_loss:3.618e+04  time:2m29s
+
+
+100,loss:3.515e+02 
+200,loss:3.653e+02 
+300,loss:3.821e+02 
+ 50%|█████     | 501/1000 [20:50:10<20:44:56, 149.69s/it]#epoch:501 stage:1 train_loss:1.340e+05 val_loss:3.615e+04  time:2m30s
+
+
+100,loss:3.407e+02 
+200,loss:3.660e+02 
+300,loss:3.777e+02 
+ 50%|█████     | 502/1000 [20:52:40<20:43:02, 149.76s/it]#epoch:502 stage:1 train_loss:1.338e+05 val_loss:3.613e+04  time:2m30s
+
+
+100,loss:3.442e+02 
+200,loss:3.707e+02 
+300,loss:3.769e+02 
+ 50%|█████     | 503/1000 [20:55:10<20:39:28, 149.63s/it]#epoch:503 stage:1 train_loss:1.337e+05 val_loss:3.612e+04  time:2m29s
+
+
+100,loss:3.406e+02 
+200,loss:3.604e+02 
+300,loss:3.813e+02 
+ 50%|█████     | 504/1000 [20:57:39<20:37:35, 149.71s/it]#epoch:504 stage:1 train_loss:1.336e+05 val_loss:3.607e+04  time:2m30s
+
+
+100,loss:3.461e+02 
+200,loss:3.597e+02 
+300,loss:3.776e+02 
+ 50%|█████     | 505/1000 [21:00:09<20:34:44, 149.67s/it]#epoch:505 stage:1 train_loss:1.336e+05 val_loss:3.608e+04  time:2m30s
+
+
+100,loss:3.394e+02 
+200,loss:3.550e+02 
+300,loss:3.783e+02 
+ 51%|█████     | 506/1000 [21:02:39<20:32:21, 149.68s/it]#epoch:506 stage:1 train_loss:1.336e+05 val_loss:3.618e+04  time:2m30s
+
+
+100,loss:3.382e+02 
+200,loss:3.566e+02 
+300,loss:3.880e+02 
+ 51%|█████     | 507/1000 [21:05:08<20:29:45, 149.67s/it]#epoch:507 stage:1 train_loss:1.335e+05 val_loss:3.614e+04  time:2m30s
+
+
+100,loss:3.409e+02 
+200,loss:3.592e+02 
+300,loss:3.804e+02 
+ 51%|█████     | 508/1000 [21:07:38<20:27:03, 149.64s/it]#epoch:508 stage:1 train_loss:1.335e+05 val_loss:3.605e+04  time:2m30s
+
+
+100,loss:3.382e+02 
+200,loss:3.600e+02 
+300,loss:3.771e+02 
+ 51%|█████     | 509/1000 [21:10:08<20:26:29, 149.88s/it]#epoch:509 stage:1 train_loss:1.336e+05 val_loss:3.601e+04  time:2m30s
+
+
+100,loss:3.384e+02 
+200,loss:3.606e+02 
+300,loss:3.861e+02 
+ 51%|█████     | 510/1000 [21:12:38<20:24:39, 149.96s/it]#epoch:510 stage:1 train_loss:1.335e+05 val_loss:3.611e+04  time:2m30s
+
+
+100,loss:3.444e+02 
+200,loss:3.566e+02 
+300,loss:3.792e+02 
+ 51%|█████     | 511/1000 [21:15:08<20:20:31, 149.76s/it]#epoch:511 stage:1 train_loss:1.335e+05 val_loss:3.609e+04  time:2m29s
+
+
+100,loss:3.397e+02 
+200,loss:3.543e+02 
+300,loss:3.801e+02 
+ 51%|█████     | 512/1000 [21:17:38<20:18:07, 149.77s/it]#epoch:512 stage:1 train_loss:1.335e+05 val_loss:3.605e+04  time:2m30s
+
+
+100,loss:3.404e+02 
+200,loss:3.666e+02 
+300,loss:3.837e+02 
+ 51%|█████▏    | 513/1000 [21:20:07<20:15:35, 149.76s/it]#epoch:513 stage:1 train_loss:1.333e+05 val_loss:3.611e+04  time:2m30s
+
+
+100,loss:3.392e+02 
+200,loss:3.574e+02 
+300,loss:3.803e+02 
+ 51%|█████▏    | 514/1000 [21:22:37<20:12:08, 149.65s/it]#epoch:514 stage:1 train_loss:1.332e+05 val_loss:3.610e+04  time:2m29s
+
+
+100,loss:3.414e+02 
+200,loss:3.616e+02 
+300,loss:3.833e+02 
+ 52%|█████▏    | 515/1000 [21:25:06<20:08:53, 149.55s/it]#epoch:515 stage:1 train_loss:1.332e+05 val_loss:3.606e+04  time:2m29s
+
+
+100,loss:3.442e+02 
+200,loss:3.622e+02 
+300,loss:3.860e+02 
+ 52%|█████▏    | 516/1000 [21:27:35<20:06:03, 149.51s/it]#epoch:516 stage:1 train_loss:1.334e+05 val_loss:3.614e+04  time:2m29s
+
+
+100,loss:3.405e+02 
+200,loss:3.525e+02 
+300,loss:3.837e+02 
+ 52%|█████▏    | 517/1000 [21:30:05<20:03:41, 149.53s/it]#epoch:517 stage:1 train_loss:1.333e+05 val_loss:3.616e+04  time:2m30s
+
+
+100,loss:3.414e+02 
+200,loss:3.539e+02 
+300,loss:3.887e+02 
+ 52%|█████▏    | 518/1000 [21:32:35<20:01:22, 149.55s/it]#epoch:518 stage:1 train_loss:1.332e+05 val_loss:3.612e+04  time:2m30s
+
+
+100,loss:3.390e+02 
+200,loss:3.565e+02 
+300,loss:3.792e+02 
+ 52%|█████▏    | 519/1000 [21:35:04<19:59:12, 149.59s/it]#epoch:519 stage:1 train_loss:1.333e+05 val_loss:3.613e+04  time:2m30s
+
+
+100,loss:3.370e+02 
+200,loss:3.541e+02 
+300,loss:3.818e+02 
+ 52%|█████▏    | 520/1000 [21:37:34<19:57:14, 149.66s/it]#epoch:520 stage:1 train_loss:1.331e+05 val_loss:3.613e+04  time:2m30s
+
+
+100,loss:3.379e+02 
+200,loss:3.517e+02 
+300,loss:3.792e+02 
+ 52%|█████▏    | 521/1000 [21:40:04<19:54:26, 149.62s/it]#epoch:521 stage:1 train_loss:1.334e+05 val_loss:3.599e+04  time:2m30s
+
+
+100,loss:3.436e+02 
+200,loss:3.574e+02 
+300,loss:3.834e+02 
+ 52%|█████▏    | 522/1000 [21:42:33<19:51:36, 149.57s/it]#epoch:522 stage:1 train_loss:1.334e+05 val_loss:3.604e+04  time:2m29s
+
+
+100,loss:3.482e+02 
+200,loss:3.522e+02 
+300,loss:3.795e+02 
+ 52%|█████▏    | 523/1000 [21:45:03<19:49:43, 149.65s/it]#epoch:523 stage:1 train_loss:1.334e+05 val_loss:3.604e+04  time:2m30s
+
+
+100,loss:3.409e+02 
+200,loss:3.525e+02 
+300,loss:3.798e+02 
+ 52%|█████▏    | 524/1000 [21:47:33<19:47:14, 149.65s/it]#epoch:524 stage:1 train_loss:1.334e+05 val_loss:3.603e+04  time:2m30s
+
+
+100,loss:3.427e+02 
+200,loss:3.508e+02 
+300,loss:3.779e+02 
+ 52%|█████▎    | 525/1000 [21:50:02<19:43:55, 149.55s/it]#epoch:525 stage:1 train_loss:1.332e+05 val_loss:3.596e+04  time:2m29s
+
+
+100,loss:3.414e+02 
+200,loss:3.550e+02 
+300,loss:3.791e+02 
+ 53%|█████▎    | 526/1000 [21:52:32<19:42:08, 149.64s/it]#epoch:526 stage:1 train_loss:1.330e+05 val_loss:3.602e+04  time:2m30s
+
+
+100,loss:3.417e+02 
+200,loss:3.522e+02 
+300,loss:3.798e+02 
+ 53%|█████▎    | 527/1000 [21:55:01<19:39:24, 149.61s/it]#epoch:527 stage:1 train_loss:1.330e+05 val_loss:3.599e+04  time:2m30s
+
+
+100,loss:3.416e+02 
+200,loss:3.588e+02 
+300,loss:3.937e+02 
+ 53%|█████▎    | 528/1000 [21:57:31<19:37:30, 149.68s/it]#epoch:528 stage:1 train_loss:1.330e+05 val_loss:3.603e+04  time:2m30s
+
+
+100,loss:3.556e+02 
+200,loss:3.572e+02 
+300,loss:3.859e+02 
+ 53%|█████▎    | 529/1000 [22:00:01<19:34:45, 149.65s/it]#epoch:529 stage:1 train_loss:1.330e+05 val_loss:3.605e+04  time:2m30s
+
+
+100,loss:3.422e+02 
+200,loss:3.531e+02 
+300,loss:3.836e+02 
+ 53%|█████▎    | 530/1000 [22:02:30<19:32:21, 149.66s/it]#epoch:530 stage:1 train_loss:1.329e+05 val_loss:3.607e+04  time:2m30s
+
+
+100,loss:3.466e+02 
+200,loss:3.588e+02 
+300,loss:3.804e+02 
+ 53%|█████▎    | 531/1000 [22:05:00<19:30:31, 149.75s/it]#epoch:531 stage:1 train_loss:1.328e+05 val_loss:3.601e+04  time:2m30s
+
+
+100,loss:3.446e+02 
+200,loss:3.557e+02 
+300,loss:3.923e+02 
+ 53%|█████▎    | 532/1000 [22:07:30<19:28:31, 149.81s/it]#epoch:532 stage:1 train_loss:1.328e+05 val_loss:3.605e+04  time:2m30s
+
+
+100,loss:3.426e+02 
+200,loss:3.537e+02 
+300,loss:3.817e+02 
+ 53%|█████▎    | 533/1000 [22:10:00<19:26:18, 149.85s/it]#epoch:533 stage:1 train_loss:1.327e+05 val_loss:3.604e+04  time:2m30s
+
+
+100,loss:3.424e+02 
+200,loss:3.595e+02 
+300,loss:3.798e+02 
+ 53%|█████▎    | 534/1000 [22:12:29<19:21:49, 149.59s/it]#epoch:534 stage:1 train_loss:1.327e+05 val_loss:3.609e+04  time:2m29s
+
+
+100,loss:3.425e+02 
+200,loss:3.595e+02 
+300,loss:3.753e+02 
+ 54%|█████▎    | 535/1000 [22:14:59<19:20:02, 149.68s/it]#epoch:535 stage:1 train_loss:1.326e+05 val_loss:3.605e+04  time:2m30s
+
+
+100,loss:3.410e+02 
+200,loss:3.569e+02 
+300,loss:3.788e+02 
+ 54%|█████▎    | 536/1000 [22:17:29<19:17:07, 149.63s/it]#epoch:536 stage:1 train_loss:1.328e+05 val_loss:3.598e+04  time:2m29s
+
+
+100,loss:3.413e+02 
+200,loss:3.532e+02 
+300,loss:3.779e+02 
+ 54%|█████▎    | 537/1000 [22:19:58<19:14:46, 149.65s/it]#epoch:537 stage:1 train_loss:1.327e+05 val_loss:3.601e+04  time:2m30s
+
+
+100,loss:3.431e+02 
+200,loss:3.559e+02 
+300,loss:3.767e+02 
+ 54%|█████▍    | 538/1000 [22:22:28<19:12:16, 149.65s/it]#epoch:538 stage:1 train_loss:1.326e+05 val_loss:3.603e+04  time:2m30s
+
+
+100,loss:3.446e+02 
+200,loss:3.537e+02 
+300,loss:3.853e+02 
+ 54%|█████▍    | 539/1000 [22:24:58<19:10:16, 149.71s/it]#epoch:539 stage:1 train_loss:1.326e+05 val_loss:3.604e+04  time:2m30s
+
+
+100,loss:3.409e+02 
+200,loss:3.545e+02 
+300,loss:3.799e+02 
+ 54%|█████▍    | 540/1000 [22:27:27<19:06:57, 149.60s/it]#epoch:540 stage:1 train_loss:1.327e+05 val_loss:3.601e+04  time:2m29s
+
+
+100,loss:3.442e+02 
+200,loss:3.570e+02 
+300,loss:3.802e+02 
+ 54%|█████▍    | 541/1000 [22:29:57<19:04:46, 149.64s/it]#epoch:541 stage:1 train_loss:1.327e+05 val_loss:3.602e+04  time:2m30s
+
+
+100,loss:3.414e+02 
+200,loss:3.549e+02 
+300,loss:3.823e+02 
+ 54%|█████▍    | 542/1000 [22:32:27<19:02:41, 149.70s/it]#epoch:542 stage:1 train_loss:1.326e+05 val_loss:3.600e+04  time:2m30s
+
+
+100,loss:3.426e+02 
+200,loss:3.550e+02 
+300,loss:3.823e+02 
+ 54%|█████▍    | 543/1000 [22:34:56<18:58:34, 149.49s/it]#epoch:543 stage:1 train_loss:1.324e+05 val_loss:3.603e+04  time:2m29s
+
+
+100,loss:3.417e+02 
+200,loss:3.543e+02 
+300,loss:3.756e+02 
+ 54%|█████▍    | 544/1000 [22:37:25<18:54:42, 149.30s/it]#epoch:544 stage:1 train_loss:1.324e+05 val_loss:3.603e+04  time:2m29s
+
+
+100,loss:3.382e+02 
+200,loss:3.560e+02 
+300,loss:3.750e+02 
+ 55%|█████▍    | 545/1000 [22:39:54<18:52:41, 149.37s/it]#epoch:545 stage:1 train_loss:1.324e+05 val_loss:3.600e+04  time:2m29s
+
+
+100,loss:3.426e+02 
+200,loss:3.547e+02 
+300,loss:3.754e+02 
+ 55%|█████▍    | 546/1000 [22:42:23<18:49:21, 149.25s/it]#epoch:546 stage:1 train_loss:1.324e+05 val_loss:3.602e+04  time:2m29s
+
+
+100,loss:3.459e+02 
+200,loss:3.544e+02 
+300,loss:3.747e+02 
+ 55%|█████▍    | 547/1000 [22:44:52<18:47:09, 149.29s/it]#epoch:547 stage:1 train_loss:1.324e+05 val_loss:3.604e+04  time:2m29s
+
+
+100,loss:3.409e+02 
+200,loss:3.530e+02 
+300,loss:3.749e+02 
+ 55%|█████▍    | 548/1000 [22:47:22<18:45:37, 149.42s/it]#epoch:548 stage:1 train_loss:1.323e+05 val_loss:3.604e+04  time:2m30s
+
+
+100,loss:3.411e+02 
+200,loss:3.529e+02 
+300,loss:3.746e+02 
+ 55%|█████▍    | 549/1000 [22:49:52<18:44:40, 149.62s/it]#epoch:549 stage:1 train_loss:1.322e+05 val_loss:3.602e+04  time:2m30s
+
+
+100,loss:3.435e+02 
+200,loss:3.542e+02 
+300,loss:3.749e+02 
+ 55%|█████▌    | 550/1000 [22:52:22<18:42:20, 149.65s/it]#epoch:550 stage:1 train_loss:1.323e+05 val_loss:3.603e+04  time:2m30s
+
+
+100,loss:3.398e+02 
+200,loss:3.525e+02 
+300,loss:3.748e+02 
+ 55%|█████▌    | 551/1000 [22:54:52<18:40:55, 149.79s/it]#epoch:551 stage:1 train_loss:1.322e+05 val_loss:3.605e+04  time:2m30s
+
+
+100,loss:3.450e+02 
+200,loss:3.524e+02 
+300,loss:3.749e+02 
+ 55%|█████▌    | 552/1000 [22:57:22<18:38:49, 149.84s/it]#epoch:552 stage:1 train_loss:1.322e+05 val_loss:3.601e+04  time:2m30s
+
+
+100,loss:3.435e+02 
+200,loss:3.525e+02 
+300,loss:3.755e+02 
+ 55%|█████▌    | 553/1000 [22:59:52<18:36:12, 149.83s/it]#epoch:553 stage:1 train_loss:1.322e+05 val_loss:3.604e+04  time:2m30s
+
+
+100,loss:3.427e+02 
+200,loss:3.554e+02 
+300,loss:3.763e+02 
+ 55%|█████▌    | 554/1000 [23:02:22<18:34:21, 149.91s/it]#epoch:554 stage:1 train_loss:1.322e+05 val_loss:3.598e+04  time:2m30s
+
+
+100,loss:3.406e+02 
+200,loss:3.528e+02 
+300,loss:3.751e+02 
+ 56%|█████▌    | 555/1000 [23:04:52<18:31:42, 149.89s/it]#epoch:555 stage:1 train_loss:1.321e+05 val_loss:3.598e+04  time:2m30s
+
+
+100,loss:3.390e+02 
+200,loss:3.536e+02 
+300,loss:3.753e+02 
+ 56%|█████▌    | 556/1000 [23:07:21<18:28:38, 149.82s/it]#epoch:556 stage:1 train_loss:1.321e+05 val_loss:3.603e+04  time:2m30s
+
+
+100,loss:3.401e+02 
+200,loss:3.537e+02 
+300,loss:3.748e+02 
+ 56%|█████▌    | 557/1000 [23:09:51<18:26:03, 149.80s/it]#epoch:557 stage:1 train_loss:1.321e+05 val_loss:3.600e+04  time:2m30s
+
+
+100,loss:3.418e+02 
+200,loss:3.533e+02 
+300,loss:3.747e+02 
+ 56%|█████▌    | 558/1000 [23:12:21<18:23:02, 149.73s/it]#epoch:558 stage:1 train_loss:1.321e+05 val_loss:3.604e+04  time:2m30s
+
+
+100,loss:3.411e+02 
+200,loss:3.533e+02 
+300,loss:3.751e+02 
+ 56%|█████▌    | 559/1000 [23:14:51<18:20:26, 149.72s/it]#epoch:559 stage:1 train_loss:1.320e+05 val_loss:3.602e+04  time:2m30s
+
+
+100,loss:3.409e+02 
+200,loss:3.532e+02 
+300,loss:3.748e+02 
+ 56%|█████▌    | 560/1000 [23:17:20<18:18:29, 149.79s/it]#epoch:560 stage:1 train_loss:1.321e+05 val_loss:3.601e+04  time:2m30s
+
+
+100,loss:3.409e+02 
+200,loss:3.531e+02 
+300,loss:3.747e+02 
+ 56%|█████▌    | 561/1000 [23:19:50<18:14:45, 149.63s/it]#epoch:561 stage:1 train_loss:1.320e+05 val_loss:3.604e+04  time:2m29s
+
+
+100,loss:3.397e+02 
+200,loss:3.531e+02 
+300,loss:3.747e+02 
+ 56%|█████▌    | 562/1000 [23:22:19<18:12:19, 149.63s/it]#epoch:562 stage:1 train_loss:1.320e+05 val_loss:3.602e+04  time:2m30s
+
+
+100,loss:3.403e+02 
+200,loss:3.529e+02 
+300,loss:3.743e+02 
+ 56%|█████▋    | 563/1000 [23:24:50<18:12:05, 149.94s/it]#epoch:563 stage:1 train_loss:1.320e+05 val_loss:3.602e+04  time:2m31s
+
+
